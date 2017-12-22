@@ -1,0 +1,1884 @@
+ARM GAS  /tmp/cc429rGU.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_rcc_ex.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.HAL_RCCEx_PeriphCLKConfig,"ax",%progbits
+  16              		.align	1
+  17              		.global	HAL_RCCEx_PeriphCLKConfig
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	HAL_RCCEx_PeriphCLKConfig:
+  24              	.LFB64:
+  25              		.file 1 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c"
+   1:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /**
+   2:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   ******************************************************************************
+   3:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @file    stm32f1xx_hal_rcc_ex.c
+   4:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @author  MCD Application Team
+   5:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @version V1.0.4
+   6:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @date    29-April-2016
+   7:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @brief   Extended RCC HAL module driver.
+   8:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *          This file provides firmware functions to manage the following 
+   9:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *          functionalities RCC extension peripheral:
+  10:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *           + Extended Peripheral Control functions
+  11:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *  
+  12:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   ******************************************************************************
+  13:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @attention
+  14:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *
+  15:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * <h2><center>&copy; COPYRIGHT(c) 2016 STMicroelectronics</center></h2>
+  16:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *
+  17:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * Redistribution and use in source and binary forms, with or without modification,
+  18:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * are permitted provided that the following conditions are met:
+  19:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *   1. Redistributions of source code must retain the above copyright notice,
+  20:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *      this list of conditions and the following disclaimer.
+  21:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  22:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *      this list of conditions and the following disclaimer in the documentation
+  23:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *      and/or other materials provided with the distribution.
+  24:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  25:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *      may be used to endorse or promote products derived from this software
+  26:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *      without specific prior written permission.
+  27:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *
+  28:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  29:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  30:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  31:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  32:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  33:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ARM GAS  /tmp/cc429rGU.s 			page 2
+
+
+  34:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  35:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  36:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  37:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  38:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *
+  39:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   ******************************************************************************  
+  40:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */ 
+  41:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+  42:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /* Includes ------------------------------------------------------------------*/
+  43:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #include "stm32f1xx_hal.h"
+  44:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+  45:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /** @addtogroup STM32F1xx_HAL_Driver
+  46:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @{
+  47:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */
+  48:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+  49:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #ifdef HAL_RCC_MODULE_ENABLED
+  50:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+  51:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /** @defgroup RCCEx RCCEx
+  52:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @brief RCC Extension HAL module driver.
+  53:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @{
+  54:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */
+  55:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+  56:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /* Private typedef -----------------------------------------------------------*/
+  57:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /* Private define ------------------------------------------------------------*/
+  58:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /** @defgroup RCCEx_Private_Constants RCCEx Private Constants
+  59:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  * @{
+  60:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  */
+  61:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /**
+  62:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @}
+  63:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */
+  64:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+  65:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /* Private macro -------------------------------------------------------------*/
+  66:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /** @defgroup RCCEx_Private_Macros RCCEx Private Macros
+  67:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  * @{
+  68:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  */
+  69:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /**
+  70:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @}
+  71:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */
+  72:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+  73:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /* Private variables ---------------------------------------------------------*/
+  74:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /* Private function prototypes -----------------------------------------------*/
+  75:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /* Private functions ---------------------------------------------------------*/
+  76:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+  77:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /** @defgroup RCCEx_Exported_Functions RCCEx Exported Functions
+  78:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @{
+  79:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */
+  80:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+  81:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /** @defgroup RCCEx_Exported_Functions_Group1 Peripheral Control functions 
+  82:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  *  @brief  Extended Peripheral Control functions  
+  83:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  *
+  84:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** @verbatim   
+  85:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  ===============================================================================
+  86:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****                 ##### Extended Peripheral Control functions  #####
+  87:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  ===============================================================================  
+  88:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     [..]
+  89:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     This subsection provides a set of functions allowing to control the RCC Clocks 
+  90:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     frequencies.
+ARM GAS  /tmp/cc429rGU.s 			page 3
+
+
+  91:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     [..] 
+  92:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     (@) Important note: Care must be taken when HAL_RCCEx_PeriphCLKConfig() is used to
+  93:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         select the RTC clock source; in this case the Backup domain will be reset in  
+  94:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         order to modify the RTC Clock source, as consequence RTC registers (including 
+  95:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         the backup registers) are set to their reset values.
+  96:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       
+  97:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** @endverbatim
+  98:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @{
+  99:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */
+ 100:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 101:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /**
+ 102:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @brief  Initializes the RCC extended peripherals clocks according to the specified parameters i
+ 103:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         RCC_PeriphCLKInitTypeDef.
+ 104:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @param  PeriphClkInit pointer to an RCC_PeriphCLKInitTypeDef structure that
+ 105:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         contains the configuration information for the Extended Peripherals clocks(RTC clock).
+ 106:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *
+ 107:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @note   Care must be taken when HAL_RCCEx_PeriphCLKConfig() is used to select 
+ 108:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         the RTC clock source; in this case the Backup domain will be reset in  
+ 109:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         order to modify the RTC Clock source, as consequence RTC registers (including 
+ 110:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         the backup registers) are set to their reset values.
+ 111:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *
+ 112:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @note   In case of STM32F105xC or STM32F107xC devices, PLLI2S will be enabled if requested on 
+ 113:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         one of 2 I2S interfaces. When PLLI2S is enabled, you need to call HAL_RCCEx_DisablePLLI
+ 114:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         manually disable it.
+ 115:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *
+ 116:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @retval HAL status
+ 117:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */
+ 118:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit)
+ 119:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** {
+  26              		.loc 1 119 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 8
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              	.LVL0:
+  31 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 20
+  34              		.cfi_offset 4, -20
+  35              		.cfi_offset 5, -16
+  36              		.cfi_offset 6, -12
+  37              		.cfi_offset 7, -8
+  38              		.cfi_offset 14, -4
+  39 0002 83B0     		sub	sp, sp, #12
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 32
+  42 0004 0446     		mov	r4, r0
+  43              	.LVL1:
+ 120:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   uint32_t tickstart = 0, temp_reg = 0;
+ 121:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F105xC) || defined(STM32F107xC)
+ 122:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   uint32_t  pllactive = 0;
+ 123:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F105xC || STM32F107xC */
+ 124:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 125:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Check the parameters */
+ 126:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   assert_param(IS_RCC_PERIPHCLOCK(PeriphClkInit->PeriphClockSelection));
+ 127:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   
+ 128:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /*------------------------------- RTC/LCD Configuration ------------------------*/ 
+ 129:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   if ((((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_RTC) == RCC_PERIPHCLK_RTC))
+ARM GAS  /tmp/cc429rGU.s 			page 4
+
+
+  44              		.loc 1 129 0
+  45 0006 0368     		ldr	r3, [r0]
+  46 0008 13F0010F 		tst	r3, #1
+  47 000c 18D1     		bne	.L16
+  48              	.LVL2:
+  49              	.L2:
+ 130:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   {
+ 131:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* check for RTC Parameters used to output RTCCLK */
+ 132:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     assert_param(IS_RCC_RTCCLKSOURCE(PeriphClkInit->RTCClockSelection));
+ 133:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 134:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Enable Power Clock*/
+ 135:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     __HAL_RCC_PWR_CLK_ENABLE();
+ 136:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     
+ 137:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Enable write access to Backup domain */
+ 138:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     SET_BIT(PWR->CR, PWR_CR_DBP);
+ 139:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     
+ 140:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Wait for Backup domain Write protection disable */
+ 141:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     tickstart = HAL_GetTick();
+ 142:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     
+ 143:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     while((PWR->CR & PWR_CR_DBP) == RESET)
+ 144:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 145:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       if((HAL_GetTick() - tickstart) > RCC_DBP_TIMEOUT_VALUE)
+ 146:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 147:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         return HAL_TIMEOUT;
+ 148:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }      
+ 149:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
+ 150:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       
+ 151:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Reset the Backup domain only if the RTC Clock source selection is modified from reset value 
+ 152:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     temp_reg = (RCC->BDCR & RCC_BDCR_RTCSEL);
+ 153:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     if((temp_reg != 0x00000000U) && (temp_reg != (PeriphClkInit->RTCClockSelection & RCC_BDCR_RTCSE
+ 154:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 155:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Store the content of BDCR register before the reset of Backup Domain */
+ 156:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       temp_reg = (RCC->BDCR & ~(RCC_BDCR_RTCSEL));
+ 157:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* RTC Clock selection can be changed only if the Backup Domain is reset */
+ 158:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       __HAL_RCC_BACKUPRESET_FORCE();
+ 159:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       __HAL_RCC_BACKUPRESET_RELEASE();
+ 160:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Restore the Content of BDCR register */
+ 161:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       RCC->BDCR = temp_reg;
+ 162:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 163:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Wait for LSERDY if LSE was enabled */
+ 164:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       if (HAL_IS_BIT_SET(temp_reg, RCC_BDCR_LSEON))
+ 165:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 166:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         /* Get timeout */
+ 167:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         tickstart = HAL_GetTick();
+ 168:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       
+ 169:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         /* Wait till LSE is ready */  
+ 170:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         while(__HAL_RCC_GET_FLAG(RCC_FLAG_LSERDY) == RESET)
+ 171:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 172:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           if((HAL_GetTick() - tickstart) > RCC_LSE_TIMEOUT_VALUE)
+ 173:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           {
+ 174:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****             return HAL_TIMEOUT;
+ 175:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           }      
+ 176:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }  
+ 177:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 178:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
+ 179:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     __HAL_RCC_RTC_CONFIG(PeriphClkInit->RTCClockSelection); 
+ 180:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   }
+ARM GAS  /tmp/cc429rGU.s 			page 5
+
+
+ 181:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 182:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /*------------------------------ ADC clock Configuration ------------------*/ 
+ 183:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_ADC) == RCC_PERIPHCLK_ADC)
+  50              		.loc 1 183 0
+  51 000e 2368     		ldr	r3, [r4]
+  52 0010 13F0020F 		tst	r3, #2
+  53 0014 06D0     		beq	.L11
+ 184:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   {
+ 185:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Check the parameters */
+ 186:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     assert_param(IS_RCC_ADCPLLCLK_DIV(PeriphClkInit->AdcClockSelection));
+ 187:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     
+ 188:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Configure the ADC clock source */
+ 189:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     __HAL_RCC_ADC_CONFIG(PeriphClkInit->AdcClockSelection);
+  54              		.loc 1 189 0
+  55 0016 454A     		ldr	r2, .L20
+  56 0018 5368     		ldr	r3, [r2, #4]
+  57 001a 23F44043 		bic	r3, r3, #49152
+  58 001e A168     		ldr	r1, [r4, #8]
+  59 0020 0B43     		orrs	r3, r3, r1
+  60 0022 5360     		str	r3, [r2, #4]
+  61              	.L11:
+ 190:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   }
+ 191:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 192:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F105xC) || defined(STM32F107xC)
+ 193:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /*------------------------------ I2S2 Configuration ------------------------*/ 
+ 194:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_I2S2) == RCC_PERIPHCLK_I2S2)
+ 195:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   {
+ 196:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Check the parameters */
+ 197:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     assert_param(IS_RCC_I2S2CLKSOURCE(PeriphClkInit->I2s2ClockSelection));
+ 198:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 199:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Configure the I2S2 clock source */
+ 200:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     __HAL_RCC_I2S2_CONFIG(PeriphClkInit->I2s2ClockSelection);
+ 201:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   }
+ 202:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 203:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /*------------------------------ I2S3 Configuration ------------------------*/ 
+ 204:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_I2S3) == RCC_PERIPHCLK_I2S3)
+ 205:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   {
+ 206:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Check the parameters */
+ 207:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     assert_param(IS_RCC_I2S3CLKSOURCE(PeriphClkInit->I2s3ClockSelection));
+ 208:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     
+ 209:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Configure the I2S3 clock source */
+ 210:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     __HAL_RCC_I2S3_CONFIG(PeriphClkInit->I2s3ClockSelection);
+ 211:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   }
+ 212:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 213:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /*------------------------------ PLL I2S Configuration ----------------------*/ 
+ 214:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Check that PLLI2S need to be enabled */
+ 215:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   if (HAL_IS_BIT_SET(RCC->CFGR2, RCC_CFGR2_I2S2SRC) || HAL_IS_BIT_SET(RCC->CFGR2, RCC_CFGR2_I2S3SRC
+ 216:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   {
+ 217:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Update flag to indicate that PLL I2S should be active */
+ 218:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     pllactive = 1;
+ 219:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   }
+ 220:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 221:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Check if PLL I2S need to be enabled */
+ 222:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   if (pllactive == 1)
+ 223:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   {
+ 224:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Enable PLL I2S only if not active */
+ 225:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     if (HAL_IS_BIT_CLR(RCC->CR, RCC_CR_PLL3ON))
+ARM GAS  /tmp/cc429rGU.s 			page 6
+
+
+ 226:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 227:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Check the parameters */
+ 228:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       assert_param(IS_RCC_PLLI2S_MUL(PeriphClkInit->PLLI2S.PLLI2SMUL));
+ 229:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       assert_param(IS_RCC_HSE_PREDIV2(PeriphClkInit->PLLI2S.HSEPrediv2Value));
+ 230:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 231:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Prediv2 can be written only when the PLL2 is disabled. */
+ 232:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Return an error only if new value is different from the programmed value */
+ 233:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       if (HAL_IS_BIT_SET(RCC->CR,RCC_CR_PLL2ON) && \
+ 234:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         (__HAL_RCC_HSE_GET_PREDIV2() != PeriphClkInit->PLLI2S.HSEPrediv2Value))
+ 235:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 236:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         return HAL_ERROR;
+ 237:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 238:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 239:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Configure the HSE prediv2 factor --------------------------------*/
+ 240:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       __HAL_RCC_HSE_PREDIV2_CONFIG(PeriphClkInit->PLLI2S.HSEPrediv2Value);
+ 241:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 242:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Configure the main PLLI2S multiplication factors. */
+ 243:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       __HAL_RCC_PLLI2S_CONFIG(PeriphClkInit->PLLI2S.PLLI2SMUL);
+ 244:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       
+ 245:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Enable the main PLLI2S. */
+ 246:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       __HAL_RCC_PLLI2S_ENABLE();
+ 247:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       
+ 248:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Get Start Tick*/
+ 249:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       tickstart = HAL_GetTick();
+ 250:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       
+ 251:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Wait till PLLI2S is ready */
+ 252:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       while(__HAL_RCC_GET_FLAG(RCC_FLAG_PLLI2SRDY)  == RESET)
+ 253:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 254:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         if((HAL_GetTick() - tickstart ) > PLLI2S_TIMEOUT_VALUE)
+ 255:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 256:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           return HAL_TIMEOUT;
+ 257:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
+ 258:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 259:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
+ 260:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     else
+ 261:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 262:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Return an error only if user wants to change the PLLI2SMUL whereas PLLI2S is active */
+ 263:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       if (READ_BIT(RCC->CFGR2, RCC_CFGR2_PLL3MUL) != PeriphClkInit->PLLI2S.PLLI2SMUL)
+ 264:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 265:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           return HAL_ERROR;
+ 266:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 267:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
+ 268:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   }
+ 269:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F105xC || STM32F107xC */
+ 270:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 271:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F102x6) || defined(STM32F102xB) || defined(STM32F103x6)\
+ 272:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F103xB) || defined(STM32F103xE) || defined(STM32F103xG)\
+ 273:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F105xC) || defined(STM32F107xC)
+ 274:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /*------------------------------ USB clock Configuration ------------------*/ 
+ 275:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   if(((PeriphClkInit->PeriphClockSelection) & RCC_PERIPHCLK_USB) == RCC_PERIPHCLK_USB)
+  62              		.loc 1 275 0
+  63 0024 2368     		ldr	r3, [r4]
+  64 0026 13F0100F 		tst	r3, #16
+  65 002a 7CD0     		beq	.L14
+ 276:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   {
+ 277:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Check the parameters */
+ 278:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     assert_param(IS_RCC_USBPLLCLK_DIV(PeriphClkInit->UsbClockSelection));
+ARM GAS  /tmp/cc429rGU.s 			page 7
+
+
+ 279:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     
+ 280:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Configure the USB clock source */
+ 281:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     __HAL_RCC_USB_CONFIG(PeriphClkInit->UsbClockSelection);
+  66              		.loc 1 281 0
+  67 002c 3F4A     		ldr	r2, .L20
+  68 002e 5368     		ldr	r3, [r2, #4]
+  69 0030 23F48003 		bic	r3, r3, #4194304
+  70 0034 E168     		ldr	r1, [r4, #12]
+  71 0036 0B43     		orrs	r3, r3, r1
+  72 0038 5360     		str	r3, [r2, #4]
+ 282:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   }
+ 283:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F102x6 || STM32F102xB || STM32F103x6 || STM32F103xB || STM32F103xE || STM32F103xG ||
+ 284:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 285:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   return HAL_OK;
+  73              		.loc 1 285 0
+  74 003a 0020     		movs	r0, #0
+  75              	.L4:
+ 286:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** }
+  76              		.loc 1 286 0
+  77 003c 03B0     		add	sp, sp, #12
+  78              	.LCFI2:
+  79              		.cfi_remember_state
+  80              		.cfi_def_cfa_offset 20
+  81              		@ sp needed
+  82 003e F0BD     		pop	{r4, r5, r6, r7, pc}
+  83              	.LVL3:
+  84              	.L16:
+  85              	.LCFI3:
+  86              		.cfi_restore_state
+  87              	.LBB19:
+ 135:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     
+  88              		.loc 1 135 0
+  89 0040 3A4B     		ldr	r3, .L20
+  90 0042 DA69     		ldr	r2, [r3, #28]
+  91 0044 42F08052 		orr	r2, r2, #268435456
+  92 0048 DA61     		str	r2, [r3, #28]
+  93 004a DB69     		ldr	r3, [r3, #28]
+  94 004c 03F08053 		and	r3, r3, #268435456
+  95 0050 0193     		str	r3, [sp, #4]
+  96 0052 019B     		ldr	r3, [sp, #4]
+  97              	.LBE19:
+ 138:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     
+  98              		.loc 1 138 0
+  99 0054 364A     		ldr	r2, .L20+4
+ 100 0056 1368     		ldr	r3, [r2]
+ 101 0058 43F48073 		orr	r3, r3, #256
+ 102 005c 1360     		str	r3, [r2]
+ 141:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     
+ 103              		.loc 1 141 0
+ 104 005e FFF7FEFF 		bl	HAL_GetTick
+ 105              	.LVL4:
+ 106 0062 0546     		mov	r5, r0
+ 107              	.LVL5:
+ 108              	.L3:
+ 143:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 109              		.loc 1 143 0
+ 110 0064 324B     		ldr	r3, .L20+4
+ARM GAS  /tmp/cc429rGU.s 			page 8
+
+
+ 111 0066 1B68     		ldr	r3, [r3]
+ 112 0068 13F4807F 		tst	r3, #256
+ 113 006c 06D1     		bne	.L17
+ 145:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 114              		.loc 1 145 0
+ 115 006e FFF7FEFF 		bl	HAL_GetTick
+ 116              	.LVL6:
+ 117 0072 401B     		subs	r0, r0, r5
+ 118 0074 6428     		cmp	r0, #100
+ 119 0076 F5D9     		bls	.L3
+ 147:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }      
+ 120              		.loc 1 147 0
+ 121 0078 0320     		movs	r0, #3
+ 122 007a DFE7     		b	.L4
+ 123              	.L17:
+ 152:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     if((temp_reg != 0x00000000U) && (temp_reg != (PeriphClkInit->RTCClockSelection & RCC_BDCR_RTCSE
+ 124              		.loc 1 152 0
+ 125 007c 2B4B     		ldr	r3, .L20
+ 126 007e 1B6A     		ldr	r3, [r3, #32]
+ 127              	.LVL7:
+ 153:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 128              		.loc 1 153 0
+ 129 0080 13F44073 		ands	r3, r3, #768
+ 130              	.LVL8:
+ 131 0084 1DD0     		beq	.L6
+ 153:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 132              		.loc 1 153 0 is_stmt 0 discriminator 1
+ 133 0086 6268     		ldr	r2, [r4, #4]
+ 134 0088 02F44072 		and	r2, r2, #768
+ 135 008c 9342     		cmp	r3, r2
+ 136 008e 18D0     		beq	.L6
+ 156:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* RTC Clock selection can be changed only if the Backup Domain is reset */
+ 137              		.loc 1 156 0 is_stmt 1
+ 138 0090 2648     		ldr	r0, .L20
+ 139 0092 016A     		ldr	r1, [r0, #32]
+ 140 0094 21F44076 		bic	r6, r1, #768
+ 141              	.LVL9:
+ 142              	.LBB20:
+ 143              	.LBB21:
+ 144              		.file 2 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h"
+   1:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
+   2:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS Cortex-M Core Function/Instruction Header File
+   4:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  * @version  V4.30
+   5:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  * @date     20. October 2015
+   6:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
+   7:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /* Copyright (c) 2009 - 2015 ARM LIMITED
+   8:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+   9:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    All rights reserved.
+  10:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    Redistribution and use in source and binary forms, with or without
+  11:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    modification, are permitted provided that the following conditions are met:
+  12:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    - Redistributions of source code must retain the above copyright
+  13:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****      notice, this list of conditions and the following disclaimer.
+  14:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    - Redistributions in binary form must reproduce the above copyright
+  15:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****      notice, this list of conditions and the following disclaimer in the
+  16:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****      documentation and/or other materials provided with the distribution.
+  17:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    - Neither the name of ARM nor the names of its contributors may be used
+ARM GAS  /tmp/cc429rGU.s 			page 9
+
+
+  18:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****      to endorse or promote products derived from this software without
+  19:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****      specific prior written permission.
+  20:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    *
+  21:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE
+  25:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    POSSIBILITY OF SUCH DAMAGE.
+  32:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    ---------------------------------------------------------------------------*/
+  33:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  34:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  35:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  36:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_H
+  37:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  38:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /* ignore some GCC warnings */
+  39:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #if defined ( __GNUC__ )
+  40:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic push
+  41:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  42:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  43:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  44:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #endif
+  45:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  46:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  47:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+  48:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+  49:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+  50:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   @{
+  51:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+  52:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  53:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+  54:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+  55:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+  56:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+  57:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+  58:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __enable_irq(void)
+  59:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+  60:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+  61:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+  62:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  63:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  64:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+  65:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
+  66:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
+  67:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   Can only be executed in Privileged modes.
+  68:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+  69:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_irq(void)
+  70:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+  71:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+  72:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+  73:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  74:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  /tmp/cc429rGU.s 			page 10
+
+
+  75:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+  76:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Control Register
+  77:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the Control Register.
+  78:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Control Register value
+  79:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+  80:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_CONTROL(void)
+  81:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+  82:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+  83:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  84:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, control" : "=r" (result) );
+  85:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+  86:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+  87:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  88:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  89:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+  90:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Control Register
+  91:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Writes the given value to the Control Register.
+  92:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    control  Control Register value to set
+  93:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+  94:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_CONTROL(uint32_t control)
+  95:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+  96:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
+  97:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+  98:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+  99:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 100:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 101:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Get IPSR Register
+ 102:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the IPSR Register.
+ 103:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               IPSR Register value
+ 104:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 105:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_IPSR(void)
+ 106:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 107:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 108:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 109:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, ipsr" : "=r" (result) );
+ 110:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 111:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 112:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 113:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 114:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 115:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Get APSR Register
+ 116:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the APSR Register.
+ 117:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               APSR Register value
+ 118:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 119:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_APSR(void)
+ 120:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 121:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 122:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 123:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
+ 124:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 125:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 126:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 127:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 128:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 129:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Get xPSR Register
+ 130:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the xPSR Register.
+ 131:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ARM GAS  /tmp/cc429rGU.s 			page 11
+
+
+ 132:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****     \return               xPSR Register value
+ 133:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 134:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_xPSR(void)
+ 135:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 136:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 137:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 138:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, xpsr" : "=r" (result) );
+ 139:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 140:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 141:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 142:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 143:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 144:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Process Stack Pointer
+ 145:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Process Stack Pointer (PSP).
+ 146:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               PSP Register value
+ 147:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 148:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_PSP(void)
+ 149:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 150:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   register uint32_t result;
+ 151:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 152:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, psp\n"  : "=r" (result) );
+ 153:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 154:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 155:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 156:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 157:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 158:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer
+ 159:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Process Stack Pointer (PSP).
+ 160:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 161:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 162:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_PSP(uint32_t topOfProcStack)
+ 163:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 164:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR psp, %0\n" : : "r" (topOfProcStack) : "sp");
+ 165:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 166:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 167:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 168:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 169:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer
+ 170:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Main Stack Pointer (MSP).
+ 171:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               MSP Register value
+ 172:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 173:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_MSP(void)
+ 174:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 175:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   register uint32_t result;
+ 176:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 177:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp\n" : "=r" (result) );
+ 178:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 179:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 180:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 181:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 182:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 183:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer
+ 184:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Main Stack Pointer (MSP).
+ 185:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 186:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****     \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 187:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 188:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_MSP(uint32_t topOfMainStack)
+ARM GAS  /tmp/cc429rGU.s 			page 12
+
+
+ 189:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 190:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp, %0\n" : : "r" (topOfMainStack) : "sp");
+ 191:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 192:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 193:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 194:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 195:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Priority Mask
+ 196:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current state of the priority mask bit from the Priority Mask Register.
+ 197:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Priority Mask value
+ 198:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 199:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_PRIMASK(void)
+ 200:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 201:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 202:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 203:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask" : "=r" (result) );
+ 204:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 205:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 206:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 207:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 208:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 209:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Priority Mask
+ 210:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Priority Mask Register.
+ 211:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    priMask  Priority Mask
+ 212:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 213:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_PRIMASK(uint32_t priMask)
+ 214:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 215:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+ 216:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 217:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 218:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 219:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #if       (__CORTEX_M >= 0x03U)
+ 220:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 221:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 222:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable FIQ
+ 223:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Enables FIQ interrupts by clearing the F-bit in the CPSR.
+ 224:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 225:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 226:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __enable_fault_irq(void)
+ 227:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 228:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsie f" : : : "memory");
+ 229:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 230:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 231:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 232:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 233:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable FIQ
+ 234:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Disables FIQ interrupts by setting the F-bit in the CPSR.
+ 235:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 236:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 237:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_fault_irq(void)
+ 238:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 239:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid f" : : : "memory");
+ 240:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 241:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 242:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 243:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 244:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Base Priority
+ 245:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Base Priority register.
+ARM GAS  /tmp/cc429rGU.s 			page 13
+
+
+ 246:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Base Priority register value
+ 247:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 248:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_BASEPRI(void)
+ 249:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 250:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 251:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 252:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, basepri" : "=r" (result) );
+ 253:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 254:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 255:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 256:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 257:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 258:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Base Priority
+ 259:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Base Priority register.
+ 260:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
+ 261:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 262:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_BASEPRI(uint32_t value)
+ 263:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 264:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR basepri, %0" : : "r" (value) : "memory");
+ 265:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 266:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 267:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 268:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 269:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Base Priority with condition
+ 270:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Base Priority register only if BASEPRI masking is disable
+ 271:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****            or the new value increases the BASEPRI priority level.
+ 272:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
+ 273:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 274:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_BASEPRI_MAX(uint32_t value)
+ 275:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 276:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR basepri_max, %0" : : "r" (value) : "memory");
+ 277:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 278:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 279:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 280:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 281:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Fault Mask
+ 282:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Fault Mask register.
+ 283:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Fault Mask register value
+ 284:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 285:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_FAULTMASK(void)
+ 286:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 287:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 288:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 289:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, faultmask" : "=r" (result) );
+ 290:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 291:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 292:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 293:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 294:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 295:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Fault Mask
+ 296:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Fault Mask register.
+ 297:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    faultMask  Fault Mask value to set
+ 298:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 299:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_FAULTMASK(uint32_t faultMask)
+ 300:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 301:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR faultmask, %0" : : "r" (faultMask) : "memory");
+ 302:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ARM GAS  /tmp/cc429rGU.s 			page 14
+
+
+ 303:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 304:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #endif /* (__CORTEX_M >= 0x03U) */
+ 305:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 306:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 307:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #if       (__CORTEX_M == 0x04U) || (__CORTEX_M == 0x07U)
+ 308:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 309:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 310:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Get FPSCR
+ 311:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Floating Point Status/Control register.
+ 312:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Floating Point Status/Control register value
+ 313:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 314:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_FPSCR(void)
+ 315:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 316:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #if (__FPU_PRESENT == 1U) && (__FPU_USED == 1U)
+ 317:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 318:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 319:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   /* Empty asm statement works as a scheduling barrier */
+ 320:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("");
+ 321:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("VMRS %0, fpscr" : "=r" (result) );
+ 322:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("");
+ 323:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 324:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #else
+ 325:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    return(0);
+ 326:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #endif
+ 327:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 328:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 329:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 330:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 331:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Set FPSCR
+ 332:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Floating Point Status/Control register.
+ 333:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    fpscr  Floating Point Status/Control value to set
+ 334:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 335:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_FPSCR(uint32_t fpscr)
+ 336:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 337:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #if (__FPU_PRESENT == 1U) && (__FPU_USED == 1U)
+ 338:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   /* Empty asm statement works as a scheduling barrier */
+ 339:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("");
+ 340:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("VMSR fpscr, %0" : : "r" (fpscr) : "vfpcc");
+ 341:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("");
+ 342:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #endif
+ 343:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 344:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 345:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #endif /* (__CORTEX_M == 0x04U) || (__CORTEX_M == 0x07U) */
+ 346:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 347:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 348:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 349:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /*@} end of CMSIS_Core_RegAccFunctions */
+ 350:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 351:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 352:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /* ##########################  Core Instruction Access  ######################### */
+ 353:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /** \defgroup CMSIS_Core_InstructionInterface CMSIS Core Instruction Interface
+ 354:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   Access to dedicated instructions
+ 355:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   @{
+ 356:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** */
+ 357:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 358:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /* Define macros for porting to both thumb1 and thumb2.
+ 359:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  * For thumb1, use low register (r0-r7), specified by constraint "l"
+ARM GAS  /tmp/cc429rGU.s 			page 15
+
+
+ 360:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  * Otherwise, use general registers, specified by constraint "r" */
+ 361:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #if defined (__thumb__) && !defined (__thumb2__)
+ 362:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=l" (r)
+ 363:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
+ 364:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #else
+ 365:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=r" (r)
+ 366:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "r" (r)
+ 367:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #endif
+ 368:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 369:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 370:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   No Operation
+ 371:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details No Operation does nothing. This instruction can be used for code alignment purposes.
+ 372:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 373:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __NOP(void)
+ 374:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 375:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("nop");
+ 376:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 377:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 378:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 379:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 380:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Wait For Interrupt
+ 381:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Wait For Interrupt is a hint instruction that suspends execution until one of a number o
+ 382:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 383:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __WFI(void)
+ 384:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 385:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("wfi");
+ 386:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 387:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 388:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 389:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 390:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Wait For Event
+ 391:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Wait For Event is a hint instruction that permits the processor to enter
+ 392:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****     a low-power state until one of a number of events occurs.
+ 393:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 394:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __WFE(void)
+ 395:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 396:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("wfe");
+ 397:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 398:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 399:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 400:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 401:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Send Event
+ 402:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Send Event is a hint instruction. It causes an event to be signaled to the CPU.
+ 403:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 404:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __SEV(void)
+ 405:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 406:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("sev");
+ 407:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 408:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 409:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 410:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 411:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Instruction Synchronization Barrier
+ 412:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Instruction Synchronization Barrier flushes the pipeline in the processor,
+ 413:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****            so that all instructions following the ISB are fetched from cache or memory,
+ 414:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****            after the instruction has been completed.
+ 415:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 416:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __ISB(void)
+ARM GAS  /tmp/cc429rGU.s 			page 16
+
+
+ 417:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 418:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("isb 0xF":::"memory");
+ 419:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 420:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 421:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 422:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 423:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Data Synchronization Barrier
+ 424:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Acts as a special kind of Data Memory Barrier.
+ 425:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****            It completes when all explicit memory accesses before this instruction complete.
+ 426:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 427:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __DSB(void)
+ 428:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 429:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("dsb 0xF":::"memory");
+ 430:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 431:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 432:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 433:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 434:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Data Memory Barrier
+ 435:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Ensures the apparent order of the explicit memory operations before
+ 436:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****            and after the instruction, without ensuring their completion.
+ 437:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 438:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __DMB(void)
+ 439:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 440:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("dmb 0xF":::"memory");
+ 441:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 442:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 443:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 444:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 445:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse byte order (32 bit)
+ 446:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the byte order in integer value.
+ 447:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  Value to reverse
+ 448:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Reversed value
+ 449:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 450:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE uint32_t __REV(uint32_t value)
+ 451:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 452:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 5)
+ 453:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return __builtin_bswap32(value);
+ 454:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #else
+ 455:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 456:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 457:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("rev %0, %1" : __CMSIS_GCC_OUT_REG (result) : __CMSIS_GCC_USE_REG (value) );
+ 458:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 459:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #endif
+ 460:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 461:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 462:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 463:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 464:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse byte order (16 bit)
+ 465:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the byte order in two unsigned short values.
+ 466:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  Value to reverse
+ 467:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Reversed value
+ 468:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 469:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE uint32_t __REV16(uint32_t value)
+ 470:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 471:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 472:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 473:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("rev16 %0, %1" : __CMSIS_GCC_OUT_REG (result) : __CMSIS_GCC_USE_REG (value) );
+ARM GAS  /tmp/cc429rGU.s 			page 17
+
+
+ 474:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 475:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 476:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 477:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 478:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 479:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse byte order in signed short value
+ 480:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the byte order in a signed short value with sign extension to integer.
+ 481:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  Value to reverse
+ 482:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Reversed value
+ 483:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 484:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE int32_t __REVSH(int32_t value)
+ 485:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 486:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 8)
+ 487:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return (short)__builtin_bswap16(value);
+ 488:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #else
+ 489:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   int32_t result;
+ 490:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 491:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("revsh %0, %1" : __CMSIS_GCC_OUT_REG (result) : __CMSIS_GCC_USE_REG (value) );
+ 492:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return(result);
+ 493:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #endif
+ 494:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 495:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 496:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 497:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 498:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Rotate Right in unsigned value (32 bit)
+ 499:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Rotate Right (immediate) provides the value of the contents of a register rotated by a v
+ 500:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  Value to rotate
+ 501:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  Number of Bits to rotate
+ 502:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Rotated value
+ 503:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 504:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE uint32_t __ROR(uint32_t op1, uint32_t op2)
+ 505:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 506:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   return (op1 >> op2) | (op1 << (32U - op2));
+ 507:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
+ 508:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 509:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 510:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 511:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Breakpoint
+ 512:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Causes the processor to enter Debug state.
+ 513:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****            Debug tools can use this to investigate system state when the instruction at a particula
+ 514:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  is ignored by the processor.
+ 515:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****                  If required, a debugger can use it to store additional information about the break
+ 516:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 517:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #define __BKPT(value)                       __ASM volatile ("bkpt "#value)
+ 518:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 519:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 520:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
+ 521:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse bit order of value
+ 522:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Reverses the bit order of the given value.
+ 523:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    value  Value to reverse
+ 524:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Reversed value
+ 525:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
+ 526:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE uint32_t __RBIT(uint32_t value)
+ 527:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
+ 528:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
+ 529:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
+ 530:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #if       (__CORTEX_M >= 0x03U) || (__CORTEX_SC >= 300U)
+ARM GAS  /tmp/cc429rGU.s 			page 18
+
+
+ 531:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("rbit %0, %1" : "=r" (result) : "r" (value) );
+ 145              		.loc 2 531 0
+ 146 0098 4FF48033 		mov	r3, #65536
+ 147              		.syntax unified
+ 148              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 149 009c 93FAA3F2 		rbit r2, r3
+ 150              	@ 0 "" 2
+ 151              	.LVL10:
+ 152              		.thumb
+ 153              		.syntax unified
+ 154              	.LBE21:
+ 155              	.LBE20:
+ 158:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       __HAL_RCC_BACKUPRESET_RELEASE();
+ 156              		.loc 1 158 0
+ 157 00a0 B2FA82F2 		clz	r2, r2
+ 158 00a4 234D     		ldr	r5, .L20+8
+ 159              	.LVL11:
+ 160 00a6 0127     		movs	r7, #1
+ 161 00a8 45F82270 		str	r7, [r5, r2, lsl #2]
+ 162              	.LVL12:
+ 163              	.LBB22:
+ 164              	.LBB23:
+ 165              		.loc 2 531 0
+ 166              		.syntax unified
+ 167              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 168 00ac 93FAA3F3 		rbit r3, r3
+ 169              	@ 0 "" 2
+ 170              	.LVL13:
+ 171              		.thumb
+ 172              		.syntax unified
+ 173              	.LBE23:
+ 174              	.LBE22:
+ 159:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Restore the Content of BDCR register */
+ 175              		.loc 1 159 0
+ 176 00b0 B3FA83F3 		clz	r3, r3
+ 177 00b4 0022     		movs	r2, #0
+ 178 00b6 45F82320 		str	r2, [r5, r3, lsl #2]
+ 161:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 179              		.loc 1 161 0
+ 180 00ba 0662     		str	r6, [r0, #32]
+ 164:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 181              		.loc 1 164 0
+ 182 00bc 11F0010F 		tst	r1, #1
+ 183 00c0 07D1     		bne	.L18
+ 184              	.LVL14:
+ 185              	.L6:
+ 179:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   }
+ 186              		.loc 1 179 0
+ 187 00c2 1A4A     		ldr	r2, .L20
+ 188 00c4 136A     		ldr	r3, [r2, #32]
+ 189 00c6 23F44073 		bic	r3, r3, #768
+ 190 00ca 6168     		ldr	r1, [r4, #4]
+ 191 00cc 0B43     		orrs	r3, r3, r1
+ 192 00ce 1362     		str	r3, [r2, #32]
+ 193 00d0 9DE7     		b	.L2
+ 194              	.LVL15:
+ 195              	.L18:
+ARM GAS  /tmp/cc429rGU.s 			page 19
+
+
+ 167:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       
+ 196              		.loc 1 167 0
+ 197 00d2 FFF7FEFF 		bl	HAL_GetTick
+ 198              	.LVL16:
+ 199 00d6 0546     		mov	r5, r0
+ 200              	.LVL17:
+ 170:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 201              		.loc 1 170 0
+ 202 00d8 14E0     		b	.L7
+ 203              	.LVL18:
+ 204              	.L19:
+ 170:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 205              		.loc 1 170 0 is_stmt 0 discriminator 4
+ 206 00da 144B     		ldr	r3, .L20
+ 207 00dc 1A6A     		ldr	r2, [r3, #32]
+ 208              	.L9:
+ 209              	.LVL19:
+ 210              	.LBB24:
+ 211              	.LBB25:
+ 212              		.loc 2 531 0 is_stmt 1 discriminator 7
+ 213 00de 0223     		movs	r3, #2
+ 214              		.syntax unified
+ 215              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 216 00e0 93FAA3F3 		rbit r3, r3
+ 217              	@ 0 "" 2
+ 218              	.LVL20:
+ 219              		.thumb
+ 220              		.syntax unified
+ 221              	.LBE25:
+ 222              	.LBE24:
+ 170:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 223              		.loc 1 170 0 discriminator 7
+ 224 00e4 B3FA83F3 		clz	r3, r3
+ 225 00e8 03F01F03 		and	r3, r3, #31
+ 226 00ec 22FA03F3 		lsr	r3, r2, r3
+ 227 00f0 13F0010F 		tst	r3, #1
+ 228 00f4 E5D1     		bne	.L6
+ 172:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           {
+ 229              		.loc 1 172 0
+ 230 00f6 FFF7FEFF 		bl	HAL_GetTick
+ 231              	.LVL21:
+ 232 00fa 401B     		subs	r0, r0, r5
+ 233 00fc 41F28833 		movw	r3, #5000
+ 234 0100 9842     		cmp	r0, r3
+ 235 0102 0ED8     		bhi	.L13
+ 236              	.L7:
+ 237              	.LVL22:
+ 238              	.LBB26:
+ 239              	.LBB27:
+ 240              		.loc 2 531 0
+ 241 0104 0223     		movs	r3, #2
+ 242              		.syntax unified
+ 243              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 244 0106 93FAA3F2 		rbit r2, r3
+ 245              	@ 0 "" 2
+ 246              	.LVL23:
+ 247              		.thumb
+ARM GAS  /tmp/cc429rGU.s 			page 20
+
+
+ 248              		.syntax unified
+ 249              	.LBE27:
+ 250              	.LBE26:
+ 251              	.LBB28:
+ 252              	.LBB29:
+ 253              		.syntax unified
+ 254              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 255 010a 93FAA3F3 		rbit r3, r3
+ 256              	@ 0 "" 2
+ 257              	.LVL24:
+ 258              		.thumb
+ 259              		.syntax unified
+ 260              	.LBE29:
+ 261              	.LBE28:
+ 170:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 262              		.loc 1 170 0
+ 263 010e B3FA83F3 		clz	r3, r3
+ 264 0112 5B09     		lsrs	r3, r3, #5
+ 265 0114 43F00203 		orr	r3, r3, #2
+ 266 0118 022B     		cmp	r3, #2
+ 267 011a DED0     		beq	.L19
+ 170:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 268              		.loc 1 170 0 is_stmt 0 discriminator 5
+ 269 011c 034B     		ldr	r3, .L20
+ 270 011e 5A6A     		ldr	r2, [r3, #36]
+ 271 0120 DDE7     		b	.L9
+ 272              	.L13:
+ 174:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           }      
+ 273              		.loc 1 174 0 is_stmt 1
+ 274 0122 0320     		movs	r0, #3
+ 275 0124 8AE7     		b	.L4
+ 276              	.LVL25:
+ 277              	.L14:
+ 285:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** }
+ 278              		.loc 1 285 0
+ 279 0126 0020     		movs	r0, #0
+ 280 0128 88E7     		b	.L4
+ 281              	.L21:
+ 282 012a 00BF     		.align	2
+ 283              	.L20:
+ 284 012c 00100240 		.word	1073876992
+ 285 0130 00700040 		.word	1073770496
+ 286 0134 00044242 		.word	1111622656
+ 287              		.cfi_endproc
+ 288              	.LFE64:
+ 290              		.section	.text.HAL_RCCEx_GetPeriphCLKConfig,"ax",%progbits
+ 291              		.align	1
+ 292              		.global	HAL_RCCEx_GetPeriphCLKConfig
+ 293              		.syntax unified
+ 294              		.thumb
+ 295              		.thumb_func
+ 296              		.fpu softvfp
+ 298              	HAL_RCCEx_GetPeriphCLKConfig:
+ 299              	.LFB65:
+ 287:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 288:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /**
+ 289:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @brief  Get the PeriphClkInit according to the internal
+ARM GAS  /tmp/cc429rGU.s 			page 21
+
+
+ 290:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * RCC configuration registers.
+ 291:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @param  PeriphClkInit pointer to an RCC_PeriphCLKInitTypeDef structure that 
+ 292:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         returns the configuration information for the Extended Peripherals clocks(RTC, I2S, ADC
+ 293:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @retval None
+ 294:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */
+ 295:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** void HAL_RCCEx_GetPeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit)
+ 296:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** {
+ 300              		.loc 1 296 0
+ 301              		.cfi_startproc
+ 302              		@ args = 0, pretend = 0, frame = 0
+ 303              		@ frame_needed = 0, uses_anonymous_args = 0
+ 304              		@ link register save eliminated.
+ 305              	.LVL26:
+ 297:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   uint32_t srcclk = 0;
+ 298:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   
+ 299:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Set all possible values for the extended clock type parameter------------*/
+ 300:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->PeriphClockSelection = RCC_PERIPHCLK_RTC;
+ 306              		.loc 1 300 0
+ 307 0000 0123     		movs	r3, #1
+ 308 0002 0360     		str	r3, [r0]
+ 301:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 302:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Get the RTC configuration -----------------------------------------------*/
+ 303:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   srcclk = __HAL_RCC_GET_RTC_SOURCE();
+ 309              		.loc 1 303 0
+ 310 0004 084B     		ldr	r3, .L23
+ 311 0006 1A6A     		ldr	r2, [r3, #32]
+ 312 0008 02F44072 		and	r2, r2, #768
+ 313              	.LVL27:
+ 304:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Source clock is LSE or LSI*/
+ 305:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->RTCClockSelection = srcclk;
+ 314              		.loc 1 305 0
+ 315 000c 4260     		str	r2, [r0, #4]
+ 306:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 307:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Get the ADC clock configuration -----------------------------------------*/
+ 308:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->PeriphClockSelection |= RCC_PERIPHCLK_ADC;
+ 316              		.loc 1 308 0
+ 317 000e 0322     		movs	r2, #3
+ 318              	.LVL28:
+ 319 0010 0260     		str	r2, [r0]
+ 309:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->AdcClockSelection = __HAL_RCC_GET_ADC_SOURCE();
+ 320              		.loc 1 309 0
+ 321 0012 5A68     		ldr	r2, [r3, #4]
+ 322 0014 02F44042 		and	r2, r2, #49152
+ 323 0018 8260     		str	r2, [r0, #8]
+ 310:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 311:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F105xC) || defined(STM32F107xC)
+ 312:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Get the I2S2 clock configuration -----------------------------------------*/
+ 313:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->PeriphClockSelection |= RCC_PERIPHCLK_I2S2;
+ 314:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->I2s2ClockSelection = __HAL_RCC_GET_I2S2_SOURCE();
+ 315:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 316:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Get the I2S3 clock configuration -----------------------------------------*/
+ 317:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->PeriphClockSelection |= RCC_PERIPHCLK_I2S3;
+ 318:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->I2s3ClockSelection = __HAL_RCC_GET_I2S3_SOURCE();
+ 319:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 320:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F105xC || STM32F107xC */
+ 321:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 322:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F103xE) || defined(STM32F103xG)
+ARM GAS  /tmp/cc429rGU.s 			page 22
+
+
+ 323:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Get the I2S2 clock configuration -----------------------------------------*/
+ 324:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->PeriphClockSelection |= RCC_PERIPHCLK_I2S2;
+ 325:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->I2s2ClockSelection = RCC_I2S2CLKSOURCE_SYSCLK;
+ 326:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 327:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Get the I2S3 clock configuration -----------------------------------------*/
+ 328:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->PeriphClockSelection |= RCC_PERIPHCLK_I2S3;
+ 329:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->I2s3ClockSelection = RCC_I2S3CLKSOURCE_SYSCLK;
+ 330:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 331:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F103xE || STM32F103xG */
+ 332:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 333:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F102x6) || defined(STM32F102xB) || defined(STM32F103x6)\
+ 334:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F103xB) || defined(STM32F103xE) || defined(STM32F103xG)\
+ 335:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F105xC) || defined(STM32F107xC)
+ 336:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Get the USB clock configuration -----------------------------------------*/
+ 337:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->PeriphClockSelection |= RCC_PERIPHCLK_USB;
+ 324              		.loc 1 337 0
+ 325 001a 1322     		movs	r2, #19
+ 326 001c 0260     		str	r2, [r0]
+ 338:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->UsbClockSelection = __HAL_RCC_GET_USB_SOURCE();
+ 327              		.loc 1 338 0
+ 328 001e 5B68     		ldr	r3, [r3, #4]
+ 329 0020 03F48003 		and	r3, r3, #4194304
+ 330 0024 C360     		str	r3, [r0, #12]
+ 331 0026 7047     		bx	lr
+ 332              	.L24:
+ 333              		.align	2
+ 334              	.L23:
+ 335 0028 00100240 		.word	1073876992
+ 336              		.cfi_endproc
+ 337              	.LFE65:
+ 339              		.section	.text.HAL_RCCEx_GetPeriphCLKFreq,"ax",%progbits
+ 340              		.align	1
+ 341              		.global	HAL_RCCEx_GetPeriphCLKFreq
+ 342              		.syntax unified
+ 343              		.thumb
+ 344              		.thumb_func
+ 345              		.fpu softvfp
+ 347              	HAL_RCCEx_GetPeriphCLKFreq:
+ 348              	.LFB66:
+ 339:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F102x6 || STM32F102xB || STM32F103x6 || STM32F103xB || STM32F103xE || STM32F103xG ||
+ 340:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** }
+ 341:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 342:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /**
+ 343:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @brief  Returns the peripheral clock frequency
+ 344:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @note   Returns 0 if peripheral clock is unknown
+ 345:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @param  PeriphClk Peripheral clock identifier
+ 346:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         This parameter can be one of the following values:
+ 347:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_RTC  RTC peripheral clock
+ 348:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_ADC  ADC peripheral clock
+ 349:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @if STM32F103xE
+ 350:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S2 I2S2 peripheral clock
+ 351:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 352:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 353:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @endif
+ 354:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @if STM32F103xG
+ 355:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S2 I2S2 peripheral clock
+ 356:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ARM GAS  /tmp/cc429rGU.s 			page 23
+
+
+ 357:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 358:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S2 I2S2 peripheral clock
+ 359:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @endif
+ 360:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @if STM32F105xC
+ 361:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S2 I2S2 peripheral clock
+ 362:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 363:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 364:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S2 I2S2 peripheral clock
+ 365:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 366:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 367:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S2 I2S2 peripheral clock
+ 368:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_USB  USB peripheral clock
+ 369:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @endif
+ 370:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @if STM32F107xC
+ 371:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S2 I2S2 peripheral clock
+ 372:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 373:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 374:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S2 I2S2 peripheral clock
+ 375:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 376:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S3 I2S3 peripheral clock
+ 377:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_I2S2 I2S2 peripheral clock
+ 378:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_USB  USB peripheral clock
+ 379:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @endif
+ 380:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @if STM32F102xx
+ 381:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_USB  USB peripheral clock
+ 382:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @endif
+ 383:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @if STM32F103xx
+ 384:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *            @arg @ref RCC_PERIPHCLK_USB  USB peripheral clock
+ 385:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   @endif
+ 386:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @retval Frequency in Hz (0: means that no available frequency for the peripheral)
+ 387:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */
+ 388:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** uint32_t HAL_RCCEx_GetPeriphCLKFreq(uint32_t PeriphClk)
+ 389:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** {
+ 349              		.loc 1 389 0
+ 350              		.cfi_startproc
+ 351              		@ args = 0, pretend = 0, frame = 24
+ 352              		@ frame_needed = 0, uses_anonymous_args = 0
+ 353              	.LVL29:
+ 354 0000 30B5     		push	{r4, r5, lr}
+ 355              	.LCFI4:
+ 356              		.cfi_def_cfa_offset 12
+ 357              		.cfi_offset 4, -12
+ 358              		.cfi_offset 5, -8
+ 359              		.cfi_offset 14, -4
+ 360 0002 87B0     		sub	sp, sp, #28
+ 361              	.LCFI5:
+ 362              		.cfi_def_cfa_offset 40
+ 363 0004 0546     		mov	r5, r0
+ 390:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F102x6) || defined(STM32F102xB) || defined(STM32F103x6)\
+ 391:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F103xB) || defined(STM32F103xE) || defined(STM32F103xG)\
+ 392:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F105xC) || defined(STM32F107xC)
+ 393:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F105xC) || defined(STM32F107xC)
+ 394:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   const uint8_t aPLLMULFactorTable[12] = {0, 0, 4,  5,  6,  7,  8,  9, 0, 0, 0, 13};
+ 395:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   const uint8_t aPredivFactorTable[16] = { 1, 2,  3,  4,  5,  6,  7,  8, 9,10, 11, 12, 13, 14, 15, 
+ 396:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #else
+ 397:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   const uint8_t aPLLMULFactorTable[16] = { 2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 1
+ 364              		.loc 1 397 0
+ARM GAS  /tmp/cc429rGU.s 			page 24
+
+
+ 365 0006 434C     		ldr	r4, .L45
+ 366 0008 94E80F00 		ldm	r4, {r0, r1, r2, r3}
+ 367              	.LVL30:
+ 368 000c 0DF1180E 		add	lr, sp, #24
+ 369 0010 0EE90F00 		stmdb	lr, {r0, r1, r2, r3}
+ 398:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   const uint8_t aPredivFactorTable[2] = { 1, 2};
+ 370              		.loc 1 398 0
+ 371 0014 238A     		ldrh	r3, [r4, #16]
+ 372 0016 ADF80430 		strh	r3, [sp, #4]	@ movhi
+ 373              	.LVL31:
+ 399:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif
+ 400:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif
+ 401:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   uint32_t temp_reg = 0, frequency = 0;
+ 402:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F102x6) || defined(STM32F102xB) || defined(STM32F103x6)\
+ 403:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F103xB) || defined(STM32F103xE) || defined(STM32F103xG)\
+ 404:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F105xC) || defined(STM32F107xC)
+ 405:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   uint32_t prediv1 = 0, pllclk = 0, pllmul = 0;
+ 406:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F102x6 || STM32F102xB || STM32F103x6 || STM32F103xB || STM32F103xE || STM32F103xG ||
+ 407:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F105xC) || defined(STM32F107xC)
+ 408:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   uint32_t pll2mul = 0, pll3mul = 0, prediv2 = 0;
+ 409:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F105xC || STM32F107xC */
+ 410:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 411:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Check the parameters */
+ 412:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   assert_param(IS_RCC_PERIPHCLOCK(PeriphClk));
+ 413:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   
+ 414:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   switch (PeriphClk)
+ 374              		.loc 1 414 0
+ 375 001a 022D     		cmp	r5, #2
+ 376 001c 62D0     		beq	.L27
+ 377 001e 102D     		cmp	r5, #16
+ 378 0020 03D0     		beq	.L28
+ 379 0022 012D     		cmp	r5, #1
+ 380 0024 3AD0     		beq	.L41
+ 401:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F102x6) || defined(STM32F102xB) || defined(STM32F103x6)\
+ 381              		.loc 1 401 0
+ 382 0026 0020     		movs	r0, #0
+ 383 0028 6DE0     		b	.L25
+ 384              	.L28:
+ 415:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   {
+ 416:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F102x6) || defined(STM32F102xB) || defined(STM32F103x6)\
+ 417:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F103xB) || defined(STM32F103xE) || defined(STM32F103xG)\
+ 418:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F105xC) || defined(STM32F107xC)
+ 419:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   case RCC_PERIPHCLK_USB:  
+ 420:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 421:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Get RCC configuration ------------------------------------------------------*/
+ 422:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       temp_reg = RCC->CFGR;
+ 385              		.loc 1 422 0
+ 386 002a 3B4B     		ldr	r3, .L45+4
+ 387 002c 5968     		ldr	r1, [r3, #4]
+ 388              	.LVL32:
+ 423:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   
+ 424:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Check if PLL is enabled */
+ 425:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       if (HAL_IS_BIT_SET(RCC->CR,RCC_CR_PLLON))
+ 389              		.loc 1 425 0
+ 390 002e 1B68     		ldr	r3, [r3]
+ 391 0030 13F0807F 		tst	r3, #16777216
+ 392 0034 69D0     		beq	.L34
+ARM GAS  /tmp/cc429rGU.s 			page 25
+
+
+ 426:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 427:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         pllmul = aPLLMULFactorTable[(uint32_t)(temp_reg & RCC_CFGR_PLLMULL) >> POSITION_VAL(RCC_CFG
+ 393              		.loc 1 427 0
+ 394 0036 01F47013 		and	r3, r1, #3932160
+ 395              	.LVL33:
+ 396              	.LBB30:
+ 397              	.LBB31:
+ 398              		.loc 2 531 0
+ 399 003a 4FF47012 		mov	r2, #3932160
+ 400              		.syntax unified
+ 401              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 402 003e 92FAA2F2 		rbit r2, r2
+ 403              	@ 0 "" 2
+ 404              	.LVL34:
+ 405              		.thumb
+ 406              		.syntax unified
+ 407              	.LBE31:
+ 408              	.LBE30:
+ 409              		.loc 1 427 0
+ 410 0042 B2FA82F2 		clz	r2, r2
+ 411 0046 D340     		lsrs	r3, r3, r2
+ 412 0048 06AA     		add	r2, sp, #24
+ 413 004a 1344     		add	r3, r3, r2
+ 414 004c 13F8100C 		ldrb	r0, [r3, #-16]	@ zero_extendqisi2
+ 415              	.LVL35:
+ 428:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         if ((temp_reg & RCC_CFGR_PLLSRC) != RCC_PLLSOURCE_HSI_DIV2)
+ 416              		.loc 1 428 0
+ 417 0050 11F4803F 		tst	r1, #65536
+ 418 0054 1ED0     		beq	.L30
+ 429:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 430:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F105xC) || defined(STM32F107xC) || defined(STM32F100xB)\
+ 431:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F100xE)
+ 432:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           prediv1 = aPredivFactorTable[(uint32_t)(RCC->CFGR2 & RCC_CFGR2_PREDIV1) >> POSITION_VAL(R
+ 433:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #else
+ 434:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           prediv1 = aPredivFactorTable[(uint32_t)(RCC->CFGR & RCC_CFGR_PLLXTPRE) >> POSITION_VAL(RC
+ 419              		.loc 1 434 0
+ 420 0056 304B     		ldr	r3, .L45+4
+ 421 0058 5B68     		ldr	r3, [r3, #4]
+ 422 005a 03F40033 		and	r3, r3, #131072
+ 423              	.LVL36:
+ 424              	.LBB32:
+ 425              	.LBB33:
+ 426              		.loc 2 531 0
+ 427 005e 4FF40032 		mov	r2, #131072
+ 428              		.syntax unified
+ 429              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 430 0062 92FAA2F2 		rbit r2, r2
+ 431              	@ 0 "" 2
+ 432              	.LVL37:
+ 433              		.thumb
+ 434              		.syntax unified
+ 435              	.LBE33:
+ 436              	.LBE32:
+ 437              		.loc 1 434 0
+ 438 0066 B2FA82F2 		clz	r2, r2
+ 439 006a D340     		lsrs	r3, r3, r2
+ 440 006c 06AA     		add	r2, sp, #24
+ARM GAS  /tmp/cc429rGU.s 			page 26
+
+
+ 441 006e 1344     		add	r3, r3, r2
+ 442 0070 13F8142C 		ldrb	r2, [r3, #-20]	@ zero_extendqisi2
+ 443              	.LVL38:
+ 435:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F105xC || STM32F107xC || STM32F100xB || STM32F100xE */
+ 436:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 437:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F105xC) || defined(STM32F107xC)
+ 438:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           if(HAL_IS_BIT_SET(RCC->CFGR2, RCC_CFGR2_PREDIV1SRC))
+ 439:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           {
+ 440:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****             /* PLL2 selected as Prediv1 source */
+ 441:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****             /* PLLCLK = PLL2CLK / PREDIV1 * PLLMUL with PLL2CLK = HSE/PREDIV2 * PLL2MUL */
+ 442:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****             prediv2 = ((RCC->CFGR2 & RCC_CFGR2_PREDIV2) >> POSITION_VAL(RCC_CFGR2_PREDIV2)) + 1;
+ 443:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****             pll2mul = ((RCC->CFGR2 & RCC_CFGR2_PLL2MUL) >> POSITION_VAL(RCC_CFGR2_PLL2MUL)) + 2;
+ 444:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****             pllclk = (uint32_t)((((HSE_VALUE / prediv2) * pll2mul) / prediv1) * pllmul);
+ 445:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           }
+ 446:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           else
+ 447:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           {
+ 448:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****             /* HSE used as PLL clock source : PLLCLK = HSE/PREDIV1 * PLLMUL */
+ 449:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****             pllclk = (uint32_t)((HSE_VALUE / prediv1) * pllmul);
+ 450:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           }
+ 451:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           
+ 452:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* If PLLMUL was set to 13 means that it was to cover the case PLLMUL 6.5 (avoid using fl
+ 453:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* In this case need to divide pllclk by 2 */
+ 454:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           if (pllmul == aPLLMULFactorTable[(uint32_t)(RCC_CFGR_PLLMULL6_5) >> POSITION_VAL(RCC_CFGR
+ 455:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           {
+ 456:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****               pllclk = pllclk / 2;
+ 457:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           }
+ 458:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #else
+ 459:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           if ((temp_reg & RCC_CFGR_PLLSRC) != RCC_PLLSOURCE_HSI_DIV2)
+ 460:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           {
+ 461:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****             /* HSE used as PLL clock source : PLLCLK = HSE/PREDIV1 * PLLMUL */
+ 462:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****             pllclk = (uint32_t)((HSE_VALUE / prediv1) * pllmul);
+ 444              		.loc 1 462 0
+ 445 0074 294B     		ldr	r3, .L45+8
+ 446 0076 B3FBF2F3 		udiv	r3, r3, r2
+ 447 007a 03FB00F0 		mul	r0, r3, r0
+ 448              	.LVL39:
+ 449              	.L31:
+ 463:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           }
+ 464:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F105xC || STM32F107xC */
+ 465:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
+ 466:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         else
+ 467:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 468:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* HSI used as PLL clock source : PLLCLK = HSI/2 * PLLMUL */
+ 469:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           pllclk = (uint32_t)((HSI_VALUE >> 1) * pllmul);
+ 470:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
+ 471:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 472:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         /* Calcul of the USB frequency*/
+ 473:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F105xC) || defined(STM32F107xC)
+ 474:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         /* USBCLK = PLLVCO = (2 x PLLCLK) / USB prescaler */
+ 475:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         if (__HAL_RCC_GET_USB_SOURCE() == RCC_USBCLKSOURCE_PLL_DIV2)
+ 476:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 477:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* Prescaler of 2 selected for USB */ 
+ 478:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           frequency = pllclk;
+ 479:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
+ 480:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         else
+ 481:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 482:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* Prescaler of 3 selected for USB */ 
+ARM GAS  /tmp/cc429rGU.s 			page 27
+
+
+ 483:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           frequency = (2 * pllclk) / 3;
+ 484:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
+ 485:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #else
+ 486:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         /* USBCLK = PLLCLK / USB prescaler */
+ 487:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         if (__HAL_RCC_GET_USB_SOURCE() == RCC_USBCLKSOURCE_PLL)
+ 450              		.loc 1 487 0
+ 451 007e 264B     		ldr	r3, .L45+4
+ 452 0080 5B68     		ldr	r3, [r3, #4]
+ 453 0082 13F4800F 		tst	r3, #4194304
+ 454 0086 3ED1     		bne	.L25
+ 488:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 489:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* No prescaler selected for USB */
+ 490:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           frequency = pllclk;
+ 491:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
+ 492:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         else
+ 493:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 494:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* Prescaler of 1.5 selected for USB */ 
+ 495:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           frequency = (pllclk * 2) / 3;
+ 455              		.loc 1 495 0
+ 456 0088 4000     		lsls	r0, r0, #1
+ 457              	.LVL40:
+ 458 008a 254B     		ldr	r3, .L45+12
+ 459 008c A3FB0030 		umull	r3, r0, r3, r0
+ 460 0090 4008     		lsrs	r0, r0, #1
+ 461              	.LVL41:
+ 462 0092 38E0     		b	.L25
+ 463              	.LVL42:
+ 464              	.L30:
+ 469:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
+ 465              		.loc 1 469 0
+ 466 0094 234B     		ldr	r3, .L45+16
+ 467 0096 03FB00F0 		mul	r0, r3, r0
+ 468              	.LVL43:
+ 469 009a F0E7     		b	.L31
+ 470              	.LVL44:
+ 471              	.L41:
+ 496:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
+ 497:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif
+ 498:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 499:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       break;
+ 500:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
+ 501:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F102x6 || STM32F102xB || STM32F103x6 || STM32F103xB || STM32F103xE || STM32F103xG ||
+ 502:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F103xE) || defined(STM32F103xG) || defined(STM32F105xC)\
+ 503:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****  || defined(STM32F107xC)
+ 504:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   case RCC_PERIPHCLK_I2S2:  
+ 505:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 506:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F103xE) || defined(STM32F103xG)
+ 507:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* SYSCLK used as source clock for I2S2 */
+ 508:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       frequency = HAL_RCC_GetSysClockFreq();
+ 509:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #else
+ 510:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       if (__HAL_RCC_GET_I2S2_SOURCE() == RCC_I2S2CLKSOURCE_SYSCLK)
+ 511:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 512:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         /* SYSCLK used as source clock for I2S2 */
+ 513:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         frequency = HAL_RCC_GetSysClockFreq();
+ 514:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 515:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       else
+ 516:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ARM GAS  /tmp/cc429rGU.s 			page 28
+
+
+ 517:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****          /* Check if PLLI2S is enabled */
+ 518:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         if (HAL_IS_BIT_SET(RCC->CR, RCC_CR_PLL3ON))
+ 519:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 520:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* PLLI2SVCO = 2 * PLLI2SCLK = 2 * (HSE/PREDIV2 * PLL3MUL) */
+ 521:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           prediv2 = ((RCC->CFGR2 & RCC_CFGR2_PREDIV2) >> POSITION_VAL(RCC_CFGR2_PREDIV2)) + 1;
+ 522:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           pll3mul = ((RCC->CFGR2 & RCC_CFGR2_PLL3MUL) >> POSITION_VAL(RCC_CFGR2_PLL3MUL)) + 2;
+ 523:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           frequency = (uint32_t)(2 * ((HSE_VALUE / prediv2) * pll3mul));
+ 524:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
+ 525:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 526:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F103xE || STM32F103xG */
+ 527:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       break;
+ 528:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
+ 529:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   case RCC_PERIPHCLK_I2S3:
+ 530:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 531:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F103xE) || defined(STM32F103xG)
+ 532:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* SYSCLK used as source clock for I2S3 */
+ 533:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       frequency = HAL_RCC_GetSysClockFreq();
+ 534:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #else
+ 535:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       if (__HAL_RCC_GET_I2S3_SOURCE() == RCC_I2S3CLKSOURCE_SYSCLK)
+ 536:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 537:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         /* SYSCLK used as source clock for I2S3 */
+ 538:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         frequency = HAL_RCC_GetSysClockFreq();
+ 539:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 540:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       else
+ 541:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 542:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****          /* Check if PLLI2S is enabled */
+ 543:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         if (HAL_IS_BIT_SET(RCC->CR, RCC_CR_PLL3ON))
+ 544:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
+ 545:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* PLLI2SVCO = 2 * PLLI2SCLK = 2 * (HSE/PREDIV2 * PLL3MUL) */
+ 546:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           prediv2 = ((RCC->CFGR2 & RCC_CFGR2_PREDIV2) >> POSITION_VAL(RCC_CFGR2_PREDIV2)) + 1;
+ 547:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           pll3mul = ((RCC->CFGR2 & RCC_CFGR2_PLL3MUL) >> POSITION_VAL(RCC_CFGR2_PLL3MUL)) + 2;
+ 548:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           frequency = (uint32_t)(2 * ((HSE_VALUE / prediv2) * pll3mul));
+ 549:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
+ 550:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 551:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F103xE || STM32F103xG */
+ 552:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       break;
+ 553:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
+ 554:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F103xE || STM32F103xG || STM32F105xC || STM32F107xC */
+ 555:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   case RCC_PERIPHCLK_RTC:  
+ 556:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 557:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Get RCC BDCR configuration ------------------------------------------------------*/
+ 558:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       temp_reg = RCC->BDCR;
+ 472              		.loc 1 558 0
+ 473 009c 1E4B     		ldr	r3, .L45+4
+ 474 009e 1B6A     		ldr	r3, [r3, #32]
+ 475              	.LVL45:
+ 559:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
+ 560:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Check if LSE is ready if RTC clock selection is LSE */
+ 561:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       if (((temp_reg & RCC_BDCR_RTCSEL) == RCC_RTCCLKSOURCE_LSE) && (HAL_IS_BIT_SET(temp_reg, RCC_B
+ 476              		.loc 1 561 0
+ 477 00a0 40F20232 		movw	r2, #770
+ 478 00a4 1A40     		ands	r2, r2, r3
+ 479 00a6 B2F5817F 		cmp	r2, #258
+ 480 00aa 30D0     		beq	.L35
+ 562:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 563:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         frequency = LSE_VALUE;
+ 564:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ARM GAS  /tmp/cc429rGU.s 			page 29
+
+
+ 565:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Check if LSI is ready if RTC clock selection is LSI */
+ 566:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       else if (((temp_reg & RCC_BDCR_RTCSEL) == RCC_RTCCLKSOURCE_LSI) && (HAL_IS_BIT_SET(RCC->CSR, 
+ 481              		.loc 1 566 0
+ 482 00ac 03F44073 		and	r3, r3, #768
+ 483              	.LVL46:
+ 484 00b0 B3F5007F 		cmp	r3, #512
+ 485 00b4 04D0     		beq	.L42
+ 486              	.L32:
+ 567:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 568:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         frequency = LSI_VALUE;
+ 569:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 570:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       else if (((temp_reg & RCC_BDCR_RTCSEL) == RCC_RTCCLKSOURCE_HSE_DIV128) && (HAL_IS_BIT_SET(RCC
+ 487              		.loc 1 570 0
+ 488 00b6 B3F5407F 		cmp	r3, #768
+ 489 00ba 09D0     		beq	.L43
+ 571:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 572:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         frequency = HSE_VALUE / 128;
+ 573:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 574:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Clock not enabled for RTC*/
+ 575:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       else
+ 576:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 577:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         frequency = 0;
+ 490              		.loc 1 577 0
+ 491 00bc 0020     		movs	r0, #0
+ 492 00be 22E0     		b	.L25
+ 493              	.L42:
+ 566:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 494              		.loc 1 566 0 discriminator 1
+ 495 00c0 154A     		ldr	r2, .L45+4
+ 496 00c2 526A     		ldr	r2, [r2, #36]
+ 497 00c4 12F0020F 		tst	r2, #2
+ 498 00c8 F5D0     		beq	.L32
+ 568:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 499              		.loc 1 568 0
+ 500 00ca 49F64040 		movw	r0, #40000
+ 501 00ce 1AE0     		b	.L25
+ 502              	.L43:
+ 570:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
+ 503              		.loc 1 570 0 discriminator 1
+ 504 00d0 114B     		ldr	r3, .L45+4
+ 505 00d2 1B68     		ldr	r3, [r3]
+ 506 00d4 13F4003F 		tst	r3, #131072
+ 507 00d8 02D0     		beq	.L44
+ 572:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 508              		.loc 1 572 0
+ 509 00da 4FF22440 		movw	r0, #62500
+ 510              	.LVL47:
+ 578:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 579:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       break;
+ 580:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
+ 581:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   case RCC_PERIPHCLK_ADC:  
+ 582:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ 583:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       frequency = HAL_RCC_GetPCLK2Freq() / (((__HAL_RCC_GET_ADC_SOURCE() >> POSITION_VAL(RCC_CFGR_A
+ 584:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       break;
+ 585:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
+ 586:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   default: 
+ 587:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
+ARM GAS  /tmp/cc429rGU.s 			page 30
+
+
+ 588:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       break;
+ 589:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
+ 590:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   }
+ 591:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   return(frequency);
+ 511              		.loc 1 591 0
+ 512 00de 12E0     		b	.L25
+ 513              	.LVL48:
+ 514              	.L44:
+ 577:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 515              		.loc 1 577 0
+ 516 00e0 0020     		movs	r0, #0
+ 517 00e2 10E0     		b	.L25
+ 518              	.LVL49:
+ 519              	.L27:
+ 583:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       break;
+ 520              		.loc 1 583 0
+ 521 00e4 FFF7FEFF 		bl	HAL_RCC_GetPCLK2Freq
+ 522              	.LVL50:
+ 523 00e8 0B4B     		ldr	r3, .L45+4
+ 524 00ea 5B68     		ldr	r3, [r3, #4]
+ 525 00ec 03F44043 		and	r3, r3, #49152
+ 526              	.LVL51:
+ 527              	.LBB34:
+ 528              	.LBB35:
+ 529              		.loc 2 531 0
+ 530 00f0 4FF48042 		mov	r2, #16384
+ 531              		.syntax unified
+ 532              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 533 00f4 92FAA2F2 		rbit r2, r2
+ 534              	@ 0 "" 2
+ 535              	.LVL52:
+ 536              		.thumb
+ 537              		.syntax unified
+ 538              	.LBE35:
+ 539              	.LBE34:
+ 583:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       break;
+ 540              		.loc 1 583 0
+ 541 00f8 B2FA82F2 		clz	r2, r2
+ 542 00fc D340     		lsrs	r3, r3, r2
+ 543 00fe 0133     		adds	r3, r3, #1
+ 544 0100 5B00     		lsls	r3, r3, #1
+ 545 0102 B0FBF3F0 		udiv	r0, r0, r3
+ 546              	.LVL53:
+ 547              	.L25:
+ 592:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** }
+ 548              		.loc 1 592 0
+ 549 0106 07B0     		add	sp, sp, #28
+ 550              	.LCFI6:
+ 551              		.cfi_remember_state
+ 552              		.cfi_def_cfa_offset 12
+ 553              		@ sp needed
+ 554 0108 30BD     		pop	{r4, r5, pc}
+ 555              	.LVL54:
+ 556              	.L34:
+ 557              	.LCFI7:
+ 558              		.cfi_restore_state
+ 401:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #if defined(STM32F102x6) || defined(STM32F102xB) || defined(STM32F103x6)\
+ARM GAS  /tmp/cc429rGU.s 			page 31
+
+
+ 559              		.loc 1 401 0
+ 560 010a 0020     		movs	r0, #0
+ 561 010c FBE7     		b	.L25
+ 562              	.LVL55:
+ 563              	.L35:
+ 563:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       }
+ 564              		.loc 1 563 0
+ 565 010e 4FF40040 		mov	r0, #32768
+ 566 0112 F8E7     		b	.L25
+ 567              	.L46:
+ 568              		.align	2
+ 569              	.L45:
+ 570 0114 00000000 		.word	.LANCHOR0
+ 571 0118 00100240 		.word	1073876992
+ 572 011c 00127A00 		.word	8000000
+ 573 0120 ABAAAAAA 		.word	-1431655765
+ 574 0124 00093D00 		.word	4000000
+ 575              		.cfi_endproc
+ 576              	.LFE66:
+ 578              		.section	.rodata
+ 579              		.align	2
+ 580              		.set	.LANCHOR0,. + 0
+ 581              	.LC0:
+ 582 0000 02       		.byte	2
+ 583 0001 03       		.byte	3
+ 584 0002 04       		.byte	4
+ 585 0003 05       		.byte	5
+ 586 0004 06       		.byte	6
+ 587 0005 07       		.byte	7
+ 588 0006 08       		.byte	8
+ 589 0007 09       		.byte	9
+ 590 0008 0A       		.byte	10
+ 591 0009 0B       		.byte	11
+ 592 000a 0C       		.byte	12
+ 593 000b 0D       		.byte	13
+ 594 000c 0E       		.byte	14
+ 595 000d 0F       		.byte	15
+ 596 000e 10       		.byte	16
+ 597 000f 10       		.byte	16
+ 598              	.LC1:
+ 599 0010 01       		.byte	1
+ 600 0011 02       		.byte	2
+ 601              		.text
+ 602              	.Letext0:
+ 603              		.file 3 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 604              		.file 4 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 605              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+ 606              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+ 607              		.file 7 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
+ 608              		.file 8 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f1xx.h"
+ 609              		.file 9 "/usr/arm-none-eabi/include/sys/lock.h"
+ 610              		.file 10 "/usr/arm-none-eabi/include/sys/_types.h"
+ 611              		.file 11 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 612              		.file 12 "/usr/arm-none-eabi/include/sys/reent.h"
+ 613              		.file 13 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 614              		.file 14 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
+ 615              		.file 15 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ARM GAS  /tmp/cc429rGU.s 			page 32
+
+
+ 616              		.file 16 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  /tmp/cc429rGU.s 			page 33
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_rcc_ex.c
+     /tmp/cc429rGU.s:16     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 $t
+     /tmp/cc429rGU.s:23     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 HAL_RCCEx_PeriphCLKConfig
+     /tmp/cc429rGU.s:284    .text.HAL_RCCEx_PeriphCLKConfig:000000000000012c $d
+     /tmp/cc429rGU.s:291    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 $t
+     /tmp/cc429rGU.s:298    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 HAL_RCCEx_GetPeriphCLKConfig
+     /tmp/cc429rGU.s:335    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000028 $d
+     /tmp/cc429rGU.s:340    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 $t
+     /tmp/cc429rGU.s:347    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 HAL_RCCEx_GetPeriphCLKFreq
+     /tmp/cc429rGU.s:570    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000114 $d
+     /tmp/cc429rGU.s:579    .rodata:0000000000000000 $d
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+HAL_GetTick
+HAL_RCC_GetPCLK2Freq

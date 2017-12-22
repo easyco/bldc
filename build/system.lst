@@ -1,0 +1,300 @@
+ARM GAS  /tmp/ccwGZ6Zs.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"system.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.SystemClock_Config,"ax",%progbits
+  16              		.align	1
+  17              		.global	SystemClock_Config
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	SystemClock_Config:
+  24              	.LFB64:
+  25              		.file 1 "Main/system.c"
+   1:Main/system.c **** #include "system.h"
+   2:Main/system.c **** 
+   3:Main/system.c **** 
+   4:Main/system.c **** /**
+   5:Main/system.c **** * 
+   6:Main/system.c **** */
+   7:Main/system.c **** void SystemClock_Config(void)
+   8:Main/system.c **** {
+  26              		.loc 1 8 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 64
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30 0000 70B5     		push	{r4, r5, r6, lr}
+  31              	.LCFI0:
+  32              		.cfi_def_cfa_offset 16
+  33              		.cfi_offset 4, -16
+  34              		.cfi_offset 5, -12
+  35              		.cfi_offset 6, -8
+  36              		.cfi_offset 14, -4
+  37 0002 90B0     		sub	sp, sp, #64
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 80
+   9:Main/system.c **** 	RCC_OscInitTypeDef RCC_OscInitStruct;
+  10:Main/system.c **** 	RCC_ClkInitTypeDef RCC_ClkInitStruct;
+  11:Main/system.c **** 	
+  12:Main/system.c **** #ifdef SYSCLK_SOURCE_HSE	// SYSCLK = 72Mhz
+  13:Main/system.c **** 	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  14:Main/system.c **** 	RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  15:Main/system.c **** 	RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+  16:Main/system.c **** 	RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  17:Main/system.c **** 	RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  18:Main/system.c **** 	RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  19:Main/system.c **** 	RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+ARM GAS  /tmp/ccwGZ6Zs.s 			page 2
+
+
+  20:Main/system.c **** 	HAL_RCC_OscConfig(&RCC_OscInitStruct);
+  21:Main/system.c **** 
+  22:Main/system.c **** 	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RC
+  23:Main/system.c **** 	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  24:Main/system.c **** 	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  25:Main/system.c **** 	RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  26:Main/system.c **** 	RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  27:Main/system.c **** 	HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2);
+  28:Main/system.c **** #else	// SYSCLK = 64Mhz
+  29:Main/system.c **** 	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  40              		.loc 1 29 0
+  41 0004 0225     		movs	r5, #2
+  42 0006 0695     		str	r5, [sp, #24]
+  30:Main/system.c **** 	RCC_OscInitStruct.HSEState = RCC_HSE_OFF;
+  43              		.loc 1 30 0
+  44 0008 0024     		movs	r4, #0
+  45 000a 0794     		str	r4, [sp, #28]
+  31:Main/system.c **** 	RCC_OscInitStruct.LSEState = RCC_LSE_OFF;
+  46              		.loc 1 31 0
+  47 000c 0994     		str	r4, [sp, #36]
+  32:Main/system.c **** 	RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  48              		.loc 1 32 0
+  49 000e 0123     		movs	r3, #1
+  50 0010 0A93     		str	r3, [sp, #40]
+  33:Main/system.c **** 	RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  51              		.loc 1 33 0
+  52 0012 1023     		movs	r3, #16
+  53 0014 0B93     		str	r3, [sp, #44]
+  34:Main/system.c **** 	RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+  54              		.loc 1 34 0
+  55 0016 0894     		str	r4, [sp, #32]
+  35:Main/system.c **** 	RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  56              		.loc 1 35 0
+  57 0018 0D95     		str	r5, [sp, #52]
+  36:Main/system.c **** 	RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI_DIV2;
+  58              		.loc 1 36 0
+  59 001a 0E94     		str	r4, [sp, #56]
+  37:Main/system.c **** 	RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL16;
+  60              		.loc 1 37 0
+  61 001c 4FF46013 		mov	r3, #3670016
+  62 0020 0F93     		str	r3, [sp, #60]
+  38:Main/system.c **** 	HAL_RCC_OscConfig(&RCC_OscInitStruct);
+  63              		.loc 1 38 0
+  64 0022 06A8     		add	r0, sp, #24
+  65 0024 FFF7FEFF 		bl	HAL_RCC_OscConfig
+  66              	.LVL0:
+  39:Main/system.c **** 
+  40:Main/system.c **** 	RCC_ClkInitStruct.ClockType = (RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_PCLK1 | R
+  67              		.loc 1 40 0
+  68 0028 0F26     		movs	r6, #15
+  69 002a 0196     		str	r6, [sp, #4]
+  41:Main/system.c **** 	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  70              		.loc 1 41 0
+  71 002c 0295     		str	r5, [sp, #8]
+  42:Main/system.c **** 	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  72              		.loc 1 42 0
+  73 002e 0394     		str	r4, [sp, #12]
+ARM GAS  /tmp/ccwGZ6Zs.s 			page 3
+
+
+  43:Main/system.c **** 	RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  74              		.loc 1 43 0
+  75 0030 0594     		str	r4, [sp, #20]
+  44:Main/system.c **** 	RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  76              		.loc 1 44 0
+  77 0032 4FF48063 		mov	r3, #1024
+  78 0036 0493     		str	r3, [sp, #16]
+  45:Main/system.c **** 	HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2);	
+  79              		.loc 1 45 0
+  80 0038 2946     		mov	r1, r5
+  81 003a 01A8     		add	r0, sp, #4
+  82 003c FFF7FEFF 		bl	HAL_RCC_ClockConfig
+  83              	.LVL1:
+  46:Main/system.c **** #endif
+  47:Main/system.c **** 
+  48:Main/system.c **** 	HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq() / 1000);
+  84              		.loc 1 48 0
+  85 0040 FFF7FEFF 		bl	HAL_RCC_GetHCLKFreq
+  86              	.LVL2:
+  87 0044 084B     		ldr	r3, .L3
+  88 0046 A3FB0030 		umull	r3, r0, r3, r0
+  89 004a 8009     		lsrs	r0, r0, #6
+  90 004c FFF7FEFF 		bl	HAL_SYSTICK_Config
+  91              	.LVL3:
+  49:Main/system.c **** 	HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
+  92              		.loc 1 49 0
+  93 0050 0420     		movs	r0, #4
+  94 0052 FFF7FEFF 		bl	HAL_SYSTICK_CLKSourceConfig
+  95              	.LVL4:
+  50:Main/system.c **** 	HAL_NVIC_SetPriority(SysTick_IRQn, 15, 0);
+  96              		.loc 1 50 0
+  97 0056 2246     		mov	r2, r4
+  98 0058 3146     		mov	r1, r6
+  99 005a 4FF0FF30 		mov	r0, #-1
+ 100 005e FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 101              	.LVL5:
+  51:Main/system.c **** }
+ 102              		.loc 1 51 0
+ 103 0062 10B0     		add	sp, sp, #64
+ 104              	.LCFI2:
+ 105              		.cfi_def_cfa_offset 16
+ 106              		@ sp needed
+ 107 0064 70BD     		pop	{r4, r5, r6, pc}
+ 108              	.L4:
+ 109 0066 00BF     		.align	2
+ 110              	.L3:
+ 111 0068 D34D6210 		.word	274877907
+ 112              		.cfi_endproc
+ 113              	.LFE64:
+ 115              		.section	.text.__io_putchar,"ax",%progbits
+ 116              		.align	1
+ 117              		.global	__io_putchar
+ 118              		.syntax unified
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.fpu softvfp
+ 123              	__io_putchar:
+ARM GAS  /tmp/ccwGZ6Zs.s 			page 4
+
+
+ 124              	.LFB65:
+  52:Main/system.c **** 
+  53:Main/system.c **** extern UART_HandleTypeDef huart;
+  54:Main/system.c **** #ifdef __GNUC__
+  55:Main/system.c **** int __io_putchar(int ch)
+  56:Main/system.c **** #else
+  57:Main/system.c **** int fputc(int ch, FILE *f)
+  58:Main/system.c **** #endif
+  59:Main/system.c **** {
+ 125              		.loc 1 59 0
+ 126              		.cfi_startproc
+ 127              		@ args = 0, pretend = 0, frame = 8
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129              	.LVL6:
+ 130 0000 00B5     		push	{lr}
+ 131              	.LCFI3:
+ 132              		.cfi_def_cfa_offset 4
+ 133              		.cfi_offset 14, -4
+ 134 0002 83B0     		sub	sp, sp, #12
+ 135              	.LCFI4:
+ 136              		.cfi_def_cfa_offset 16
+ 137 0004 02A9     		add	r1, sp, #8
+ 138 0006 41F8040D 		str	r0, [r1, #-4]!
+  60:Main/system.c **** 	HAL_UART_Transmit(&huart, (uint8_t *)&ch, 1, 100);
+ 139              		.loc 1 60 0
+ 140 000a 6423     		movs	r3, #100
+ 141 000c 0122     		movs	r2, #1
+ 142 000e 0348     		ldr	r0, .L7
+ 143              	.LVL7:
+ 144 0010 FFF7FEFF 		bl	HAL_UART_Transmit
+ 145              	.LVL8:
+  61:Main/system.c **** 	return ch;
+  62:Main/system.c **** }
+ 146              		.loc 1 62 0
+ 147 0014 0198     		ldr	r0, [sp, #4]
+ 148 0016 03B0     		add	sp, sp, #12
+ 149              	.LCFI5:
+ 150              		.cfi_def_cfa_offset 4
+ 151              		@ sp needed
+ 152 0018 5DF804FB 		ldr	pc, [sp], #4
+ 153              	.L8:
+ 154              		.align	2
+ 155              	.L7:
+ 156 001c 00000000 		.word	huart
+ 157              		.cfi_endproc
+ 158              	.LFE65:
+ 160              		.section	.text.Error_Handler,"ax",%progbits
+ 161              		.align	1
+ 162              		.global	Error_Handler
+ 163              		.syntax unified
+ 164              		.thumb
+ 165              		.thumb_func
+ 166              		.fpu softvfp
+ 168              	Error_Handler:
+ 169              	.LFB66:
+  63:Main/system.c **** 
+  64:Main/system.c **** /**
+ARM GAS  /tmp/ccwGZ6Zs.s 			page 5
+
+
+  65:Main/system.c **** * @brief  This function is executed in case of error occurrence.
+  66:Main/system.c **** * @param  None
+  67:Main/system.c **** * @retval None
+  68:Main/system.c **** */
+  69:Main/system.c **** void Error_Handler(void)
+  70:Main/system.c **** {
+ 170              		.loc 1 70 0
+ 171              		.cfi_startproc
+ 172              		@ Volatile: function does not return.
+ 173              		@ args = 0, pretend = 0, frame = 0
+ 174              		@ frame_needed = 0, uses_anonymous_args = 0
+ 175              		@ link register save eliminated.
+ 176              	.L10:
+ 177 0000 FEE7     		b	.L10
+ 178              		.cfi_endproc
+ 179              	.LFE66:
+ 181              		.text
+ 182              	.Letext0:
+ 183              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 184              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 185              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+ 186              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+ 187              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
+ 188              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
+ 189              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
+ 190              		.file 9 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 191              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
+ 192              		.file 11 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 193              		.file 12 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ 194              		.file 13 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
+ 195              		.file 14 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 196              		.file 15 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 197              		.file 16 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  /tmp/ccwGZ6Zs.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 system.c
+     /tmp/ccwGZ6Zs.s:16     .text.SystemClock_Config:0000000000000000 $t
+     /tmp/ccwGZ6Zs.s:23     .text.SystemClock_Config:0000000000000000 SystemClock_Config
+     /tmp/ccwGZ6Zs.s:111    .text.SystemClock_Config:0000000000000068 $d
+     /tmp/ccwGZ6Zs.s:116    .text.__io_putchar:0000000000000000 $t
+     /tmp/ccwGZ6Zs.s:123    .text.__io_putchar:0000000000000000 __io_putchar
+     /tmp/ccwGZ6Zs.s:156    .text.__io_putchar:000000000000001c $d
+     /tmp/ccwGZ6Zs.s:161    .text.Error_Handler:0000000000000000 $t
+     /tmp/ccwGZ6Zs.s:168    .text.Error_Handler:0000000000000000 Error_Handler
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig
+HAL_RCC_GetHCLKFreq
+HAL_SYSTICK_Config
+HAL_SYSTICK_CLKSourceConfig
+HAL_NVIC_SetPriority
+HAL_UART_Transmit
+huart

@@ -1,0 +1,402 @@
+ARM GAS  /tmp/ccwOK2Tv.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_it.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.NMI_Handler,"ax",%progbits
+  16              		.align	1
+  17              		.global	NMI_Handler
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	NMI_Handler:
+  24              	.LFB64:
+  25              		.file 1 "Main/stm32f1xx_it.c"
+   1:Main/stm32f1xx_it.c **** /**
+   2:Main/stm32f1xx_it.c ****   ******************************************************************************
+   3:Main/stm32f1xx_it.c ****   * @file    Templates/Src/stm32f1xx.c
+   4:Main/stm32f1xx_it.c ****   * @author  MCD Application Team
+   5:Main/stm32f1xx_it.c ****   * @version V1.4.0
+   6:Main/stm32f1xx_it.c ****   * @date    29-April-2016
+   7:Main/stm32f1xx_it.c ****   * @brief   Main Interrupt Service Routines.
+   8:Main/stm32f1xx_it.c ****   *          This file provides template for all exceptions handler and 
+   9:Main/stm32f1xx_it.c ****   *          peripherals interrupt service routine.
+  10:Main/stm32f1xx_it.c ****   ******************************************************************************
+  11:Main/stm32f1xx_it.c ****   * @attention
+  12:Main/stm32f1xx_it.c ****   *
+  13:Main/stm32f1xx_it.c ****   * <h2><center>&copy; COPYRIGHT(c) 2016 STMicroelectronics</center></h2>
+  14:Main/stm32f1xx_it.c ****   *
+  15:Main/stm32f1xx_it.c ****   * Redistribution and use in source and binary forms, with or without modification,
+  16:Main/stm32f1xx_it.c ****   * are permitted provided that the following conditions are met:
+  17:Main/stm32f1xx_it.c ****   *   1. Redistributions of source code must retain the above copyright notice,
+  18:Main/stm32f1xx_it.c ****   *      this list of conditions and the following disclaimer.
+  19:Main/stm32f1xx_it.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  20:Main/stm32f1xx_it.c ****   *      this list of conditions and the following disclaimer in the documentation
+  21:Main/stm32f1xx_it.c ****   *      and/or other materials provided with the distribution.
+  22:Main/stm32f1xx_it.c ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  23:Main/stm32f1xx_it.c ****   *      may be used to endorse or promote products derived from this software
+  24:Main/stm32f1xx_it.c ****   *      without specific prior written permission.
+  25:Main/stm32f1xx_it.c ****   *
+  26:Main/stm32f1xx_it.c ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  27:Main/stm32f1xx_it.c ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  28:Main/stm32f1xx_it.c ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  29:Main/stm32f1xx_it.c ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  30:Main/stm32f1xx_it.c ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  31:Main/stm32f1xx_it.c ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  32:Main/stm32f1xx_it.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  33:Main/stm32f1xx_it.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ARM GAS  /tmp/ccwOK2Tv.s 			page 2
+
+
+  34:Main/stm32f1xx_it.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  35:Main/stm32f1xx_it.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  36:Main/stm32f1xx_it.c ****   *
+  37:Main/stm32f1xx_it.c ****   ******************************************************************************
+  38:Main/stm32f1xx_it.c ****   */
+  39:Main/stm32f1xx_it.c **** 
+  40:Main/stm32f1xx_it.c **** /* Includes ------------------------------------------------------------------*/
+  41:Main/stm32f1xx_it.c **** #include "stm32f1xx_hal.h"
+  42:Main/stm32f1xx_it.c **** #include "stm32f1xx_it.h"
+  43:Main/stm32f1xx_it.c ****    
+  44:Main/stm32f1xx_it.c **** /** @addtogroup STM32F1xx_HAL_Examples
+  45:Main/stm32f1xx_it.c ****   * @{
+  46:Main/stm32f1xx_it.c ****   */
+  47:Main/stm32f1xx_it.c **** 
+  48:Main/stm32f1xx_it.c **** /** @addtogroup Templates
+  49:Main/stm32f1xx_it.c ****   * @{
+  50:Main/stm32f1xx_it.c ****   */
+  51:Main/stm32f1xx_it.c **** 
+  52:Main/stm32f1xx_it.c **** /* Private typedef -----------------------------------------------------------*/
+  53:Main/stm32f1xx_it.c **** /* Private define ------------------------------------------------------------*/
+  54:Main/stm32f1xx_it.c **** /* Private macro -------------------------------------------------------------*/
+  55:Main/stm32f1xx_it.c **** /* Private variables ---------------------------------------------------------*/
+  56:Main/stm32f1xx_it.c **** 
+  57:Main/stm32f1xx_it.c **** /* Private function prototypes -----------------------------------------------*/
+  58:Main/stm32f1xx_it.c **** /* Private functions ---------------------------------------------------------*/
+  59:Main/stm32f1xx_it.c **** 
+  60:Main/stm32f1xx_it.c **** /******************************************************************************/
+  61:Main/stm32f1xx_it.c **** /*            Cortex-M3 Processor Exceptions Handlers                         */
+  62:Main/stm32f1xx_it.c **** /******************************************************************************/
+  63:Main/stm32f1xx_it.c **** 
+  64:Main/stm32f1xx_it.c **** /**
+  65:Main/stm32f1xx_it.c ****   * @brief   This function handles NMI exception.
+  66:Main/stm32f1xx_it.c ****   * @param  None
+  67:Main/stm32f1xx_it.c ****   * @retval None
+  68:Main/stm32f1xx_it.c ****   */
+  69:Main/stm32f1xx_it.c **** void NMI_Handler(void)
+  70:Main/stm32f1xx_it.c **** {
+  26              		.loc 1 70 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+  31 0000 7047     		bx	lr
+  32              		.cfi_endproc
+  33              	.LFE64:
+  35              		.section	.text.HardFault_Handler,"ax",%progbits
+  36              		.align	1
+  37              		.global	HardFault_Handler
+  38              		.syntax unified
+  39              		.thumb
+  40              		.thumb_func
+  41              		.fpu softvfp
+  43              	HardFault_Handler:
+  44              	.LFB65:
+  71:Main/stm32f1xx_it.c **** }
+  72:Main/stm32f1xx_it.c **** 
+  73:Main/stm32f1xx_it.c **** /**
+ARM GAS  /tmp/ccwOK2Tv.s 			page 3
+
+
+  74:Main/stm32f1xx_it.c ****   * @brief  This function handles Hard Fault exception.
+  75:Main/stm32f1xx_it.c ****   * @param  None
+  76:Main/stm32f1xx_it.c ****   * @retval None
+  77:Main/stm32f1xx_it.c ****   */
+  78:Main/stm32f1xx_it.c **** void HardFault_Handler(void)
+  79:Main/stm32f1xx_it.c **** {
+  45              		.loc 1 79 0
+  46              		.cfi_startproc
+  47              		@ Volatile: function does not return.
+  48              		@ args = 0, pretend = 0, frame = 0
+  49              		@ frame_needed = 0, uses_anonymous_args = 0
+  50              		@ link register save eliminated.
+  51              	.L3:
+  52 0000 FEE7     		b	.L3
+  53              		.cfi_endproc
+  54              	.LFE65:
+  56              		.section	.text.MemManage_Handler,"ax",%progbits
+  57              		.align	1
+  58              		.global	MemManage_Handler
+  59              		.syntax unified
+  60              		.thumb
+  61              		.thumb_func
+  62              		.fpu softvfp
+  64              	MemManage_Handler:
+  65              	.LFB66:
+  80:Main/stm32f1xx_it.c ****   /* Go to infinite loop when Hard Fault exception occurs */
+  81:Main/stm32f1xx_it.c ****   while (1)
+  82:Main/stm32f1xx_it.c ****   {
+  83:Main/stm32f1xx_it.c ****   }
+  84:Main/stm32f1xx_it.c **** }
+  85:Main/stm32f1xx_it.c **** 
+  86:Main/stm32f1xx_it.c **** /**
+  87:Main/stm32f1xx_it.c ****   * @brief  This function handles Memory Manage exception.
+  88:Main/stm32f1xx_it.c ****   * @param  None
+  89:Main/stm32f1xx_it.c ****   * @retval None
+  90:Main/stm32f1xx_it.c ****   */
+  91:Main/stm32f1xx_it.c **** void MemManage_Handler(void)
+  92:Main/stm32f1xx_it.c **** {
+  66              		.loc 1 92 0
+  67              		.cfi_startproc
+  68              		@ Volatile: function does not return.
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71              		@ link register save eliminated.
+  72              	.L5:
+  73 0000 FEE7     		b	.L5
+  74              		.cfi_endproc
+  75              	.LFE66:
+  77              		.section	.text.BusFault_Handler,"ax",%progbits
+  78              		.align	1
+  79              		.global	BusFault_Handler
+  80              		.syntax unified
+  81              		.thumb
+  82              		.thumb_func
+  83              		.fpu softvfp
+  85              	BusFault_Handler:
+  86              	.LFB67:
+ARM GAS  /tmp/ccwOK2Tv.s 			page 4
+
+
+  93:Main/stm32f1xx_it.c ****   /* Go to infinite loop when Memory Manage exception occurs */
+  94:Main/stm32f1xx_it.c ****   while (1)
+  95:Main/stm32f1xx_it.c ****   {
+  96:Main/stm32f1xx_it.c ****   }
+  97:Main/stm32f1xx_it.c **** }
+  98:Main/stm32f1xx_it.c **** 
+  99:Main/stm32f1xx_it.c **** /**
+ 100:Main/stm32f1xx_it.c ****   * @brief  This function handles Bus Fault exception.
+ 101:Main/stm32f1xx_it.c ****   * @param  None
+ 102:Main/stm32f1xx_it.c ****   * @retval None
+ 103:Main/stm32f1xx_it.c ****   */
+ 104:Main/stm32f1xx_it.c **** void BusFault_Handler(void)
+ 105:Main/stm32f1xx_it.c **** {
+  87              		.loc 1 105 0
+  88              		.cfi_startproc
+  89              		@ Volatile: function does not return.
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92              		@ link register save eliminated.
+  93              	.L7:
+  94 0000 FEE7     		b	.L7
+  95              		.cfi_endproc
+  96              	.LFE67:
+  98              		.section	.text.UsageFault_Handler,"ax",%progbits
+  99              		.align	1
+ 100              		.global	UsageFault_Handler
+ 101              		.syntax unified
+ 102              		.thumb
+ 103              		.thumb_func
+ 104              		.fpu softvfp
+ 106              	UsageFault_Handler:
+ 107              	.LFB68:
+ 106:Main/stm32f1xx_it.c ****   /* Go to infinite loop when Bus Fault exception occurs */
+ 107:Main/stm32f1xx_it.c ****   while (1)
+ 108:Main/stm32f1xx_it.c ****   {
+ 109:Main/stm32f1xx_it.c ****   }
+ 110:Main/stm32f1xx_it.c **** }
+ 111:Main/stm32f1xx_it.c **** 
+ 112:Main/stm32f1xx_it.c **** /**
+ 113:Main/stm32f1xx_it.c ****   * @brief  This function handles Usage Fault exception.
+ 114:Main/stm32f1xx_it.c ****   * @param  None
+ 115:Main/stm32f1xx_it.c ****   * @retval None
+ 116:Main/stm32f1xx_it.c ****   */
+ 117:Main/stm32f1xx_it.c **** void UsageFault_Handler(void)
+ 118:Main/stm32f1xx_it.c **** {
+ 108              		.loc 1 118 0
+ 109              		.cfi_startproc
+ 110              		@ Volatile: function does not return.
+ 111              		@ args = 0, pretend = 0, frame = 0
+ 112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 113              		@ link register save eliminated.
+ 114              	.L9:
+ 115 0000 FEE7     		b	.L9
+ 116              		.cfi_endproc
+ 117              	.LFE68:
+ 119              		.section	.text.SVC_Handler,"ax",%progbits
+ 120              		.align	1
+ARM GAS  /tmp/ccwOK2Tv.s 			page 5
+
+
+ 121              		.global	SVC_Handler
+ 122              		.syntax unified
+ 123              		.thumb
+ 124              		.thumb_func
+ 125              		.fpu softvfp
+ 127              	SVC_Handler:
+ 128              	.LFB69:
+ 119:Main/stm32f1xx_it.c ****   /* Go to infinite loop when Usage Fault exception occurs */
+ 120:Main/stm32f1xx_it.c ****   while (1)
+ 121:Main/stm32f1xx_it.c ****   {
+ 122:Main/stm32f1xx_it.c ****   }
+ 123:Main/stm32f1xx_it.c **** }
+ 124:Main/stm32f1xx_it.c **** 
+ 125:Main/stm32f1xx_it.c **** /**
+ 126:Main/stm32f1xx_it.c ****   * @brief  This function handles SVCall exception.
+ 127:Main/stm32f1xx_it.c ****   * @param  None
+ 128:Main/stm32f1xx_it.c ****   * @retval None
+ 129:Main/stm32f1xx_it.c ****   */
+ 130:Main/stm32f1xx_it.c **** void SVC_Handler(void)
+ 131:Main/stm32f1xx_it.c **** {
+ 129              		.loc 1 131 0
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 0, uses_anonymous_args = 0
+ 133              		@ link register save eliminated.
+ 134 0000 7047     		bx	lr
+ 135              		.cfi_endproc
+ 136              	.LFE69:
+ 138              		.section	.text.DebugMon_Handler,"ax",%progbits
+ 139              		.align	1
+ 140              		.global	DebugMon_Handler
+ 141              		.syntax unified
+ 142              		.thumb
+ 143              		.thumb_func
+ 144              		.fpu softvfp
+ 146              	DebugMon_Handler:
+ 147              	.LFB70:
+ 132:Main/stm32f1xx_it.c **** }
+ 133:Main/stm32f1xx_it.c **** 
+ 134:Main/stm32f1xx_it.c **** /**
+ 135:Main/stm32f1xx_it.c ****   * @brief  This function handles Debug Monitor exception.
+ 136:Main/stm32f1xx_it.c ****   * @param  None
+ 137:Main/stm32f1xx_it.c ****   * @retval None
+ 138:Main/stm32f1xx_it.c ****   */
+ 139:Main/stm32f1xx_it.c **** void DebugMon_Handler(void)
+ 140:Main/stm32f1xx_it.c **** {
+ 148              		.loc 1 140 0
+ 149              		.cfi_startproc
+ 150              		@ args = 0, pretend = 0, frame = 0
+ 151              		@ frame_needed = 0, uses_anonymous_args = 0
+ 152              		@ link register save eliminated.
+ 153 0000 7047     		bx	lr
+ 154              		.cfi_endproc
+ 155              	.LFE70:
+ 157              		.section	.text.PendSV_Handler,"ax",%progbits
+ 158              		.align	1
+ 159              		.global	PendSV_Handler
+ARM GAS  /tmp/ccwOK2Tv.s 			page 6
+
+
+ 160              		.syntax unified
+ 161              		.thumb
+ 162              		.thumb_func
+ 163              		.fpu softvfp
+ 165              	PendSV_Handler:
+ 166              	.LFB71:
+ 141:Main/stm32f1xx_it.c **** }
+ 142:Main/stm32f1xx_it.c **** 
+ 143:Main/stm32f1xx_it.c **** /**
+ 144:Main/stm32f1xx_it.c ****   * @brief  This function handles PendSVC exception.
+ 145:Main/stm32f1xx_it.c ****   * @param  None
+ 146:Main/stm32f1xx_it.c ****   * @retval None
+ 147:Main/stm32f1xx_it.c ****   */
+ 148:Main/stm32f1xx_it.c **** void PendSV_Handler(void)
+ 149:Main/stm32f1xx_it.c **** {
+ 167              		.loc 1 149 0
+ 168              		.cfi_startproc
+ 169              		@ args = 0, pretend = 0, frame = 0
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171              		@ link register save eliminated.
+ 172 0000 7047     		bx	lr
+ 173              		.cfi_endproc
+ 174              	.LFE71:
+ 176              		.section	.text.SysTick_Handler,"ax",%progbits
+ 177              		.align	1
+ 178              		.global	SysTick_Handler
+ 179              		.syntax unified
+ 180              		.thumb
+ 181              		.thumb_func
+ 182              		.fpu softvfp
+ 184              	SysTick_Handler:
+ 185              	.LFB72:
+ 150:Main/stm32f1xx_it.c **** }
+ 151:Main/stm32f1xx_it.c **** 
+ 152:Main/stm32f1xx_it.c **** /**
+ 153:Main/stm32f1xx_it.c ****   * @brief  This function handles SysTick Handler.
+ 154:Main/stm32f1xx_it.c ****   * @param  None
+ 155:Main/stm32f1xx_it.c ****   * @retval None
+ 156:Main/stm32f1xx_it.c ****   */
+ 157:Main/stm32f1xx_it.c **** void SysTick_Handler(void)
+ 158:Main/stm32f1xx_it.c **** {
+ 186              		.loc 1 158 0
+ 187              		.cfi_startproc
+ 188              		@ args = 0, pretend = 0, frame = 0
+ 189              		@ frame_needed = 0, uses_anonymous_args = 0
+ 190              		.loc 1 158 0
+ 191 0000 08B5     		push	{r3, lr}
+ 192              	.LCFI0:
+ 193              		.cfi_def_cfa_offset 8
+ 194              		.cfi_offset 3, -8
+ 195              		.cfi_offset 14, -4
+ 159:Main/stm32f1xx_it.c ****   HAL_IncTick();
+ 196              		.loc 1 159 0
+ 197 0002 FFF7FEFF 		bl	HAL_IncTick
+ 198              	.LVL0:
+ 199 0006 08BD     		pop	{r3, pc}
+ 200              		.cfi_endproc
+ARM GAS  /tmp/ccwOK2Tv.s 			page 7
+
+
+ 201              	.LFE72:
+ 203              		.text
+ 204              	.Letext0:
+ 205              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 206              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 207              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+ 208              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+ 209              		.file 6 "/usr/arm-none-eabi/include/sys/lock.h"
+ 210              		.file 7 "/usr/arm-none-eabi/include/sys/_types.h"
+ 211              		.file 8 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 212              		.file 9 "/usr/arm-none-eabi/include/sys/reent.h"
+ 213              		.file 10 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ARM GAS  /tmp/ccwOK2Tv.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_it.c
+     /tmp/ccwOK2Tv.s:16     .text.NMI_Handler:0000000000000000 $t
+     /tmp/ccwOK2Tv.s:23     .text.NMI_Handler:0000000000000000 NMI_Handler
+     /tmp/ccwOK2Tv.s:36     .text.HardFault_Handler:0000000000000000 $t
+     /tmp/ccwOK2Tv.s:43     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+     /tmp/ccwOK2Tv.s:57     .text.MemManage_Handler:0000000000000000 $t
+     /tmp/ccwOK2Tv.s:64     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+     /tmp/ccwOK2Tv.s:78     .text.BusFault_Handler:0000000000000000 $t
+     /tmp/ccwOK2Tv.s:85     .text.BusFault_Handler:0000000000000000 BusFault_Handler
+     /tmp/ccwOK2Tv.s:99     .text.UsageFault_Handler:0000000000000000 $t
+     /tmp/ccwOK2Tv.s:106    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+     /tmp/ccwOK2Tv.s:120    .text.SVC_Handler:0000000000000000 $t
+     /tmp/ccwOK2Tv.s:127    .text.SVC_Handler:0000000000000000 SVC_Handler
+     /tmp/ccwOK2Tv.s:139    .text.DebugMon_Handler:0000000000000000 $t
+     /tmp/ccwOK2Tv.s:146    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+     /tmp/ccwOK2Tv.s:158    .text.PendSV_Handler:0000000000000000 $t
+     /tmp/ccwOK2Tv.s:165    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+     /tmp/ccwOK2Tv.s:177    .text.SysTick_Handler:0000000000000000 $t
+     /tmp/ccwOK2Tv.s:184    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+HAL_IncTick
