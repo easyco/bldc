@@ -1,10 +1,10 @@
 /**
 ******************************************************************************
-* @project/file		stm32f1xx_hal_gpio.c
-* @author			MCD Application Team
-* @version			V1.0.4
-* @date				29-April-2016
-* @brief			GPIO HAL module driver.
+* @project/file		STM32 BLDC
+* @author			xiaopeng
+* @version			V0.0.0
+* @date				21-December-2017
+* @brief			STM32 + EASYCO BLDC DEVELOP KIT V2.1 Brushless motor driver
 *
 *
 ******************************************************************************
@@ -14,7 +14,6 @@
 *
 ******************************************************************************
 */
-
 #include "system.h"
 #include "stm32f1_easyco.h"
 
@@ -29,12 +28,15 @@ int main(void)
 
 	BSP_Init();
 
+	UART_Init();
+	ADC_Init();
+	TIM_InitPwm(); 
+	TIM_InitComm();
+	TIM_InitCrossCnt();
+	TIM_InitAdcTrigger();
+
 	while (1)
 	{
-		HAL_Delay(100);
-		LED7_Toggle();
-		LED8_Toggle();
-		LED9_Toggle();
 	}
 }
 /* end of file */

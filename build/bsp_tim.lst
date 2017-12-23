@@ -1,0 +1,607 @@
+ARM GAS  /tmp/cckb7hKM.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"bsp_tim.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.TIM_InitPwm,"ax",%progbits
+  16              		.align	1
+  17              		.global	TIM_InitPwm
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	TIM_InitPwm:
+  24              	.LFB66:
+  25              		.file 1 "Drivers/BSP/bsp_tim.c"
+   1:Drivers/BSP/bsp_tim.c **** #include "bsp_tim.h"
+   2:Drivers/BSP/bsp_tim.c **** #include "bldc.h"
+   3:Drivers/BSP/bsp_tim.c **** 
+   4:Drivers/BSP/bsp_tim.c **** TIM_HandleTypeDef htimPwm;
+   5:Drivers/BSP/bsp_tim.c **** TIM_HandleTypeDef htimComm;
+   6:Drivers/BSP/bsp_tim.c **** TIM_HandleTypeDef htimAdc;
+   7:Drivers/BSP/bsp_tim.c **** 
+   8:Drivers/BSP/bsp_tim.c **** void TIM_InitPwm(void)
+   9:Drivers/BSP/bsp_tim.c **** {
+  26              		.loc 1 9 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 40
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  31              	.LCFI0:
+  32              		.cfi_def_cfa_offset 24
+  33              		.cfi_offset 4, -24
+  34              		.cfi_offset 5, -20
+  35              		.cfi_offset 6, -16
+  36              		.cfi_offset 7, -12
+  37              		.cfi_offset 8, -8
+  38              		.cfi_offset 14, -4
+  39 0004 8AB0     		sub	sp, sp, #40
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 64
+  42              	.LBB2:
+  10:Drivers/BSP/bsp_tim.c **** 	TIM_OC_InitTypeDef sConfigOC;
+  11:Drivers/BSP/bsp_tim.c **** 	TIM_MasterConfigTypeDef sMasterConfig;
+  12:Drivers/BSP/bsp_tim.c **** 
+  13:Drivers/BSP/bsp_tim.c **** 	PWM_CLK_Enable();
+  43              		.loc 1 13 0
+  44 0006 2A4B     		ldr	r3, .L3
+  45 0008 9A69     		ldr	r2, [r3, #24]
+ARM GAS  /tmp/cckb7hKM.s 			page 2
+
+
+  46 000a 42F40062 		orr	r2, r2, #2048
+  47 000e 9A61     		str	r2, [r3, #24]
+  48 0010 9B69     		ldr	r3, [r3, #24]
+  49 0012 03F40063 		and	r3, r3, #2048
+  50 0016 0093     		str	r3, [sp]
+  51 0018 009B     		ldr	r3, [sp]
+  52              	.LBE2:
+  14:Drivers/BSP/bsp_tim.c **** 
+  15:Drivers/BSP/bsp_tim.c **** 	htimPwm.Instance = PWM_TIM;
+  53              		.loc 1 15 0
+  54 001a 264C     		ldr	r4, .L3+4
+  55 001c 264E     		ldr	r6, .L3+8
+  56 001e 2660     		str	r6, [r4]
+  16:Drivers/BSP/bsp_tim.c **** 	htimPwm.Init.ClockDivision = 0;
+  57              		.loc 1 16 0
+  58 0020 0025     		movs	r5, #0
+  59 0022 2561     		str	r5, [r4, #16]
+  17:Drivers/BSP/bsp_tim.c **** 	htimPwm.Init.Prescaler = PWM_TIM_PRESCALER;
+  60              		.loc 1 17 0
+  61 0024 6560     		str	r5, [r4, #4]
+  18:Drivers/BSP/bsp_tim.c **** 	htimPwm.Init.Period = PWM_TIM_PERIOD;
+  62              		.loc 1 18 0
+  63 0026 DFF89C80 		ldr	r8, .L3+20
+  64 002a D8F80030 		ldr	r3, [r8]
+  65 002e 234F     		ldr	r7, .L3+12
+  66 0030 A7FB0323 		umull	r2, r3, r7, r3
+  67 0034 9B0B     		lsrs	r3, r3, #14
+  68 0036 013B     		subs	r3, r3, #1
+  69 0038 E360     		str	r3, [r4, #12]
+  19:Drivers/BSP/bsp_tim.c **** 	htimPwm.Init.CounterMode = TIM_COUNTERMODE_UP;
+  70              		.loc 1 19 0
+  71 003a A560     		str	r5, [r4, #8]
+  20:Drivers/BSP/bsp_tim.c **** 	htimPwm.Init.RepetitionCounter = 0;
+  72              		.loc 1 20 0
+  73 003c 6561     		str	r5, [r4, #20]
+  21:Drivers/BSP/bsp_tim.c **** 	HAL_TIM_PWM_Init(&htimPwm);
+  74              		.loc 1 21 0
+  75 003e 2046     		mov	r0, r4
+  76 0040 FFF7FEFF 		bl	HAL_TIM_PWM_Init
+  77              	.LVL0:
+  22:Drivers/BSP/bsp_tim.c **** 
+  23:Drivers/BSP/bsp_tim.c **** 	sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  78              		.loc 1 23 0
+  79 0044 6023     		movs	r3, #96
+  80 0046 0393     		str	r3, [sp, #12]
+  24:Drivers/BSP/bsp_tim.c **** 	sConfigOC.Pulse = PWM_TIM_PERIOD / 10;
+  81              		.loc 1 24 0
+  82 0048 D8F80030 		ldr	r3, [r8]
+  83 004c A7FB0323 		umull	r2, r3, r7, r3
+  84 0050 9B0B     		lsrs	r3, r3, #14
+  85 0052 013B     		subs	r3, r3, #1
+  86 0054 1A4A     		ldr	r2, .L3+16
+  87 0056 A2FB0323 		umull	r2, r3, r2, r3
+  88 005a DB08     		lsrs	r3, r3, #3
+  89 005c 0493     		str	r3, [sp, #16]
+  25:Drivers/BSP/bsp_tim.c **** 	sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  90              		.loc 1 25 0
+ARM GAS  /tmp/cckb7hKM.s 			page 3
+
+
+  91 005e 0595     		str	r5, [sp, #20]
+  26:Drivers/BSP/bsp_tim.c **** 	sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
+  92              		.loc 1 26 0
+  93 0060 0695     		str	r5, [sp, #24]
+  27:Drivers/BSP/bsp_tim.c **** 	sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  94              		.loc 1 27 0
+  95 0062 0795     		str	r5, [sp, #28]
+  28:Drivers/BSP/bsp_tim.c **** 	sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
+  96              		.loc 1 28 0
+  97 0064 0895     		str	r5, [sp, #32]
+  29:Drivers/BSP/bsp_tim.c **** 	sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+  98              		.loc 1 29 0
+  99 0066 0995     		str	r5, [sp, #36]
+  30:Drivers/BSP/bsp_tim.c **** 	HAL_TIM_PWM_ConfigChannel(&htimPwm, &sConfigOC, TIM_CHANNEL_1);
+ 100              		.loc 1 30 0
+ 101 0068 2A46     		mov	r2, r5
+ 102 006a 03A9     		add	r1, sp, #12
+ 103 006c 2046     		mov	r0, r4
+ 104 006e FFF7FEFF 		bl	HAL_TIM_PWM_ConfigChannel
+ 105              	.LVL1:
+  31:Drivers/BSP/bsp_tim.c **** 	HAL_TIM_PWM_ConfigChannel(&htimPwm, &sConfigOC, TIM_CHANNEL_2);
+ 106              		.loc 1 31 0
+ 107 0072 0422     		movs	r2, #4
+ 108 0074 03A9     		add	r1, sp, #12
+ 109 0076 2046     		mov	r0, r4
+ 110 0078 FFF7FEFF 		bl	HAL_TIM_PWM_ConfigChannel
+ 111              	.LVL2:
+  32:Drivers/BSP/bsp_tim.c **** 	HAL_TIM_PWM_ConfigChannel(&htimPwm, &sConfigOC, TIM_CHANNEL_3);
+ 112              		.loc 1 32 0
+ 113 007c 0822     		movs	r2, #8
+ 114 007e 03A9     		add	r1, sp, #12
+ 115 0080 2046     		mov	r0, r4
+ 116 0082 FFF7FEFF 		bl	HAL_TIM_PWM_ConfigChannel
+ 117              	.LVL3:
+  33:Drivers/BSP/bsp_tim.c **** 	HAL_TIM_PWM_ConfigChannel(&htimPwm, &sConfigOC, TIM_CHANNEL_4);
+ 118              		.loc 1 33 0
+ 119 0086 0C22     		movs	r2, #12
+ 120 0088 0DEB0201 		add	r1, sp, r2
+ 121 008c 2046     		mov	r0, r4
+ 122 008e FFF7FEFF 		bl	HAL_TIM_PWM_ConfigChannel
+ 123              	.LVL4:
+  34:Drivers/BSP/bsp_tim.c **** 
+  35:Drivers/BSP/bsp_tim.c **** 	/* PWM CH and CHN dead time */
+  36:Drivers/BSP/bsp_tim.c **** 	PWM_TIM->BDTR |= PWM_DEADTIME;
+ 124              		.loc 1 36 0
+ 125 0092 736C     		ldr	r3, [r6, #68]
+ 126 0094 43F00503 		orr	r3, r3, #5
+ 127 0098 7364     		str	r3, [r6, #68]
+  37:Drivers/BSP/bsp_tim.c **** 
+  38:Drivers/BSP/bsp_tim.c **** 	sMasterConfig.MasterOutputTrigger = TIM_TRGO_OC4REF;
+ 128              		.loc 1 38 0
+ 129 009a 7023     		movs	r3, #112
+ 130 009c 0193     		str	r3, [sp, #4]
+  39:Drivers/BSP/bsp_tim.c **** 	sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+ 131              		.loc 1 39 0
+ 132 009e 0295     		str	r5, [sp, #8]
+  40:Drivers/BSP/bsp_tim.c **** 	HAL_TIMEx_MasterConfigSynchronization(&htimPwm, &sMasterConfig);
+ARM GAS  /tmp/cckb7hKM.s 			page 4
+
+
+ 133              		.loc 1 40 0
+ 134 00a0 01A9     		add	r1, sp, #4
+ 135 00a2 2046     		mov	r0, r4
+ 136 00a4 FFF7FEFF 		bl	HAL_TIMEx_MasterConfigSynchronization
+ 137              	.LVL5:
+  41:Drivers/BSP/bsp_tim.c **** }
+ 138              		.loc 1 41 0
+ 139 00a8 0AB0     		add	sp, sp, #40
+ 140              	.LCFI2:
+ 141              		.cfi_def_cfa_offset 24
+ 142              		@ sp needed
+ 143 00aa BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 144              	.L4:
+ 145 00ae 00BF     		.align	2
+ 146              	.L3:
+ 147 00b0 00100240 		.word	1073876992
+ 148 00b4 00000000 		.word	htimPwm
+ 149 00b8 002C0140 		.word	1073818624
+ 150 00bc 5917B7D1 		.word	-776530087
+ 151 00c0 CDCCCCCC 		.word	-858993459
+ 152 00c4 00000000 		.word	SystemCoreClock
+ 153              		.cfi_endproc
+ 154              	.LFE66:
+ 156              		.section	.text.TIM_InitComm,"ax",%progbits
+ 157              		.align	1
+ 158              		.global	TIM_InitComm
+ 159              		.syntax unified
+ 160              		.thumb
+ 161              		.thumb_func
+ 162              		.fpu softvfp
+ 164              	TIM_InitComm:
+ 165              	.LFB67:
+  42:Drivers/BSP/bsp_tim.c **** 
+  43:Drivers/BSP/bsp_tim.c **** void TIM_InitComm(void)
+  44:Drivers/BSP/bsp_tim.c **** {
+ 166              		.loc 1 44 0
+ 167              		.cfi_startproc
+ 168              		@ args = 0, pretend = 0, frame = 8
+ 169              		@ frame_needed = 0, uses_anonymous_args = 0
+ 170 0000 30B5     		push	{r4, r5, lr}
+ 171              	.LCFI3:
+ 172              		.cfi_def_cfa_offset 12
+ 173              		.cfi_offset 4, -12
+ 174              		.cfi_offset 5, -8
+ 175              		.cfi_offset 14, -4
+ 176 0002 83B0     		sub	sp, sp, #12
+ 177              	.LCFI4:
+ 178              		.cfi_def_cfa_offset 24
+ 179              	.LBB3:
+  45:Drivers/BSP/bsp_tim.c **** 	COMM_TIM_CLK_Enable();
+ 180              		.loc 1 45 0
+ 181 0004 164B     		ldr	r3, .L7
+ 182 0006 DA69     		ldr	r2, [r3, #28]
+ 183 0008 42F00102 		orr	r2, r2, #1
+ 184 000c DA61     		str	r2, [r3, #28]
+ 185 000e DB69     		ldr	r3, [r3, #28]
+ 186 0010 03F00103 		and	r3, r3, #1
+ARM GAS  /tmp/cckb7hKM.s 			page 5
+
+
+ 187 0014 0193     		str	r3, [sp, #4]
+ 188 0016 019B     		ldr	r3, [sp, #4]
+ 189              	.LBE3:
+  46:Drivers/BSP/bsp_tim.c **** 
+  47:Drivers/BSP/bsp_tim.c **** 	htimComm.Instance = COMM_TIM;
+ 190              		.loc 1 47 0
+ 191 0018 1248     		ldr	r0, .L7+4
+ 192 001a 4FF08045 		mov	r5, #1073741824
+ 193 001e 0560     		str	r5, [r0]
+  48:Drivers/BSP/bsp_tim.c **** 	htimComm.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+ 194              		.loc 1 48 0
+ 195 0020 0024     		movs	r4, #0
+ 196 0022 0461     		str	r4, [r0, #16]
+  49:Drivers/BSP/bsp_tim.c **** 	htimComm.Init.Prescaler = COMM_TIM_PRESCALER;
+ 197              		.loc 1 49 0
+ 198 0024 104B     		ldr	r3, .L7+8
+ 199 0026 1B68     		ldr	r3, [r3]
+ 200 0028 104A     		ldr	r2, .L7+12
+ 201 002a A2FB0323 		umull	r2, r3, r2, r3
+ 202 002e 9B0C     		lsrs	r3, r3, #18
+ 203 0030 013B     		subs	r3, r3, #1
+ 204 0032 4360     		str	r3, [r0, #4]
+  50:Drivers/BSP/bsp_tim.c **** 	htimComm.Init.Period = COMM_TIM_PERIOD;
+ 205              		.loc 1 50 0
+ 206 0034 4FF6FF73 		movw	r3, #65535
+ 207 0038 C360     		str	r3, [r0, #12]
+  51:Drivers/BSP/bsp_tim.c **** 	htimComm.Init.RepetitionCounter = 0;
+ 208              		.loc 1 51 0
+ 209 003a 4461     		str	r4, [r0, #20]
+  52:Drivers/BSP/bsp_tim.c **** 	htimComm.Init.CounterMode = TIM_COUNTERMODE_UP;
+ 210              		.loc 1 52 0
+ 211 003c 8460     		str	r4, [r0, #8]
+  53:Drivers/BSP/bsp_tim.c **** 	HAL_TIM_Base_Init(&htimComm);
+ 212              		.loc 1 53 0
+ 213 003e FFF7FEFF 		bl	HAL_TIM_Base_Init
+ 214              	.LVL6:
+  54:Drivers/BSP/bsp_tim.c **** 
+  55:Drivers/BSP/bsp_tim.c **** 	COMM_TIM->DIER |= TIM_IT_UPDATE;
+ 215              		.loc 1 55 0
+ 216 0042 EB68     		ldr	r3, [r5, #12]
+ 217 0044 43F00103 		orr	r3, r3, #1
+ 218 0048 EB60     		str	r3, [r5, #12]
+  56:Drivers/BSP/bsp_tim.c **** 	HAL_NVIC_SetPriority(COMM_TIM_IRQn, 0, 0);
+ 219              		.loc 1 56 0
+ 220 004a 2246     		mov	r2, r4
+ 221 004c 2146     		mov	r1, r4
+ 222 004e 1C20     		movs	r0, #28
+ 223 0050 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 224              	.LVL7:
+  57:Drivers/BSP/bsp_tim.c **** 	HAL_NVIC_EnableIRQ(COMM_TIM_IRQn);
+ 225              		.loc 1 57 0
+ 226 0054 1C20     		movs	r0, #28
+ 227 0056 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 228              	.LVL8:
+  58:Drivers/BSP/bsp_tim.c **** }
+ 229              		.loc 1 58 0
+ 230 005a 03B0     		add	sp, sp, #12
+ARM GAS  /tmp/cckb7hKM.s 			page 6
+
+
+ 231              	.LCFI5:
+ 232              		.cfi_def_cfa_offset 12
+ 233              		@ sp needed
+ 234 005c 30BD     		pop	{r4, r5, pc}
+ 235              	.L8:
+ 236 005e 00BF     		.align	2
+ 237              	.L7:
+ 238 0060 00100240 		.word	1073876992
+ 239 0064 00000000 		.word	htimComm
+ 240 0068 00000000 		.word	SystemCoreClock
+ 241 006c 83DE1B43 		.word	1125899907
+ 242              		.cfi_endproc
+ 243              	.LFE67:
+ 245              		.section	.text.TIM_InitCrossCnt,"ax",%progbits
+ 246              		.align	1
+ 247              		.global	TIM_InitCrossCnt
+ 248              		.syntax unified
+ 249              		.thumb
+ 250              		.thumb_func
+ 251              		.fpu softvfp
+ 253              	TIM_InitCrossCnt:
+ 254              	.LFB68:
+  59:Drivers/BSP/bsp_tim.c **** 
+  60:Drivers/BSP/bsp_tim.c **** void TIM_InitCrossCnt(void)
+  61:Drivers/BSP/bsp_tim.c **** {
+ 255              		.loc 1 61 0
+ 256              		.cfi_startproc
+ 257              		@ args = 0, pretend = 0, frame = 8
+ 258              		@ frame_needed = 0, uses_anonymous_args = 0
+ 259 0000 10B5     		push	{r4, lr}
+ 260              	.LCFI6:
+ 261              		.cfi_def_cfa_offset 8
+ 262              		.cfi_offset 4, -8
+ 263              		.cfi_offset 14, -4
+ 264 0002 82B0     		sub	sp, sp, #8
+ 265              	.LCFI7:
+ 266              		.cfi_def_cfa_offset 16
+ 267              	.LBB4:
+  62:Drivers/BSP/bsp_tim.c **** 	static TIM_HandleTypeDef htimZcnt;
+  63:Drivers/BSP/bsp_tim.c **** 
+  64:Drivers/BSP/bsp_tim.c **** 	ZCNT_TIM_CLK_Enable();
+ 268              		.loc 1 64 0
+ 269 0004 114B     		ldr	r3, .L11
+ 270 0006 DA69     		ldr	r2, [r3, #28]
+ 271 0008 42F00402 		orr	r2, r2, #4
+ 272 000c DA61     		str	r2, [r3, #28]
+ 273 000e DB69     		ldr	r3, [r3, #28]
+ 274 0010 03F00403 		and	r3, r3, #4
+ 275 0014 0193     		str	r3, [sp, #4]
+ 276 0016 019B     		ldr	r3, [sp, #4]
+ 277              	.LBE4:
+  65:Drivers/BSP/bsp_tim.c **** 
+  66:Drivers/BSP/bsp_tim.c **** 	htimZcnt.Instance = ZCNT_TIM;
+ 278              		.loc 1 66 0
+ 279 0018 0D4C     		ldr	r4, .L11+4
+ 280 001a 0E4B     		ldr	r3, .L11+8
+ 281 001c 2360     		str	r3, [r4]
+ARM GAS  /tmp/cckb7hKM.s 			page 7
+
+
+  67:Drivers/BSP/bsp_tim.c **** 	htimZcnt.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+ 282              		.loc 1 67 0
+ 283 001e 0022     		movs	r2, #0
+ 284 0020 2261     		str	r2, [r4, #16]
+  68:Drivers/BSP/bsp_tim.c **** 	htimZcnt.Init.Prescaler = ZCNT_TIM_PRESCALER;
+ 285              		.loc 1 68 0
+ 286 0022 0D4B     		ldr	r3, .L11+12
+ 287 0024 1B68     		ldr	r3, [r3]
+ 288 0026 0D49     		ldr	r1, .L11+16
+ 289 0028 A1FB0313 		umull	r1, r3, r1, r3
+ 290 002c 9B0C     		lsrs	r3, r3, #18
+ 291 002e 013B     		subs	r3, r3, #1
+ 292 0030 6360     		str	r3, [r4, #4]
+  69:Drivers/BSP/bsp_tim.c **** 	htimZcnt.Init.Period = ZCNT_TIM_PERIOD;
+ 293              		.loc 1 69 0
+ 294 0032 4FF6FF73 		movw	r3, #65535
+ 295 0036 E360     		str	r3, [r4, #12]
+  70:Drivers/BSP/bsp_tim.c **** 	htimZcnt.Init.RepetitionCounter = 0;
+ 296              		.loc 1 70 0
+ 297 0038 6261     		str	r2, [r4, #20]
+  71:Drivers/BSP/bsp_tim.c **** 	htimZcnt.Init.CounterMode = TIM_COUNTERMODE_UP;
+ 298              		.loc 1 71 0
+ 299 003a A260     		str	r2, [r4, #8]
+  72:Drivers/BSP/bsp_tim.c **** 	HAL_TIM_Base_Init(&htimZcnt);
+ 300              		.loc 1 72 0
+ 301 003c 2046     		mov	r0, r4
+ 302 003e FFF7FEFF 		bl	HAL_TIM_Base_Init
+ 303              	.LVL9:
+  73:Drivers/BSP/bsp_tim.c **** 
+  74:Drivers/BSP/bsp_tim.c **** 	HAL_TIM_Base_Start(&htimZcnt);
+ 304              		.loc 1 74 0
+ 305 0042 2046     		mov	r0, r4
+ 306 0044 FFF7FEFF 		bl	HAL_TIM_Base_Start
+ 307              	.LVL10:
+  75:Drivers/BSP/bsp_tim.c **** }
+ 308              		.loc 1 75 0
+ 309 0048 02B0     		add	sp, sp, #8
+ 310              	.LCFI8:
+ 311              		.cfi_def_cfa_offset 8
+ 312              		@ sp needed
+ 313 004a 10BD     		pop	{r4, pc}
+ 314              	.L12:
+ 315              		.align	2
+ 316              	.L11:
+ 317 004c 00100240 		.word	1073876992
+ 318 0050 00000000 		.word	.LANCHOR0
+ 319 0054 00080040 		.word	1073743872
+ 320 0058 00000000 		.word	SystemCoreClock
+ 321 005c 83DE1B43 		.word	1125899907
+ 322              		.cfi_endproc
+ 323              	.LFE68:
+ 325              		.section	.text.TIM_InitAdcTrigger,"ax",%progbits
+ 326              		.align	1
+ 327              		.global	TIM_InitAdcTrigger
+ 328              		.syntax unified
+ 329              		.thumb
+ 330              		.thumb_func
+ARM GAS  /tmp/cckb7hKM.s 			page 8
+
+
+ 331              		.fpu softvfp
+ 333              	TIM_InitAdcTrigger:
+ 334              	.LFB69:
+  76:Drivers/BSP/bsp_tim.c **** 
+  77:Drivers/BSP/bsp_tim.c **** void TIM_InitAdcTrigger(void)
+  78:Drivers/BSP/bsp_tim.c **** {
+ 335              		.loc 1 78 0
+ 336              		.cfi_startproc
+ 337              		@ args = 0, pretend = 0, frame = 32
+ 338              		@ frame_needed = 0, uses_anonymous_args = 0
+ 339 0000 30B5     		push	{r4, r5, lr}
+ 340              	.LCFI9:
+ 341              		.cfi_def_cfa_offset 12
+ 342              		.cfi_offset 4, -12
+ 343              		.cfi_offset 5, -8
+ 344              		.cfi_offset 14, -4
+ 345 0002 89B0     		sub	sp, sp, #36
+ 346              	.LCFI10:
+ 347              		.cfi_def_cfa_offset 48
+ 348              	.LBB5:
+  79:Drivers/BSP/bsp_tim.c **** 	TIM_OC_InitTypeDef sConfigOC;
+  80:Drivers/BSP/bsp_tim.c **** 	TIM_SlaveConfigTypeDef sSlaveConfig;
+  81:Drivers/BSP/bsp_tim.c **** 	TIM_MasterConfigTypeDef sMasterConfig;
+  82:Drivers/BSP/bsp_tim.c **** 
+  83:Drivers/BSP/bsp_tim.c **** 	ADC_TRIG_TIM_CLK_Enable();
+ 349              		.loc 1 83 0
+ 350 0004 174B     		ldr	r3, .L15
+ 351 0006 DA69     		ldr	r2, [r3, #28]
+ 352 0008 42F00202 		orr	r2, r2, #2
+ 353 000c DA61     		str	r2, [r3, #28]
+ 354 000e DB69     		ldr	r3, [r3, #28]
+ 355 0010 03F00203 		and	r3, r3, #2
+ 356 0014 0093     		str	r3, [sp]
+ 357 0016 009B     		ldr	r3, [sp]
+ 358              	.LBE5:
+  84:Drivers/BSP/bsp_tim.c **** 
+  85:Drivers/BSP/bsp_tim.c **** 	htimAdc.Instance = ADC_TRIG_TIM;
+ 359              		.loc 1 85 0
+ 360 0018 134C     		ldr	r4, .L15+4
+ 361 001a 144B     		ldr	r3, .L15+8
+ 362 001c 2360     		str	r3, [r4]
+  86:Drivers/BSP/bsp_tim.c **** 	htimAdc.Init.Prescaler = ADC_TRIG_TIM_PRESCALER;
+ 363              		.loc 1 86 0
+ 364 001e 0025     		movs	r5, #0
+ 365 0020 6560     		str	r5, [r4, #4]
+  87:Drivers/BSP/bsp_tim.c **** 	htimAdc.Init.CounterMode = TIM_COUNTERMODE_UP;
+ 366              		.loc 1 87 0
+ 367 0022 A560     		str	r5, [r4, #8]
+  88:Drivers/BSP/bsp_tim.c **** 	htimAdc.Init.Period = ADC_TRIG_TIM_PERIOD;
+ 368              		.loc 1 88 0
+ 369 0024 124B     		ldr	r3, .L15+12
+ 370 0026 1B68     		ldr	r3, [r3]
+ 371 0028 124A     		ldr	r2, .L15+16
+ 372 002a A2FB0323 		umull	r2, r3, r2, r3
+ 373 002e 9B0C     		lsrs	r3, r3, #18
+ 374 0030 03EB8303 		add	r3, r3, r3, lsl #2
+ 375 0034 5A00     		lsls	r2, r3, #1
+ARM GAS  /tmp/cckb7hKM.s 			page 9
+
+
+ 376 0036 E260     		str	r2, [r4, #12]
+  89:Drivers/BSP/bsp_tim.c **** 	htimAdc.Init.ClockDivision = 0;
+ 377              		.loc 1 89 0
+ 378 0038 2561     		str	r5, [r4, #16]
+  90:Drivers/BSP/bsp_tim.c **** 	htimAdc.Init.RepetitionCounter = 0;
+ 379              		.loc 1 90 0
+ 380 003a 6561     		str	r5, [r4, #20]
+  91:Drivers/BSP/bsp_tim.c **** 	HAL_TIM_Base_Init(&htimAdc);
+ 381              		.loc 1 91 0
+ 382 003c 2046     		mov	r0, r4
+ 383 003e FFF7FEFF 		bl	HAL_TIM_Base_Init
+ 384              	.LVL11:
+  92:Drivers/BSP/bsp_tim.c **** 
+  93:Drivers/BSP/bsp_tim.c **** 	/* 门控模式，触发信号来自TIM1 */
+  94:Drivers/BSP/bsp_tim.c **** 	sSlaveConfig.SlaveMode = TIM_SLAVEMODE_GATED;
+ 385              		.loc 1 94 0
+ 386 0042 0523     		movs	r3, #5
+ 387 0044 0393     		str	r3, [sp, #12]
+  95:Drivers/BSP/bsp_tim.c **** 	sSlaveConfig.InputTrigger = TIM_TS_ITR0;
+ 388              		.loc 1 95 0
+ 389 0046 0495     		str	r5, [sp, #16]
+  96:Drivers/BSP/bsp_tim.c **** 	HAL_TIM_SlaveConfigSynchronization(&htimAdc, &sSlaveConfig);
+ 390              		.loc 1 96 0
+ 391 0048 03A9     		add	r1, sp, #12
+ 392 004a 2046     		mov	r0, r4
+ 393 004c FFF7FEFF 		bl	HAL_TIM_SlaveConfigSynchronization
+ 394              	.LVL12:
+  97:Drivers/BSP/bsp_tim.c **** 
+  98:Drivers/BSP/bsp_tim.c **** 	/* UPDATE事件触发ADC转换 */
+  99:Drivers/BSP/bsp_tim.c **** 	sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+ 395              		.loc 1 99 0
+ 396 0050 2023     		movs	r3, #32
+ 397 0052 0193     		str	r3, [sp, #4]
+ 100:Drivers/BSP/bsp_tim.c **** 	sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+ 398              		.loc 1 100 0
+ 399 0054 0295     		str	r5, [sp, #8]
+ 101:Drivers/BSP/bsp_tim.c **** 	HAL_TIMEx_MasterConfigSynchronization(&htimAdc, &sMasterConfig);
+ 400              		.loc 1 101 0
+ 401 0056 01A9     		add	r1, sp, #4
+ 402 0058 2046     		mov	r0, r4
+ 403 005a FFF7FEFF 		bl	HAL_TIMEx_MasterConfigSynchronization
+ 404              	.LVL13:
+ 102:Drivers/BSP/bsp_tim.c **** }
+ 405              		.loc 1 102 0
+ 406 005e 09B0     		add	sp, sp, #36
+ 407              	.LCFI11:
+ 408              		.cfi_def_cfa_offset 12
+ 409              		@ sp needed
+ 410 0060 30BD     		pop	{r4, r5, pc}
+ 411              	.L16:
+ 412 0062 00BF     		.align	2
+ 413              	.L15:
+ 414 0064 00100240 		.word	1073876992
+ 415 0068 00000000 		.word	htimAdc
+ 416 006c 00040040 		.word	1073742848
+ 417 0070 00000000 		.word	SystemCoreClock
+ 418 0074 83DE1B43 		.word	1125899907
+ARM GAS  /tmp/cckb7hKM.s 			page 10
+
+
+ 419              		.cfi_endproc
+ 420              	.LFE69:
+ 422              		.comm	htimAdc,60,4
+ 423              		.comm	htimComm,60,4
+ 424              		.comm	htimPwm,60,4
+ 425              		.section	.bss.htimZcnt.8247,"aw",%nobits
+ 426              		.align	2
+ 427              		.set	.LANCHOR0,. + 0
+ 430              	htimZcnt.8247:
+ 431 0000 00000000 		.space	60
+ 431      00000000 
+ 431      00000000 
+ 431      00000000 
+ 431      00000000 
+ 432              		.text
+ 433              	.Letext0:
+ 434              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 435              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 436              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+ 437              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+ 438              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
+ 439              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
+ 440              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
+ 441              		.file 9 "/usr/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h"
+ 442              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
+ 443              		.file 11 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 444              		.file 12 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 445              		.file 13 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 446              		.file 14 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h"
+ 447              		.file 15 "BLDC/bldc.h"
+ 448              		.file 16 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  /tmp/cckb7hKM.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 bsp_tim.c
+     /tmp/cckb7hKM.s:16     .text.TIM_InitPwm:0000000000000000 $t
+     /tmp/cckb7hKM.s:23     .text.TIM_InitPwm:0000000000000000 TIM_InitPwm
+     /tmp/cckb7hKM.s:147    .text.TIM_InitPwm:00000000000000b0 $d
+                            *COM*:000000000000003c htimPwm
+     /tmp/cckb7hKM.s:157    .text.TIM_InitComm:0000000000000000 $t
+     /tmp/cckb7hKM.s:164    .text.TIM_InitComm:0000000000000000 TIM_InitComm
+     /tmp/cckb7hKM.s:238    .text.TIM_InitComm:0000000000000060 $d
+                            *COM*:000000000000003c htimComm
+     /tmp/cckb7hKM.s:246    .text.TIM_InitCrossCnt:0000000000000000 $t
+     /tmp/cckb7hKM.s:253    .text.TIM_InitCrossCnt:0000000000000000 TIM_InitCrossCnt
+     /tmp/cckb7hKM.s:317    .text.TIM_InitCrossCnt:000000000000004c $d
+     /tmp/cckb7hKM.s:326    .text.TIM_InitAdcTrigger:0000000000000000 $t
+     /tmp/cckb7hKM.s:333    .text.TIM_InitAdcTrigger:0000000000000000 TIM_InitAdcTrigger
+     /tmp/cckb7hKM.s:414    .text.TIM_InitAdcTrigger:0000000000000064 $d
+                            *COM*:000000000000003c htimAdc
+     /tmp/cckb7hKM.s:426    .bss.htimZcnt.8247:0000000000000000 $d
+     /tmp/cckb7hKM.s:430    .bss.htimZcnt.8247:0000000000000000 htimZcnt.8247
+
+UNDEFINED SYMBOLS
+HAL_TIM_PWM_Init
+HAL_TIM_PWM_ConfigChannel
+HAL_TIMEx_MasterConfigSynchronization
+SystemCoreClock
+HAL_TIM_Base_Init
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+HAL_TIM_Base_Start
+HAL_TIM_SlaveConfigSynchronization

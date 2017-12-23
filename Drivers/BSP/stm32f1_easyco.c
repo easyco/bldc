@@ -94,13 +94,13 @@ static void BSP_InitADC(void)
 void BSP_Init(void)
 {
 	BSP_InitLED();
-	//BSP_InitButton();
-	//BSP_InitUART();
-	//BSP_InitPWM();
-	//BSP_InitADC();
+	BSP_InitButton();
+	BSP_InitUART();
+	BSP_InitPWM();
+	BSP_InitADC();
 }
 
-void Init_UART(void)
+void UART_Init(void)
 {
 	UART_CLK_Enable();
 

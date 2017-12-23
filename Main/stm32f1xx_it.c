@@ -40,23 +40,11 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f1xx_hal.h"
 #include "stm32f1xx_it.h"
-   
-/** @addtogroup STM32F1xx_HAL_Examples
-  * @{
-  */
 
-/** @addtogroup Templates
-  * @{
-  */
-
-/* Private typedef -----------------------------------------------------------*/
-/* Private define ------------------------------------------------------------*/
-/* Private macro -------------------------------------------------------------*/
-/* Private variables ---------------------------------------------------------*/
-
-/* Private function prototypes -----------------------------------------------*/
-/* Private functions ---------------------------------------------------------*/
-
+#include "stm32f1_easyco.h"
+#include "bsp_tim.h"
+#include "bsp_adc.h"
+#include "bldc.h"   
 /******************************************************************************/
 /*            Cortex-M3 Processor Exceptions Handlers                         */
 /******************************************************************************/
@@ -157,6 +145,7 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   HAL_IncTick();
+  BLDC_TaskCallback();
 }
 
 /******************************************************************************/
@@ -166,22 +155,50 @@ void SysTick_Handler(void)
 /*  file (startup_stm32f1xx.s).                                               */
 /******************************************************************************/
 
-/**
-  * @brief  This function handles PPP interrupt request.
-  * @param  None
-  * @retval None
-  */
-/*void PPP_IRQHandler(void)
+/* 换向中断 */
+void COMM_TIM_IRQHandler(void)
 {
-}*/
+	if (TIM2->SR & TIM_FLAG_UPDATE)
+	{
+		TIM2->SR &= ~TIM_FLAG_UPDATE;
+		//LED8_Toggle();
+		BLDC_CommCallback();
+	}
+}
 
+#if defined (USE_INJECTED_GROUP_SMAPLE_BEMF)
+void ADC1_IRQHandler(void)
+{
+	LED8_On();
+	if (ADC1->SR & ADC_FLAG_JEOC)
+	{
+		ADC1->SR &= ~ADC_FLAG_JEOC;
+		
+		Bldc.AdcBuffer[0] = ADC1->JDR1;
+		Bldc.AdcBuffer[1] = ADC1->JDR2;
+		Bldc.AdcBuffer[2] = ADC1->JDR3;
+		BLDC_CheckZeroCrossCallback();
+	}
+	LED8_Off();
+}
+#else
+void ADC1_IRQHandler(void)
+{
+	LED8_On();
+	if (ADC1->SR & ADC_FLAG_JEOC)
+	{
+		ADC1->SR &= ~ADC_FLAG_JEOC;
 
-/**
-  * @}
-  */ 
-
-/**
-  * @}
-  */
+		Bldc.AdcBuffer[3] = ADC1->JDR1;
+	}
+	LED8_Off();
+}
+void DMA1_Channel1_IRQHandler(void)
+{
+	BLDC_CheckZeroCrossCallback();
+	/* 执行完过零检测再清除DMA中断，否则在过零检测过程中有可能再次发生中断 */
+	DMA1->IFCR |= DMA_FLAG_TC1;
+}
+#endif
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

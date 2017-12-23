@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cclYqDDb.s 			page 1
+ARM GAS  /tmp/cclwjEcc.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -23,15 +23,15 @@ ARM GAS  /tmp/cclYqDDb.s 			page 1
   20              		.thumb_func
   21              		.fpu softvfp
   23              	main:
-  24              	.LFB64:
+  24              	.LFB66:
   25              		.file 1 "Main/main.c"
    1:Main/main.c   **** /**
    2:Main/main.c   **** ******************************************************************************
-   3:Main/main.c   **** * @project/file		stm32f1xx_hal_gpio.c
-   4:Main/main.c   **** * @author			MCD Application Team
-   5:Main/main.c   **** * @version			V1.0.4
-   6:Main/main.c   **** * @date				29-April-2016
-   7:Main/main.c   **** * @brief			GPIO HAL module driver.
+   3:Main/main.c   **** * @project/file		STM32 BLDC
+   4:Main/main.c   **** * @author			xiaopeng
+   5:Main/main.c   **** * @version			V0.0.0
+   6:Main/main.c   **** * @date				21-December-2017
+   7:Main/main.c   **** * @brief			STM32 + EASYCO BLDC DEVELOP KIT V2.1 Brushless motor driver
    8:Main/main.c   **** *
    9:Main/main.c   **** *
   10:Main/main.c   **** ******************************************************************************
@@ -41,13 +41,12 @@ ARM GAS  /tmp/cclYqDDb.s 			page 1
   14:Main/main.c   **** *
   15:Main/main.c   **** ******************************************************************************
   16:Main/main.c   **** */
-  17:Main/main.c   **** 
-  18:Main/main.c   **** #include "system.h"
-  19:Main/main.c   **** #include "stm32f1_easyco.h"
-  20:Main/main.c   **** 
-  21:Main/main.c   **** int main(void)
-  22:Main/main.c   **** {
-  26              		.loc 1 22 0
+  17:Main/main.c   **** #include "system.h"
+  18:Main/main.c   **** #include "stm32f1_easyco.h"
+  19:Main/main.c   **** 
+  20:Main/main.c   **** int main(void)
+  21:Main/main.c   **** {
+  26              		.loc 1 21 0
   27              		.cfi_startproc
   28              		@ Volatile: function does not return.
   29              		@ args = 0, pretend = 0, frame = 8
@@ -58,14 +57,14 @@ ARM GAS  /tmp/cclYqDDb.s 			page 1
   34              		.cfi_offset 14, -4
   35 0002 83B0     		sub	sp, sp, #12
   36              	.LCFI1:
-ARM GAS  /tmp/cclYqDDb.s 			page 2
-
-
   37              		.cfi_def_cfa_offset 16
+ARM GAS  /tmp/cclwjEcc.s 			page 2
+
+
   38              	.LBB2:
-  23:Main/main.c   **** 	__HAL_RCC_AFIO_CLK_ENABLE();
-  39              		.loc 1 23 0
-  40 0004 154B     		ldr	r3, .L4
+  22:Main/main.c   **** 	__HAL_RCC_AFIO_CLK_ENABLE();
+  39              		.loc 1 22 0
+  40 0004 134B     		ldr	r3, .L4
   41 0006 9A69     		ldr	r2, [r3, #24]
   42 0008 42F00102 		orr	r2, r2, #1
   43 000c 9A61     		str	r2, [r3, #24]
@@ -74,100 +73,99 @@ ARM GAS  /tmp/cclYqDDb.s 			page 1
   46 0014 0193     		str	r3, [sp, #4]
   47 0016 019B     		ldr	r3, [sp, #4]
   48              	.LBE2:
-  24:Main/main.c   **** 	__HAL_AFIO_REMAP_SWJ_NOJTAG();
-  49              		.loc 1 24 0
-  50 0018 114A     		ldr	r2, .L4+4
+  23:Main/main.c   **** 	__HAL_AFIO_REMAP_SWJ_NOJTAG();
+  49              		.loc 1 23 0
+  50 0018 0F4A     		ldr	r2, .L4+4
   51 001a 5368     		ldr	r3, [r2, #4]
   52 001c 23F0E063 		bic	r3, r3, #117440512
   53 0020 43F00073 		orr	r3, r3, #33554432
   54 0024 5360     		str	r3, [r2, #4]
-  25:Main/main.c   **** 	__HAL_AFIO_REMAP_USART1_ENABLE();
-  55              		.loc 1 25 0
+  24:Main/main.c   **** 	__HAL_AFIO_REMAP_USART1_ENABLE();
+  55              		.loc 1 24 0
   56 0026 5368     		ldr	r3, [r2, #4]
   57 0028 43F00403 		orr	r3, r3, #4
   58 002c 5360     		str	r3, [r2, #4]
-  26:Main/main.c   **** 
-  27:Main/main.c   **** 	HAL_Init();
-  59              		.loc 1 27 0
+  25:Main/main.c   **** 
+  26:Main/main.c   **** 	HAL_Init();
+  59              		.loc 1 26 0
   60 002e FFF7FEFF 		bl	HAL_Init
   61              	.LVL0:
-  28:Main/main.c   **** 	SystemClock_Config();
-  62              		.loc 1 28 0
+  27:Main/main.c   **** 	SystemClock_Config();
+  62              		.loc 1 27 0
   63 0032 FFF7FEFF 		bl	SystemClock_Config
   64              	.LVL1:
-  29:Main/main.c   **** 
-  30:Main/main.c   **** 	BSP_Init();
-  65              		.loc 1 30 0
+  28:Main/main.c   **** 
+  29:Main/main.c   **** 	BSP_Init();
+  65              		.loc 1 29 0
   66 0036 FFF7FEFF 		bl	BSP_Init
   67              	.LVL2:
-  68              	.L2:
-  31:Main/main.c   **** 
-  32:Main/main.c   **** 	while (1)
-  33:Main/main.c   **** 	{
-  34:Main/main.c   **** 		HAL_Delay(100);
-  69              		.loc 1 34 0 discriminator 1
-  70 003a 6420     		movs	r0, #100
-  71 003c FFF7FEFF 		bl	HAL_Delay
-  72              	.LVL3:
-  35:Main/main.c   **** 		LED7_Toggle();
-  73              		.loc 1 35 0 discriminator 1
-  74 0040 084C     		ldr	r4, .L4+8
-  75 0042 0821     		movs	r1, #8
-  76 0044 2046     		mov	r0, r4
-  77 0046 FFF7FEFF 		bl	HAL_GPIO_TogglePin
-  78              	.LVL4:
-  36:Main/main.c   **** 		LED8_Toggle();
-  79              		.loc 1 36 0 discriminator 1
-ARM GAS  /tmp/cclYqDDb.s 			page 3
+  30:Main/main.c   **** 
+  31:Main/main.c   **** 	UART_Init();
+  68              		.loc 1 31 0
+  69 003a FFF7FEFF 		bl	UART_Init
+  70              	.LVL3:
+  32:Main/main.c   **** 	ADC_Init();
+  71              		.loc 1 32 0
+  72 003e FFF7FEFF 		bl	ADC_Init
+  73              	.LVL4:
+  33:Main/main.c   **** 	TIM_InitPwm(); 
+  74              		.loc 1 33 0
+  75 0042 FFF7FEFF 		bl	TIM_InitPwm
+  76              	.LVL5:
+  34:Main/main.c   **** 	TIM_InitComm();
+  77              		.loc 1 34 0
+  78 0046 FFF7FEFF 		bl	TIM_InitComm
+  79              	.LVL6:
+  35:Main/main.c   **** 	TIM_InitCrossCnt();
+  80              		.loc 1 35 0
+ARM GAS  /tmp/cclwjEcc.s 			page 3
 
 
-  80 004a 1021     		movs	r1, #16
-  81 004c 2046     		mov	r0, r4
-  82 004e FFF7FEFF 		bl	HAL_GPIO_TogglePin
-  83              	.LVL5:
-  37:Main/main.c   **** 		LED9_Toggle();
-  84              		.loc 1 37 0 discriminator 1
-  85 0052 2021     		movs	r1, #32
-  86 0054 2046     		mov	r0, r4
-  87 0056 FFF7FEFF 		bl	HAL_GPIO_TogglePin
-  88              	.LVL6:
-  89 005a EEE7     		b	.L2
-  90              	.L5:
-  91              		.align	2
-  92              	.L4:
-  93 005c 00100240 		.word	1073876992
-  94 0060 00000140 		.word	1073807360
-  95 0064 000C0140 		.word	1073810432
-  96              		.cfi_endproc
-  97              	.LFE64:
-  99              		.text
- 100              	.Letext0:
- 101              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 102              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 103              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
- 104              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
- 105              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
- 106              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
- 107              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
- 108              		.file 9 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 109              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
- 110              		.file 11 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 111              		.file 12 "Main/system.h"
- 112              		.file 13 "Drivers/BSP/stm32f1_easyco.h"
- 113              		.file 14 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
-ARM GAS  /tmp/cclYqDDb.s 			page 4
+  81 004a FFF7FEFF 		bl	TIM_InitCrossCnt
+  82              	.LVL7:
+  36:Main/main.c   **** 	TIM_InitAdcTrigger();
+  83              		.loc 1 36 0
+  84 004e FFF7FEFF 		bl	TIM_InitAdcTrigger
+  85              	.LVL8:
+  86              	.L2:
+  87 0052 FEE7     		b	.L2
+  88              	.L5:
+  89              		.align	2
+  90              	.L4:
+  91 0054 00100240 		.word	1073876992
+  92 0058 00000140 		.word	1073807360
+  93              		.cfi_endproc
+  94              	.LFE66:
+  96              		.text
+  97              	.Letext0:
+  98              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+  99              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 100              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+ 101              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+ 102              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
+ 103              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
+ 104              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
+ 105              		.file 9 "/usr/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h"
+ 106              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
+ 107              		.file 11 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 108              		.file 12 "Main/system.h"
+ 109              		.file 13 "Drivers/BSP/stm32f1_easyco.h"
+ARM GAS  /tmp/cclwjEcc.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/cclYqDDb.s:16     .text.main:0000000000000000 $t
-     /tmp/cclYqDDb.s:23     .text.main:0000000000000000 main
-     /tmp/cclYqDDb.s:93     .text.main:000000000000005c $d
-                     .debug_frame:0000000000000010 $d
+     /tmp/cclwjEcc.s:16     .text.main:0000000000000000 $t
+     /tmp/cclwjEcc.s:23     .text.main:0000000000000000 main
+     /tmp/cclwjEcc.s:91     .text.main:0000000000000054 $d
 
 UNDEFINED SYMBOLS
 HAL_Init
 SystemClock_Config
 BSP_Init
-HAL_Delay
-HAL_GPIO_TogglePin
+UART_Init
+ADC_Init
+TIM_InitPwm
+TIM_InitComm
+TIM_InitCrossCnt
+TIM_InitAdcTrigger

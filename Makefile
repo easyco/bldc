@@ -13,8 +13,13 @@
 ######################################
 # target
 ######################################
-TARGET = STM32F103
+TARGET = STM32F103_BLDC
 
+######################################
+# C defines
+######################################
+C_DEFS = -DUSE_HAL_DRIVER \
+		 -DSTM32F103xB
 
 ######################################
 # building variables
@@ -24,44 +29,58 @@ DEBUG = 1
 # optimization
 OPT = -Og
 
-
 #######################################
 # paths
 #######################################
-# source path
-SOURCES_DIR =  \
-Main \
-Drivers/BSP \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src
-
-# firmware library path
-PERIFLIB_PATH = /Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver
-
-# Build path
 BUILD_DIR = build
+
+# C includes
+C_INCLUDES = -IMain \
+			 -IBLDC \
+			 -IDrivers/BSP \
+             -IDrivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc \
+             -IDrivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/Legacy \
+             -IDrivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include \
+             -IDrivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include
+
+HAL_DIR = Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver
+MAIN_DIR = Main
 
 ######################################
 # source
 ######################################
 # C sources
-C_SOURCES =  \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c \
-Main/stm32f1xx_it.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c \
+MAIN_SRC = $(notdir $(wildcard $(MAIN_DIR)/*.c))
+
+C_SOURCES :=  \
+$(HAL_DIR)/Src/stm32f1xx_hal_adc.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_adc_ex.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_flash.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_cortex.c \
+$(HAL_DIR)/Src/stm32f1xx_hal.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_gpio.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_tim_ex.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_flash_ex.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_pwr.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_rcc.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_rcc_ex.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_tim.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_dma.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_gpio_ex.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_uart.c \
+$(HAL_DIR)/Src/stm32f1xx_hal_usart.c \
+Drivers/BSP/stm32f1_easyco.c \
+Drivers/BSP/bsp_adc.c \
+Drivers/BSP/bsp_tim.c \
 Main/main.c \
 Main/system.c \
-Drivers/BSP/stm32f1_easyco.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c \
+Main/syscalls.c \
 Main/system_stm32f1xx.c \
-Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c  
+Main/stm32f1xx_it.c \
+BLDC/adc.c \
+BLDC/pwm.c \
+BLDC/comm.c \
+BLDC/bldc.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -106,23 +125,13 @@ MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
 # AS defines
 AS_DEFS = 
 
-# C defines
-C_DEFS =  \
--DUSE_HAL_DRIVER \
--DSTM32F103xB
+
 
 
 # AS includes
 AS_INCLUDES = 
 
-# C includes
-C_INCLUDES =  \
--IMain \
--IDrivers/BSP \
--IDrivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc \
--IDrivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/Legacy \
--IDrivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include \
--IDrivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include
+
 
 
 # compile gcc flags
@@ -152,7 +161,6 @@ LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BU
 
 # default action: build all
 all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
-
 
 #######################################
 # build the application

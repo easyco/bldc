@@ -75,7 +75,7 @@
 #define ADC_INJECTED_TRGO					ADC_EXTERNALTRIGINJECCONV_T4_TRGO
 
 void BSP_Init(void);
-void Init_UART(void);
+void UART_Init(void);
 bool Button_IsPush(void);
 
 

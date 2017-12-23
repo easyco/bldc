@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDCmQNM.s 			page 1
+ARM GAS  /tmp/ccnBRBwt.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -22,7 +22,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
   19              		.thumb_func
   20              		.fpu softvfp
   22              	FLASH_MassErase:
-  23              	.LFB70:
+  23              	.LFB72:
   24              		.file 1 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c"
    1:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** /**
    2:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
   32:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   *
   33:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   * <h2><center>&copy; COPYRIGHT(c) 2016 STMicroelectronics</center></h2>
   34:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   *
-ARM GAS  /tmp/ccDCmQNM.s 			page 2
+ARM GAS  /tmp/ccnBRBwt.s 			page 2
 
 
   35:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   * Redistribution and use in source and binary forms, with or without modification,
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
   89:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** /* Private typedef -----------------------------------------------------------*/
   90:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** /* Private define ------------------------------------------------------------*/
   91:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** /** @defgroup FLASHEx_Private_Constants FLASHEx Private Constants
-ARM GAS  /tmp/ccDCmQNM.s 			page 3
+ARM GAS  /tmp/ccnBRBwt.s 			page 3
 
 
   92:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****  * @{
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  146:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     (+) @ref HAL_FLASHEx_Erase_IT: end of erase is done when @ref HAL_FLASH_EndOfOperationCallback 
  147:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         is called with parameter 0xFFFFFFFF
  148:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
-ARM GAS  /tmp/ccDCmQNM.s 			page 4
+ARM GAS  /tmp/ccnBRBwt.s 			page 4
 
 
  149:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     [..] Any operation of erase should follow these steps:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  203:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         {
  204:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****           status = HAL_OK;
  205:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         }
-ARM GAS  /tmp/ccDCmQNM.s 			page 5
+ARM GAS  /tmp/ccnBRBwt.s 			page 5
 
 
  206:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  260:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         /*Initialization of PageError variable*/
  261:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         *PageError = 0xFFFFFFFF;
  262:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
-ARM GAS  /tmp/ccDCmQNM.s 			page 6
+ARM GAS  /tmp/ccnBRBwt.s 			page 6
 
 
  263:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         /* Erase by page by page to be done*/
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  317:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
  318:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
  319:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   /* Process Unlocked */
-ARM GAS  /tmp/ccDCmQNM.s 			page 7
+ARM GAS  /tmp/ccnBRBwt.s 			page 7
 
 
  320:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   __HAL_UNLOCK(&pFlash);
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  374:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     pFlash.ProcedureOnGoing = FLASH_PROC_PAGEERASE;
  375:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     pFlash.DataRemaining = pEraseInit->NbPages;
  376:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     pFlash.Address = pEraseInit->PageAddress;
-ARM GAS  /tmp/ccDCmQNM.s 			page 8
+ARM GAS  /tmp/ccnBRBwt.s 			page 8
 
 
  377:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  431:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     SET_BIT(FLASH->CR, FLASH_CR_OPTER);
  432:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     SET_BIT(FLASH->CR, FLASH_CR_STRT);
  433:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
-ARM GAS  /tmp/ccDCmQNM.s 			page 9
+ARM GAS  /tmp/ccnBRBwt.s 			page 9
 
 
  434:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     /* Wait for last operation to be completed */
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  488:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     {
  489:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       /* Process Unlocked */
  490:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       __HAL_UNLOCK(&pFlash);
-ARM GAS  /tmp/ccDCmQNM.s 			page 10
+ARM GAS  /tmp/ccnBRBwt.s 			page 10
 
 
  491:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       return status;
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  545:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** {
  546:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   pOBInit->OptionType = OPTIONBYTE_WRP | OPTIONBYTE_RDP | OPTIONBYTE_USER;
  547:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
-ARM GAS  /tmp/ccDCmQNM.s 			page 11
+ARM GAS  /tmp/ccnBRBwt.s 			page 11
 
 
  548:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   /*Get WRP*/
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  602:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   *            @arg @ref FLASH_BANK_2 Bank2 to be erased
  603:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   *            @arg @ref FLASH_BANK_BOTH Bank1 and Bank2 to be erased
  604:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   @endif
-ARM GAS  /tmp/ccDCmQNM.s 			page 12
+ARM GAS  /tmp/ccnBRBwt.s 			page 12
 
 
  605:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   @if STM32F103xG
@@ -682,8 +682,8 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  617:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   /* Clean the error context */
  618:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   pFlash.ErrorCode = HAL_FLASH_ERROR_NONE;
   31              		.loc 1 618 0
-  32 0000 0022     		movs	r2, #0
-  33 0002 064B     		ldr	r3, .L2
+  32 0000 064B     		ldr	r3, .L2
+  33 0002 0022     		movs	r2, #0
   34 0004 DA61     		str	r2, [r3, #28]
  619:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
  620:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #if defined(FLASH_BANK2_END)
@@ -716,29 +716,30 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
   41 0010 1A69     		ldr	r2, [r3, #16]
   42 0012 42F04002 		orr	r2, r2, #64
   43 0016 1A61     		str	r2, [r3, #16]
-  44 0018 7047     		bx	lr
-  45              	.L3:
-ARM GAS  /tmp/ccDCmQNM.s 			page 13
-
-
-  46 001a 00BF     		.align	2
-  47              	.L2:
-  48 001c 00000000 		.word	pFlash
-  49 0020 00200240 		.word	1073881088
-  50              		.cfi_endproc
-  51              	.LFE70:
-  53              		.section	.text.FLASH_OB_GetWRP,"ax",%progbits
-  54              		.align	1
-  55              		.syntax unified
-  56              		.thumb
-  57              		.thumb_func
-  58              		.fpu softvfp
-  60              	FLASH_OB_GetWRP:
-  61              	.LFB76:
  641:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #if defined(FLASH_BANK2_END)
  642:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
+ARM GAS  /tmp/ccnBRBwt.s 			page 13
+
+
  643:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* FLASH_BANK2_END */
  644:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** }
+  44              		.loc 1 644 0
+  45 0018 7047     		bx	lr
+  46              	.L3:
+  47 001a 00BF     		.align	2
+  48              	.L2:
+  49 001c 00000000 		.word	pFlash
+  50 0020 00200240 		.word	1073881088
+  51              		.cfi_endproc
+  52              	.LFE72:
+  54              		.section	.text.FLASH_OB_GetWRP,"ax",%progbits
+  55              		.align	1
+  56              		.syntax unified
+  57              		.thumb
+  58              		.thumb_func
+  59              		.fpu softvfp
+  61              	FLASH_OB_GetWRP:
+  62              	.LFB78:
  645:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
  646:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** /**
  647:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   * @brief  Enable the write protection of the desired pages
@@ -777,10 +778,10 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  680:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   WRP0_Data = (uint16_t)(WriteProtectPage & OB_WRP_PAGES0TO31MASK);
  681:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* OB_WRP_PAGES0TO31MASK */
  682:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   
+ARM GAS  /tmp/ccnBRBwt.s 			page 14
+
+
  683:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #if defined(OB_WRP_PAGES16TO31MASK)
-ARM GAS  /tmp/ccDCmQNM.s 			page 14
-
-
  684:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   WRP1_Data = (uint16_t)((WriteProtectPage & OB_WRP_PAGES16TO31MASK) >> 8);
  685:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #elif defined(OB_WRP_PAGES32TO63MASK)
  686:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   WRP1_Data = (uint16_t)((WriteProtectPage & OB_WRP_PAGES32TO63MASK) >> 8);
@@ -837,10 +838,10 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  737:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         status = FLASH_WaitForLastOperation((uint32_t)FLASH_TIMEOUT_VALUE);
  738:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
  739:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* FLASH_WRP1_WRP1 */
+ARM GAS  /tmp/ccnBRBwt.s 			page 15
+
+
  740:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
-ARM GAS  /tmp/ccDCmQNM.s 			page 15
-
-
  741:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #if defined(FLASH_WRP2_WRP2)
  742:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       if((status == HAL_OK) && (WRP2_Data != 0xFF))
  743:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
@@ -897,10 +898,10 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  794:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   /* Check the parameters */
  795:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   assert_param(IS_OB_WRP(WriteProtectPage));
  796:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
+ARM GAS  /tmp/ccnBRBwt.s 			page 16
+
+
  797:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   /* Get current write protected pages and the new pages to be unprotected ******/
-ARM GAS  /tmp/ccDCmQNM.s 			page 16
-
-
  798:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   WriteProtectPage = (FLASH_OB_GetWRP() | WriteProtectPage);
  799:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
  800:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #if defined(OB_WRP_PAGES0TO15MASK)
@@ -957,10 +958,10 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  851:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
  852:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* FLASH_WRP0_WRP0 */
  853:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
+ARM GAS  /tmp/ccnBRBwt.s 			page 17
+
+
  854:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #if defined(FLASH_WRP1_WRP1)
-ARM GAS  /tmp/ccDCmQNM.s 			page 17
-
-
  855:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       if((status == HAL_OK) && (WRP1_Data != 0xFF))
  856:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
  857:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         OB->WRP1 |= WRP1_Data;
@@ -1017,10 +1018,10 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  908:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   
  909:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   if(status == HAL_OK)
  910:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   { 
+ARM GAS  /tmp/ccnBRBwt.s 			page 18
+
+
  911:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     /* Clean the error context */
-ARM GAS  /tmp/ccDCmQNM.s 			page 18
-
-
  912:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     pFlash.ErrorCode = HAL_FLASH_ERROR_NONE;
  913:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     
  914:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     /* If the previous operation is completed, proceed to erase the option bytes */
@@ -1077,10 +1078,10 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  965:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   if(status == HAL_OK)
  966:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {     
  967:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     /* Clean the error context */
+ARM GAS  /tmp/ccnBRBwt.s 			page 19
+
+
  968:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     pFlash.ErrorCode = HAL_FLASH_ERROR_NONE;
-ARM GAS  /tmp/ccDCmQNM.s 			page 19
-
-
  969:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
  970:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     /* Enable the Option Bytes Programming operation */
  971:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     SET_BIT(FLASH->CR, FLASH_CR_OPTPG); 
@@ -1137,10 +1138,10 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
 1022:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     
 1023:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     /* If the program operation is completed, disable the OPTPG Bit */
 1024:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     CLEAR_BIT(FLASH->CR, FLASH_CR_OPTPG);
+ARM GAS  /tmp/ccnBRBwt.s 			page 20
+
+
 1025:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
-ARM GAS  /tmp/ccDCmQNM.s 			page 20
-
-
 1026:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   /* Return the Option Byte Data Program Status */
 1027:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   return status;
 1028:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** }
@@ -1151,33 +1152,33 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
 1033:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   */
 1034:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** static uint32_t FLASH_OB_GetWRP(void)
 1035:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** {
-  62              		.loc 1 1035 0
-  63              		.cfi_startproc
-  64              		@ args = 0, pretend = 0, frame = 0
-  65              		@ frame_needed = 0, uses_anonymous_args = 0
-  66              		@ link register save eliminated.
+  63              		.loc 1 1035 0
+  64              		.cfi_startproc
+  65              		@ args = 0, pretend = 0, frame = 0
+  66              		@ frame_needed = 0, uses_anonymous_args = 0
+  67              		@ link register save eliminated.
 1036:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   /* Return the FLASH write protection Register value */
 1037:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   return (uint32_t)(READ_REG(FLASH->WRPR));
-  67              		.loc 1 1037 0
-  68 0000 014B     		ldr	r3, .L5
-  69 0002 186A     		ldr	r0, [r3, #32]
+  68              		.loc 1 1037 0
+  69 0000 014B     		ldr	r3, .L5
+  70 0002 186A     		ldr	r0, [r3, #32]
 1038:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** }
-  70              		.loc 1 1038 0
-  71 0004 7047     		bx	lr
-  72              	.L6:
-  73 0006 00BF     		.align	2
-  74              	.L5:
-  75 0008 00200240 		.word	1073881088
-  76              		.cfi_endproc
-  77              	.LFE76:
-  79              		.section	.text.FLASH_OB_GetRDP,"ax",%progbits
-  80              		.align	1
-  81              		.syntax unified
-  82              		.thumb
-  83              		.thumb_func
-  84              		.fpu softvfp
-  86              	FLASH_OB_GetRDP:
-  87              	.LFB77:
+  71              		.loc 1 1038 0
+  72 0004 7047     		bx	lr
+  73              	.L6:
+  74 0006 00BF     		.align	2
+  75              	.L5:
+  76 0008 00200240 		.word	1073881088
+  77              		.cfi_endproc
+  78              	.LFE78:
+  80              		.section	.text.FLASH_OB_GetRDP,"ax",%progbits
+  81              		.align	1
+  82              		.syntax unified
+  83              		.thumb
+  84              		.thumb_func
+  85              		.fpu softvfp
+  87              	FLASH_OB_GetRDP:
+  88              	.LFB79:
 1039:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
 1040:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** /**
 1041:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   * @brief  Returns the FLASH Read Protection level.
@@ -1188,339 +1189,338 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
 1046:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   */
 1047:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** static uint32_t FLASH_OB_GetRDP(void)
 1048:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** {
-  88              		.loc 1 1048 0
-  89              		.cfi_startproc
-  90              		@ args = 0, pretend = 0, frame = 0
-  91              		@ frame_needed = 0, uses_anonymous_args = 0
-  92              		@ link register save eliminated.
-  93              	.LVL1:
+  89              		.loc 1 1048 0
+  90              		.cfi_startproc
+  91              		@ args = 0, pretend = 0, frame = 0
+  92              		@ frame_needed = 0, uses_anonymous_args = 0
+  93              		@ link register save eliminated.
+  94              	.LVL1:
 1049:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   uint32_t readstatus = OB_RDP_LEVEL_0;
 1050:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   uint32_t tmp_reg = 0;
 1051:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   
+ARM GAS  /tmp/ccnBRBwt.s 			page 21
+
+
 1052:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   /* Read RDP level bits */
-ARM GAS  /tmp/ccDCmQNM.s 			page 21
-
-
 1053:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   tmp_reg = READ_BIT(FLASH->OBR, FLASH_OBR_RDPRT);
-  94              		.loc 1 1053 0
-  95 0000 044B     		ldr	r3, .L11
-  96 0002 DB69     		ldr	r3, [r3, #28]
-  97              	.LVL2:
+  95              		.loc 1 1053 0
+  96 0000 044B     		ldr	r3, .L10
+  97 0002 DB69     		ldr	r3, [r3, #28]
+  98              	.LVL2:
 1054:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
 1055:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   if (tmp_reg == FLASH_OBR_RDPRT)
-  98              		.loc 1 1055 0
-  99 0004 13F0020F 		tst	r3, #2
- 100 0008 01D1     		bne	.L10
+  99              		.loc 1 1055 0
+ 100 0004 13F0020F 		tst	r3, #2
+ 101 0008 01D0     		beq	.L9
 1056:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
 1057:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     readstatus = OB_RDP_LEVEL_1;
+ 102              		.loc 1 1057 0
+ 103 000a 0020     		movs	r0, #0
+ 104 000c 7047     		bx	lr
+ 105              	.L9:
 1058:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
 1059:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   else 
 1060:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
 1061:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     readstatus = OB_RDP_LEVEL_0;
- 101              		.loc 1 1061 0
- 102 000a A520     		movs	r0, #165
+ 106              		.loc 1 1061 0
+ 107 000e A520     		movs	r0, #165
 1062:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
 1063:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
 1064:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   return readstatus;
 1065:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** }
- 103              		.loc 1 1065 0
- 104 000c 7047     		bx	lr
- 105              	.L10:
-1057:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
- 106              		.loc 1 1057 0
- 107 000e 0020     		movs	r0, #0
- 108 0010 7047     		bx	lr
- 109              	.L12:
- 110 0012 00BF     		.align	2
- 111              	.L11:
- 112 0014 00200240 		.word	1073881088
- 113              		.cfi_endproc
- 114              	.LFE77:
- 116              		.section	.text.FLASH_OB_RDP_LevelConfig,"ax",%progbits
- 117              		.align	1
- 118              		.syntax unified
- 119              		.thumb
- 120              		.thumb_func
- 121              		.fpu softvfp
- 123              	FLASH_OB_RDP_LevelConfig:
- 124              	.LFB73:
+ 108              		.loc 1 1065 0
+ 109 0010 7047     		bx	lr
+ 110              	.L11:
+ 111 0012 00BF     		.align	2
+ 112              	.L10:
+ 113 0014 00200240 		.word	1073881088
+ 114              		.cfi_endproc
+ 115              	.LFE79:
+ 117              		.section	.text.FLASH_OB_RDP_LevelConfig,"ax",%progbits
+ 118              		.align	1
+ 119              		.syntax unified
+ 120              		.thumb
+ 121              		.thumb_func
+ 122              		.fpu softvfp
+ 124              	FLASH_OB_RDP_LevelConfig:
+ 125              	.LFB75:
  900:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
- 125              		.loc 1 900 0
- 126              		.cfi_startproc
- 127              		@ args = 0, pretend = 0, frame = 0
- 128              		@ frame_needed = 0, uses_anonymous_args = 0
- 129              	.LVL3:
- 130 0000 38B5     		push	{r3, r4, r5, lr}
- 131              	.LCFI0:
- 132              		.cfi_def_cfa_offset 16
- 133              		.cfi_offset 3, -16
- 134              		.cfi_offset 4, -12
- 135              		.cfi_offset 5, -8
- 136              		.cfi_offset 14, -4
- 137 0002 0546     		mov	r5, r0
-ARM GAS  /tmp/ccDCmQNM.s 			page 22
+ 126              		.loc 1 900 0
+ 127              		.cfi_startproc
+ 128              		@ args = 0, pretend = 0, frame = 0
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130              	.LVL3:
+ 131 0000 38B5     		push	{r3, r4, r5, lr}
+ 132              	.LCFI0:
+ 133              		.cfi_def_cfa_offset 16
+ 134              		.cfi_offset 3, -16
+ 135              		.cfi_offset 4, -12
+ 136              		.cfi_offset 5, -8
+ 137              		.cfi_offset 14, -4
+ 138 0002 0546     		mov	r5, r0
+ARM GAS  /tmp/ccnBRBwt.s 			page 22
 
 
- 138              	.LVL4:
+ 139              	.LVL4:
  907:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   
- 139              		.loc 1 907 0
- 140 0004 4CF25030 		movw	r0, #50000
- 141              	.LVL5:
- 142 0008 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 143              	.LVL6:
+ 140              		.loc 1 907 0
+ 141 0004 4CF25030 		movw	r0, #50000
+ 142              	.LVL5:
+ 143 0008 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 144              	.LVL6:
  909:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   { 
- 144              		.loc 1 909 0
- 145 000c 0346     		mov	r3, r0
- 146 000e 08B1     		cbz	r0, .L16
- 147              	.LVL7:
- 148              	.L14:
+ 145              		.loc 1 909 0
+ 146 000c 0346     		mov	r3, r0
+ 147 000e 08B1     		cbz	r0, .L15
+ 148              	.LVL7:
+ 149              	.L13:
  940:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 149              		.loc 1 940 0
- 150 0010 1846     		mov	r0, r3
- 151 0012 38BD     		pop	{r3, r4, r5, pc}
- 152              	.LVL8:
- 153              	.L16:
+ 150              		.loc 1 940 0
+ 151 0010 1846     		mov	r0, r3
+ 152 0012 38BD     		pop	{r3, r4, r5, pc}
+ 153              	.LVL8:
+ 154              	.L15:
  912:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     
- 154              		.loc 1 912 0
- 155 0014 0022     		movs	r2, #0
- 156 0016 134B     		ldr	r3, .L17
- 157 0018 DA61     		str	r2, [r3, #28]
+ 155              		.loc 1 912 0
+ 156 0014 134B     		ldr	r3, .L16
+ 157 0016 0022     		movs	r2, #0
+ 158 0018 DA61     		str	r2, [r3, #28]
  915:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     SET_BIT(FLASH->CR, FLASH_CR_STRT);
- 158              		.loc 1 915 0
- 159 001a 134C     		ldr	r4, .L17+4
- 160 001c 2369     		ldr	r3, [r4, #16]
- 161 001e 43F02003 		orr	r3, r3, #32
- 162 0022 2361     		str	r3, [r4, #16]
+ 159              		.loc 1 915 0
+ 160 001a 134C     		ldr	r4, .L16+4
+ 161 001c 2369     		ldr	r3, [r4, #16]
+ 162 001e 43F02003 		orr	r3, r3, #32
+ 163 0022 2361     		str	r3, [r4, #16]
  916:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 163              		.loc 1 916 0
- 164 0024 2369     		ldr	r3, [r4, #16]
- 165 0026 43F04003 		orr	r3, r3, #64
- 166 002a 2361     		str	r3, [r4, #16]
+ 164              		.loc 1 916 0
+ 165 0024 2369     		ldr	r3, [r4, #16]
+ 166 0026 43F04003 		orr	r3, r3, #64
+ 167 002a 2361     		str	r3, [r4, #16]
  919:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 167              		.loc 1 919 0
- 168 002c 4CF25030 		movw	r0, #50000
- 169              	.LVL9:
- 170 0030 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 171              	.LVL10:
+ 168              		.loc 1 919 0
+ 169 002c 4CF25030 		movw	r0, #50000
+ 170              	.LVL9:
+ 171 0030 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 172              	.LVL10:
  922:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 172              		.loc 1 922 0
- 173 0034 2369     		ldr	r3, [r4, #16]
- 174 0036 23F02003 		bic	r3, r3, #32
- 175 003a 2361     		str	r3, [r4, #16]
+ 173              		.loc 1 922 0
+ 174 0034 2369     		ldr	r3, [r4, #16]
+ 175 0036 23F02003 		bic	r3, r3, #32
+ 176 003a 2361     		str	r3, [r4, #16]
  924:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     {
- 176              		.loc 1 924 0
- 177 003c 0346     		mov	r3, r0
- 178 003e 0028     		cmp	r0, #0
- 179 0040 E6D1     		bne	.L14
+ 177              		.loc 1 924 0
+ 178 003c 0346     		mov	r3, r0
+ 179 003e 0028     		cmp	r0, #0
+ 180 0040 E6D1     		bne	.L13
  927:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       
- 180              		.loc 1 927 0
- 181 0042 2369     		ldr	r3, [r4, #16]
- 182 0044 43F01003 		orr	r3, r3, #16
- 183 0048 2361     		str	r3, [r4, #16]
+ 181              		.loc 1 927 0
+ 182 0042 2369     		ldr	r3, [r4, #16]
+ 183 0044 43F01003 		orr	r3, r3, #16
+ 184 0048 2361     		str	r3, [r4, #16]
  929:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       
-ARM GAS  /tmp/ccDCmQNM.s 			page 23
+ARM GAS  /tmp/ccnBRBwt.s 			page 23
 
 
- 184              		.loc 1 929 0
- 185 004a ADB2     		uxth	r5, r5
- 186 004c 074B     		ldr	r3, .L17+8
- 187 004e 1D80     		strh	r5, [r3]	@ movhi
+ 185              		.loc 1 929 0
+ 186 004a ADB2     		uxth	r5, r5
+ 187 004c 074B     		ldr	r3, .L16+8
+ 188 004e 1D80     		strh	r5, [r3]	@ movhi
  932:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       
- 188              		.loc 1 932 0
- 189 0050 4CF25030 		movw	r0, #50000
- 190              	.LVL11:
- 191 0054 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 192              	.LVL12:
- 193 0058 0346     		mov	r3, r0
- 194              	.LVL13:
+ 189              		.loc 1 932 0
+ 190 0050 4CF25030 		movw	r0, #50000
+ 191              	.LVL11:
+ 192 0054 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 193              	.LVL12:
+ 194 0058 0346     		mov	r3, r0
+ 195              	.LVL13:
  935:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     }
- 195              		.loc 1 935 0
- 196 005a 2269     		ldr	r2, [r4, #16]
- 197 005c 22F01002 		bic	r2, r2, #16
- 198 0060 2261     		str	r2, [r4, #16]
- 199 0062 D5E7     		b	.L14
- 200              	.L18:
- 201              		.align	2
- 202              	.L17:
- 203 0064 00000000 		.word	pFlash
- 204 0068 00200240 		.word	1073881088
- 205 006c 00F8FF1F 		.word	536868864
- 206              		.cfi_endproc
- 207              	.LFE73:
- 209              		.section	.text.FLASH_OB_UserConfig,"ax",%progbits
- 210              		.align	1
- 211              		.syntax unified
- 212              		.thumb
- 213              		.thumb_func
- 214              		.fpu softvfp
- 216              	FLASH_OB_UserConfig:
- 217              	.LFB74:
+ 196              		.loc 1 935 0
+ 197 005a 2269     		ldr	r2, [r4, #16]
+ 198 005c 22F01002 		bic	r2, r2, #16
+ 199 0060 2261     		str	r2, [r4, #16]
+ 200 0062 D5E7     		b	.L13
+ 201              	.L17:
+ 202              		.align	2
+ 203              	.L16:
+ 204 0064 00000000 		.word	pFlash
+ 205 0068 00200240 		.word	1073881088
+ 206 006c 00F8FF1F 		.word	536868864
+ 207              		.cfi_endproc
+ 208              	.LFE75:
+ 210              		.section	.text.FLASH_OB_UserConfig,"ax",%progbits
+ 211              		.align	1
+ 212              		.syntax unified
+ 213              		.thumb
+ 214              		.thumb_func
+ 215              		.fpu softvfp
+ 217              	FLASH_OB_UserConfig:
+ 218              	.LFB76:
  951:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
- 218              		.loc 1 951 0
- 219              		.cfi_startproc
- 220              		@ args = 0, pretend = 0, frame = 0
- 221              		@ frame_needed = 0, uses_anonymous_args = 0
- 222              	.LVL14:
- 223 0000 38B5     		push	{r3, r4, r5, lr}
- 224              	.LCFI1:
- 225              		.cfi_def_cfa_offset 16
- 226              		.cfi_offset 3, -16
- 227              		.cfi_offset 4, -12
- 228              		.cfi_offset 5, -8
- 229              		.cfi_offset 14, -4
- 230 0002 0446     		mov	r4, r0
- 231              	.LVL15:
+ 219              		.loc 1 951 0
+ 220              		.cfi_startproc
+ 221              		@ args = 0, pretend = 0, frame = 0
+ 222              		@ frame_needed = 0, uses_anonymous_args = 0
+ 223              	.LVL14:
+ 224 0000 38B5     		push	{r3, r4, r5, lr}
+ 225              	.LCFI1:
+ 226              		.cfi_def_cfa_offset 16
+ 227              		.cfi_offset 3, -16
+ 228              		.cfi_offset 4, -12
+ 229              		.cfi_offset 5, -8
+ 230              		.cfi_offset 14, -4
+ 231 0002 0446     		mov	r4, r0
+ 232              	.LVL15:
  963:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   
- 232              		.loc 1 963 0
- 233 0004 4CF25030 		movw	r0, #50000
- 234              	.LVL16:
- 235 0008 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 236              	.LVL17:
+ 233              		.loc 1 963 0
+ 234 0004 4CF25030 		movw	r0, #50000
+ 235              	.LVL16:
+ 236 0008 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 237              	.LVL17:
  965:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {     
- 237              		.loc 1 965 0
-ARM GAS  /tmp/ccDCmQNM.s 			page 24
+ 238              		.loc 1 965 0
+ARM GAS  /tmp/ccnBRBwt.s 			page 24
 
 
- 238 000c 0346     		mov	r3, r0
- 239 000e 08B1     		cbz	r0, .L22
- 240              	.LVL18:
- 241              	.L20:
+ 239 000c 0346     		mov	r3, r0
+ 240 000e 08B1     		cbz	r0, .L21
+ 241              	.LVL18:
+ 242              	.L19:
  987:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 242              		.loc 1 987 0
- 243 0010 1846     		mov	r0, r3
- 244 0012 38BD     		pop	{r3, r4, r5, pc}
- 245              	.LVL19:
- 246              	.L22:
+ 243              		.loc 1 987 0
+ 244 0010 1846     		mov	r0, r3
+ 245 0012 38BD     		pop	{r3, r4, r5, pc}
+ 246              	.LVL19:
+ 247              	.L21:
  968:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 247              		.loc 1 968 0
- 248 0014 0022     		movs	r2, #0
- 249 0016 0A4B     		ldr	r3, .L23
- 250 0018 DA61     		str	r2, [r3, #28]
+ 248              		.loc 1 968 0
+ 249 0014 0A4B     		ldr	r3, .L22
+ 250 0016 0022     		movs	r2, #0
+ 251 0018 DA61     		str	r2, [r3, #28]
  971:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****  
- 251              		.loc 1 971 0
- 252 001a 0A4D     		ldr	r5, .L23+4
- 253 001c 2B69     		ldr	r3, [r5, #16]
- 254 001e 43F01003 		orr	r3, r3, #16
- 255 0022 2B61     		str	r3, [r5, #16]
+ 252              		.loc 1 971 0
+ 253 001a 0A4D     		ldr	r5, .L22+4
+ 254 001c 2B69     		ldr	r3, [r5, #16]
+ 255 001e 43F01003 		orr	r3, r3, #16
+ 256 0022 2B61     		str	r3, [r5, #16]
  976:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* FLASH_BANK2_END */
- 256              		.loc 1 976 0
- 257 0024 44F08804 		orr	r4, r4, #136
- 258 0028 074B     		ldr	r3, .L23+8
- 259 002a 5C80     		strh	r4, [r3, #2]	@ movhi
+ 257              		.loc 1 976 0
+ 258 0024 44F08804 		orr	r4, r4, #136
+ 259 0028 074B     		ldr	r3, .L22+8
+ 260 002a 5C80     		strh	r4, [r3, #2]	@ movhi
  980:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 260              		.loc 1 980 0
- 261 002c 4CF25030 		movw	r0, #50000
- 262              	.LVL20:
- 263 0030 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 264              	.LVL21:
- 265 0034 0346     		mov	r3, r0
- 266              	.LVL22:
+ 261              		.loc 1 980 0
+ 262 002c 4CF25030 		movw	r0, #50000
+ 263              	.LVL20:
+ 264 0030 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 265              	.LVL21:
+ 266 0034 0346     		mov	r3, r0
+ 267              	.LVL22:
  983:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
- 267              		.loc 1 983 0
- 268 0036 2A69     		ldr	r2, [r5, #16]
- 269 0038 22F01002 		bic	r2, r2, #16
- 270 003c 2A61     		str	r2, [r5, #16]
- 271 003e E7E7     		b	.L20
- 272              	.L24:
- 273              		.align	2
- 274              	.L23:
- 275 0040 00000000 		.word	pFlash
- 276 0044 00200240 		.word	1073881088
- 277 0048 00F8FF1F 		.word	536868864
- 278              		.cfi_endproc
- 279              	.LFE74:
- 281              		.section	.text.FLASH_OB_ProgramData,"ax",%progbits
- 282              		.align	1
- 283              		.syntax unified
- 284              		.thumb
- 285              		.thumb_func
- 286              		.fpu softvfp
- 288              	FLASH_OB_ProgramData:
- 289              	.LFB75:
+ 268              		.loc 1 983 0
+ 269 0036 2A69     		ldr	r2, [r5, #16]
+ 270 0038 22F01002 		bic	r2, r2, #16
+ 271 003c 2A61     		str	r2, [r5, #16]
+ 272 003e E7E7     		b	.L19
+ 273              	.L23:
+ 274              		.align	2
+ 275              	.L22:
+ 276 0040 00000000 		.word	pFlash
+ 277 0044 00200240 		.word	1073881088
+ 278 0048 00F8FF1F 		.word	536868864
+ 279              		.cfi_endproc
+ 280              	.LFE76:
+ 282              		.section	.text.FLASH_OB_ProgramData,"ax",%progbits
+ 283              		.align	1
+ 284              		.syntax unified
+ 285              		.thumb
+ 286              		.thumb_func
+ 287              		.fpu softvfp
+ 289              	FLASH_OB_ProgramData:
+ 290              	.LFB77:
 1002:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_ERROR;
-ARM GAS  /tmp/ccDCmQNM.s 			page 25
+ARM GAS  /tmp/ccnBRBwt.s 			page 25
 
 
- 290              		.loc 1 1002 0
- 291              		.cfi_startproc
- 292              		@ args = 0, pretend = 0, frame = 0
- 293              		@ frame_needed = 0, uses_anonymous_args = 0
- 294              	.LVL23:
- 295 0000 70B5     		push	{r4, r5, r6, lr}
- 296              	.LCFI2:
- 297              		.cfi_def_cfa_offset 16
- 298              		.cfi_offset 4, -16
- 299              		.cfi_offset 5, -12
- 300              		.cfi_offset 6, -8
- 301              		.cfi_offset 14, -4
- 302 0002 0646     		mov	r6, r0
- 303 0004 0C46     		mov	r4, r1
- 304              	.LVL24:
+ 291              		.loc 1 1002 0
+ 292              		.cfi_startproc
+ 293              		@ args = 0, pretend = 0, frame = 0
+ 294              		@ frame_needed = 0, uses_anonymous_args = 0
+ 295              	.LVL23:
+ 296 0000 70B5     		push	{r4, r5, r6, lr}
+ 297              	.LCFI2:
+ 298              		.cfi_def_cfa_offset 16
+ 299              		.cfi_offset 4, -16
+ 300              		.cfi_offset 5, -12
+ 301              		.cfi_offset 6, -8
+ 302              		.cfi_offset 14, -4
+ 303 0002 0646     		mov	r6, r0
+ 304 0004 0C46     		mov	r4, r1
+ 305              	.LVL24:
 1009:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   
- 305              		.loc 1 1009 0
- 306 0006 4CF25030 		movw	r0, #50000
- 307              	.LVL25:
- 308 000a FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 309              	.LVL26:
+ 306              		.loc 1 1009 0
+ 307 0006 4CF25030 		movw	r0, #50000
+ 308              	.LVL25:
+ 309 000a FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 310              	.LVL26:
 1011:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
- 310              		.loc 1 1011 0
- 311 000e 0346     		mov	r3, r0
- 312 0010 08B1     		cbz	r0, .L28
- 313              	.LVL27:
- 314              	.L26:
+ 311              		.loc 1 1011 0
+ 312 000e 0346     		mov	r3, r0
+ 313 0010 08B1     		cbz	r0, .L27
+ 314              	.LVL27:
+ 315              	.L25:
 1028:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 315              		.loc 1 1028 0
- 316 0012 1846     		mov	r0, r3
- 317 0014 70BD     		pop	{r4, r5, r6, pc}
- 318              	.LVL28:
- 319              	.L28:
+ 316              		.loc 1 1028 0
+ 317 0012 1846     		mov	r0, r3
+ 318 0014 70BD     		pop	{r4, r5, r6, pc}
+ 319              	.LVL28:
+ 320              	.L27:
 1014:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 320              		.loc 1 1014 0
- 321 0016 0022     		movs	r2, #0
- 322 0018 094B     		ldr	r3, .L29
- 323 001a DA61     		str	r2, [r3, #28]
+ 321              		.loc 1 1014 0
+ 322 0016 0A4B     		ldr	r3, .L28
+ 323 0018 0022     		movs	r2, #0
+ 324 001a DA61     		str	r2, [r3, #28]
 1017:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     *(__IO uint16_t*)Address = Data;
- 324              		.loc 1 1017 0
- 325 001c 094D     		ldr	r5, .L29+4
- 326 001e 2B69     		ldr	r3, [r5, #16]
- 327 0020 43F01003 		orr	r3, r3, #16
- 328 0024 2B61     		str	r3, [r5, #16]
+ 325              		.loc 1 1017 0
+ 326 001c 094D     		ldr	r5, .L28+4
+ 327 001e 2B69     		ldr	r3, [r5, #16]
+ 328 0020 43F01003 		orr	r3, r3, #16
+ 329 0024 2B61     		str	r3, [r5, #16]
 1018:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     
- 329              		.loc 1 1018 0
- 330 0026 A4B2     		uxth	r4, r4
- 331 0028 3480     		strh	r4, [r6]	@ movhi
+ 330              		.loc 1 1018 0
+ 331 0026 A4B2     		uxth	r4, r4
+ 332 0028 3480     		strh	r4, [r6]	@ movhi
 1021:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     
- 332              		.loc 1 1021 0
- 333 002a 4CF25030 		movw	r0, #50000
- 334              	.LVL29:
- 335 002e FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 336              	.LVL30:
- 337 0032 0346     		mov	r3, r0
- 338              	.LVL31:
+ 333              		.loc 1 1021 0
+ 334 002a 4CF25030 		movw	r0, #50000
+ 335              	.LVL29:
+ 336 002e FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 337              	.LVL30:
+ 338 0032 0346     		mov	r3, r0
+ 339              	.LVL31:
 1024:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
-ARM GAS  /tmp/ccDCmQNM.s 			page 26
+ARM GAS  /tmp/ccnBRBwt.s 			page 26
 
 
- 339              		.loc 1 1024 0
- 340 0034 2A69     		ldr	r2, [r5, #16]
- 341 0036 22F01002 		bic	r2, r2, #16
- 342 003a 2A61     		str	r2, [r5, #16]
- 343 003c E9E7     		b	.L26
- 344              	.L30:
- 345 003e 00BF     		.align	2
- 346              	.L29:
- 347 0040 00000000 		.word	pFlash
- 348 0044 00200240 		.word	1073881088
- 349              		.cfi_endproc
- 350              	.LFE75:
- 352              		.section	.text.FLASH_OB_GetUser,"ax",%progbits
- 353              		.align	1
- 354              		.syntax unified
- 355              		.thumb
- 356              		.thumb_func
- 357              		.fpu softvfp
- 359              	FLASH_OB_GetUser:
- 360              	.LFB78:
+ 340              		.loc 1 1024 0
+ 341 0034 2A69     		ldr	r2, [r5, #16]
+ 342 0036 22F01002 		bic	r2, r2, #16
+ 343 003a 2A61     		str	r2, [r5, #16]
+ 344 003c E9E7     		b	.L25
+ 345              	.L29:
+ 346 003e 00BF     		.align	2
+ 347              	.L28:
+ 348 0040 00000000 		.word	pFlash
+ 349 0044 00200240 		.word	1073881088
+ 350              		.cfi_endproc
+ 351              	.LFE77:
+ 353              		.section	.text.FLASH_OB_GetUser,"ax",%progbits
+ 354              		.align	1
+ 355              		.syntax unified
+ 356              		.thumb
+ 357              		.thumb_func
+ 358              		.fpu softvfp
+ 360              	FLASH_OB_GetUser:
+ 361              	.LFB80:
 1066:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
 1067:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** /**
 1068:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   * @brief  Return the FLASH User Option Byte value.
@@ -1530,21 +1530,21 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
 1072:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   */
 1073:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** static uint8_t FLASH_OB_GetUser(void)
 1074:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** {
- 361              		.loc 1 1074 0
- 362              		.cfi_startproc
- 363              		@ args = 0, pretend = 0, frame = 0
- 364              		@ frame_needed = 0, uses_anonymous_args = 0
- 365              		@ link register save eliminated.
+ 362              		.loc 1 1074 0
+ 363              		.cfi_startproc
+ 364              		@ args = 0, pretend = 0, frame = 0
+ 365              		@ frame_needed = 0, uses_anonymous_args = 0
+ 366              		@ link register save eliminated.
 1075:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   /* Return the User Option Byte */
 1076:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   return (uint8_t)((READ_REG(FLASH->OBR) & FLASH_OBR_USER) >> FLASH_POSITION_IWDGSW_BIT);
- 366              		.loc 1 1076 0
- 367 0000 054B     		ldr	r3, .L32
- 368 0002 D869     		ldr	r0, [r3, #28]
- 369 0004 00F01C00 		and	r0, r0, #28
- 370              	.LVL32:
- 371              	.LBB8:
- 372              	.LBB9:
- 373              		.file 2 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h"
+ 367              		.loc 1 1076 0
+ 368 0000 054B     		ldr	r3, .L31
+ 369 0002 D869     		ldr	r0, [r3, #28]
+ 370 0004 00F01C00 		and	r0, r0, #28
+ 371              	.LVL32:
+ 372              	.LBB8:
+ 373              	.LBB9:
+ 374              		.file 2 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h"
    1:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
    2:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
    3:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS Cortex-M Core Function/Instruction Header File
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
   11:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    modification, are permitted provided that the following conditions are met:
   12:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    - Redistributions of source code must retain the above copyright
   13:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****      notice, this list of conditions and the following disclaimer.
-ARM GAS  /tmp/ccDCmQNM.s 			page 27
+ARM GAS  /tmp/ccnBRBwt.s 			page 27
 
 
   14:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    - Redistributions in binary form must reproduce the above copyright
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
   68:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
   69:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_irq(void)
   70:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  /tmp/ccDCmQNM.s 			page 28
+ARM GAS  /tmp/ccnBRBwt.s 			page 28
 
 
   71:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  125:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
  126:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
  127:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccDCmQNM.s 			page 29
+ARM GAS  /tmp/ccnBRBwt.s 			page 29
 
 
  128:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  182:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
  183:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Main Stack Pointer
  184:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Main Stack Pointer (MSP).
-ARM GAS  /tmp/ccDCmQNM.s 			page 30
+ARM GAS  /tmp/ccnBRBwt.s 			page 30
 
 
  185:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  239:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid f" : : : "memory");
  240:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** }
  241:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccDCmQNM.s 			page 31
+ARM GAS  /tmp/ccnBRBwt.s 			page 31
 
 
  242:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  296:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Fault Mask register.
  297:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \param [in]    faultMask  Fault Mask value to set
  298:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  /tmp/ccDCmQNM.s 			page 32
+ARM GAS  /tmp/ccnBRBwt.s 			page 32
 
 
  299:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_FAULTMASK(uint32_t faultMask)
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  353:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /** \defgroup CMSIS_Core_InstructionInterface CMSIS Core Instruction Interface
  354:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   Access to dedicated instructions
  355:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   @{
-ARM GAS  /tmp/ccDCmQNM.s 			page 33
+ARM GAS  /tmp/ccnBRBwt.s 			page 33
 
 
  356:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** */
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  410:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** /**
  411:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \brief   Instruction Synchronization Barrier
  412:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \details Instruction Synchronization Barrier flushes the pipeline in the processor,
-ARM GAS  /tmp/ccDCmQNM.s 			page 34
+ARM GAS  /tmp/ccnBRBwt.s 			page 34
 
 
  413:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****            so that all instructions following the ISB are fetched from cache or memory,
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  467:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Reversed value
  468:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
  469:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE uint32_t __REV16(uint32_t value)
-ARM GAS  /tmp/ccDCmQNM.s 			page 35
+ARM GAS  /tmp/ccnBRBwt.s 			page 35
 
 
  470:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  524:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****   \return               Reversed value
  525:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****  */
  526:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE uint32_t __RBIT(uint32_t value)
-ARM GAS  /tmp/ccDCmQNM.s 			page 36
+ARM GAS  /tmp/ccnBRBwt.s 			page 36
 
 
  527:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** {
@@ -2106,864 +2106,886 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
  529:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** 
  530:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h **** #if       (__CORTEX_M >= 0x03U) || (__CORTEX_SC >= 300U)
  531:Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("rbit %0, %1" : "=r" (result) : "r" (value) );
- 374              		.loc 2 531 0
- 375 0008 0423     		movs	r3, #4
- 376              		.syntax unified
- 377              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
- 378 000a 93FAA3F3 		rbit r3, r3
- 379              	@ 0 "" 2
- 380              	.LVL33:
- 381              		.thumb
- 382              		.syntax unified
- 383              	.LBE9:
- 384              	.LBE8:
- 385              		.loc 1 1076 0
- 386 000e B3FA83F3 		clz	r3, r3
- 387 0012 D840     		lsrs	r0, r0, r3
+ 375              		.loc 2 531 0
+ 376 0008 0423     		movs	r3, #4
+ 377              		.syntax unified
+ 378              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 379 000a 93FAA3F3 		rbit r3, r3
+ 380              	@ 0 "" 2
+ 381              	.LVL33:
+ 382              		.thumb
+ 383              		.syntax unified
+ 384              	.LBE9:
+ 385              	.LBE8:
+ 386              		.loc 1 1076 0
+ 387 000e B3FA83F3 		clz	r3, r3
+ 388 0012 D840     		lsrs	r0, r0, r3
 1077:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** }
- 388              		.loc 1 1077 0
- 389 0014 C0B2     		uxtb	r0, r0
- 390 0016 7047     		bx	lr
- 391              	.L33:
- 392              		.align	2
- 393              	.L32:
- 394 0018 00200240 		.word	1073881088
- 395              		.cfi_endproc
- 396              	.LFE78:
- 398              		.section	.text.HAL_FLASHEx_OBErase,"ax",%progbits
- 399              		.align	1
- 400              		.global	HAL_FLASHEx_OBErase
- 401              		.syntax unified
- 402              		.thumb
- 403              		.thumb_func
- 404              		.fpu softvfp
- 406              	HAL_FLASHEx_OBErase:
- 407              	.LFB66:
+ 389              		.loc 1 1077 0
+ 390 0014 C0B2     		uxtb	r0, r0
+ 391 0016 7047     		bx	lr
+ 392              	.L32:
+ 393              		.align	2
+ 394              	.L31:
+ 395 0018 00200240 		.word	1073881088
+ 396              		.cfi_endproc
+ 397              	.LFE80:
+ 399              		.section	.text.HAL_FLASHEx_OBErase,"ax",%progbits
+ 400              		.align	1
+ 401              		.global	HAL_FLASHEx_OBErase
+ 402              		.syntax unified
+ 403              		.thumb
+ 404              		.thumb_func
+ 405              		.fpu softvfp
+ 407              	HAL_FLASHEx_OBErase:
+ 408              	.LFB68:
  415:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   uint8_t rdptmp = OB_RDP_LEVEL_0;
- 408              		.loc 1 415 0
- 409              		.cfi_startproc
- 410              		@ args = 0, pretend = 0, frame = 0
- 411              		@ frame_needed = 0, uses_anonymous_args = 0
- 412 0000 38B5     		push	{r3, r4, r5, lr}
- 413              	.LCFI3:
- 414              		.cfi_def_cfa_offset 16
- 415              		.cfi_offset 3, -16
- 416              		.cfi_offset 4, -12
- 417              		.cfi_offset 5, -8
- 418              		.cfi_offset 14, -4
- 419              	.LVL34:
+ 409              		.loc 1 415 0
+ 410              		.cfi_startproc
+ 411              		@ args = 0, pretend = 0, frame = 0
+ 412              		@ frame_needed = 0, uses_anonymous_args = 0
+ 413 0000 38B5     		push	{r3, r4, r5, lr}
+ 414              	.LCFI3:
+ 415              		.cfi_def_cfa_offset 16
+ 416              		.cfi_offset 3, -16
+ 417              		.cfi_offset 4, -12
+ 418              		.cfi_offset 5, -8
+ 419              		.cfi_offset 14, -4
+ 420              	.LVL34:
  420:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 420              		.loc 1 420 0
- 421 0002 FFF7FEFF 		bl	FLASH_OB_GetRDP
- 422              	.LVL35:
- 423 0006 C5B2     		uxtb	r5, r0
- 424              	.LVL36:
-ARM GAS  /tmp/ccDCmQNM.s 			page 37
+ 421              		.loc 1 420 0
+ 422 0002 FFF7FEFF 		bl	FLASH_OB_GetRDP
+ 423              	.LVL35:
+ 424 0006 C5B2     		uxtb	r5, r0
+ 425              	.LVL36:
+ARM GAS  /tmp/ccnBRBwt.s 			page 37
 
 
  423:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 425              		.loc 1 423 0
- 426 0008 4CF25030 		movw	r0, #50000
- 427 000c FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 428              	.LVL37:
+ 426              		.loc 1 423 0
+ 427 0008 4CF25030 		movw	r0, #50000
+ 428 000c FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 429              	.LVL37:
  425:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
- 429              		.loc 1 425 0
- 430 0010 0346     		mov	r3, r0
- 431 0012 08B1     		cbz	r0, .L37
- 432              	.LVL38:
- 433              	.L35:
+ 430              		.loc 1 425 0
+ 431 0010 0346     		mov	r3, r0
+ 432 0012 08B1     		cbz	r0, .L36
+ 433              	.LVL38:
+ 434              	.L34:
  449:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 434              		.loc 1 449 0
- 435 0014 1846     		mov	r0, r3
- 436 0016 38BD     		pop	{r3, r4, r5, pc}
- 437              	.LVL39:
- 438              	.L37:
+ 435              		.loc 1 449 0
+ 436 0014 1846     		mov	r0, r3
+ 437 0016 38BD     		pop	{r3, r4, r5, pc}
+ 438              	.LVL39:
+ 439              	.L36:
  428:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 439              		.loc 1 428 0
- 440 0018 0022     		movs	r2, #0
- 441 001a 0D4B     		ldr	r3, .L38
- 442 001c DA61     		str	r2, [r3, #28]
+ 440              		.loc 1 428 0
+ 441 0018 0D4B     		ldr	r3, .L37
+ 442 001a 0022     		movs	r2, #0
+ 443 001c DA61     		str	r2, [r3, #28]
  431:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     SET_BIT(FLASH->CR, FLASH_CR_STRT);
- 443              		.loc 1 431 0
- 444 001e 0D4C     		ldr	r4, .L38+4
- 445 0020 2369     		ldr	r3, [r4, #16]
- 446 0022 43F02003 		orr	r3, r3, #32
- 447 0026 2361     		str	r3, [r4, #16]
+ 444              		.loc 1 431 0
+ 445 001e 0D4C     		ldr	r4, .L37+4
+ 446 0020 2369     		ldr	r3, [r4, #16]
+ 447 0022 43F02003 		orr	r3, r3, #32
+ 448 0026 2361     		str	r3, [r4, #16]
  432:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 448              		.loc 1 432 0
- 449 0028 2369     		ldr	r3, [r4, #16]
- 450 002a 43F04003 		orr	r3, r3, #64
- 451 002e 2361     		str	r3, [r4, #16]
+ 449              		.loc 1 432 0
+ 450 0028 2369     		ldr	r3, [r4, #16]
+ 451 002a 43F04003 		orr	r3, r3, #64
+ 452 002e 2361     		str	r3, [r4, #16]
  435:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 452              		.loc 1 435 0
- 453 0030 4CF25030 		movw	r0, #50000
- 454              	.LVL40:
- 455 0034 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 456              	.LVL41:
+ 453              		.loc 1 435 0
+ 454 0030 4CF25030 		movw	r0, #50000
+ 455              	.LVL40:
+ 456 0034 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 457              	.LVL41:
  438:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 457              		.loc 1 438 0
- 458 0038 2369     		ldr	r3, [r4, #16]
- 459 003a 23F02003 		bic	r3, r3, #32
- 460 003e 2361     		str	r3, [r4, #16]
+ 458              		.loc 1 438 0
+ 459 0038 2369     		ldr	r3, [r4, #16]
+ 460 003a 23F02003 		bic	r3, r3, #32
+ 461 003e 2361     		str	r3, [r4, #16]
  440:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     {
- 461              		.loc 1 440 0
- 462 0040 0346     		mov	r3, r0
- 463 0042 0028     		cmp	r0, #0
- 464 0044 E6D1     		bne	.L35
+ 462              		.loc 1 440 0
+ 463 0040 0346     		mov	r3, r0
+ 464 0042 0028     		cmp	r0, #0
+ 465 0044 E6D1     		bne	.L34
  443:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     }
- 465              		.loc 1 443 0
- 466 0046 2846     		mov	r0, r5
- 467              	.LVL42:
- 468 0048 FFF7FEFF 		bl	FLASH_OB_RDP_LevelConfig
- 469              	.LVL43:
- 470 004c 0346     		mov	r3, r0
- 471              	.LVL44:
-ARM GAS  /tmp/ccDCmQNM.s 			page 38
+ 466              		.loc 1 443 0
+ 467 0046 2846     		mov	r0, r5
+ 468              	.LVL42:
+ 469 0048 FFF7FEFF 		bl	FLASH_OB_RDP_LevelConfig
+ 470              	.LVL43:
+ 471 004c 0346     		mov	r3, r0
+ 472              	.LVL44:
+ARM GAS  /tmp/ccnBRBwt.s 			page 38
 
 
- 472 004e E1E7     		b	.L35
- 473              	.L39:
- 474              		.align	2
- 475              	.L38:
- 476 0050 00000000 		.word	pFlash
- 477 0054 00200240 		.word	1073881088
- 478              		.cfi_endproc
- 479              	.LFE66:
- 481              		.section	.text.FLASH_OB_EnableWRP,"ax",%progbits
- 482              		.align	1
- 483              		.syntax unified
- 484              		.thumb
- 485              		.thumb_func
- 486              		.fpu softvfp
- 488              	FLASH_OB_EnableWRP:
- 489              	.LFB71:
+ 473 004e E1E7     		b	.L34
+ 474              	.L38:
+ 475              		.align	2
+ 476              	.L37:
+ 477 0050 00000000 		.word	pFlash
+ 478 0054 00200240 		.word	1073881088
+ 479              		.cfi_endproc
+ 480              	.LFE68:
+ 482              		.section	.text.FLASH_OB_EnableWRP,"ax",%progbits
+ 483              		.align	1
+ 484              		.syntax unified
+ 485              		.thumb
+ 486              		.thumb_func
+ 487              		.fpu softvfp
+ 489              	FLASH_OB_EnableWRP:
+ 490              	.LFB73:
  658:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
- 490              		.loc 1 658 0
- 491              		.cfi_startproc
- 492              		@ args = 0, pretend = 0, frame = 0
- 493              		@ frame_needed = 0, uses_anonymous_args = 0
- 494              	.LVL45:
- 495 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 496              	.LCFI4:
- 497              		.cfi_def_cfa_offset 24
- 498              		.cfi_offset 3, -24
- 499              		.cfi_offset 4, -20
- 500              		.cfi_offset 5, -16
- 501              		.cfi_offset 6, -12
- 502              		.cfi_offset 7, -8
- 503              		.cfi_offset 14, -4
- 504 0002 0446     		mov	r4, r0
- 505              	.LVL46:
+ 491              		.loc 1 658 0
+ 492              		.cfi_startproc
+ 493              		@ args = 0, pretend = 0, frame = 0
+ 494              		@ frame_needed = 0, uses_anonymous_args = 0
+ 495              	.LVL45:
+ 496 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 497              	.LCFI4:
+ 498              		.cfi_def_cfa_offset 24
+ 499              		.cfi_offset 3, -24
+ 500              		.cfi_offset 4, -20
+ 501              		.cfi_offset 5, -16
+ 502              		.cfi_offset 6, -12
+ 503              		.cfi_offset 7, -8
+ 504              		.cfi_offset 14, -4
+ 505 0002 0446     		mov	r4, r0
+ 506              	.LVL46:
  675:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   
- 506              		.loc 1 675 0
- 507 0004 FFF7FEFF 		bl	FLASH_OB_GetWRP
- 508              	.LVL47:
- 509 0008 20EA0404 		bic	r4, r0, r4
- 510              	.LVL48:
+ 507              		.loc 1 675 0
+ 508 0004 FFF7FEFF 		bl	FLASH_OB_GetWRP
+ 509              	.LVL47:
+ 510 0008 20EA0404 		bic	r4, r0, r4
+ 511              	.LVL48:
  686:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* OB_WRP_PAGES32TO63MASK */
- 511              		.loc 1 686 0
- 512 000c C4F30727 		ubfx	r7, r4, #8, #8
- 513              	.LVL49:
+ 512              		.loc 1 686 0
+ 513 000c C4F30727 		ubfx	r7, r4, #8, #8
+ 514              	.LVL49:
  690:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* OB_WRP_PAGES64TO95MASK */
- 514              		.loc 1 690 0
- 515 0010 C4F30746 		ubfx	r6, r4, #16, #8
- 516              	.LVL50:
+ 515              		.loc 1 690 0
+ 516 0010 C4F30746 		ubfx	r6, r4, #16, #8
+ 517              	.LVL50:
  707:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 517              		.loc 1 707 0
- 518 0014 4CF25030 		movw	r0, #50000
- 519 0018 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 520              	.LVL51:
+ 518              		.loc 1 707 0
+ 519 0014 4CF25030 		movw	r0, #50000
+ 520 0018 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 521              	.LVL51:
  709:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   { 
- 521              		.loc 1 709 0
- 522 001c 0346     		mov	r3, r0
- 523 001e 08B1     		cbz	r0, .L47
- 524              	.LVL52:
-ARM GAS  /tmp/ccDCmQNM.s 			page 39
+ 522              		.loc 1 709 0
+ 523 001c 0346     		mov	r3, r0
+ 524 001e 08B1     		cbz	r0, .L46
+ 525              	.LVL52:
+ARM GAS  /tmp/ccnBRBwt.s 			page 39
 
 
- 525              	.L41:
+ 526              	.L40:
  767:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 526              		.loc 1 767 0
- 527 0020 1846     		mov	r0, r3
- 528 0022 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 529              	.LVL53:
- 530              	.L47:
- 531 0024 E5B2     		uxtb	r5, r4
- 532 0026 240E     		lsrs	r4, r4, #24
- 533              	.LVL54:
+ 527              		.loc 1 767 0
+ 528 0020 1846     		mov	r0, r3
+ 529 0022 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 530              	.LVL53:
+ 531              	.L46:
+ 532 0024 E5B2     		uxtb	r5, r4
+ 533 0026 240E     		lsrs	r4, r4, #24
+ 534              	.LVL54:
  712:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 534              		.loc 1 712 0
- 535 0028 0022     		movs	r2, #0
- 536 002a 204B     		ldr	r3, .L48
- 537 002c DA61     		str	r2, [r3, #28]
+ 535              		.loc 1 712 0
+ 536 0028 224B     		ldr	r3, .L51
+ 537 002a 0022     		movs	r2, #0
+ 538 002c DA61     		str	r2, [r3, #28]
  715:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     if (status == HAL_OK)  
- 538              		.loc 1 715 0
- 539 002e FFF7FEFF 		bl	HAL_FLASHEx_OBErase
- 540              	.LVL55:
+ 539              		.loc 1 715 0
+ 540 002e FFF7FEFF 		bl	HAL_FLASHEx_OBErase
+ 541              	.LVL55:
  716:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     {
- 541              		.loc 1 716 0
- 542 0032 0346     		mov	r3, r0
- 543 0034 0028     		cmp	r0, #0
- 544 0036 F3D1     		bne	.L41
+ 542              		.loc 1 716 0
+ 543 0032 0346     		mov	r3, r0
+ 544 0034 0028     		cmp	r0, #0
+ 545 0036 F3D1     		bne	.L40
  719:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 545              		.loc 1 719 0
- 546 0038 1D49     		ldr	r1, .L48+4
- 547 003a 0A69     		ldr	r2, [r1, #16]
- 548 003c 42F01002 		orr	r2, r2, #16
- 549 0040 0A61     		str	r2, [r1, #16]
+ 546              		.loc 1 719 0
+ 547 0038 1F49     		ldr	r1, .L51+4
+ 548 003a 0A69     		ldr	r2, [r1, #16]
+ 549 003c 42F01002 		orr	r2, r2, #16
+ 550 0040 0A61     		str	r2, [r1, #16]
  722:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 550              		.loc 1 722 0
- 551 0042 FF2D     		cmp	r5, #255
- 552 0044 08D0     		beq	.L42
- 724:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 553              		.loc 1 724 0
- 554 0046 1B4B     		ldr	r3, .L48+8
- 555 0048 1A89     		ldrh	r2, [r3, #8]
- 556 004a 1540     		ands	r5, r5, r2
- 557              	.LVL56:
- 558 004c 1D81     		strh	r5, [r3, #8]	@ movhi
- 727:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
- 559              		.loc 1 727 0
- 560 004e 4CF25030 		movw	r0, #50000
+ 551              		.loc 1 722 0
+ 552 0042 FF2D     		cmp	r5, #255
+ 553 0044 0ED1     		bne	.L47
+ 554              	.LVL56:
+ 555              	.L41:
+ 732:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
+ 556              		.loc 1 732 0
+ 557 0046 0BB9     		cbnz	r3, .L42
+ 732:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
+ 558              		.loc 1 732 0 is_stmt 0 discriminator 1
+ 559 0048 FF2F     		cmp	r7, #255
+ 560 004a 15D1     		bne	.L48
  561              	.LVL57:
- 562 0052 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 563              	.LVL58:
- 564 0056 0346     		mov	r3, r0
- 565              	.LVL59:
- 566              	.L42:
- 732:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 567              		.loc 1 732 0
- 568 0058 53B9     		cbnz	r3, .L43
- 732:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 569              		.loc 1 732 0 is_stmt 0 discriminator 1
- 570 005a FF2F     		cmp	r7, #255
- 571 005c 08D0     		beq	.L43
-ARM GAS  /tmp/ccDCmQNM.s 			page 40
-
-
- 734:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 572              		.loc 1 734 0 is_stmt 1
- 573 005e 154B     		ldr	r3, .L48+8
- 574              	.LVL60:
- 575 0060 5A89     		ldrh	r2, [r3, #10]
- 576 0062 1740     		ands	r7, r7, r2
- 577              	.LVL61:
- 578 0064 5F81     		strh	r7, [r3, #10]	@ movhi
- 737:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
- 579              		.loc 1 737 0
- 580 0066 4CF25030 		movw	r0, #50000
- 581 006a FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 582              	.LVL62:
- 583 006e 0346     		mov	r3, r0
- 584              	.LVL63:
- 585              	.L43:
+ 562              	.L42:
  742:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 586              		.loc 1 742 0
- 587 0070 53B9     		cbnz	r3, .L44
+ 563              		.loc 1 742 0 is_stmt 1
+ 564 004c 0BB9     		cbnz	r3, .L43
  742:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 588              		.loc 1 742 0 is_stmt 0 discriminator 1
- 589 0072 FF2E     		cmp	r6, #255
- 590 0074 08D0     		beq	.L44
- 744:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 591              		.loc 1 744 0 is_stmt 1
- 592 0076 0F4B     		ldr	r3, .L48+8
- 593              	.LVL64:
- 594 0078 9A89     		ldrh	r2, [r3, #12]
- 595 007a 1640     		ands	r6, r6, r2
- 596              	.LVL65:
- 597 007c 9E81     		strh	r6, [r3, #12]	@ movhi
- 747:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
- 598              		.loc 1 747 0
- 599 007e 4CF25030 		movw	r0, #50000
- 600 0082 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 601              	.LVL66:
- 602 0086 0346     		mov	r3, r0
- 603              	.LVL67:
- 604              	.L44:
+ 565              		.loc 1 742 0 is_stmt 0 discriminator 1
+ 566 004e FF2E     		cmp	r6, #255
+ 567 0050 1CD1     		bne	.L49
+ 568              	.LVL58:
+ 569              	.L43:
  752:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 605              		.loc 1 752 0
- 606 0088 53B9     		cbnz	r3, .L45
- 752:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 607              		.loc 1 752 0 is_stmt 0 discriminator 1
- 608 008a FF2C     		cmp	r4, #255
- 609 008c 08D0     		beq	.L45
- 754:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 610              		.loc 1 754 0 is_stmt 1
- 611 008e 094B     		ldr	r3, .L48+8
- 612              	.LVL68:
- 613 0090 D889     		ldrh	r0, [r3, #14]
- 614 0092 2040     		ands	r0, r0, r4
- 615 0094 D881     		strh	r0, [r3, #14]	@ movhi
- 757:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
- 616              		.loc 1 757 0
- 617 0096 4CF25030 		movw	r0, #50000
- 618 009a FFF7FEFF 		bl	FLASH_WaitForLastOperation
-ARM GAS  /tmp/ccDCmQNM.s 			page 41
+ 570              		.loc 1 752 0 is_stmt 1
+ 571 0052 0BB9     		cbnz	r3, .L44
+ARM GAS  /tmp/ccnBRBwt.s 			page 40
 
 
- 619              	.LVL69:
- 620 009e 0346     		mov	r3, r0
- 621              	.LVL70:
- 622              	.L45:
+ 752:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
+ 572              		.loc 1 752 0 is_stmt 0 discriminator 1
+ 573 0054 FF2C     		cmp	r4, #255
+ 574 0056 23D1     		bne	.L50
+ 575              	.L44:
  762:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     }
- 623              		.loc 1 762 0
- 624 00a0 0349     		ldr	r1, .L48+4
- 625 00a2 0A69     		ldr	r2, [r1, #16]
- 626 00a4 22F01002 		bic	r2, r2, #16
- 627 00a8 0A61     		str	r2, [r1, #16]
- 628 00aa B9E7     		b	.L41
- 629              	.L49:
- 630              		.align	2
- 631              	.L48:
- 632 00ac 00000000 		.word	pFlash
- 633 00b0 00200240 		.word	1073881088
- 634 00b4 00F8FF1F 		.word	536868864
- 635              		.cfi_endproc
- 636              	.LFE71:
- 638              		.section	.text.FLASH_OB_DisableWRP,"ax",%progbits
- 639              		.align	1
- 640              		.syntax unified
- 641              		.thumb
- 642              		.thumb_func
- 643              		.fpu softvfp
- 645              	FLASH_OB_DisableWRP:
- 646              	.LFB72:
+ 576              		.loc 1 762 0 is_stmt 1
+ 577 0058 1749     		ldr	r1, .L51+4
+ 578 005a 0A69     		ldr	r2, [r1, #16]
+ 579 005c 22F01002 		bic	r2, r2, #16
+ 580 0060 0A61     		str	r2, [r1, #16]
+ 581 0062 DDE7     		b	.L40
+ 582              	.LVL59:
+ 583              	.L47:
+ 724:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
+ 584              		.loc 1 724 0
+ 585 0064 154B     		ldr	r3, .L51+8
+ 586 0066 1A89     		ldrh	r2, [r3, #8]
+ 587 0068 1540     		ands	r5, r5, r2
+ 588              	.LVL60:
+ 589 006a 1D81     		strh	r5, [r3, #8]	@ movhi
+ 727:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
+ 590              		.loc 1 727 0
+ 591 006c 4CF25030 		movw	r0, #50000
+ 592              	.LVL61:
+ 593 0070 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 594              	.LVL62:
+ 595 0074 0346     		mov	r3, r0
+ 596              	.LVL63:
+ 597 0076 E6E7     		b	.L41
+ 598              	.L48:
+ 734:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
+ 599              		.loc 1 734 0
+ 600 0078 104B     		ldr	r3, .L51+8
+ 601              	.LVL64:
+ 602 007a 5A89     		ldrh	r2, [r3, #10]
+ 603 007c 1740     		ands	r7, r7, r2
+ 604              	.LVL65:
+ 605 007e 5F81     		strh	r7, [r3, #10]	@ movhi
+ 737:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
+ 606              		.loc 1 737 0
+ 607 0080 4CF25030 		movw	r0, #50000
+ 608 0084 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 609              	.LVL66:
+ 610 0088 0346     		mov	r3, r0
+ 611              	.LVL67:
+ 612 008a DFE7     		b	.L42
+ 613              	.L49:
+ 744:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
+ 614              		.loc 1 744 0
+ 615 008c 0B4B     		ldr	r3, .L51+8
+ 616              	.LVL68:
+ 617 008e 9A89     		ldrh	r2, [r3, #12]
+ 618 0090 1640     		ands	r6, r6, r2
+ 619              	.LVL69:
+ 620 0092 9E81     		strh	r6, [r3, #12]	@ movhi
+ 747:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
+ARM GAS  /tmp/ccnBRBwt.s 			page 41
+
+
+ 621              		.loc 1 747 0
+ 622 0094 4CF25030 		movw	r0, #50000
+ 623 0098 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 624              	.LVL70:
+ 625 009c 0346     		mov	r3, r0
+ 626              	.LVL71:
+ 627 009e D8E7     		b	.L43
+ 628              	.L50:
+ 754:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
+ 629              		.loc 1 754 0
+ 630 00a0 064B     		ldr	r3, .L51+8
+ 631              	.LVL72:
+ 632 00a2 D889     		ldrh	r0, [r3, #14]
+ 633 00a4 2040     		ands	r0, r0, r4
+ 634 00a6 D881     		strh	r0, [r3, #14]	@ movhi
+ 757:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
+ 635              		.loc 1 757 0
+ 636 00a8 4CF25030 		movw	r0, #50000
+ 637 00ac FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 638              	.LVL73:
+ 639 00b0 0346     		mov	r3, r0
+ 640              	.LVL74:
+ 641 00b2 D1E7     		b	.L44
+ 642              	.L52:
+ 643              		.align	2
+ 644              	.L51:
+ 645 00b4 00000000 		.word	pFlash
+ 646 00b8 00200240 		.word	1073881088
+ 647 00bc 00F8FF1F 		.word	536868864
+ 648              		.cfi_endproc
+ 649              	.LFE73:
+ 651              		.section	.text.FLASH_OB_DisableWRP,"ax",%progbits
+ 652              		.align	1
+ 653              		.syntax unified
+ 654              		.thumb
+ 655              		.thumb_func
+ 656              		.fpu softvfp
+ 658              	FLASH_OB_DisableWRP:
+ 659              	.LFB74:
  781:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
- 647              		.loc 1 781 0
- 648              		.cfi_startproc
- 649              		@ args = 0, pretend = 0, frame = 0
- 650              		@ frame_needed = 0, uses_anonymous_args = 0
- 651              	.LVL71:
- 652 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 653              	.LCFI5:
- 654              		.cfi_def_cfa_offset 24
- 655              		.cfi_offset 3, -24
- 656              		.cfi_offset 4, -20
- 657              		.cfi_offset 5, -16
- 658              		.cfi_offset 6, -12
- 659              		.cfi_offset 7, -8
- 660              		.cfi_offset 14, -4
- 661 0002 0446     		mov	r4, r0
- 662              	.LVL72:
+ 660              		.loc 1 781 0
+ 661              		.cfi_startproc
+ 662              		@ args = 0, pretend = 0, frame = 0
+ 663              		@ frame_needed = 0, uses_anonymous_args = 0
+ 664              	.LVL75:
+ 665 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 666              	.LCFI5:
+ 667              		.cfi_def_cfa_offset 24
+ 668              		.cfi_offset 3, -24
+ 669              		.cfi_offset 4, -20
+ 670              		.cfi_offset 5, -16
+ 671              		.cfi_offset 6, -12
+ 672              		.cfi_offset 7, -8
+ 673              		.cfi_offset 14, -4
+ 674 0002 0446     		mov	r4, r0
+ 675              	.LVL76:
  798:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 663              		.loc 1 798 0
- 664 0004 FFF7FEFF 		bl	FLASH_OB_GetWRP
- 665              	.LVL73:
- 666 0008 0443     		orrs	r4, r4, r0
- 667              	.LVL74:
+ARM GAS  /tmp/ccnBRBwt.s 			page 42
+
+
+ 676              		.loc 1 798 0
+ 677 0004 FFF7FEFF 		bl	FLASH_OB_GetWRP
+ 678              	.LVL77:
+ 679 0008 0443     		orrs	r4, r4, r0
+ 680              	.LVL78:
  809:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* OB_WRP_PAGES32TO63MASK */
- 668              		.loc 1 809 0
- 669 000a C4F30727 		ubfx	r7, r4, #8, #8
- 670              	.LVL75:
+ 681              		.loc 1 809 0
+ 682 000a C4F30727 		ubfx	r7, r4, #8, #8
+ 683              	.LVL79:
  813:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* OB_WRP_PAGES64TO95MASK */
- 671              		.loc 1 813 0
- 672 000e C4F30746 		ubfx	r6, r4, #16, #8
-ARM GAS  /tmp/ccDCmQNM.s 			page 42
-
-
- 673              	.LVL76:
+ 684              		.loc 1 813 0
+ 685 000e C4F30746 		ubfx	r6, r4, #16, #8
+ 686              	.LVL80:
  831:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 674              		.loc 1 831 0
- 675 0012 4CF25030 		movw	r0, #50000
- 676 0016 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 677              	.LVL77:
+ 687              		.loc 1 831 0
+ 688 0012 4CF25030 		movw	r0, #50000
+ 689 0016 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 690              	.LVL81:
  833:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   { 
- 678              		.loc 1 833 0
- 679 001a 0346     		mov	r3, r0
- 680 001c 08B1     		cbz	r0, .L57
- 681              	.LVL78:
- 682              	.L51:
+ 691              		.loc 1 833 0
+ 692 001a 0346     		mov	r3, r0
+ 693 001c 08B1     		cbz	r0, .L60
+ 694              	.LVL82:
+ 695              	.L54:
  889:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 683              		.loc 1 889 0
- 684 001e 1846     		mov	r0, r3
- 685 0020 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 686              	.LVL79:
- 687              	.L57:
- 688 0022 E5B2     		uxtb	r5, r4
- 689 0024 240E     		lsrs	r4, r4, #24
- 690              	.LVL80:
+ 696              		.loc 1 889 0
+ 697 001e 1846     		mov	r0, r3
+ 698 0020 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 699              	.LVL83:
+ 700              	.L60:
+ 701 0022 E5B2     		uxtb	r5, r4
+ 702 0024 240E     		lsrs	r4, r4, #24
+ 703              	.LVL84:
  836:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 691              		.loc 1 836 0
- 692 0026 0022     		movs	r2, #0
- 693 0028 224B     		ldr	r3, .L58
- 694 002a DA61     		str	r2, [r3, #28]
+ 704              		.loc 1 836 0
+ 705 0026 234B     		ldr	r3, .L65
+ 706 0028 0022     		movs	r2, #0
+ 707 002a DA61     		str	r2, [r3, #28]
  839:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     if (status == HAL_OK)  
- 695              		.loc 1 839 0
- 696 002c FFF7FEFF 		bl	HAL_FLASHEx_OBErase
- 697              	.LVL81:
+ 708              		.loc 1 839 0
+ 709 002c FFF7FEFF 		bl	HAL_FLASHEx_OBErase
+ 710              	.LVL85:
  840:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     {
- 698              		.loc 1 840 0
- 699 0030 0346     		mov	r3, r0
- 700 0032 0028     		cmp	r0, #0
- 701 0034 F3D1     		bne	.L51
+ 711              		.loc 1 840 0
+ 712 0030 0346     		mov	r3, r0
+ 713 0032 0028     		cmp	r0, #0
+ 714 0034 F3D1     		bne	.L54
  842:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 702              		.loc 1 842 0
- 703 0036 2049     		ldr	r1, .L58+4
- 704 0038 0A69     		ldr	r2, [r1, #16]
- 705 003a 42F01002 		orr	r2, r2, #16
- 706 003e 0A61     		str	r2, [r1, #16]
+ 715              		.loc 1 842 0
+ 716 0036 2049     		ldr	r1, .L65+4
+ 717 0038 0A69     		ldr	r2, [r1, #16]
+ 718 003a 42F01002 		orr	r2, r2, #16
+ 719 003e 0A61     		str	r2, [r1, #16]
  845:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 707              		.loc 1 845 0
- 708 0040 FF2D     		cmp	r5, #255
- 709 0042 09D0     		beq	.L52
- 847:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 710              		.loc 1 847 0
- 711 0044 1D4A     		ldr	r2, .L58+8
- 712 0046 1389     		ldrh	r3, [r2, #8]
- 713 0048 9BB2     		uxth	r3, r3
- 714 004a 1D43     		orrs	r5, r5, r3
- 715              	.LVL82:
- 716 004c 1581     		strh	r5, [r2, #8]	@ movhi
- 850:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
- 717              		.loc 1 850 0
- 718 004e 4CF25030 		movw	r0, #50000
- 719              	.LVL83:
-ARM GAS  /tmp/ccDCmQNM.s 			page 43
+ 720              		.loc 1 845 0
+ 721 0040 FF2D     		cmp	r5, #255
+ 722 0042 0ED1     		bne	.L61
+ARM GAS  /tmp/ccnBRBwt.s 			page 43
 
 
- 720 0052 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 721              	.LVL84:
- 722 0056 0346     		mov	r3, r0
- 723              	.LVL85:
- 724              	.L52:
+ 723              	.LVL86:
+ 724              	.L55:
  855:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
  725              		.loc 1 855 0
- 726 0058 5BB9     		cbnz	r3, .L53
+ 726 0044 0BB9     		cbnz	r3, .L56
  855:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
  727              		.loc 1 855 0 is_stmt 0 discriminator 1
- 728 005a FF2F     		cmp	r7, #255
- 729 005c 09D0     		beq	.L53
- 857:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 730              		.loc 1 857 0 is_stmt 1
- 731 005e 174A     		ldr	r2, .L58+8
- 732 0060 5389     		ldrh	r3, [r2, #10]
- 733              	.LVL86:
- 734 0062 9BB2     		uxth	r3, r3
- 735 0064 1F43     		orrs	r7, r7, r3
- 736              	.LVL87:
- 737 0066 5781     		strh	r7, [r2, #10]	@ movhi
- 860:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
- 738              		.loc 1 860 0
- 739 0068 4CF25030 		movw	r0, #50000
- 740 006c FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 741              	.LVL88:
- 742 0070 0346     		mov	r3, r0
- 743              	.LVL89:
- 744              	.L53:
+ 728 0046 FF2F     		cmp	r7, #255
+ 729 0048 15D1     		bne	.L62
+ 730              	.LVL87:
+ 731              	.L56:
  865:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 745              		.loc 1 865 0
- 746 0072 5BB9     		cbnz	r3, .L54
+ 732              		.loc 1 865 0 is_stmt 1
+ 733 004a 0BB9     		cbnz	r3, .L57
  865:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 747              		.loc 1 865 0 is_stmt 0 discriminator 1
- 748 0074 FF2E     		cmp	r6, #255
- 749 0076 09D0     		beq	.L54
- 867:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 750              		.loc 1 867 0 is_stmt 1
- 751 0078 104A     		ldr	r2, .L58+8
- 752 007a 9389     		ldrh	r3, [r2, #12]
- 753              	.LVL90:
- 754 007c 9BB2     		uxth	r3, r3
- 755 007e 1E43     		orrs	r6, r6, r3
- 756              	.LVL91:
- 757 0080 9681     		strh	r6, [r2, #12]	@ movhi
- 870:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
- 758              		.loc 1 870 0
- 759 0082 4CF25030 		movw	r0, #50000
- 760 0086 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 761              	.LVL92:
- 762 008a 0346     		mov	r3, r0
- 763              	.LVL93:
- 764              	.L54:
+ 734              		.loc 1 865 0 is_stmt 0 discriminator 1
+ 735 004c FF2E     		cmp	r6, #255
+ 736 004e 1CD1     		bne	.L63
+ 737              	.LVL88:
+ 738              	.L57:
  875:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 765              		.loc 1 875 0
- 766 008c 5BB9     		cbnz	r3, .L55
+ 739              		.loc 1 875 0 is_stmt 1
+ 740 0050 0BB9     		cbnz	r3, .L58
  875:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
-ARM GAS  /tmp/ccDCmQNM.s 			page 44
-
-
- 767              		.loc 1 875 0 is_stmt 0 discriminator 1
- 768 008e FF2C     		cmp	r4, #255
- 769 0090 09D0     		beq	.L55
- 877:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 770              		.loc 1 877 0 is_stmt 1
- 771 0092 0A4B     		ldr	r3, .L58+8
- 772              	.LVL94:
- 773 0094 D889     		ldrh	r0, [r3, #14]
- 774 0096 80B2     		uxth	r0, r0
- 775 0098 2043     		orrs	r0, r0, r4
- 776 009a D881     		strh	r0, [r3, #14]	@ movhi
- 880:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
- 777              		.loc 1 880 0
- 778 009c 4CF25030 		movw	r0, #50000
- 779 00a0 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 780              	.LVL95:
- 781 00a4 0346     		mov	r3, r0
- 782              	.LVL96:
- 783              	.L55:
+ 741              		.loc 1 875 0 is_stmt 0 discriminator 1
+ 742 0052 FF2C     		cmp	r4, #255
+ 743 0054 23D1     		bne	.L64
+ 744              	.L58:
  885:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     }
- 784              		.loc 1 885 0
- 785 00a6 0449     		ldr	r1, .L58+4
- 786 00a8 0A69     		ldr	r2, [r1, #16]
- 787 00aa 22F01002 		bic	r2, r2, #16
- 788 00ae 0A61     		str	r2, [r1, #16]
- 789 00b0 B5E7     		b	.L51
- 790              	.L59:
- 791 00b2 00BF     		.align	2
- 792              	.L58:
- 793 00b4 00000000 		.word	pFlash
- 794 00b8 00200240 		.word	1073881088
- 795 00bc 00F8FF1F 		.word	536868864
- 796              		.cfi_endproc
- 797              	.LFE72:
- 799              		.section	.text.HAL_FLASHEx_OBProgram,"ax",%progbits
- 800              		.align	1
- 801              		.global	HAL_FLASHEx_OBProgram
- 802              		.syntax unified
- 803              		.thumb
- 804              		.thumb_func
- 805              		.fpu softvfp
- 807              	HAL_FLASHEx_OBProgram:
- 808              	.LFB67:
- 464:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_ERROR;
- 809              		.loc 1 464 0
- 810              		.cfi_startproc
- 811              		@ args = 0, pretend = 0, frame = 0
- 812              		@ frame_needed = 0, uses_anonymous_args = 0
- 813              	.LVL97:
- 468:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 814              		.loc 1 468 0
- 815 0000 284B     		ldr	r3, .L78
- 816 0002 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
- 817 0004 012B     		cmp	r3, #1
- 818 0006 4AD0     		beq	.L68
- 464:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_ERROR;
- 819              		.loc 1 464 0 discriminator 2
-ARM GAS  /tmp/ccDCmQNM.s 			page 45
+ 745              		.loc 1 885 0 is_stmt 1
+ 746 0056 1849     		ldr	r1, .L65+4
+ 747 0058 0A69     		ldr	r2, [r1, #16]
+ 748 005a 22F01002 		bic	r2, r2, #16
+ 749 005e 0A61     		str	r2, [r1, #16]
+ 750 0060 DDE7     		b	.L54
+ 751              	.LVL89:
+ 752              	.L61:
+ 847:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
+ 753              		.loc 1 847 0
+ 754 0062 164B     		ldr	r3, .L65+8
+ 755 0064 1A89     		ldrh	r2, [r3, #8]
+ 756 0066 1543     		orrs	r5, r5, r2
+ 757              	.LVL90:
+ 758 0068 1D81     		strh	r5, [r3, #8]	@ movhi
+ 850:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
+ 759              		.loc 1 850 0
+ 760 006a 4CF25030 		movw	r0, #50000
+ 761              	.LVL91:
+ 762 006e FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 763              	.LVL92:
+ 764 0072 0346     		mov	r3, r0
+ 765              	.LVL93:
+ 766 0074 E6E7     		b	.L55
+ 767              	.L62:
+ 857:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
+ 768              		.loc 1 857 0
+ 769 0076 114B     		ldr	r3, .L65+8
+ARM GAS  /tmp/ccnBRBwt.s 			page 44
 
 
- 820 0008 10B5     		push	{r4, lr}
- 821              	.LCFI6:
- 822              		.cfi_def_cfa_offset 8
- 823              		.cfi_offset 4, -8
- 824              		.cfi_offset 14, -4
- 825 000a 0446     		mov	r4, r0
+ 770              	.LVL94:
+ 771 0078 5A89     		ldrh	r2, [r3, #10]
+ 772 007a 1743     		orrs	r7, r7, r2
+ 773              	.LVL95:
+ 774 007c 5F81     		strh	r7, [r3, #10]	@ movhi
+ 860:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
+ 775              		.loc 1 860 0
+ 776 007e 4CF25030 		movw	r0, #50000
+ 777 0082 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 778              	.LVL96:
+ 779 0086 0346     		mov	r3, r0
+ 780              	.LVL97:
+ 781 0088 DFE7     		b	.L56
+ 782              	.L63:
+ 867:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
+ 783              		.loc 1 867 0
+ 784 008a 0C4B     		ldr	r3, .L65+8
+ 785              	.LVL98:
+ 786 008c 9A89     		ldrh	r2, [r3, #12]
+ 787 008e 1643     		orrs	r6, r6, r2
+ 788              	.LVL99:
+ 789 0090 9E81     		strh	r6, [r3, #12]	@ movhi
+ 870:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
+ 790              		.loc 1 870 0
+ 791 0092 4CF25030 		movw	r0, #50000
+ 792 0096 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 793              	.LVL100:
+ 794 009a 0346     		mov	r3, r0
+ 795              	.LVL101:
+ 796 009c D8E7     		b	.L57
+ 797              	.L64:
+ 877:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
+ 798              		.loc 1 877 0
+ 799 009e 074B     		ldr	r3, .L65+8
+ 800              	.LVL102:
+ 801 00a0 D889     		ldrh	r0, [r3, #14]
+ 802 00a2 2043     		orrs	r0, r0, r4
+ 803 00a4 D881     		strh	r0, [r3, #14]	@ movhi
+ 880:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
+ 804              		.loc 1 880 0
+ 805 00a6 4CF25030 		movw	r0, #50000
+ 806 00aa FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 807              	.LVL103:
+ 808 00ae 0346     		mov	r3, r0
+ 809              	.LVL104:
+ 810 00b0 D1E7     		b	.L58
+ 811              	.L66:
+ 812 00b2 00BF     		.align	2
+ 813              	.L65:
+ 814 00b4 00000000 		.word	pFlash
+ 815 00b8 00200240 		.word	1073881088
+ 816 00bc 00F8FF1F 		.word	536868864
+ 817              		.cfi_endproc
+ 818              	.LFE74:
+ 820              		.section	.text.HAL_FLASHEx_OBProgram,"ax",%progbits
+ 821              		.align	1
+ 822              		.global	HAL_FLASHEx_OBProgram
+ARM GAS  /tmp/ccnBRBwt.s 			page 45
+
+
+ 823              		.syntax unified
+ 824              		.thumb
+ 825              		.thumb_func
+ 826              		.fpu softvfp
+ 828              	HAL_FLASHEx_OBProgram:
+ 829              	.LFB69:
+ 464:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_ERROR;
+ 830              		.loc 1 464 0
+ 831              		.cfi_startproc
+ 832              		@ args = 0, pretend = 0, frame = 0
+ 833              		@ frame_needed = 0, uses_anonymous_args = 0
+ 834              	.LVL105:
  468:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 826              		.loc 1 468 0 discriminator 2
- 827 000c 0122     		movs	r2, #1
- 828 000e 254B     		ldr	r3, .L78
- 829 0010 1A76     		strb	r2, [r3, #24]
+ 835              		.loc 1 468 0
+ 836 0000 284B     		ldr	r3, .L85
+ 837 0002 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
+ 838 0004 012B     		cmp	r3, #1
+ 839 0006 4AD0     		beq	.L75
+ 464:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_ERROR;
+ 840              		.loc 1 464 0 discriminator 2
+ 841 0008 10B5     		push	{r4, lr}
+ 842              	.LCFI6:
+ 843              		.cfi_def_cfa_offset 8
+ 844              		.cfi_offset 4, -8
+ 845              		.cfi_offset 14, -4
+ 846 000a 0446     		mov	r4, r0
+ 468:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
+ 847              		.loc 1 468 0 discriminator 2
+ 848 000c 254B     		ldr	r3, .L85
+ 849 000e 0122     		movs	r2, #1
+ 850 0010 1A76     		strb	r2, [r3, #24]
  474:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
- 830              		.loc 1 474 0 discriminator 2
- 831 0012 0368     		ldr	r3, [r0]
- 832 0014 13F0010F 		tst	r3, #1
- 833 0018 10D0     		beq	.L69
+ 851              		.loc 1 474 0 discriminator 2
+ 852 0012 0368     		ldr	r3, [r0]
+ 853 0014 13F0010F 		tst	r3, #1
+ 854 0018 10D0     		beq	.L76
  477:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     {
- 834              		.loc 1 477 0
- 835 001a 4368     		ldr	r3, [r0, #4]
- 836 001c 9342     		cmp	r3, r2
- 837 001e 08D0     		beq	.L74
+ 855              		.loc 1 477 0
+ 856 001a 4368     		ldr	r3, [r0, #4]
+ 857 001c 9342     		cmp	r3, r2
+ 858 001e 08D0     		beq	.L81
  485:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     }
- 838              		.loc 1 485 0
- 839 0020 8068     		ldr	r0, [r0, #8]
- 840              	.LVL98:
- 841 0022 FFF7FEFF 		bl	FLASH_OB_DisableWRP
- 842              	.LVL99:
- 843 0026 0346     		mov	r3, r0
- 844              	.LVL100:
- 845              	.L64:
+ 859              		.loc 1 485 0
+ 860 0020 8068     		ldr	r0, [r0, #8]
+ 861              	.LVL106:
+ 862 0022 FFF7FEFF 		bl	FLASH_OB_DisableWRP
+ 863              	.LVL107:
+ 864 0026 0346     		mov	r3, r0
+ 865              	.LVL108:
+ 866              	.L71:
  487:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     {
- 846              		.loc 1 487 0
- 847 0028 4BB1     		cbz	r3, .L62
+ 867              		.loc 1 487 0
+ 868 0028 4BB1     		cbz	r3, .L69
  490:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       return status;
- 848              		.loc 1 490 0
- 849 002a 0021     		movs	r1, #0
- 850 002c 1D4A     		ldr	r2, .L78
- 851 002e 1176     		strb	r1, [r2, #24]
+ 869              		.loc 1 490 0
+ 870 002a 1E4A     		ldr	r2, .L85
+ 871 002c 0021     		movs	r1, #0
+ARM GAS  /tmp/ccnBRBwt.s 			page 46
+
+
+ 872 002e 1176     		strb	r1, [r2, #24]
  491:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     }
- 852              		.loc 1 491 0
- 853 0030 14E0     		b	.L61
- 854              	.LVL101:
- 855              	.L74:
+ 873              		.loc 1 491 0
+ 874 0030 14E0     		b	.L68
+ 875              	.LVL109:
+ 876              	.L81:
  480:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     }
- 856              		.loc 1 480 0
- 857 0032 8068     		ldr	r0, [r0, #8]
- 858              	.LVL102:
- 859 0034 FFF7FEFF 		bl	FLASH_OB_EnableWRP
- 860              	.LVL103:
- 861 0038 0346     		mov	r3, r0
- 862              	.LVL104:
- 863 003a F5E7     		b	.L64
- 864              	.LVL105:
- 865              	.L69:
+ 877              		.loc 1 480 0
+ 878 0032 8068     		ldr	r0, [r0, #8]
+ 879              	.LVL110:
+ 880 0034 FFF7FEFF 		bl	FLASH_OB_EnableWRP
+ 881              	.LVL111:
+ 882 0038 0346     		mov	r3, r0
+ 883              	.LVL112:
+ 884 003a F5E7     		b	.L71
+ 885              	.LVL113:
+ 886              	.L76:
  465:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 866              		.loc 1 465 0
- 867 003c 0123     		movs	r3, #1
-ARM GAS  /tmp/ccDCmQNM.s 			page 46
-
-
- 868              	.LVL106:
- 869              	.L62:
+ 887              		.loc 1 465 0
+ 888 003c 0123     		movs	r3, #1
+ 889              	.LVL114:
+ 890              	.L69:
  496:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
- 870              		.loc 1 496 0
- 871 003e 2268     		ldr	r2, [r4]
- 872 0040 12F0020F 		tst	r2, #2
- 873 0044 0CD1     		bne	.L75
- 874              	.LVL107:
- 875              	.L65:
+ 891              		.loc 1 496 0
+ 892 003e 2268     		ldr	r2, [r4]
+ 893 0040 12F0020F 		tst	r2, #2
+ 894 0044 0CD1     		bne	.L82
+ 895              	.LVL115:
+ 896              	.L72:
  508:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
- 876              		.loc 1 508 0
- 877 0046 2268     		ldr	r2, [r4]
- 878 0048 12F0040F 		tst	r2, #4
- 879 004c 12D1     		bne	.L76
- 880              	.LVL108:
- 881              	.L66:
+ 897              		.loc 1 508 0
+ 898 0046 2268     		ldr	r2, [r4]
+ 899 0048 12F0040F 		tst	r2, #4
+ 900 004c 12D1     		bne	.L83
+ 901              	.LVL116:
+ 902              	.L73:
  520:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
- 882              		.loc 1 520 0
- 883 004e 2268     		ldr	r2, [r4]
- 884 0050 12F0080F 		tst	r2, #8
- 885 0054 18D1     		bne	.L77
- 886              	.LVL109:
- 887              	.L67:
+ 903              		.loc 1 520 0
+ 904 004e 2268     		ldr	r2, [r4]
+ 905 0050 12F0080F 		tst	r2, #8
+ 906 0054 18D1     		bne	.L84
+ 907              	.LVL117:
+ 908              	.L74:
  532:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 888              		.loc 1 532 0
- 889 0056 0021     		movs	r1, #0
- 890 0058 124A     		ldr	r2, .L78
- 891 005a 1176     		strb	r1, [r2, #24]
- 892              	.LVL110:
- 893              	.L61:
+ 909              		.loc 1 532 0
+ 910 0056 134A     		ldr	r2, .L85
+ 911 0058 0021     		movs	r1, #0
+ 912 005a 1176     		strb	r1, [r2, #24]
+ 913              	.LVL118:
+ 914              	.L68:
  535:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 894              		.loc 1 535 0
- 895 005c 1846     		mov	r0, r3
- 896 005e 10BD     		pop	{r4, pc}
- 897              	.LVL111:
- 898              	.L75:
+ 915              		.loc 1 535 0
+ 916 005c 1846     		mov	r0, r3
+ 917 005e 10BD     		pop	{r4, pc}
+ 918              	.LVL119:
+ 919              	.L82:
  498:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     if (status != HAL_OK)
- 899              		.loc 1 498 0
- 900 0060 207C     		ldrb	r0, [r4, #16]	@ zero_extendqisi2
- 901 0062 FFF7FEFF 		bl	FLASH_OB_RDP_LevelConfig
- 902              	.LVL112:
+ARM GAS  /tmp/ccnBRBwt.s 			page 47
+
+
+ 920              		.loc 1 498 0
+ 921 0060 207C     		ldrb	r0, [r4, #16]	@ zero_extendqisi2
+ 922 0062 FFF7FEFF 		bl	FLASH_OB_RDP_LevelConfig
+ 923              	.LVL120:
  499:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     {
- 903              		.loc 1 499 0
- 904 0066 0346     		mov	r3, r0
- 905 0068 0028     		cmp	r0, #0
- 906 006a ECD0     		beq	.L65
+ 924              		.loc 1 499 0
+ 925 0066 0346     		mov	r3, r0
+ 926 0068 0028     		cmp	r0, #0
+ 927 006a ECD0     		beq	.L72
  502:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       return status;
- 907              		.loc 1 502 0
- 908 006c 0021     		movs	r1, #0
- 909 006e 0D4A     		ldr	r2, .L78
- 910 0070 1176     		strb	r1, [r2, #24]
+ 928              		.loc 1 502 0
+ 929 006c 0D4A     		ldr	r2, .L85
+ 930 006e 0021     		movs	r1, #0
+ 931 0070 1176     		strb	r1, [r2, #24]
  503:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     }
- 911              		.loc 1 503 0
- 912 0072 F3E7     		b	.L61
- 913              	.LVL113:
- 914              	.L76:
+ 932              		.loc 1 503 0
+ 933 0072 F3E7     		b	.L68
+ 934              	.LVL121:
+ 935              	.L83:
  510:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     if (status != HAL_OK)
-ARM GAS  /tmp/ccDCmQNM.s 			page 47
-
-
- 915              		.loc 1 510 0
- 916 0074 607C     		ldrb	r0, [r4, #17]	@ zero_extendqisi2
- 917 0076 FFF7FEFF 		bl	FLASH_OB_UserConfig
- 918              	.LVL114:
+ 936              		.loc 1 510 0
+ 937 0074 607C     		ldrb	r0, [r4, #17]	@ zero_extendqisi2
+ 938 0076 FFF7FEFF 		bl	FLASH_OB_UserConfig
+ 939              	.LVL122:
  511:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     {
- 919              		.loc 1 511 0
- 920 007a 0346     		mov	r3, r0
- 921 007c 0028     		cmp	r0, #0
- 922 007e E6D0     		beq	.L66
+ 940              		.loc 1 511 0
+ 941 007a 0346     		mov	r3, r0
+ 942 007c 0028     		cmp	r0, #0
+ 943 007e E6D0     		beq	.L73
  514:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       return status;
- 923              		.loc 1 514 0
- 924 0080 0021     		movs	r1, #0
- 925 0082 084A     		ldr	r2, .L78
- 926 0084 1176     		strb	r1, [r2, #24]
+ 944              		.loc 1 514 0
+ 945 0080 084A     		ldr	r2, .L85
+ 946 0082 0021     		movs	r1, #0
+ 947 0084 1176     		strb	r1, [r2, #24]
  515:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     }
- 927              		.loc 1 515 0
- 928 0086 E9E7     		b	.L61
- 929              	.LVL115:
- 930              	.L77:
+ 948              		.loc 1 515 0
+ 949 0086 E9E7     		b	.L68
+ 950              	.LVL123:
+ 951              	.L84:
  522:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     if (status != HAL_OK)
- 931              		.loc 1 522 0
- 932 0088 217E     		ldrb	r1, [r4, #24]	@ zero_extendqisi2
- 933 008a 6069     		ldr	r0, [r4, #20]
- 934 008c FFF7FEFF 		bl	FLASH_OB_ProgramData
- 935              	.LVL116:
+ 952              		.loc 1 522 0
+ 953 0088 217E     		ldrb	r1, [r4, #24]	@ zero_extendqisi2
+ 954 008a 6069     		ldr	r0, [r4, #20]
+ 955 008c FFF7FEFF 		bl	FLASH_OB_ProgramData
+ 956              	.LVL124:
  523:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     {
- 936              		.loc 1 523 0
- 937 0090 0346     		mov	r3, r0
- 938 0092 0028     		cmp	r0, #0
- 939 0094 DFD0     		beq	.L67
+ 957              		.loc 1 523 0
+ 958 0090 0346     		mov	r3, r0
+ 959 0092 0028     		cmp	r0, #0
+ 960 0094 DFD0     		beq	.L74
  526:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       return status;
- 940              		.loc 1 526 0
- 941 0096 0021     		movs	r1, #0
- 942 0098 024A     		ldr	r2, .L78
- 943 009a 1176     		strb	r1, [r2, #24]
+ 961              		.loc 1 526 0
+ 962 0096 034A     		ldr	r2, .L85
+ 963 0098 0021     		movs	r1, #0
+ 964 009a 1176     		strb	r1, [r2, #24]
  527:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     }
- 944              		.loc 1 527 0
- 945 009c DEE7     		b	.L61
- 946              	.LVL117:
- 947              	.L68:
- 948              	.LCFI7:
- 949              		.cfi_def_cfa_offset 0
- 950              		.cfi_restore 4
- 951              		.cfi_restore 14
+ 965              		.loc 1 527 0
+ARM GAS  /tmp/ccnBRBwt.s 			page 48
+
+
+ 966 009c DEE7     		b	.L68
+ 967              	.LVL125:
+ 968              	.L75:
+ 969              	.LCFI7:
+ 970              		.cfi_def_cfa_offset 0
+ 971              		.cfi_restore 4
+ 972              		.cfi_restore 14
  468:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 952              		.loc 1 468 0
- 953 009e 0223     		movs	r3, #2
+ 973              		.loc 1 468 0
+ 974 009e 0223     		movs	r3, #2
  535:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 954              		.loc 1 535 0
- 955 00a0 1846     		mov	r0, r3
- 956              	.LVL118:
- 957 00a2 7047     		bx	lr
- 958              	.L79:
- 959              		.align	2
- 960              	.L78:
- 961 00a4 00000000 		.word	pFlash
- 962              		.cfi_endproc
-ARM GAS  /tmp/ccDCmQNM.s 			page 48
-
-
- 963              	.LFE67:
- 965              		.section	.text.HAL_FLASHEx_OBGetConfig,"ax",%progbits
- 966              		.align	1
- 967              		.global	HAL_FLASHEx_OBGetConfig
- 968              		.syntax unified
- 969              		.thumb
- 970              		.thumb_func
- 971              		.fpu softvfp
- 973              	HAL_FLASHEx_OBGetConfig:
- 974              	.LFB68:
+ 975              		.loc 1 535 0
+ 976 00a0 1846     		mov	r0, r3
+ 977              	.LVL126:
+ 978 00a2 7047     		bx	lr
+ 979              	.L86:
+ 980              		.align	2
+ 981              	.L85:
+ 982 00a4 00000000 		.word	pFlash
+ 983              		.cfi_endproc
+ 984              	.LFE69:
+ 986              		.section	.text.HAL_FLASHEx_OBGetConfig,"ax",%progbits
+ 987              		.align	1
+ 988              		.global	HAL_FLASHEx_OBGetConfig
+ 989              		.syntax unified
+ 990              		.thumb
+ 991              		.thumb_func
+ 992              		.fpu softvfp
+ 994              	HAL_FLASHEx_OBGetConfig:
+ 995              	.LFB70:
  545:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   pOBInit->OptionType = OPTIONBYTE_WRP | OPTIONBYTE_RDP | OPTIONBYTE_USER;
- 975              		.loc 1 545 0
- 976              		.cfi_startproc
- 977              		@ args = 0, pretend = 0, frame = 0
- 978              		@ frame_needed = 0, uses_anonymous_args = 0
- 979              	.LVL119:
- 980 0000 10B5     		push	{r4, lr}
- 981              	.LCFI8:
- 982              		.cfi_def_cfa_offset 8
- 983              		.cfi_offset 4, -8
- 984              		.cfi_offset 14, -4
- 985 0002 0446     		mov	r4, r0
+ 996              		.loc 1 545 0
+ 997              		.cfi_startproc
+ 998              		@ args = 0, pretend = 0, frame = 0
+ 999              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1000              	.LVL127:
+ 1001 0000 10B5     		push	{r4, lr}
+ 1002              	.LCFI8:
+ 1003              		.cfi_def_cfa_offset 8
+ 1004              		.cfi_offset 4, -8
+ 1005              		.cfi_offset 14, -4
+ 1006 0002 0446     		mov	r4, r0
  546:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 986              		.loc 1 546 0
- 987 0004 0723     		movs	r3, #7
- 988 0006 0360     		str	r3, [r0]
+ 1007              		.loc 1 546 0
+ 1008 0004 0723     		movs	r3, #7
+ 1009 0006 0360     		str	r3, [r0]
  549:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 989              		.loc 1 549 0
- 990 0008 FFF7FEFF 		bl	FLASH_OB_GetWRP
- 991              	.LVL120:
- 992 000c A060     		str	r0, [r4, #8]
+ 1010              		.loc 1 549 0
+ 1011 0008 FFF7FEFF 		bl	FLASH_OB_GetWRP
+ 1012              	.LVL128:
+ 1013 000c A060     		str	r0, [r4, #8]
  552:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 993              		.loc 1 552 0
- 994 000e FFF7FEFF 		bl	FLASH_OB_GetRDP
- 995              	.LVL121:
- 996 0012 2074     		strb	r0, [r4, #16]
+ 1014              		.loc 1 552 0
+ 1015 000e FFF7FEFF 		bl	FLASH_OB_GetRDP
+ 1016              	.LVL129:
+ 1017 0012 2074     		strb	r0, [r4, #16]
  555:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** }
- 997              		.loc 1 555 0
- 998 0014 FFF7FEFF 		bl	FLASH_OB_GetUser
- 999              	.LVL122:
- 1000 0018 6074     		strb	r0, [r4, #17]
- 1001 001a 10BD     		pop	{r4, pc}
- 1002              		.cfi_endproc
- 1003              	.LFE68:
- 1005              		.section	.text.HAL_FLASHEx_OBGetUserData,"ax",%progbits
- 1006              		.align	1
- 1007              		.global	HAL_FLASHEx_OBGetUserData
- 1008              		.syntax unified
- 1009              		.thumb
- 1010              		.thumb_func
- 1011              		.fpu softvfp
- 1013              	HAL_FLASHEx_OBGetUserData:
- 1014              	.LFB69:
+ARM GAS  /tmp/ccnBRBwt.s 			page 49
+
+
+ 1018              		.loc 1 555 0
+ 1019 0014 FFF7FEFF 		bl	FLASH_OB_GetUser
+ 1020              	.LVL130:
+ 1021 0018 6074     		strb	r0, [r4, #17]
+ 556:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
+ 1022              		.loc 1 556 0
+ 1023 001a 10BD     		pop	{r4, pc}
+ 1024              		.cfi_endproc
+ 1025              	.LFE70:
+ 1027              		.section	.text.HAL_FLASHEx_OBGetUserData,"ax",%progbits
+ 1028              		.align	1
+ 1029              		.global	HAL_FLASHEx_OBGetUserData
+ 1030              		.syntax unified
+ 1031              		.thumb
+ 1032              		.thumb_func
+ 1033              		.fpu softvfp
+ 1035              	HAL_FLASHEx_OBGetUserData:
+ 1036              	.LFB71:
  567:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   uint32_t value = 0;
- 1015              		.loc 1 567 0
- 1016              		.cfi_startproc
- 1017              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccDCmQNM.s 			page 49
-
-
- 1018              		@ frame_needed = 0, uses_anonymous_args = 0
- 1019              		@ link register save eliminated.
- 1020              	.LVL123:
+ 1037              		.loc 1 567 0
+ 1038              		.cfi_startproc
+ 1039              		@ args = 0, pretend = 0, frame = 0
+ 1040              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1041              		@ link register save eliminated.
+ 1042              	.LVL131:
  570:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
- 1021              		.loc 1 570 0
- 1022 0000 0D4B     		ldr	r3, .L86
- 1023 0002 9842     		cmp	r0, r3
- 1024 0004 0BD0     		beq	.L85
+ 1043              		.loc 1 570 0
+ 1044 0000 0D4B     		ldr	r3, .L93
+ 1045 0002 9842     		cmp	r0, r3
+ 1046 0004 0BD0     		beq	.L92
  578:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
- 1025              		.loc 1 578 0
- 1026 0006 0D4B     		ldr	r3, .L86+4
- 1027 0008 D869     		ldr	r0, [r3, #28]
- 1028              	.LVL124:
- 1029 000a 00F07F70 		and	r0, r0, #66846720
- 1030              	.LVL125:
- 1031              	.LBB10:
- 1032              	.LBB11:
- 1033              		.loc 2 531 0
- 1034 000e 4FF07F73 		mov	r3, #66846720
- 1035              		.syntax unified
- 1036              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
- 1037 0012 93FAA3F3 		rbit r3, r3
- 1038              	@ 0 "" 2
- 1039              	.LVL126:
- 1040              		.thumb
- 1041              		.syntax unified
- 1042              	.LBE11:
- 1043              	.LBE10:
+ 1047              		.loc 1 578 0
+ 1048 0006 0D4B     		ldr	r3, .L93+4
+ 1049 0008 D869     		ldr	r0, [r3, #28]
+ 1050              	.LVL132:
+ 1051 000a 00F07F70 		and	r0, r0, #66846720
+ 1052              	.LVL133:
+ 1053              	.LBB10:
+ 1054              	.LBB11:
+ 1055              		.loc 2 531 0
+ 1056 000e 4FF07F73 		mov	r3, #66846720
+ 1057              		.syntax unified
+ 1058              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 1059 0012 93FAA3F3 		rbit r3, r3
+ 1060              	@ 0 "" 2
+ 1061              	.LVL134:
+ 1062              		.thumb
+ 1063              		.syntax unified
+ 1064              	.LBE11:
+ 1065              	.LBE10:
  578:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
- 1044              		.loc 1 578 0
- 1045 0016 B3FA83F3 		clz	r3, r3
- 1046 001a D840     		lsrs	r0, r0, r3
- 1047              	.LVL127:
+ 1066              		.loc 1 578 0
+ 1067 0016 B3FA83F3 		clz	r3, r3
+ 1068 001a D840     		lsrs	r0, r0, r3
+ 1069              	.LVL135:
  582:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1048              		.loc 1 582 0
- 1049 001c 7047     		bx	lr
- 1050              	.LVL128:
- 1051              	.L85:
- 573:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
- 1052              		.loc 1 573 0
- 1053 001e 074B     		ldr	r3, .L86+4
- 1054 0020 D869     		ldr	r0, [r3, #28]
- 1055              	.LVL129:
- 1056 0022 00F47F30 		and	r0, r0, #261120
- 1057              	.LVL130:
- 1058              	.LBB12:
- 1059              	.LBB13:
- 1060              		.loc 2 531 0
- 1061 0026 4FF47F33 		mov	r3, #261120
- 1062              		.syntax unified
- 1063              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
- 1064 002a 93FAA3F3 		rbit r3, r3
- 1065              	@ 0 "" 2
- 1066              	.LVL131:
- 1067              		.thumb
- 1068              		.syntax unified
- 1069              	.LBE13:
-ARM GAS  /tmp/ccDCmQNM.s 			page 50
+ 1070              		.loc 1 582 0
+ARM GAS  /tmp/ccnBRBwt.s 			page 50
 
 
- 1070              	.LBE12:
+ 1071 001c 7047     		bx	lr
+ 1072              	.LVL136:
+ 1073              	.L92:
  573:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
- 1071              		.loc 1 573 0
- 1072 002e B3FA83F3 		clz	r3, r3
- 1073 0032 D840     		lsrs	r0, r0, r3
- 1074              	.LVL132:
- 1075 0034 7047     		bx	lr
- 1076              	.L87:
- 1077 0036 00BF     		.align	2
- 1078              	.L86:
- 1079 0038 04F8FF1F 		.word	536868868
- 1080 003c 00200240 		.word	1073881088
- 1081              		.cfi_endproc
- 1082              	.LFE69:
- 1084              		.section	.text.FLASH_PageErase,"ax",%progbits
- 1085              		.align	1
- 1086              		.global	FLASH_PageErase
- 1087              		.syntax unified
- 1088              		.thumb
- 1089              		.thumb_func
- 1090              		.fpu softvfp
- 1092              	FLASH_PageErase:
- 1093              	.LFB79:
+ 1074              		.loc 1 573 0
+ 1075 001e 074B     		ldr	r3, .L93+4
+ 1076 0020 D869     		ldr	r0, [r3, #28]
+ 1077              	.LVL137:
+ 1078 0022 00F47F30 		and	r0, r0, #261120
+ 1079              	.LVL138:
+ 1080              	.LBB12:
+ 1081              	.LBB13:
+ 1082              		.loc 2 531 0
+ 1083 0026 4FF47F33 		mov	r3, #261120
+ 1084              		.syntax unified
+ 1085              	@ 531 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/cmsis_gcc.h" 1
+ 1086 002a 93FAA3F3 		rbit r3, r3
+ 1087              	@ 0 "" 2
+ 1088              	.LVL139:
+ 1089              		.thumb
+ 1090              		.syntax unified
+ 1091              	.LBE13:
+ 1092              	.LBE12:
+ 573:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
+ 1093              		.loc 1 573 0
+ 1094 002e B3FA83F3 		clz	r3, r3
+ 1095 0032 D840     		lsrs	r0, r0, r3
+ 1096              	.LVL140:
+ 1097 0034 7047     		bx	lr
+ 1098              	.L94:
+ 1099 0036 00BF     		.align	2
+ 1100              	.L93:
+ 1101 0038 04F8FF1F 		.word	536868868
+ 1102 003c 00200240 		.word	1073881088
+ 1103              		.cfi_endproc
+ 1104              	.LFE71:
+ 1106              		.section	.text.FLASH_PageErase,"ax",%progbits
+ 1107              		.align	1
+ 1108              		.global	FLASH_PageErase
+ 1109              		.syntax unified
+ 1110              		.thumb
+ 1111              		.thumb_func
+ 1112              		.fpu softvfp
+ 1114              	FLASH_PageErase:
+ 1115              	.LFB81:
 1078:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
 1079:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** /**
 1080:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   * @}
@@ -2976,6 +2998,9 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
 1087:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** /** @addtogroup FLASH
 1088:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   * @{
 1089:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   */
+ARM GAS  /tmp/ccnBRBwt.s 			page 51
+
+
 1090:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
 1091:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** /** @addtogroup FLASH_Private_Functions
 1092:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****  * @{
@@ -2990,21 +3015,18 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
 1101:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   */
 1102:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** void FLASH_PageErase(uint32_t PageAddress)
 1103:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** {
- 1094              		.loc 1 1103 0
- 1095              		.cfi_startproc
- 1096              		@ args = 0, pretend = 0, frame = 0
- 1097              		@ frame_needed = 0, uses_anonymous_args = 0
- 1098              		@ link register save eliminated.
- 1099              	.LVL133:
+ 1116              		.loc 1 1103 0
+ 1117              		.cfi_startproc
+ 1118              		@ args = 0, pretend = 0, frame = 0
+ 1119              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1120              		@ link register save eliminated.
+ 1121              	.LVL141:
 1104:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   /* Clean the error context */
 1105:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   pFlash.ErrorCode = HAL_FLASH_ERROR_NONE;
-ARM GAS  /tmp/ccDCmQNM.s 			page 51
-
-
- 1100              		.loc 1 1105 0
- 1101 0000 0022     		movs	r2, #0
- 1102 0002 064B     		ldr	r3, .L89
- 1103 0004 DA61     		str	r2, [r3, #28]
+ 1122              		.loc 1 1105 0
+ 1123 0000 064B     		ldr	r3, .L96
+ 1124 0002 0022     		movs	r2, #0
+ 1125 0004 DA61     		str	r2, [r3, #28]
 1106:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
 1107:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #if defined(FLASH_BANK2_END)
 1108:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   if(PageAddress > FLASH_BANK1_END)
@@ -3019,396 +3041,403 @@ ARM GAS  /tmp/ccDCmQNM.s 			page 1
 1117:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* FLASH_BANK2_END */
 1118:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     /* Proceed to erase the page */
 1119:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     SET_BIT(FLASH->CR, FLASH_CR_PER);
- 1104              		.loc 1 1119 0
- 1105 0006 064B     		ldr	r3, .L89+4
- 1106 0008 1A69     		ldr	r2, [r3, #16]
- 1107 000a 42F00202 		orr	r2, r2, #2
- 1108 000e 1A61     		str	r2, [r3, #16]
+ 1126              		.loc 1 1119 0
+ 1127 0006 064B     		ldr	r3, .L96+4
+ 1128 0008 1A69     		ldr	r2, [r3, #16]
+ 1129 000a 42F00202 		orr	r2, r2, #2
+ 1130 000e 1A61     		str	r2, [r3, #16]
 1120:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     WRITE_REG(FLASH->AR, PageAddress);
- 1109              		.loc 1 1120 0
- 1110 0010 5861     		str	r0, [r3, #20]
+ 1131              		.loc 1 1120 0
+ 1132 0010 5861     		str	r0, [r3, #20]
 1121:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     SET_BIT(FLASH->CR, FLASH_CR_STRT);
- 1111              		.loc 1 1121 0
- 1112 0012 1A69     		ldr	r2, [r3, #16]
- 1113 0014 42F04002 		orr	r2, r2, #64
- 1114 0018 1A61     		str	r2, [r3, #16]
- 1115 001a 7047     		bx	lr
- 1116              	.L90:
- 1117              		.align	2
- 1118              	.L89:
- 1119 001c 00000000 		.word	pFlash
- 1120 0020 00200240 		.word	1073881088
- 1121              		.cfi_endproc
- 1122              	.LFE79:
- 1124              		.section	.text.HAL_FLASHEx_Erase,"ax",%progbits
- 1125              		.align	1
- 1126              		.global	HAL_FLASHEx_Erase
- 1127              		.syntax unified
- 1128              		.thumb
- 1129              		.thumb_func
- 1130              		.fpu softvfp
- 1132              	HAL_FLASHEx_Erase:
- 1133              	.LFB64:
- 177:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_ERROR;
- 1134              		.loc 1 177 0
- 1135              		.cfi_startproc
- 1136              		@ args = 0, pretend = 0, frame = 0
- 1137              		@ frame_needed = 0, uses_anonymous_args = 0
- 1138              	.LVL134:
- 182:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1139              		.loc 1 182 0
- 1140 0000 264B     		ldr	r3, .L108
-ARM GAS  /tmp/ccDCmQNM.s 			page 52
+ 1133              		.loc 1 1121 0
+ 1134 0012 1A69     		ldr	r2, [r3, #16]
+ 1135 0014 42F04002 		orr	r2, r2, #64
+ 1136 0018 1A61     		str	r2, [r3, #16]
+1122:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #if defined(FLASH_BANK2_END)
+1123:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
+1124:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** #endif /* FLASH_BANK2_END */
+1125:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** }
+ARM GAS  /tmp/ccnBRBwt.s 			page 52
 
 
- 1141 0002 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
- 1142 0004 012B     		cmp	r3, #1
- 1143 0006 46D0     		beq	.L98
+ 1137              		.loc 1 1125 0
+ 1138 001a 7047     		bx	lr
+ 1139              	.L97:
+ 1140              		.align	2
+ 1141              	.L96:
+ 1142 001c 00000000 		.word	pFlash
+ 1143 0020 00200240 		.word	1073881088
+ 1144              		.cfi_endproc
+ 1145              	.LFE81:
+ 1147              		.section	.text.HAL_FLASHEx_Erase,"ax",%progbits
+ 1148              		.align	1
+ 1149              		.global	HAL_FLASHEx_Erase
+ 1150              		.syntax unified
+ 1151              		.thumb
+ 1152              		.thumb_func
+ 1153              		.fpu softvfp
+ 1155              	HAL_FLASHEx_Erase:
+ 1156              	.LFB66:
  177:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_ERROR;
- 1144              		.loc 1 177 0 discriminator 2
- 1145 0008 70B5     		push	{r4, r5, r6, lr}
- 1146              	.LCFI9:
- 1147              		.cfi_def_cfa_offset 16
- 1148              		.cfi_offset 4, -16
- 1149              		.cfi_offset 5, -12
- 1150              		.cfi_offset 6, -8
- 1151              		.cfi_offset 14, -4
- 1152 000a 0E46     		mov	r6, r1
- 1153 000c 0546     		mov	r5, r0
+ 1157              		.loc 1 177 0
+ 1158              		.cfi_startproc
+ 1159              		@ args = 0, pretend = 0, frame = 0
+ 1160              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1161              	.LVL142:
  182:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1154              		.loc 1 182 0 discriminator 2
- 1155 000e 0122     		movs	r2, #1
- 1156 0010 224B     		ldr	r3, .L108
- 1157 0012 1A76     		strb	r2, [r3, #24]
+ 1162              		.loc 1 182 0
+ 1163 0000 264B     		ldr	r3, .L115
+ 1164 0002 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
+ 1165 0004 012B     		cmp	r3, #1
+ 1166 0006 46D0     		beq	.L105
+ 177:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_ERROR;
+ 1167              		.loc 1 177 0 discriminator 2
+ 1168 0008 70B5     		push	{r4, r5, r6, lr}
+ 1169              	.LCFI9:
+ 1170              		.cfi_def_cfa_offset 16
+ 1171              		.cfi_offset 4, -16
+ 1172              		.cfi_offset 5, -12
+ 1173              		.cfi_offset 6, -8
+ 1174              		.cfi_offset 14, -4
+ 1175 000a 0E46     		mov	r6, r1
+ 1176 000c 0446     		mov	r4, r0
+ 182:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
+ 1177              		.loc 1 182 0 discriminator 2
+ 1178 000e 234B     		ldr	r3, .L115
+ 1179 0010 0122     		movs	r2, #1
+ 1180 0012 1A76     		strb	r2, [r3, #24]
  187:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
- 1158              		.loc 1 187 0 discriminator 2
- 1159 0014 0368     		ldr	r3, [r0]
- 1160 0016 022B     		cmp	r3, #2
- 1161 0018 20D0     		beq	.L105
+ 1181              		.loc 1 187 0 discriminator 2
+ 1182 0014 0368     		ldr	r3, [r0]
+ 1183 0016 022B     		cmp	r3, #2
+ 1184 0018 20D0     		beq	.L112
  290:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 1162              		.loc 1 290 0
- 1163 001a 4CF25030 		movw	r0, #50000
- 1164              	.LVL135:
- 1165 001e FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 1166              	.LVL136:
- 1167 0022 90BB     		cbnz	r0, .L100
+ 1185              		.loc 1 290 0
+ 1186 001a 4CF25030 		movw	r0, #50000
+ 1187              	.LVL143:
+ 1188 001e FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 1189              	.LVL144:
+ARM GAS  /tmp/ccnBRBwt.s 			page 53
+
+
+ 1190 0022 90BB     		cbnz	r0, .L107
  293:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 1168              		.loc 1 293 0
- 1169 0024 4FF0FF33 		mov	r3, #-1
- 1170 0028 3360     		str	r3, [r6]
+ 1191              		.loc 1 293 0
+ 1192 0024 4FF0FF33 		mov	r3, #-1
+ 1193 0028 3360     		str	r3, [r6]
  296:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****             address < ((pEraseInit->NbPages * FLASH_PAGE_SIZE) + pEraseInit->PageAddress);
- 1171              		.loc 1 296 0
- 1172 002a AC68     		ldr	r4, [r5, #8]
- 1173              	.LVL137:
+ 1194              		.loc 1 296 0
+ 1195 002a A568     		ldr	r5, [r4, #8]
+ 1196              	.LVL145:
  178:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   uint32_t address = 0;
- 1174              		.loc 1 178 0
- 1175 002c 0121     		movs	r1, #1
- 1176              	.LVL138:
- 1177              	.L95:
+ 1197              		.loc 1 178 0
+ 1198 002c 0122     		movs	r2, #1
+ 1199              	.LVL146:
+ 1200              	.L102:
  297:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****             address += FLASH_PAGE_SIZE)
- 1178              		.loc 1 297 0 discriminator 1
- 1179 002e EA68     		ldr	r2, [r5, #12]
- 1180 0030 AB68     		ldr	r3, [r5, #8]
- 1181 0032 03EB8223 		add	r3, r3, r2, lsl #10
+ 1201              		.loc 1 297 0 discriminator 1
+ 1202 002e E168     		ldr	r1, [r4, #12]
+ 1203 0030 A368     		ldr	r3, [r4, #8]
+ 1204 0032 03EB8123 		add	r3, r3, r1, lsl #10
  296:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****             address < ((pEraseInit->NbPages * FLASH_PAGE_SIZE) + pEraseInit->PageAddress);
- 1182              		.loc 1 296 0 discriminator 1
- 1183 0036 9C42     		cmp	r4, r3
- 1184 0038 28D2     		bcs	.L94
+ 1205              		.loc 1 296 0 discriminator 1
+ 1206 0036 AB42     		cmp	r3, r5
+ 1207 0038 28D9     		bls	.L101
  300:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****           
- 1185              		.loc 1 300 0
- 1186 003a 2046     		mov	r0, r4
- 1187 003c FFF7FEFF 		bl	FLASH_PageErase
-ARM GAS  /tmp/ccDCmQNM.s 			page 53
-
-
- 1188              	.LVL139:
+ 1208              		.loc 1 300 0
+ 1209 003a 2846     		mov	r0, r5
+ 1210 003c FFF7FEFF 		bl	FLASH_PageErase
+ 1211              	.LVL147:
  303:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****           
- 1189              		.loc 1 303 0
- 1190 0040 4CF25030 		movw	r0, #50000
- 1191 0044 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 1192              	.LVL140:
+ 1212              		.loc 1 303 0
+ 1213 0040 4CF25030 		movw	r0, #50000
+ 1214 0044 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 1215              	.LVL148:
  306:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****           
- 1193              		.loc 1 306 0
- 1194 0048 154A     		ldr	r2, .L108+4
- 1195 004a 1369     		ldr	r3, [r2, #16]
- 1196 004c 23F00203 		bic	r3, r3, #2
- 1197 0050 1361     		str	r3, [r2, #16]
+ 1216              		.loc 1 306 0
+ 1217 0048 154A     		ldr	r2, .L115+4
+ 1218 004a 1369     		ldr	r3, [r2, #16]
+ 1219 004c 23F00203 		bic	r3, r3, #2
+ 1220 0050 1361     		str	r3, [r2, #16]
  308:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****           {
- 1198              		.loc 1 308 0
- 1199 0052 0146     		mov	r1, r0
- 1200 0054 B8B9     		cbnz	r0, .L106
+ 1221              		.loc 1 308 0
+ 1222 0052 0246     		mov	r2, r0
+ 1223 0054 B8B9     		cbnz	r0, .L113
  298:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         {
- 1201              		.loc 1 298 0
- 1202 0056 04F58064 		add	r4, r4, #1024
- 1203              	.LVL141:
- 1204 005a E8E7     		b	.L95
- 1205              	.LVL142:
- 1206              	.L105:
+ 1224              		.loc 1 298 0
+ 1225 0056 05F58065 		add	r5, r5, #1024
+ 1226              	.LVL149:
+ 1227 005a E8E7     		b	.L102
+ 1228              	.LVL150:
+ 1229              	.L112:
  233:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       {
- 1207              		.loc 1 233 0
- 1208 005c 4CF25030 		movw	r0, #50000
- 1209              	.LVL143:
- 1210 0060 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 1211              	.LVL144:
- 1212 0064 08B1     		cbz	r0, .L107
+ 1230              		.loc 1 233 0
+ 1231 005c 4CF25030 		movw	r0, #50000
+ 1232              	.LVL151:
+ 1233 0060 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 1234              	.LVL152:
+ 1235 0064 08B1     		cbz	r0, .L114
+ARM GAS  /tmp/ccnBRBwt.s 			page 54
+
+
  178:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   uint32_t address = 0;
- 1213              		.loc 1 178 0
- 1214 0066 0121     		movs	r1, #1
- 1215 0068 10E0     		b	.L94
- 1216              	.L107:
+ 1236              		.loc 1 178 0
+ 1237 0066 0122     		movs	r2, #1
+ 1238 0068 10E0     		b	.L101
+ 1239              	.L114:
  236:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 1217              		.loc 1 236 0
- 1218 006a 0120     		movs	r0, #1
- 1219 006c FFF7FEFF 		bl	FLASH_MassErase
- 1220              	.LVL145:
+ 1240              		.loc 1 236 0
+ 1241 006a 0120     		movs	r0, #1
+ 1242 006c FFF7FEFF 		bl	FLASH_MassErase
+ 1243              	.LVL153:
  239:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         
- 1221              		.loc 1 239 0
- 1222 0070 4CF25030 		movw	r0, #50000
- 1223 0074 FFF7FEFF 		bl	FLASH_WaitForLastOperation
- 1224              	.LVL146:
- 1225 0078 0146     		mov	r1, r0
- 1226              	.LVL147:
+ 1244              		.loc 1 239 0
+ 1245 0070 4CF25030 		movw	r0, #50000
+ 1246 0074 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 1247              	.LVL154:
+ 1248 0078 0246     		mov	r2, r0
+ 1249              	.LVL155:
  242:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****       }
- 1227              		.loc 1 242 0
- 1228 007a 094A     		ldr	r2, .L108+4
- 1229 007c 1369     		ldr	r3, [r2, #16]
- 1230 007e 23F00403 		bic	r3, r3, #4
- 1231 0082 1361     		str	r3, [r2, #16]
- 1232 0084 02E0     		b	.L94
- 1233              	.LVL148:
- 1234              	.L106:
+ 1250              		.loc 1 242 0
+ 1251 007a 0949     		ldr	r1, .L115+4
+ 1252 007c 0B69     		ldr	r3, [r1, #16]
+ 1253 007e 23F00403 		bic	r3, r3, #4
+ 1254 0082 0B61     		str	r3, [r1, #16]
+ 1255 0084 02E0     		b	.L101
+ 1256              	.LVL156:
+ 1257              	.L113:
  311:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****             break;
-ARM GAS  /tmp/ccDCmQNM.s 			page 54
-
-
- 1235              		.loc 1 311 0
- 1236 0086 3460     		str	r4, [r6]
+ 1258              		.loc 1 311 0
+ 1259 0086 3560     		str	r5, [r6]
  312:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****           }
- 1237              		.loc 1 312 0
- 1238 0088 00E0     		b	.L94
- 1239              	.LVL149:
- 1240              	.L100:
+ 1260              		.loc 1 312 0
+ 1261 0088 00E0     		b	.L101
+ 1262              	.LVL157:
+ 1263              	.L107:
  178:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   uint32_t address = 0;
- 1241              		.loc 1 178 0
- 1242 008a 0121     		movs	r1, #1
- 1243              	.LVL150:
- 1244              	.L94:
+ 1264              		.loc 1 178 0
+ 1265 008a 0122     		movs	r2, #1
+ 1266              	.LVL158:
+ 1267              	.L101:
  320:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1245              		.loc 1 320 0
- 1246 008c 0022     		movs	r2, #0
- 1247 008e 034B     		ldr	r3, .L108
- 1248 0090 1A76     		strb	r2, [r3, #24]
+ 1268              		.loc 1 320 0
+ 1269 008c 034B     		ldr	r3, .L115
+ 1270 008e 0021     		movs	r1, #0
+ 1271 0090 1976     		strb	r1, [r3, #24]
  323:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1249              		.loc 1 323 0
- 1250 0092 0846     		mov	r0, r1
- 1251 0094 70BD     		pop	{r4, r5, r6, pc}
- 1252              	.LVL151:
- 1253              	.L98:
- 1254              	.LCFI10:
- 1255              		.cfi_def_cfa_offset 0
- 1256              		.cfi_restore 4
- 1257              		.cfi_restore 5
- 1258              		.cfi_restore 6
- 1259              		.cfi_restore 14
+ 1272              		.loc 1 323 0
+ 1273 0092 1046     		mov	r0, r2
+ 1274 0094 70BD     		pop	{r4, r5, r6, pc}
+ 1275              	.LVL159:
+ 1276              	.L105:
+ 1277              	.LCFI10:
+ 1278              		.cfi_def_cfa_offset 0
+ 1279              		.cfi_restore 4
+ 1280              		.cfi_restore 5
+ 1281              		.cfi_restore 6
+ 1282              		.cfi_restore 14
  182:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1260              		.loc 1 182 0
- 1261 0096 0221     		movs	r1, #2
- 1262              	.LVL152:
+ARM GAS  /tmp/ccnBRBwt.s 			page 55
+
+
+ 1283              		.loc 1 182 0
+ 1284 0096 0222     		movs	r2, #2
  323:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1263              		.loc 1 323 0
- 1264 0098 0846     		mov	r0, r1
- 1265              	.LVL153:
- 1266 009a 7047     		bx	lr
- 1267              	.L109:
- 1268              		.align	2
- 1269              	.L108:
- 1270 009c 00000000 		.word	pFlash
- 1271 00a0 00200240 		.word	1073881088
- 1272              		.cfi_endproc
- 1273              	.LFE64:
- 1275              		.section	.text.HAL_FLASHEx_Erase_IT,"ax",%progbits
- 1276              		.align	1
- 1277              		.global	HAL_FLASHEx_Erase_IT
- 1278              		.syntax unified
- 1279              		.thumb
- 1280              		.thumb_func
- 1281              		.fpu softvfp
- 1283              	HAL_FLASHEx_Erase_IT:
- 1284              	.LFB65:
+ 1285              		.loc 1 323 0
+ 1286 0098 1046     		mov	r0, r2
+ 1287              	.LVL160:
+ 1288 009a 7047     		bx	lr
+ 1289              	.L116:
+ 1290              		.align	2
+ 1291              	.L115:
+ 1292 009c 00000000 		.word	pFlash
+ 1293 00a0 00200240 		.word	1073881088
+ 1294              		.cfi_endproc
+ 1295              	.LFE66:
+ 1297              		.section	.text.HAL_FLASHEx_Erase_IT,"ax",%progbits
+ 1298              		.align	1
+ 1299              		.global	HAL_FLASHEx_Erase_IT
+ 1300              		.syntax unified
+ 1301              		.thumb
+ 1302              		.thumb_func
+ 1303              		.fpu softvfp
+ 1305              	HAL_FLASHEx_Erase_IT:
+ 1306              	.LFB67:
  337:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
- 1285              		.loc 1 337 0
- 1286              		.cfi_startproc
-ARM GAS  /tmp/ccDCmQNM.s 			page 55
-
-
- 1287              		@ args = 0, pretend = 0, frame = 0
- 1288              		@ frame_needed = 0, uses_anonymous_args = 0
- 1289              	.LVL154:
- 1290 0000 08B5     		push	{r3, lr}
- 1291              	.LCFI11:
- 1292              		.cfi_def_cfa_offset 8
- 1293              		.cfi_offset 3, -8
- 1294              		.cfi_offset 14, -4
- 1295              	.LVL155:
+ 1307              		.loc 1 337 0
+ 1308              		.cfi_startproc
+ 1309              		@ args = 0, pretend = 0, frame = 0
+ 1310              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1311              	.LVL161:
+ 1312 0000 08B5     		push	{r3, lr}
+ 1313              	.LCFI11:
+ 1314              		.cfi_def_cfa_offset 8
+ 1315              		.cfi_offset 3, -8
+ 1316              		.cfi_offset 14, -4
+ 1317              	.LVL162:
  341:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1296              		.loc 1 341 0
- 1297 0002 144B     		ldr	r3, .L117
- 1298 0004 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
- 1299 0006 012B     		cmp	r3, #1
- 1300 0008 20D0     		beq	.L113
+ 1318              		.loc 1 341 0
+ 1319 0002 144B     		ldr	r3, .L124
+ 1320 0004 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
+ 1321 0006 012B     		cmp	r3, #1
+ 1322 0008 20D0     		beq	.L120
  341:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1301              		.loc 1 341 0 is_stmt 0 discriminator 2
- 1302 000a 124B     		ldr	r3, .L117
- 1303 000c 0122     		movs	r2, #1
- 1304 000e 1A76     		strb	r2, [r3, #24]
+ 1323              		.loc 1 341 0 is_stmt 0 discriminator 2
+ 1324 000a 124B     		ldr	r3, .L124
+ 1325 000c 0122     		movs	r2, #1
+ 1326 000e 1A76     		strb	r2, [r3, #24]
  344:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
- 1305              		.loc 1 344 0 is_stmt 1 discriminator 2
- 1306 0010 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 1307 0012 EBB9     		cbnz	r3, .L114
+ 1327              		.loc 1 344 0 is_stmt 1 discriminator 2
+ 1328 0010 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1329 0012 EBB9     		cbnz	r3, .L121
  353:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1308              		.loc 1 353 0
- 1309 0014 104A     		ldr	r2, .L117+4
- 1310 0016 1369     		ldr	r3, [r2, #16]
- 1311 0018 43F4A053 		orr	r3, r3, #5120
- 1312 001c 1361     		str	r3, [r2, #16]
+ 1330              		.loc 1 353 0
+ 1331 0014 104A     		ldr	r2, .L124+4
+ 1332 0016 1369     		ldr	r3, [r2, #16]
+ 1333 0018 43F4A053 		orr	r3, r3, #5120
+ 1334 001c 1361     		str	r3, [r2, #16]
  360:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   {
- 1313              		.loc 1 360 0
- 1314 001e 0368     		ldr	r3, [r0]
- 1315 0020 022B     		cmp	r3, #2
- 1316 0022 0BD0     		beq	.L116
+ARM GAS  /tmp/ccnBRBwt.s 			page 56
+
+
+ 1335              		.loc 1 360 0
+ 1336 001e 0368     		ldr	r3, [r0]
+ 1337 0020 022B     		cmp	r3, #2
+ 1338 0022 0BD0     		beq	.L123
  374:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     pFlash.DataRemaining = pEraseInit->NbPages;
- 1317              		.loc 1 374 0
- 1318 0024 0B4B     		ldr	r3, .L117
- 1319 0026 0122     		movs	r2, #1
- 1320 0028 1A70     		strb	r2, [r3]
+ 1339              		.loc 1 374 0
+ 1340 0024 0B4B     		ldr	r3, .L124
+ 1341 0026 0122     		movs	r2, #1
+ 1342 0028 1A70     		strb	r2, [r3]
  375:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****     pFlash.Address = pEraseInit->PageAddress;
- 1321              		.loc 1 375 0
- 1322 002a C268     		ldr	r2, [r0, #12]
- 1323 002c 5A60     		str	r2, [r3, #4]
+ 1343              		.loc 1 375 0
+ 1344 002a C268     		ldr	r2, [r0, #12]
+ 1345 002c 5A60     		str	r2, [r3, #4]
  376:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1324              		.loc 1 376 0
- 1325 002e 8268     		ldr	r2, [r0, #8]
- 1326 0030 9A60     		str	r2, [r3, #8]
+ 1346              		.loc 1 376 0
+ 1347 002e 8268     		ldr	r2, [r0, #8]
+ 1348 0030 9A60     		str	r2, [r3, #8]
  379:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
- 1327              		.loc 1 379 0
- 1328 0032 8068     		ldr	r0, [r0, #8]
- 1329              	.LVL156:
- 1330 0034 FFF7FEFF 		bl	FLASH_PageErase
- 1331              	.LVL157:
+ 1349              		.loc 1 379 0
+ 1350 0032 8068     		ldr	r0, [r0, #8]
+ 1351              	.LVL163:
+ 1352 0034 FFF7FEFF 		bl	FLASH_PageErase
+ 1353              	.LVL164:
  382:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** }
- 1332              		.loc 1 382 0
- 1333 0038 0020     		movs	r0, #0
-ARM GAS  /tmp/ccDCmQNM.s 			page 56
-
-
- 1334 003a 08BD     		pop	{r3, pc}
- 1335              	.LVL158:
- 1336              	.L116:
+ 1354              		.loc 1 382 0
+ 1355 0038 0020     		movs	r0, #0
+ 1356 003a 0AE0     		b	.L118
+ 1357              	.LVL165:
+ 1358              	.L123:
  363:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****         FLASH_MassErase(pEraseInit->Banks);
- 1337              		.loc 1 363 0
- 1338 003c 0222     		movs	r2, #2
- 1339 003e 054B     		ldr	r3, .L117
- 1340 0040 1A70     		strb	r2, [r3]
+ 1359              		.loc 1 363 0
+ 1360 003c 054B     		ldr	r3, .L124
+ 1361 003e 0222     		movs	r2, #2
+ 1362 0040 1A70     		strb	r2, [r3]
  364:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
- 1341              		.loc 1 364 0
- 1342 0042 4068     		ldr	r0, [r0, #4]
- 1343              	.LVL159:
- 1344 0044 FFF7FEFF 		bl	FLASH_MassErase
- 1345              	.LVL160:
+ 1363              		.loc 1 364 0
+ 1364 0042 4068     		ldr	r0, [r0, #4]
+ 1365              	.LVL166:
+ 1366 0044 FFF7FEFF 		bl	FLASH_MassErase
+ 1367              	.LVL167:
  382:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** }
- 1346              		.loc 1 382 0
- 1347 0048 0020     		movs	r0, #0
- 1348 004a 08BD     		pop	{r3, pc}
- 1349              	.LVL161:
- 1350              	.L113:
+ 1368              		.loc 1 382 0
+ 1369 0048 0020     		movs	r0, #0
+ 1370 004a 02E0     		b	.L118
+ 1371              	.LVL168:
+ 1372              	.L120:
  341:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1351              		.loc 1 341 0
- 1352 004c 0220     		movs	r0, #2
- 1353              	.LVL162:
- 1354 004e 08BD     		pop	{r3, pc}
- 1355              	.LVL163:
- 1356              	.L114:
+ 1373              		.loc 1 341 0
+ 1374 004c 0220     		movs	r0, #2
+ 1375              	.LVL169:
+ 1376 004e 00E0     		b	.L118
+ 1377              	.LVL170:
+ 1378              	.L121:
  346:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c ****   }
- 1357              		.loc 1 346 0
- 1358 0050 0120     		movs	r0, #1
- 1359              	.LVL164:
+ 1379              		.loc 1 346 0
+ 1380 0050 0120     		movs	r0, #1
+ 1381              	.LVL171:
+ARM GAS  /tmp/ccnBRBwt.s 			page 57
+
+
+ 1382              	.L118:
  383:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c **** 
- 1360              		.loc 1 383 0
- 1361 0052 08BD     		pop	{r3, pc}
- 1362              	.L118:
- 1363              		.align	2
- 1364              	.L117:
- 1365 0054 00000000 		.word	pFlash
- 1366 0058 00200240 		.word	1073881088
- 1367              		.cfi_endproc
- 1368              	.LFE65:
- 1370              		.text
- 1371              	.Letext0:
- 1372              		.file 3 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 1373              		.file 4 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 1374              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
- 1375              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
- 1376              		.file 7 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
- 1377              		.file 8 "/usr/arm-none-eabi/include/sys/lock.h"
- 1378              		.file 9 "/usr/arm-none-eabi/include/sys/_types.h"
- 1379              		.file 10 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 1380              		.file 11 "/usr/arm-none-eabi/include/sys/reent.h"
- 1381              		.file 12 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 1382              		.file 13 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h"
- 1383              		.file 14 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h"
-ARM GAS  /tmp/ccDCmQNM.s 			page 57
+ 1383              		.loc 1 383 0
+ 1384 0052 08BD     		pop	{r3, pc}
+ 1385              	.L125:
+ 1386              		.align	2
+ 1387              	.L124:
+ 1388 0054 00000000 		.word	pFlash
+ 1389 0058 00200240 		.word	1073881088
+ 1390              		.cfi_endproc
+ 1391              	.LFE67:
+ 1393              		.text
+ 1394              	.Letext0:
+ 1395              		.file 3 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 1396              		.file 4 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 1397              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+ 1398              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+ 1399              		.file 7 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
+ 1400              		.file 8 "/usr/arm-none-eabi/include/sys/lock.h"
+ 1401              		.file 9 "/usr/arm-none-eabi/include/sys/_types.h"
+ 1402              		.file 10 "/usr/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h"
+ 1403              		.file 11 "/usr/arm-none-eabi/include/sys/reent.h"
+ 1404              		.file 12 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 1405              		.file 13 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h"
+ 1406              		.file 14 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h"
+ARM GAS  /tmp/ccnBRBwt.s 			page 58
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_flash_ex.c
-     /tmp/ccDCmQNM.s:16     .text.FLASH_MassErase:0000000000000000 $t
-     /tmp/ccDCmQNM.s:22     .text.FLASH_MassErase:0000000000000000 FLASH_MassErase
-     /tmp/ccDCmQNM.s:48     .text.FLASH_MassErase:000000000000001c $d
-     /tmp/ccDCmQNM.s:54     .text.FLASH_OB_GetWRP:0000000000000000 $t
-     /tmp/ccDCmQNM.s:60     .text.FLASH_OB_GetWRP:0000000000000000 FLASH_OB_GetWRP
-     /tmp/ccDCmQNM.s:75     .text.FLASH_OB_GetWRP:0000000000000008 $d
-     /tmp/ccDCmQNM.s:80     .text.FLASH_OB_GetRDP:0000000000000000 $t
-     /tmp/ccDCmQNM.s:86     .text.FLASH_OB_GetRDP:0000000000000000 FLASH_OB_GetRDP
-     /tmp/ccDCmQNM.s:112    .text.FLASH_OB_GetRDP:0000000000000014 $d
-     /tmp/ccDCmQNM.s:117    .text.FLASH_OB_RDP_LevelConfig:0000000000000000 $t
-     /tmp/ccDCmQNM.s:123    .text.FLASH_OB_RDP_LevelConfig:0000000000000000 FLASH_OB_RDP_LevelConfig
-     /tmp/ccDCmQNM.s:203    .text.FLASH_OB_RDP_LevelConfig:0000000000000064 $d
-     /tmp/ccDCmQNM.s:210    .text.FLASH_OB_UserConfig:0000000000000000 $t
-     /tmp/ccDCmQNM.s:216    .text.FLASH_OB_UserConfig:0000000000000000 FLASH_OB_UserConfig
-     /tmp/ccDCmQNM.s:275    .text.FLASH_OB_UserConfig:0000000000000040 $d
-     /tmp/ccDCmQNM.s:282    .text.FLASH_OB_ProgramData:0000000000000000 $t
-     /tmp/ccDCmQNM.s:288    .text.FLASH_OB_ProgramData:0000000000000000 FLASH_OB_ProgramData
-     /tmp/ccDCmQNM.s:347    .text.FLASH_OB_ProgramData:0000000000000040 $d
-     /tmp/ccDCmQNM.s:353    .text.FLASH_OB_GetUser:0000000000000000 $t
-     /tmp/ccDCmQNM.s:359    .text.FLASH_OB_GetUser:0000000000000000 FLASH_OB_GetUser
-     /tmp/ccDCmQNM.s:394    .text.FLASH_OB_GetUser:0000000000000018 $d
-     /tmp/ccDCmQNM.s:399    .text.HAL_FLASHEx_OBErase:0000000000000000 $t
-     /tmp/ccDCmQNM.s:406    .text.HAL_FLASHEx_OBErase:0000000000000000 HAL_FLASHEx_OBErase
-     /tmp/ccDCmQNM.s:476    .text.HAL_FLASHEx_OBErase:0000000000000050 $d
-     /tmp/ccDCmQNM.s:482    .text.FLASH_OB_EnableWRP:0000000000000000 $t
-     /tmp/ccDCmQNM.s:488    .text.FLASH_OB_EnableWRP:0000000000000000 FLASH_OB_EnableWRP
-     /tmp/ccDCmQNM.s:632    .text.FLASH_OB_EnableWRP:00000000000000ac $d
-     /tmp/ccDCmQNM.s:639    .text.FLASH_OB_DisableWRP:0000000000000000 $t
-     /tmp/ccDCmQNM.s:645    .text.FLASH_OB_DisableWRP:0000000000000000 FLASH_OB_DisableWRP
-     /tmp/ccDCmQNM.s:793    .text.FLASH_OB_DisableWRP:00000000000000b4 $d
-     /tmp/ccDCmQNM.s:800    .text.HAL_FLASHEx_OBProgram:0000000000000000 $t
-     /tmp/ccDCmQNM.s:807    .text.HAL_FLASHEx_OBProgram:0000000000000000 HAL_FLASHEx_OBProgram
-     /tmp/ccDCmQNM.s:961    .text.HAL_FLASHEx_OBProgram:00000000000000a4 $d
-     /tmp/ccDCmQNM.s:966    .text.HAL_FLASHEx_OBGetConfig:0000000000000000 $t
-     /tmp/ccDCmQNM.s:973    .text.HAL_FLASHEx_OBGetConfig:0000000000000000 HAL_FLASHEx_OBGetConfig
-     /tmp/ccDCmQNM.s:1006   .text.HAL_FLASHEx_OBGetUserData:0000000000000000 $t
-     /tmp/ccDCmQNM.s:1013   .text.HAL_FLASHEx_OBGetUserData:0000000000000000 HAL_FLASHEx_OBGetUserData
-     /tmp/ccDCmQNM.s:1079   .text.HAL_FLASHEx_OBGetUserData:0000000000000038 $d
-     /tmp/ccDCmQNM.s:1085   .text.FLASH_PageErase:0000000000000000 $t
-     /tmp/ccDCmQNM.s:1092   .text.FLASH_PageErase:0000000000000000 FLASH_PageErase
-     /tmp/ccDCmQNM.s:1119   .text.FLASH_PageErase:000000000000001c $d
-     /tmp/ccDCmQNM.s:1125   .text.HAL_FLASHEx_Erase:0000000000000000 $t
-     /tmp/ccDCmQNM.s:1132   .text.HAL_FLASHEx_Erase:0000000000000000 HAL_FLASHEx_Erase
-     /tmp/ccDCmQNM.s:1270   .text.HAL_FLASHEx_Erase:000000000000009c $d
-     /tmp/ccDCmQNM.s:1276   .text.HAL_FLASHEx_Erase_IT:0000000000000000 $t
-     /tmp/ccDCmQNM.s:1283   .text.HAL_FLASHEx_Erase_IT:0000000000000000 HAL_FLASHEx_Erase_IT
-     /tmp/ccDCmQNM.s:1365   .text.HAL_FLASHEx_Erase_IT:0000000000000054 $d
-                     .debug_frame:0000000000000010 $d
+     /tmp/ccnBRBwt.s:16     .text.FLASH_MassErase:0000000000000000 $t
+     /tmp/ccnBRBwt.s:22     .text.FLASH_MassErase:0000000000000000 FLASH_MassErase
+     /tmp/ccnBRBwt.s:49     .text.FLASH_MassErase:000000000000001c $d
+     /tmp/ccnBRBwt.s:55     .text.FLASH_OB_GetWRP:0000000000000000 $t
+     /tmp/ccnBRBwt.s:61     .text.FLASH_OB_GetWRP:0000000000000000 FLASH_OB_GetWRP
+     /tmp/ccnBRBwt.s:76     .text.FLASH_OB_GetWRP:0000000000000008 $d
+     /tmp/ccnBRBwt.s:81     .text.FLASH_OB_GetRDP:0000000000000000 $t
+     /tmp/ccnBRBwt.s:87     .text.FLASH_OB_GetRDP:0000000000000000 FLASH_OB_GetRDP
+     /tmp/ccnBRBwt.s:113    .text.FLASH_OB_GetRDP:0000000000000014 $d
+     /tmp/ccnBRBwt.s:118    .text.FLASH_OB_RDP_LevelConfig:0000000000000000 $t
+     /tmp/ccnBRBwt.s:124    .text.FLASH_OB_RDP_LevelConfig:0000000000000000 FLASH_OB_RDP_LevelConfig
+     /tmp/ccnBRBwt.s:204    .text.FLASH_OB_RDP_LevelConfig:0000000000000064 $d
+     /tmp/ccnBRBwt.s:211    .text.FLASH_OB_UserConfig:0000000000000000 $t
+     /tmp/ccnBRBwt.s:217    .text.FLASH_OB_UserConfig:0000000000000000 FLASH_OB_UserConfig
+     /tmp/ccnBRBwt.s:276    .text.FLASH_OB_UserConfig:0000000000000040 $d
+     /tmp/ccnBRBwt.s:283    .text.FLASH_OB_ProgramData:0000000000000000 $t
+     /tmp/ccnBRBwt.s:289    .text.FLASH_OB_ProgramData:0000000000000000 FLASH_OB_ProgramData
+     /tmp/ccnBRBwt.s:348    .text.FLASH_OB_ProgramData:0000000000000040 $d
+     /tmp/ccnBRBwt.s:354    .text.FLASH_OB_GetUser:0000000000000000 $t
+     /tmp/ccnBRBwt.s:360    .text.FLASH_OB_GetUser:0000000000000000 FLASH_OB_GetUser
+     /tmp/ccnBRBwt.s:395    .text.FLASH_OB_GetUser:0000000000000018 $d
+     /tmp/ccnBRBwt.s:400    .text.HAL_FLASHEx_OBErase:0000000000000000 $t
+     /tmp/ccnBRBwt.s:407    .text.HAL_FLASHEx_OBErase:0000000000000000 HAL_FLASHEx_OBErase
+     /tmp/ccnBRBwt.s:477    .text.HAL_FLASHEx_OBErase:0000000000000050 $d
+     /tmp/ccnBRBwt.s:483    .text.FLASH_OB_EnableWRP:0000000000000000 $t
+     /tmp/ccnBRBwt.s:489    .text.FLASH_OB_EnableWRP:0000000000000000 FLASH_OB_EnableWRP
+     /tmp/ccnBRBwt.s:645    .text.FLASH_OB_EnableWRP:00000000000000b4 $d
+     /tmp/ccnBRBwt.s:652    .text.FLASH_OB_DisableWRP:0000000000000000 $t
+     /tmp/ccnBRBwt.s:658    .text.FLASH_OB_DisableWRP:0000000000000000 FLASH_OB_DisableWRP
+     /tmp/ccnBRBwt.s:814    .text.FLASH_OB_DisableWRP:00000000000000b4 $d
+     /tmp/ccnBRBwt.s:821    .text.HAL_FLASHEx_OBProgram:0000000000000000 $t
+     /tmp/ccnBRBwt.s:828    .text.HAL_FLASHEx_OBProgram:0000000000000000 HAL_FLASHEx_OBProgram
+     /tmp/ccnBRBwt.s:982    .text.HAL_FLASHEx_OBProgram:00000000000000a4 $d
+     /tmp/ccnBRBwt.s:987    .text.HAL_FLASHEx_OBGetConfig:0000000000000000 $t
+     /tmp/ccnBRBwt.s:994    .text.HAL_FLASHEx_OBGetConfig:0000000000000000 HAL_FLASHEx_OBGetConfig
+     /tmp/ccnBRBwt.s:1028   .text.HAL_FLASHEx_OBGetUserData:0000000000000000 $t
+     /tmp/ccnBRBwt.s:1035   .text.HAL_FLASHEx_OBGetUserData:0000000000000000 HAL_FLASHEx_OBGetUserData
+     /tmp/ccnBRBwt.s:1101   .text.HAL_FLASHEx_OBGetUserData:0000000000000038 $d
+     /tmp/ccnBRBwt.s:1107   .text.FLASH_PageErase:0000000000000000 $t
+     /tmp/ccnBRBwt.s:1114   .text.FLASH_PageErase:0000000000000000 FLASH_PageErase
+     /tmp/ccnBRBwt.s:1142   .text.FLASH_PageErase:000000000000001c $d
+     /tmp/ccnBRBwt.s:1148   .text.HAL_FLASHEx_Erase:0000000000000000 $t
+     /tmp/ccnBRBwt.s:1155   .text.HAL_FLASHEx_Erase:0000000000000000 HAL_FLASHEx_Erase
+     /tmp/ccnBRBwt.s:1292   .text.HAL_FLASHEx_Erase:000000000000009c $d
+     /tmp/ccnBRBwt.s:1298   .text.HAL_FLASHEx_Erase_IT:0000000000000000 $t
+     /tmp/ccnBRBwt.s:1305   .text.HAL_FLASHEx_Erase_IT:0000000000000000 HAL_FLASHEx_Erase_IT
+     /tmp/ccnBRBwt.s:1388   .text.HAL_FLASHEx_Erase_IT:0000000000000054 $d
 
 UNDEFINED SYMBOLS
 pFlash

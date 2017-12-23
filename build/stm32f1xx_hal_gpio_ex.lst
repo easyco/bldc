@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccfdtjPr.s 			page 1
+ARM GAS  /tmp/cc74UJoC.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -23,7 +23,7 @@ ARM GAS  /tmp/ccfdtjPr.s 			page 1
   20              		.thumb_func
   21              		.fpu softvfp
   23              	HAL_GPIOEx_ConfigEventout:
-  24              	.LFB64:
+  24              	.LFB66:
   25              		.file 1 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c"
    1:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** /**
    2:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccfdtjPr.s 			page 1
   31:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   *
   32:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   * Redistribution and use in source and binary forms, with or without modification,
   33:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   * are permitted provided that the following conditions are met:
-ARM GAS  /tmp/ccfdtjPr.s 			page 2
+ARM GAS  /tmp/cc74UJoC.s 			page 2
 
 
   34:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   *   1. Redistributions of source code must retain the above copyright notice,
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccfdtjPr.s 			page 1
   88:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   * @{
   89:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   */
   90:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   
-ARM GAS  /tmp/ccfdtjPr.s 			page 3
+ARM GAS  /tmp/cc74UJoC.s 			page 3
 
 
   91:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** /**
@@ -151,23 +151,24 @@ ARM GAS  /tmp/ccfdtjPr.s 			page 1
   37              	.LVL1:
   38 000a 0B43     		orrs	r3, r3, r1
   39 000c 1360     		str	r3, [r2]
-  40 000e 7047     		bx	lr
-  41              	.L3:
-  42              		.align	2
-  43              	.L2:
-  44 0010 00000140 		.word	1073807360
-  45              		.cfi_endproc
-  46              	.LFE64:
-  48              		.section	.text.HAL_GPIOEx_EnableEventout,"ax",%progbits
-  49              		.align	1
-  50              		.global	HAL_GPIOEx_EnableEventout
-  51              		.syntax unified
-  52              		.thumb
-  53              		.thumb_func
-  54              		.fpu softvfp
-  56              	HAL_GPIOEx_EnableEventout:
-  57              	.LFB65:
  107:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** }
+  40              		.loc 1 107 0
+  41 000e 7047     		bx	lr
+  42              	.L3:
+  43              		.align	2
+  44              	.L2:
+  45 0010 00000140 		.word	1073807360
+  46              		.cfi_endproc
+  47              	.LFE66:
+  49              		.section	.text.HAL_GPIOEx_EnableEventout,"ax",%progbits
+  50              		.align	1
+  51              		.global	HAL_GPIOEx_EnableEventout
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu softvfp
+  57              	HAL_GPIOEx_EnableEventout:
+  58              	.LFB67:
  108:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** 
  109:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** /**
  110:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   * @brief  Enables the Event Output.
@@ -175,37 +176,38 @@ ARM GAS  /tmp/ccfdtjPr.s 			page 1
  112:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   */
  113:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** void HAL_GPIOEx_EnableEventout(void)
  114:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** {
-  58              		.loc 1 114 0
-  59              		.cfi_startproc
-  60              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccfdtjPr.s 			page 4
+  59              		.loc 1 114 0
+  60              		.cfi_startproc
+ARM GAS  /tmp/cc74UJoC.s 			page 4
 
 
-  61              		@ frame_needed = 0, uses_anonymous_args = 0
-  62              		@ link register save eliminated.
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
  115:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   SET_BIT(AFIO->EVCR, AFIO_EVCR_EVOE);
-  63              		.loc 1 115 0
-  64 0000 024A     		ldr	r2, .L5
-  65 0002 1368     		ldr	r3, [r2]
-  66 0004 43F08003 		orr	r3, r3, #128
-  67 0008 1360     		str	r3, [r2]
-  68 000a 7047     		bx	lr
-  69              	.L6:
-  70              		.align	2
-  71              	.L5:
-  72 000c 00000140 		.word	1073807360
-  73              		.cfi_endproc
-  74              	.LFE65:
-  76              		.section	.text.HAL_GPIOEx_DisableEventout,"ax",%progbits
-  77              		.align	1
-  78              		.global	HAL_GPIOEx_DisableEventout
-  79              		.syntax unified
-  80              		.thumb
-  81              		.thumb_func
-  82              		.fpu softvfp
-  84              	HAL_GPIOEx_DisableEventout:
-  85              	.LFB66:
+  64              		.loc 1 115 0
+  65 0000 024A     		ldr	r2, .L5
+  66 0002 1368     		ldr	r3, [r2]
+  67 0004 43F08003 		orr	r3, r3, #128
+  68 0008 1360     		str	r3, [r2]
  116:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** }
+  69              		.loc 1 116 0
+  70 000a 7047     		bx	lr
+  71              	.L6:
+  72              		.align	2
+  73              	.L5:
+  74 000c 00000140 		.word	1073807360
+  75              		.cfi_endproc
+  76              	.LFE67:
+  78              		.section	.text.HAL_GPIOEx_DisableEventout,"ax",%progbits
+  79              		.align	1
+  80              		.global	HAL_GPIOEx_DisableEventout
+  81              		.syntax unified
+  82              		.thumb
+  83              		.thumb_func
+  84              		.fpu softvfp
+  86              	HAL_GPIOEx_DisableEventout:
+  87              	.LFB68:
  117:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** 
  118:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** /**
  119:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   * @brief  Disables the Event Output.
@@ -213,52 +215,53 @@ ARM GAS  /tmp/ccfdtjPr.s 			page 1
  121:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   */
  122:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** void HAL_GPIOEx_DisableEventout(void)
  123:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** {
-  86              		.loc 1 123 0
-  87              		.cfi_startproc
-  88              		@ args = 0, pretend = 0, frame = 0
-  89              		@ frame_needed = 0, uses_anonymous_args = 0
-  90              		@ link register save eliminated.
+  88              		.loc 1 123 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92              		@ link register save eliminated.
  124:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c ****   CLEAR_BIT(AFIO->EVCR, AFIO_EVCR_EVOE);
-  91              		.loc 1 124 0
-  92 0000 024A     		ldr	r2, .L8
-  93 0002 1368     		ldr	r3, [r2]
-  94 0004 23F08003 		bic	r3, r3, #128
-  95 0008 1360     		str	r3, [r2]
-  96 000a 7047     		bx	lr
-  97              	.L9:
-  98              		.align	2
-  99              	.L8:
- 100 000c 00000140 		.word	1073807360
- 101              		.cfi_endproc
- 102              	.LFE66:
- 104              		.text
- 105              	.Letext0:
- 106              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 107              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 108              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
- 109              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
- 110              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
-ARM GAS  /tmp/ccfdtjPr.s 			page 5
+  93              		.loc 1 124 0
+  94 0000 024A     		ldr	r2, .L8
+  95 0002 1368     		ldr	r3, [r2]
+  96 0004 23F08003 		bic	r3, r3, #128
+  97 0008 1360     		str	r3, [r2]
+ 125:Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c **** }
+  98              		.loc 1 125 0
+  99 000a 7047     		bx	lr
+ 100              	.L9:
+ 101              		.align	2
+ 102              	.L8:
+ 103 000c 00000140 		.word	1073807360
+ 104              		.cfi_endproc
+ 105              	.LFE68:
+ 107              		.text
+ 108              	.Letext0:
+ 109              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ARM GAS  /tmp/cc74UJoC.s 			page 5
 
 
- 111              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
- 112              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
- 113              		.file 9 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 114              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
-ARM GAS  /tmp/ccfdtjPr.s 			page 6
+ 110              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 111              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+ 112              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+ 113              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
+ 114              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
+ 115              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
+ 116              		.file 9 "/usr/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h"
+ 117              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
+ARM GAS  /tmp/cc74UJoC.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_gpio_ex.c
-     /tmp/ccfdtjPr.s:16     .text.HAL_GPIOEx_ConfigEventout:0000000000000000 $t
-     /tmp/ccfdtjPr.s:23     .text.HAL_GPIOEx_ConfigEventout:0000000000000000 HAL_GPIOEx_ConfigEventout
-     /tmp/ccfdtjPr.s:44     .text.HAL_GPIOEx_ConfigEventout:0000000000000010 $d
-     /tmp/ccfdtjPr.s:49     .text.HAL_GPIOEx_EnableEventout:0000000000000000 $t
-     /tmp/ccfdtjPr.s:56     .text.HAL_GPIOEx_EnableEventout:0000000000000000 HAL_GPIOEx_EnableEventout
-     /tmp/ccfdtjPr.s:72     .text.HAL_GPIOEx_EnableEventout:000000000000000c $d
-     /tmp/ccfdtjPr.s:77     .text.HAL_GPIOEx_DisableEventout:0000000000000000 $t
-     /tmp/ccfdtjPr.s:84     .text.HAL_GPIOEx_DisableEventout:0000000000000000 HAL_GPIOEx_DisableEventout
-     /tmp/ccfdtjPr.s:100    .text.HAL_GPIOEx_DisableEventout:000000000000000c $d
-                     .debug_frame:0000000000000010 $d
+     /tmp/cc74UJoC.s:16     .text.HAL_GPIOEx_ConfigEventout:0000000000000000 $t
+     /tmp/cc74UJoC.s:23     .text.HAL_GPIOEx_ConfigEventout:0000000000000000 HAL_GPIOEx_ConfigEventout
+     /tmp/cc74UJoC.s:45     .text.HAL_GPIOEx_ConfigEventout:0000000000000010 $d
+     /tmp/cc74UJoC.s:50     .text.HAL_GPIOEx_EnableEventout:0000000000000000 $t
+     /tmp/cc74UJoC.s:57     .text.HAL_GPIOEx_EnableEventout:0000000000000000 HAL_GPIOEx_EnableEventout
+     /tmp/cc74UJoC.s:74     .text.HAL_GPIOEx_EnableEventout:000000000000000c $d
+     /tmp/cc74UJoC.s:79     .text.HAL_GPIOEx_DisableEventout:0000000000000000 $t
+     /tmp/cc74UJoC.s:86     .text.HAL_GPIOEx_DisableEventout:0000000000000000 HAL_GPIOEx_DisableEventout
+     /tmp/cc74UJoC.s:103    .text.HAL_GPIOEx_DisableEventout:000000000000000c $d
 
 NO UNDEFINED SYMBOLS

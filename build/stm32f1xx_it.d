@@ -51,7 +51,9 @@ build/stm32f1xx_it.d: Main/stm32f1xx_it.c \
  Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usb.h \
  Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h \
  Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_hcd.h \
- Main/stm32f1xx_it.h
+ Main/stm32f1xx_it.h Drivers/BSP/stm32f1_easyco.h Main/system.h \
+ Drivers/BSP/bsp_tim.h Drivers/BSP/bsp_adc.h BLDC/bldc.h \
+ Drivers/BSP/bsp_adc.h
 
 Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 
@@ -158,3 +160,15 @@ Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pcd_ex.h:
 Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_hcd.h:
 
 Main/stm32f1xx_it.h:
+
+Drivers/BSP/stm32f1_easyco.h:
+
+Main/system.h:
+
+Drivers/BSP/bsp_tim.h:
+
+Drivers/BSP/bsp_adc.h:
+
+BLDC/bldc.h:
+
+Drivers/BSP/bsp_adc.h:

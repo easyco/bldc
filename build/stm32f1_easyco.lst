@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccPiDBYE.s 			page 1
+ARM GAS  /tmp/ccs1xtTg.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -22,7 +22,7 @@ ARM GAS  /tmp/ccPiDBYE.s 			page 1
   19              		.thumb_func
   20              		.fpu softvfp
   22              	BSP_InitLED:
-  23              	.LFB64:
+  23              	.LFB66:
   24              		.file 1 "Drivers/BSP/stm32f1_easyco.c"
    1:Drivers/BSP/stm32f1_easyco.c **** #include "system.h"
    2:Drivers/BSP/stm32f1_easyco.c **** #include "stm32f1_easyco.h"
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccPiDBYE.s 			page 1
   46 0016 019B     		ldr	r3, [sp, #4]
   47              	.LBE2:
   11:Drivers/BSP/stm32f1_easyco.c **** 	
-ARM GAS  /tmp/ccPiDBYE.s 			page 2
+ARM GAS  /tmp/ccs1xtTg.s 			page 2
 
 
   12:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Mode = GPIO_MODE_OUTPUT_PP;
@@ -110,292 +110,661 @@ ARM GAS  /tmp/ccPiDBYE.s 			page 1
   84 004c 00100240 		.word	1073876992
   85 0050 000C0140 		.word	1073810432
   86              		.cfi_endproc
-  87              	.LFE64:
-  89              		.section	.text.BSP_Init,"ax",%progbits
+  87              	.LFE66:
+  89              		.section	.text.BSP_InitButton,"ax",%progbits
   90              		.align	1
-  91              		.global	BSP_Init
-  92              		.syntax unified
-  93              		.thumb
-  94              		.thumb_func
-  95              		.fpu softvfp
-ARM GAS  /tmp/ccPiDBYE.s 			page 3
+  91              		.syntax unified
+  92              		.thumb
+  93              		.thumb_func
+  94              		.fpu softvfp
+  96              	BSP_InitButton:
+ARM GAS  /tmp/ccs1xtTg.s 			page 3
 
 
-  97              	BSP_Init:
-  98              	.LFB69:
+  97              	.LFB67:
   22:Drivers/BSP/stm32f1_easyco.c **** 
   23:Drivers/BSP/stm32f1_easyco.c **** static void BSP_InitButton(void)
   24:Drivers/BSP/stm32f1_easyco.c **** {
+  98              		.loc 1 24 0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 24
+ 101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 102 0000 00B5     		push	{lr}
+ 103              	.LCFI3:
+ 104              		.cfi_def_cfa_offset 4
+ 105              		.cfi_offset 14, -4
+ 106 0002 87B0     		sub	sp, sp, #28
+ 107              	.LCFI4:
+ 108              		.cfi_def_cfa_offset 32
+ 109              	.LBB3:
   25:Drivers/BSP/stm32f1_easyco.c **** 	GPIO_InitTypeDef gpioInit;
   26:Drivers/BSP/stm32f1_easyco.c **** 
   27:Drivers/BSP/stm32f1_easyco.c **** 	BUTTON_GPIO_CLK_Enable();
+ 110              		.loc 1 27 0
+ 111 0004 0D4B     		ldr	r3, .L7
+ 112 0006 9A69     		ldr	r2, [r3, #24]
+ 113 0008 42F00802 		orr	r2, r2, #8
+ 114 000c 9A61     		str	r2, [r3, #24]
+ 115 000e 9B69     		ldr	r3, [r3, #24]
+ 116 0010 03F00803 		and	r3, r3, #8
+ 117 0014 0193     		str	r3, [sp, #4]
+ 118 0016 019B     		ldr	r3, [sp, #4]
+ 119              	.LBE3:
   28:Drivers/BSP/stm32f1_easyco.c **** 
   29:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Mode = GPIO_MODE_INPUT;
+ 120              		.loc 1 29 0
+ 121 0018 0023     		movs	r3, #0
+ 122 001a 0393     		str	r3, [sp, #12]
   30:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pull = GPIO_PULLUP;
+ 123              		.loc 1 30 0
+ 124 001c 0123     		movs	r3, #1
+ 125 001e 0493     		str	r3, [sp, #16]
   31:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Speed = GPIO_SPEED_FREQ_LOW;
+ 126              		.loc 1 31 0
+ 127 0020 0223     		movs	r3, #2
+ 128 0022 0593     		str	r3, [sp, #20]
   32:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pin = BUTTON_GPIO_PIN;
+ 129              		.loc 1 32 0
+ 130 0024 06A9     		add	r1, sp, #24
+ 131 0026 4FF48073 		mov	r3, #256
+ 132 002a 41F8103D 		str	r3, [r1, #-16]!
   33:Drivers/BSP/stm32f1_easyco.c **** 	HAL_GPIO_Init(BUTTON_GPIO_PORT, &gpioInit);
+ 133              		.loc 1 33 0
+ 134 002e 0448     		ldr	r0, .L7+4
+ 135 0030 FFF7FEFF 		bl	HAL_GPIO_Init
+ 136              	.LVL1:
   34:Drivers/BSP/stm32f1_easyco.c **** }
+ 137              		.loc 1 34 0
+ 138 0034 07B0     		add	sp, sp, #28
+ 139              	.LCFI5:
+ 140              		.cfi_def_cfa_offset 4
+ARM GAS  /tmp/ccs1xtTg.s 			page 4
+
+
+ 141              		@ sp needed
+ 142 0036 5DF804FB 		ldr	pc, [sp], #4
+ 143              	.L8:
+ 144 003a 00BF     		.align	2
+ 145              	.L7:
+ 146 003c 00100240 		.word	1073876992
+ 147 0040 000C0140 		.word	1073810432
+ 148              		.cfi_endproc
+ 149              	.LFE67:
+ 151              		.section	.text.BSP_InitUART,"ax",%progbits
+ 152              		.align	1
+ 153              		.syntax unified
+ 154              		.thumb
+ 155              		.thumb_func
+ 156              		.fpu softvfp
+ 158              	BSP_InitUART:
+ 159              	.LFB68:
   35:Drivers/BSP/stm32f1_easyco.c **** 
   36:Drivers/BSP/stm32f1_easyco.c **** static void BSP_InitUART(void)
   37:Drivers/BSP/stm32f1_easyco.c **** {
+ 160              		.loc 1 37 0
+ 161              		.cfi_startproc
+ 162              		@ args = 0, pretend = 0, frame = 24
+ 163              		@ frame_needed = 0, uses_anonymous_args = 0
+ 164 0000 00B5     		push	{lr}
+ 165              	.LCFI6:
+ 166              		.cfi_def_cfa_offset 4
+ 167              		.cfi_offset 14, -4
+ 168 0002 87B0     		sub	sp, sp, #28
+ 169              	.LCFI7:
+ 170              		.cfi_def_cfa_offset 32
+ 171              	.LBB4:
   38:Drivers/BSP/stm32f1_easyco.c **** 	GPIO_InitTypeDef gpioInit;
   39:Drivers/BSP/stm32f1_easyco.c **** 
   40:Drivers/BSP/stm32f1_easyco.c **** 	UART_GPIO_CLK_Enable();
+ 172              		.loc 1 40 0
+ 173 0004 0C4B     		ldr	r3, .L11
+ 174 0006 9A69     		ldr	r2, [r3, #24]
+ 175 0008 42F00802 		orr	r2, r2, #8
+ 176 000c 9A61     		str	r2, [r3, #24]
+ 177 000e 9B69     		ldr	r3, [r3, #24]
+ 178 0010 03F00803 		and	r3, r3, #8
+ 179 0014 0193     		str	r3, [sp, #4]
+ 180 0016 019B     		ldr	r3, [sp, #4]
+ 181              	.LBE4:
   41:Drivers/BSP/stm32f1_easyco.c **** 	
   42:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Mode = GPIO_MODE_AF_PP;
+ 182              		.loc 1 42 0
+ 183 0018 0223     		movs	r3, #2
+ 184 001a 0393     		str	r3, [sp, #12]
   43:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pull = GPIO_PULLUP;
+ 185              		.loc 1 43 0
+ 186 001c 0123     		movs	r3, #1
+ 187 001e 0493     		str	r3, [sp, #16]
   44:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Speed = GPIO_SPEED_FREQ_HIGH;
+ 188              		.loc 1 44 0
+ 189 0020 0323     		movs	r3, #3
+ARM GAS  /tmp/ccs1xtTg.s 			page 5
+
+
+ 190 0022 0593     		str	r3, [sp, #20]
   45:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pin = UART_TX_GPIO_PIN | UART_RX_GPIO_PIN;
+ 191              		.loc 1 45 0
+ 192 0024 06A9     		add	r1, sp, #24
+ 193 0026 C023     		movs	r3, #192
+ 194 0028 41F8103D 		str	r3, [r1, #-16]!
   46:Drivers/BSP/stm32f1_easyco.c **** 	HAL_GPIO_Init(UART_GPIO_PORT, &gpioInit);
+ 195              		.loc 1 46 0
+ 196 002c 0348     		ldr	r0, .L11+4
+ 197 002e FFF7FEFF 		bl	HAL_GPIO_Init
+ 198              	.LVL2:
   47:Drivers/BSP/stm32f1_easyco.c **** }
+ 199              		.loc 1 47 0
+ 200 0032 07B0     		add	sp, sp, #28
+ 201              	.LCFI8:
+ 202              		.cfi_def_cfa_offset 4
+ 203              		@ sp needed
+ 204 0034 5DF804FB 		ldr	pc, [sp], #4
+ 205              	.L12:
+ 206              		.align	2
+ 207              	.L11:
+ 208 0038 00100240 		.word	1073876992
+ 209 003c 000C0140 		.word	1073810432
+ 210              		.cfi_endproc
+ 211              	.LFE68:
+ 213              		.section	.text.BSP_InitPWM,"ax",%progbits
+ 214              		.align	1
+ 215              		.syntax unified
+ 216              		.thumb
+ 217              		.thumb_func
+ 218              		.fpu softvfp
+ 220              	BSP_InitPWM:
+ 221              	.LFB69:
   48:Drivers/BSP/stm32f1_easyco.c **** 
   49:Drivers/BSP/stm32f1_easyco.c **** static void BSP_InitPWM(void)
   50:Drivers/BSP/stm32f1_easyco.c **** {
+ 222              		.loc 1 50 0
+ 223              		.cfi_startproc
+ 224              		@ args = 0, pretend = 0, frame = 24
+ 225              		@ frame_needed = 0, uses_anonymous_args = 0
+ 226 0000 70B5     		push	{r4, r5, r6, lr}
+ 227              	.LCFI9:
+ 228              		.cfi_def_cfa_offset 16
+ 229              		.cfi_offset 4, -16
+ 230              		.cfi_offset 5, -12
+ 231              		.cfi_offset 6, -8
+ 232              		.cfi_offset 14, -4
+ 233 0002 86B0     		sub	sp, sp, #24
+ 234              	.LCFI10:
+ 235              		.cfi_def_cfa_offset 40
+ 236              	.LBB5:
   51:Drivers/BSP/stm32f1_easyco.c **** 	GPIO_InitTypeDef gpioInit;
   52:Drivers/BSP/stm32f1_easyco.c **** 
   53:Drivers/BSP/stm32f1_easyco.c **** 	PWM_H_GPIO_CLK_Enable();
+ 237              		.loc 1 53 0
+ 238 0004 154B     		ldr	r3, .L15
+ 239 0006 9A69     		ldr	r2, [r3, #24]
+ARM GAS  /tmp/ccs1xtTg.s 			page 6
+
+
+ 240 0008 42F00402 		orr	r2, r2, #4
+ 241 000c 9A61     		str	r2, [r3, #24]
+ 242 000e 9A69     		ldr	r2, [r3, #24]
+ 243 0010 02F00402 		and	r2, r2, #4
+ 244 0014 0092     		str	r2, [sp]
+ 245 0016 009A     		ldr	r2, [sp]
+ 246              	.LBE5:
+ 247              	.LBB6:
   54:Drivers/BSP/stm32f1_easyco.c **** 	PWM_L_GPIO_CLK_Enable();
+ 248              		.loc 1 54 0
+ 249 0018 9A69     		ldr	r2, [r3, #24]
+ 250 001a 42F00802 		orr	r2, r2, #8
+ 251 001e 9A61     		str	r2, [r3, #24]
+ 252 0020 9B69     		ldr	r3, [r3, #24]
+ 253 0022 03F00803 		and	r3, r3, #8
+ 254 0026 0193     		str	r3, [sp, #4]
+ 255 0028 019B     		ldr	r3, [sp, #4]
+ 256              	.LBE6:
   55:Drivers/BSP/stm32f1_easyco.c **** 
   56:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pin = PWM_AH_GPIO_PIN | PWM_BH_GPIO_PIN | PWN_CH_GPIO_PIN;
+ 257              		.loc 1 56 0
+ 258 002a 4FF4E063 		mov	r3, #1792
+ 259 002e 0293     		str	r3, [sp, #8]
   57:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Mode = GPIO_MODE_AF_PP;
+ 260              		.loc 1 57 0
+ 261 0030 0226     		movs	r6, #2
+ 262 0032 0396     		str	r6, [sp, #12]
   58:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pull = GPIO_NOPULL;
+ 263              		.loc 1 58 0
+ 264 0034 0025     		movs	r5, #0
+ 265 0036 0495     		str	r5, [sp, #16]
   59:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Speed = GPIO_SPEED_FREQ_HIGH;
+ 266              		.loc 1 59 0
+ 267 0038 0324     		movs	r4, #3
+ 268 003a 0594     		str	r4, [sp, #20]
   60:Drivers/BSP/stm32f1_easyco.c **** 	HAL_GPIO_Init(PWM_H_GPIO_PORT, &gpioInit);
+ 269              		.loc 1 60 0
+ 270 003c 02A9     		add	r1, sp, #8
+ 271 003e 0848     		ldr	r0, .L15+4
+ 272 0040 FFF7FEFF 		bl	HAL_GPIO_Init
+ 273              	.LVL3:
   61:Drivers/BSP/stm32f1_easyco.c **** 
   62:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pin = PWM_AL_GPIO_PIN | PWM_BL_GPIO_PIN | PWN_CL_GPIO_PIN;
+ 274              		.loc 1 62 0
+ 275 0044 4FF46043 		mov	r3, #57344
+ 276 0048 0293     		str	r3, [sp, #8]
   63:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Mode = GPIO_MODE_AF_PP;
+ 277              		.loc 1 63 0
+ 278 004a 0396     		str	r6, [sp, #12]
   64:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pull = GPIO_NOPULL;
+ 279              		.loc 1 64 0
+ 280 004c 0495     		str	r5, [sp, #16]
   65:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Speed = GPIO_SPEED_FREQ_HIGH;
+ 281              		.loc 1 65 0
+ 282 004e 0594     		str	r4, [sp, #20]
   66:Drivers/BSP/stm32f1_easyco.c **** 	HAL_GPIO_Init(PWM_L_GPIO_PORT, &gpioInit);
+ 283              		.loc 1 66 0
+ARM GAS  /tmp/ccs1xtTg.s 			page 7
+
+
+ 284 0050 02A9     		add	r1, sp, #8
+ 285 0052 0448     		ldr	r0, .L15+8
+ 286 0054 FFF7FEFF 		bl	HAL_GPIO_Init
+ 287              	.LVL4:
   67:Drivers/BSP/stm32f1_easyco.c **** }
+ 288              		.loc 1 67 0
+ 289 0058 06B0     		add	sp, sp, #24
+ 290              	.LCFI11:
+ 291              		.cfi_def_cfa_offset 16
+ 292              		@ sp needed
+ 293 005a 70BD     		pop	{r4, r5, r6, pc}
+ 294              	.L16:
+ 295              		.align	2
+ 296              	.L15:
+ 297 005c 00100240 		.word	1073876992
+ 298 0060 00080140 		.word	1073809408
+ 299 0064 000C0140 		.word	1073810432
+ 300              		.cfi_endproc
+ 301              	.LFE69:
+ 303              		.section	.text.BSP_InitADC,"ax",%progbits
+ 304              		.align	1
+ 305              		.syntax unified
+ 306              		.thumb
+ 307              		.thumb_func
+ 308              		.fpu softvfp
+ 310              	BSP_InitADC:
+ 311              	.LFB70:
   68:Drivers/BSP/stm32f1_easyco.c **** 
   69:Drivers/BSP/stm32f1_easyco.c **** static void BSP_InitADC(void)
   70:Drivers/BSP/stm32f1_easyco.c **** {
+ 312              		.loc 1 70 0
+ 313              		.cfi_startproc
+ 314              		@ args = 0, pretend = 0, frame = 32
+ 315              		@ frame_needed = 0, uses_anonymous_args = 0
+ 316 0000 70B5     		push	{r4, r5, r6, lr}
+ 317              	.LCFI12:
+ 318              		.cfi_def_cfa_offset 16
+ 319              		.cfi_offset 4, -16
+ 320              		.cfi_offset 5, -12
+ 321              		.cfi_offset 6, -8
+ 322              		.cfi_offset 14, -4
+ 323 0002 88B0     		sub	sp, sp, #32
+ 324              	.LCFI13:
+ 325              		.cfi_def_cfa_offset 48
+ 326              	.LBB7:
   71:Drivers/BSP/stm32f1_easyco.c **** 	GPIO_InitTypeDef gpioInit;
   72:Drivers/BSP/stm32f1_easyco.c **** 
   73:Drivers/BSP/stm32f1_easyco.c **** 	ADC_BEMF_GPIO_CLK_Enable();
+ 327              		.loc 1 73 0
+ 328 0004 234B     		ldr	r3, .L19
+ 329 0006 9A69     		ldr	r2, [r3, #24]
+ 330 0008 42F00402 		orr	r2, r2, #4
+ 331 000c 9A61     		str	r2, [r3, #24]
+ 332 000e 9A69     		ldr	r2, [r3, #24]
+ 333 0010 02F00402 		and	r2, r2, #4
+ 334 0014 0092     		str	r2, [sp]
+ 335 0016 009A     		ldr	r2, [sp]
+ARM GAS  /tmp/ccs1xtTg.s 			page 8
+
+
+ 336              	.LBE7:
+ 337              	.LBB8:
   74:Drivers/BSP/stm32f1_easyco.c **** 	ADC_VBUS_GPIO_CLK_Enable();
+ 338              		.loc 1 74 0
+ 339 0018 9A69     		ldr	r2, [r3, #24]
+ 340 001a 42F00402 		orr	r2, r2, #4
+ 341 001e 9A61     		str	r2, [r3, #24]
+ 342 0020 9A69     		ldr	r2, [r3, #24]
+ 343 0022 02F00402 		and	r2, r2, #4
+ 344 0026 0192     		str	r2, [sp, #4]
+ 345 0028 019A     		ldr	r2, [sp, #4]
+ 346              	.LBE8:
+ 347              	.LBB9:
   75:Drivers/BSP/stm32f1_easyco.c **** 	ADC_CURRENT_GPIO_CLK_Enable();
+ 348              		.loc 1 75 0
+ 349 002a 9A69     		ldr	r2, [r3, #24]
+ 350 002c 42F00802 		orr	r2, r2, #8
+ 351 0030 9A61     		str	r2, [r3, #24]
+ 352 0032 9A69     		ldr	r2, [r3, #24]
+ 353 0034 02F00802 		and	r2, r2, #8
+ 354 0038 0292     		str	r2, [sp, #8]
+ 355 003a 029A     		ldr	r2, [sp, #8]
+ 356              	.LBE9:
+ 357              	.LBB10:
   76:Drivers/BSP/stm32f1_easyco.c **** 	ADC_SPEED_GPIO_CLK_Enable();
-ARM GAS  /tmp/ccPiDBYE.s 			page 4
-
-
+ 358              		.loc 1 76 0
+ 359 003c 9A69     		ldr	r2, [r3, #24]
+ 360 003e 42F00802 		orr	r2, r2, #8
+ 361 0042 9A61     		str	r2, [r3, #24]
+ 362 0044 9B69     		ldr	r3, [r3, #24]
+ 363 0046 03F00803 		and	r3, r3, #8
+ 364 004a 0393     		str	r3, [sp, #12]
+ 365 004c 039B     		ldr	r3, [sp, #12]
+ 366              	.LBE10:
   77:Drivers/BSP/stm32f1_easyco.c **** 
   78:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Mode = GPIO_MODE_ANALOG;
+ 367              		.loc 1 78 0
+ 368 004e 0323     		movs	r3, #3
+ 369 0050 0593     		str	r3, [sp, #20]
   79:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pull = GPIO_NOPULL;
+ 370              		.loc 1 79 0
+ 371 0052 0023     		movs	r3, #0
+ 372 0054 0693     		str	r3, [sp, #24]
   80:Drivers/BSP/stm32f1_easyco.c **** 
   81:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pin = ADC_BEMF_A_GPIO_PIN | ADC_BEMF_B_GPIO_PIN | ADC_BEMF_C_GPIO_PIN;
+ 373              		.loc 1 81 0
+ 374 0056 08AC     		add	r4, sp, #32
+ 375 0058 E023     		movs	r3, #224
+ 376 005a 44F8103D 		str	r3, [r4, #-16]!
   82:Drivers/BSP/stm32f1_easyco.c **** 	HAL_GPIO_Init(ADC_BEMF_GPIO_PORT, &gpioInit);
+ 377              		.loc 1 82 0
+ 378 005e 0E4E     		ldr	r6, .L19+4
+ 379 0060 2146     		mov	r1, r4
+ 380 0062 3046     		mov	r0, r6
+ 381 0064 FFF7FEFF 		bl	HAL_GPIO_Init
+ 382              	.LVL5:
   83:Drivers/BSP/stm32f1_easyco.c **** 
+ARM GAS  /tmp/ccs1xtTg.s 			page 9
+
+
   84:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pin = ADC_SPEED_GPIO_PIN;
+ 383              		.loc 1 84 0
+ 384 0068 0223     		movs	r3, #2
+ 385 006a 0493     		str	r3, [sp, #16]
   85:Drivers/BSP/stm32f1_easyco.c **** 	HAL_GPIO_Init(ADC_SPEED_GPIO_PORT, &gpioInit);
+ 386              		.loc 1 85 0
+ 387 006c 0B4D     		ldr	r5, .L19+8
+ 388 006e 2146     		mov	r1, r4
+ 389 0070 2846     		mov	r0, r5
+ 390 0072 FFF7FEFF 		bl	HAL_GPIO_Init
+ 391              	.LVL6:
   86:Drivers/BSP/stm32f1_easyco.c **** 
   87:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pin = ADC_VBUS_GPIO_PIN;
+ 392              		.loc 1 87 0
+ 393 0076 0823     		movs	r3, #8
+ 394 0078 0493     		str	r3, [sp, #16]
   88:Drivers/BSP/stm32f1_easyco.c **** 	HAL_GPIO_Init(ADC_VBUS_GPIO_PORT, &gpioInit);
+ 395              		.loc 1 88 0
+ 396 007a 2146     		mov	r1, r4
+ 397 007c 3046     		mov	r0, r6
+ 398 007e FFF7FEFF 		bl	HAL_GPIO_Init
+ 399              	.LVL7:
   89:Drivers/BSP/stm32f1_easyco.c **** 
   90:Drivers/BSP/stm32f1_easyco.c **** 	gpioInit.Pin = ADC_CURRENT_GPIO_PIN;
+ 400              		.loc 1 90 0
+ 401 0082 0123     		movs	r3, #1
+ 402 0084 0493     		str	r3, [sp, #16]
   91:Drivers/BSP/stm32f1_easyco.c **** 	HAL_GPIO_Init(ADC_CURRENT_GPIO_PORT, &gpioInit);
+ 403              		.loc 1 91 0
+ 404 0086 2146     		mov	r1, r4
+ 405 0088 2846     		mov	r0, r5
+ 406 008a FFF7FEFF 		bl	HAL_GPIO_Init
+ 407              	.LVL8:
   92:Drivers/BSP/stm32f1_easyco.c **** }
+ 408              		.loc 1 92 0
+ 409 008e 08B0     		add	sp, sp, #32
+ 410              	.LCFI14:
+ 411              		.cfi_def_cfa_offset 16
+ 412              		@ sp needed
+ 413 0090 70BD     		pop	{r4, r5, r6, pc}
+ 414              	.L20:
+ 415 0092 00BF     		.align	2
+ 416              	.L19:
+ 417 0094 00100240 		.word	1073876992
+ 418 0098 00080140 		.word	1073809408
+ 419 009c 000C0140 		.word	1073810432
+ 420              		.cfi_endproc
+ 421              	.LFE70:
+ 423              		.section	.text.BSP_Init,"ax",%progbits
+ 424              		.align	1
+ 425              		.global	BSP_Init
+ 426              		.syntax unified
+ 427              		.thumb
+ 428              		.thumb_func
+ 429              		.fpu softvfp
+ 431              	BSP_Init:
+ 432              	.LFB71:
+ARM GAS  /tmp/ccs1xtTg.s 			page 10
+
+
   93:Drivers/BSP/stm32f1_easyco.c **** 
   94:Drivers/BSP/stm32f1_easyco.c **** void BSP_Init(void)
   95:Drivers/BSP/stm32f1_easyco.c **** {
-  99              		.loc 1 95 0
- 100              		.cfi_startproc
- 101              		@ args = 0, pretend = 0, frame = 0
- 102              		@ frame_needed = 0, uses_anonymous_args = 0
- 103 0000 08B5     		push	{r3, lr}
- 104              	.LCFI3:
- 105              		.cfi_def_cfa_offset 8
- 106              		.cfi_offset 3, -8
- 107              		.cfi_offset 14, -4
+ 433              		.loc 1 95 0
+ 434              		.cfi_startproc
+ 435              		@ args = 0, pretend = 0, frame = 0
+ 436              		@ frame_needed = 0, uses_anonymous_args = 0
+ 437 0000 08B5     		push	{r3, lr}
+ 438              	.LCFI15:
+ 439              		.cfi_def_cfa_offset 8
+ 440              		.cfi_offset 3, -8
+ 441              		.cfi_offset 14, -4
   96:Drivers/BSP/stm32f1_easyco.c **** 	BSP_InitLED();
- 108              		.loc 1 96 0
- 109 0002 FFF7FEFF 		bl	BSP_InitLED
- 110              	.LVL1:
- 111 0006 08BD     		pop	{r3, pc}
- 112              		.cfi_endproc
- 113              	.LFE69:
- 115              		.section	.text.Init_UART,"ax",%progbits
- 116              		.align	1
- 117              		.global	Init_UART
- 118              		.syntax unified
- 119              		.thumb
- 120              		.thumb_func
- 121              		.fpu softvfp
- 123              	Init_UART:
- 124              	.LFB70:
-  97:Drivers/BSP/stm32f1_easyco.c **** 	//BSP_InitButton();
-  98:Drivers/BSP/stm32f1_easyco.c **** 	//BSP_InitUART();
-  99:Drivers/BSP/stm32f1_easyco.c **** 	//BSP_InitPWM();
- 100:Drivers/BSP/stm32f1_easyco.c **** 	//BSP_InitADC();
+ 442              		.loc 1 96 0
+ 443 0002 FFF7FEFF 		bl	BSP_InitLED
+ 444              	.LVL9:
+  97:Drivers/BSP/stm32f1_easyco.c **** 	BSP_InitButton();
+ 445              		.loc 1 97 0
+ 446 0006 FFF7FEFF 		bl	BSP_InitButton
+ 447              	.LVL10:
+  98:Drivers/BSP/stm32f1_easyco.c **** 	BSP_InitUART();
+ 448              		.loc 1 98 0
+ 449 000a FFF7FEFF 		bl	BSP_InitUART
+ 450              	.LVL11:
+  99:Drivers/BSP/stm32f1_easyco.c **** 	BSP_InitPWM();
+ 451              		.loc 1 99 0
+ 452 000e FFF7FEFF 		bl	BSP_InitPWM
+ 453              	.LVL12:
+ 100:Drivers/BSP/stm32f1_easyco.c **** 	BSP_InitADC();
+ 454              		.loc 1 100 0
+ 455 0012 FFF7FEFF 		bl	BSP_InitADC
+ 456              	.LVL13:
  101:Drivers/BSP/stm32f1_easyco.c **** }
+ 457              		.loc 1 101 0
+ 458 0016 08BD     		pop	{r3, pc}
+ 459              		.cfi_endproc
+ 460              	.LFE71:
+ 462              		.section	.text.UART_Init,"ax",%progbits
+ 463              		.align	1
+ 464              		.global	UART_Init
+ 465              		.syntax unified
+ 466              		.thumb
+ 467              		.thumb_func
+ 468              		.fpu softvfp
+ 470              	UART_Init:
+ 471              	.LFB72:
  102:Drivers/BSP/stm32f1_easyco.c **** 
- 103:Drivers/BSP/stm32f1_easyco.c **** void Init_UART(void)
+ 103:Drivers/BSP/stm32f1_easyco.c **** void UART_Init(void)
  104:Drivers/BSP/stm32f1_easyco.c **** {
- 125              		.loc 1 104 0
- 126              		.cfi_startproc
- 127              		@ args = 0, pretend = 0, frame = 8
- 128              		@ frame_needed = 0, uses_anonymous_args = 0
- 129 0000 00B5     		push	{lr}
-ARM GAS  /tmp/ccPiDBYE.s 			page 5
+ 472              		.loc 1 104 0
+ 473              		.cfi_startproc
+ 474              		@ args = 0, pretend = 0, frame = 8
+ 475              		@ frame_needed = 0, uses_anonymous_args = 0
+ 476 0000 00B5     		push	{lr}
+ 477              	.LCFI16:
+ 478              		.cfi_def_cfa_offset 4
+ 479              		.cfi_offset 14, -4
+ARM GAS  /tmp/ccs1xtTg.s 			page 11
 
 
- 130              	.LCFI4:
- 131              		.cfi_def_cfa_offset 4
- 132              		.cfi_offset 14, -4
- 133 0002 83B0     		sub	sp, sp, #12
- 134              	.LCFI5:
- 135              		.cfi_def_cfa_offset 16
- 136              	.LBB3:
+ 480 0002 83B0     		sub	sp, sp, #12
+ 481              	.LCFI17:
+ 482              		.cfi_def_cfa_offset 16
+ 483              	.LBB11:
  105:Drivers/BSP/stm32f1_easyco.c **** 	UART_CLK_Enable();
- 137              		.loc 1 105 0
- 138 0004 0D4B     		ldr	r3, .L9
- 139 0006 9A69     		ldr	r2, [r3, #24]
- 140 0008 42F48042 		orr	r2, r2, #16384
- 141 000c 9A61     		str	r2, [r3, #24]
- 142 000e 9B69     		ldr	r3, [r3, #24]
- 143 0010 03F48043 		and	r3, r3, #16384
- 144 0014 0193     		str	r3, [sp, #4]
- 145 0016 019B     		ldr	r3, [sp, #4]
- 146              	.LBE3:
+ 484              		.loc 1 105 0
+ 485 0004 0D4B     		ldr	r3, .L25
+ 486 0006 9A69     		ldr	r2, [r3, #24]
+ 487 0008 42F48042 		orr	r2, r2, #16384
+ 488 000c 9A61     		str	r2, [r3, #24]
+ 489 000e 9B69     		ldr	r3, [r3, #24]
+ 490 0010 03F48043 		and	r3, r3, #16384
+ 491 0014 0193     		str	r3, [sp, #4]
+ 492 0016 019B     		ldr	r3, [sp, #4]
+ 493              	.LBE11:
  106:Drivers/BSP/stm32f1_easyco.c **** 
  107:Drivers/BSP/stm32f1_easyco.c **** 	huart.Instance = UART;
- 147              		.loc 1 107 0
- 148 0018 0948     		ldr	r0, .L9+4
- 149 001a 0A4B     		ldr	r3, .L9+8
- 150 001c 0360     		str	r3, [r0]
+ 494              		.loc 1 107 0
+ 495 0018 0948     		ldr	r0, .L25+4
+ 496 001a 0A4B     		ldr	r3, .L25+8
+ 497 001c 0360     		str	r3, [r0]
  108:Drivers/BSP/stm32f1_easyco.c **** 	huart.Init.BaudRate = 115200;
- 151              		.loc 1 108 0
- 152 001e 4FF4E133 		mov	r3, #115200
- 153 0022 4360     		str	r3, [r0, #4]
+ 498              		.loc 1 108 0
+ 499 001e 4FF4E133 		mov	r3, #115200
+ 500 0022 4360     		str	r3, [r0, #4]
  109:Drivers/BSP/stm32f1_easyco.c **** 	huart.Init.WordLength = UART_WORDLENGTH_8B;
- 154              		.loc 1 109 0
- 155 0024 0023     		movs	r3, #0
- 156 0026 8360     		str	r3, [r0, #8]
+ 501              		.loc 1 109 0
+ 502 0024 0023     		movs	r3, #0
+ 503 0026 8360     		str	r3, [r0, #8]
  110:Drivers/BSP/stm32f1_easyco.c **** 	huart.Init.StopBits = UART_STOPBITS_1;
- 157              		.loc 1 110 0
- 158 0028 C360     		str	r3, [r0, #12]
+ 504              		.loc 1 110 0
+ 505 0028 C360     		str	r3, [r0, #12]
  111:Drivers/BSP/stm32f1_easyco.c **** 	huart.Init.Parity = UART_PARITY_NONE;
- 159              		.loc 1 111 0
- 160 002a 0361     		str	r3, [r0, #16]
+ 506              		.loc 1 111 0
+ 507 002a 0361     		str	r3, [r0, #16]
  112:Drivers/BSP/stm32f1_easyco.c **** 	huart.Init.HwFlowCtl = UART_HWCONTROL_NONE;
- 161              		.loc 1 112 0
- 162 002c 8361     		str	r3, [r0, #24]
+ 508              		.loc 1 112 0
+ 509 002c 8361     		str	r3, [r0, #24]
  113:Drivers/BSP/stm32f1_easyco.c **** 	huart.Init.Mode = UART_MODE_TX_RX;
- 163              		.loc 1 113 0
- 164 002e 0C23     		movs	r3, #12
- 165 0030 4361     		str	r3, [r0, #20]
+ 510              		.loc 1 113 0
+ 511 002e 0C23     		movs	r3, #12
+ 512 0030 4361     		str	r3, [r0, #20]
  114:Drivers/BSP/stm32f1_easyco.c **** 	HAL_UART_Init(&huart);
- 166              		.loc 1 114 0
- 167 0032 FFF7FEFF 		bl	HAL_UART_Init
- 168              	.LVL2:
+ 513              		.loc 1 114 0
+ 514 0032 FFF7FEFF 		bl	HAL_UART_Init
+ 515              	.LVL14:
  115:Drivers/BSP/stm32f1_easyco.c **** }
- 169              		.loc 1 115 0
- 170 0036 03B0     		add	sp, sp, #12
- 171              	.LCFI6:
- 172              		.cfi_def_cfa_offset 4
- 173              		@ sp needed
- 174 0038 5DF804FB 		ldr	pc, [sp], #4
- 175              	.L10:
-ARM GAS  /tmp/ccPiDBYE.s 			page 6
+ 516              		.loc 1 115 0
+ 517 0036 03B0     		add	sp, sp, #12
+ 518              	.LCFI18:
+ 519              		.cfi_def_cfa_offset 4
+ 520              		@ sp needed
+ 521 0038 5DF804FB 		ldr	pc, [sp], #4
+ 522              	.L26:
+ 523              		.align	2
+ 524              	.L25:
+ 525 003c 00100240 		.word	1073876992
+ARM GAS  /tmp/ccs1xtTg.s 			page 12
 
 
- 176              		.align	2
- 177              	.L9:
- 178 003c 00100240 		.word	1073876992
- 179 0040 00000000 		.word	huart
- 180 0044 00380140 		.word	1073821696
- 181              		.cfi_endproc
- 182              	.LFE70:
- 184              		.section	.text.Button_IsPush,"ax",%progbits
- 185              		.align	1
- 186              		.global	Button_IsPush
- 187              		.syntax unified
- 188              		.thumb
- 189              		.thumb_func
- 190              		.fpu softvfp
- 192              	Button_IsPush:
- 193              	.LFB71:
+ 526 0040 00000000 		.word	huart
+ 527 0044 00380140 		.word	1073821696
+ 528              		.cfi_endproc
+ 529              	.LFE72:
+ 531              		.section	.text.Button_IsPush,"ax",%progbits
+ 532              		.align	1
+ 533              		.global	Button_IsPush
+ 534              		.syntax unified
+ 535              		.thumb
+ 536              		.thumb_func
+ 537              		.fpu softvfp
+ 539              	Button_IsPush:
+ 540              	.LFB73:
  116:Drivers/BSP/stm32f1_easyco.c **** 
  117:Drivers/BSP/stm32f1_easyco.c **** bool Button_IsPush(void)
  118:Drivers/BSP/stm32f1_easyco.c **** {
- 194              		.loc 1 118 0
- 195              		.cfi_startproc
- 196              		@ args = 0, pretend = 0, frame = 0
- 197              		@ frame_needed = 0, uses_anonymous_args = 0
- 198 0000 08B5     		push	{r3, lr}
- 199              	.LCFI7:
- 200              		.cfi_def_cfa_offset 8
- 201              		.cfi_offset 3, -8
- 202              		.cfi_offset 14, -4
+ 541              		.loc 1 118 0
+ 542              		.cfi_startproc
+ 543              		@ args = 0, pretend = 0, frame = 0
+ 544              		@ frame_needed = 0, uses_anonymous_args = 0
+ 545 0000 08B5     		push	{r3, lr}
+ 546              	.LCFI19:
+ 547              		.cfi_def_cfa_offset 8
+ 548              		.cfi_offset 3, -8
+ 549              		.cfi_offset 14, -4
  119:Drivers/BSP/stm32f1_easyco.c **** 	if (HAL_GPIO_ReadPin(BUTTON_GPIO_PORT, BUTTON_GPIO_PIN) == GPIO_PIN_RESET)
- 203              		.loc 1 119 0
- 204 0002 4FF48071 		mov	r1, #256
- 205 0006 0448     		ldr	r0, .L16
- 206 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
- 207              	.LVL3:
- 208 000c 08B1     		cbz	r0, .L15
+ 550              		.loc 1 119 0
+ 551 0002 4FF48071 		mov	r1, #256
+ 552 0006 0448     		ldr	r0, .L32
+ 553 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 554              	.LVL15:
+ 555 000c 08B1     		cbz	r0, .L31
  120:Drivers/BSP/stm32f1_easyco.c **** 	{
  121:Drivers/BSP/stm32f1_easyco.c **** 		return	true;
  122:Drivers/BSP/stm32f1_easyco.c **** 	}
  123:Drivers/BSP/stm32f1_easyco.c **** 	else
  124:Drivers/BSP/stm32f1_easyco.c **** 	{
  125:Drivers/BSP/stm32f1_easyco.c **** 		return false;
- 209              		.loc 1 125 0
- 210 000e 0020     		movs	r0, #0
+ 556              		.loc 1 125 0
+ 557 000e 0020     		movs	r0, #0
+ 558              	.L28:
  126:Drivers/BSP/stm32f1_easyco.c **** 	}
  127:Drivers/BSP/stm32f1_easyco.c **** }
- 211              		.loc 1 127 0
- 212 0010 08BD     		pop	{r3, pc}
- 213              	.L15:
+ 559              		.loc 1 127 0
+ 560 0010 08BD     		pop	{r3, pc}
+ 561              	.L31:
  121:Drivers/BSP/stm32f1_easyco.c **** 	}
- 214              		.loc 1 121 0
- 215 0012 0120     		movs	r0, #1
- 216 0014 08BD     		pop	{r3, pc}
- 217              	.L17:
- 218 0016 00BF     		.align	2
- 219              	.L16:
- 220 0018 000C0140 		.word	1073810432
- 221              		.cfi_endproc
-ARM GAS  /tmp/ccPiDBYE.s 			page 7
+ 562              		.loc 1 121 0
+ 563 0012 0120     		movs	r0, #1
+ 564 0014 FCE7     		b	.L28
+ 565              	.L33:
+ 566 0016 00BF     		.align	2
+ 567              	.L32:
+ 568 0018 000C0140 		.word	1073810432
+ 569              		.cfi_endproc
+ 570              	.LFE73:
+ 572              		.comm	huart,64,4
+ARM GAS  /tmp/ccs1xtTg.s 			page 13
 
 
- 222              	.LFE71:
- 224              		.comm	huart,64,4
- 225              		.text
- 226              	.Letext0:
- 227              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 228              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 229              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
- 230              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
- 231              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
- 232              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
- 233              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
- 234              		.file 9 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 235              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
- 236              		.file 11 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 237              		.file 12 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
- 238              		.file 13 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 239              		.file 14 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
-ARM GAS  /tmp/ccPiDBYE.s 			page 8
+ 573              		.text
+ 574              	.Letext0:
+ 575              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 576              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 577              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+ 578              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+ 579              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
+ 580              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
+ 581              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
+ 582              		.file 9 "/usr/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h"
+ 583              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
+ 584              		.file 11 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 585              		.file 12 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 586              		.file 13 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 587              		.file 14 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ARM GAS  /tmp/ccs1xtTg.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1_easyco.c
-     /tmp/ccPiDBYE.s:16     .text.BSP_InitLED:0000000000000000 $t
-     /tmp/ccPiDBYE.s:22     .text.BSP_InitLED:0000000000000000 BSP_InitLED
-     /tmp/ccPiDBYE.s:84     .text.BSP_InitLED:000000000000004c $d
-     /tmp/ccPiDBYE.s:90     .text.BSP_Init:0000000000000000 $t
-     /tmp/ccPiDBYE.s:97     .text.BSP_Init:0000000000000000 BSP_Init
-     /tmp/ccPiDBYE.s:116    .text.Init_UART:0000000000000000 $t
-     /tmp/ccPiDBYE.s:123    .text.Init_UART:0000000000000000 Init_UART
-     /tmp/ccPiDBYE.s:178    .text.Init_UART:000000000000003c $d
+     /tmp/ccs1xtTg.s:16     .text.BSP_InitLED:0000000000000000 $t
+     /tmp/ccs1xtTg.s:22     .text.BSP_InitLED:0000000000000000 BSP_InitLED
+     /tmp/ccs1xtTg.s:84     .text.BSP_InitLED:000000000000004c $d
+     /tmp/ccs1xtTg.s:90     .text.BSP_InitButton:0000000000000000 $t
+     /tmp/ccs1xtTg.s:96     .text.BSP_InitButton:0000000000000000 BSP_InitButton
+     /tmp/ccs1xtTg.s:146    .text.BSP_InitButton:000000000000003c $d
+     /tmp/ccs1xtTg.s:152    .text.BSP_InitUART:0000000000000000 $t
+     /tmp/ccs1xtTg.s:158    .text.BSP_InitUART:0000000000000000 BSP_InitUART
+     /tmp/ccs1xtTg.s:208    .text.BSP_InitUART:0000000000000038 $d
+     /tmp/ccs1xtTg.s:214    .text.BSP_InitPWM:0000000000000000 $t
+     /tmp/ccs1xtTg.s:220    .text.BSP_InitPWM:0000000000000000 BSP_InitPWM
+     /tmp/ccs1xtTg.s:297    .text.BSP_InitPWM:000000000000005c $d
+     /tmp/ccs1xtTg.s:304    .text.BSP_InitADC:0000000000000000 $t
+     /tmp/ccs1xtTg.s:310    .text.BSP_InitADC:0000000000000000 BSP_InitADC
+     /tmp/ccs1xtTg.s:417    .text.BSP_InitADC:0000000000000094 $d
+     /tmp/ccs1xtTg.s:424    .text.BSP_Init:0000000000000000 $t
+     /tmp/ccs1xtTg.s:431    .text.BSP_Init:0000000000000000 BSP_Init
+     /tmp/ccs1xtTg.s:463    .text.UART_Init:0000000000000000 $t
+     /tmp/ccs1xtTg.s:470    .text.UART_Init:0000000000000000 UART_Init
+     /tmp/ccs1xtTg.s:525    .text.UART_Init:000000000000003c $d
                             *COM*:0000000000000040 huart
-     /tmp/ccPiDBYE.s:185    .text.Button_IsPush:0000000000000000 $t
-     /tmp/ccPiDBYE.s:192    .text.Button_IsPush:0000000000000000 Button_IsPush
-     /tmp/ccPiDBYE.s:220    .text.Button_IsPush:0000000000000018 $d
-                     .debug_frame:0000000000000010 $d
+     /tmp/ccs1xtTg.s:532    .text.Button_IsPush:0000000000000000 $t
+     /tmp/ccs1xtTg.s:539    .text.Button_IsPush:0000000000000000 Button_IsPush
+     /tmp/ccs1xtTg.s:568    .text.Button_IsPush:0000000000000018 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_Init

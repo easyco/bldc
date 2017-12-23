@@ -1,0 +1,533 @@
+ARM GAS  /tmp/cc2f8ckD.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"bsp_adc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.ADC_InitDMA,"ax",%progbits
+  16              		.align	1
+  17              		.syntax unified
+  18              		.thumb
+  19              		.thumb_func
+  20              		.fpu softvfp
+  22              	ADC_InitDMA:
+  23              	.LFB66:
+  24              		.file 1 "Drivers/BSP/bsp_adc.c"
+   1:Drivers/BSP/bsp_adc.c **** #include "bsp_adc.h"
+   2:Drivers/BSP/bsp_adc.c **** #include "bldc.h"
+   3:Drivers/BSP/bsp_adc.c **** 
+   4:Drivers/BSP/bsp_adc.c **** ADC_HandleTypeDef hadc1;
+   5:Drivers/BSP/bsp_adc.c **** 
+   6:Drivers/BSP/bsp_adc.c **** static void ADC_InitDMA(void)
+   7:Drivers/BSP/bsp_adc.c **** {
+  25              		.loc 1 7 0
+  26              		.cfi_startproc
+  27              		@ args = 0, pretend = 0, frame = 8
+  28              		@ frame_needed = 0, uses_anonymous_args = 0
+  29 0000 30B5     		push	{r4, r5, lr}
+  30              	.LCFI0:
+  31              		.cfi_def_cfa_offset 12
+  32              		.cfi_offset 4, -12
+  33              		.cfi_offset 5, -8
+  34              		.cfi_offset 14, -4
+  35 0002 83B0     		sub	sp, sp, #12
+  36              	.LCFI1:
+  37              		.cfi_def_cfa_offset 24
+  38              	.LBB2:
+   8:Drivers/BSP/bsp_adc.c **** 	static DMA_HandleTypeDef  DmaHandle;
+   9:Drivers/BSP/bsp_adc.c **** 
+  10:Drivers/BSP/bsp_adc.c **** 	__HAL_RCC_DMA1_CLK_ENABLE();
+  39              		.loc 1 10 0
+  40 0004 164B     		ldr	r3, .L3
+  41 0006 5A69     		ldr	r2, [r3, #20]
+  42 0008 42F00102 		orr	r2, r2, #1
+  43 000c 5A61     		str	r2, [r3, #20]
+  44 000e 5B69     		ldr	r3, [r3, #20]
+  45 0010 03F00103 		and	r3, r3, #1
+  46 0014 0193     		str	r3, [sp, #4]
+  47 0016 019B     		ldr	r3, [sp, #4]
+  48              	.LBE2:
+ARM GAS  /tmp/cc2f8ckD.s 			page 2
+
+
+  11:Drivers/BSP/bsp_adc.c **** 
+  12:Drivers/BSP/bsp_adc.c **** 	DmaHandle.Instance = DMA1_Channel1;
+  49              		.loc 1 12 0
+  50 0018 124C     		ldr	r4, .L3+4
+  51 001a 134B     		ldr	r3, .L3+8
+  52 001c 2360     		str	r3, [r4]
+  13:Drivers/BSP/bsp_adc.c **** 
+  14:Drivers/BSP/bsp_adc.c **** 	DmaHandle.Init.Direction = DMA_PERIPH_TO_MEMORY;
+  53              		.loc 1 14 0
+  54 001e 0025     		movs	r5, #0
+  55 0020 6560     		str	r5, [r4, #4]
+  15:Drivers/BSP/bsp_adc.c **** 	DmaHandle.Init.PeriphInc = DMA_PINC_DISABLE;
+  56              		.loc 1 15 0
+  57 0022 A560     		str	r5, [r4, #8]
+  16:Drivers/BSP/bsp_adc.c **** 	DmaHandle.Init.MemInc = DMA_MINC_ENABLE;
+  58              		.loc 1 16 0
+  59 0024 8023     		movs	r3, #128
+  60 0026 E360     		str	r3, [r4, #12]
+  17:Drivers/BSP/bsp_adc.c **** 	DmaHandle.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+  61              		.loc 1 17 0
+  62 0028 4FF48073 		mov	r3, #256
+  63 002c 2361     		str	r3, [r4, #16]
+  18:Drivers/BSP/bsp_adc.c **** 	DmaHandle.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+  64              		.loc 1 18 0
+  65 002e 4FF48063 		mov	r3, #1024
+  66 0032 6361     		str	r3, [r4, #20]
+  19:Drivers/BSP/bsp_adc.c **** 	DmaHandle.Init.Mode = DMA_CIRCULAR;
+  67              		.loc 1 19 0
+  68 0034 2023     		movs	r3, #32
+  69 0036 A361     		str	r3, [r4, #24]
+  20:Drivers/BSP/bsp_adc.c **** 	DmaHandle.Init.Priority = DMA_PRIORITY_HIGH;
+  70              		.loc 1 20 0
+  71 0038 4FF40053 		mov	r3, #8192
+  72 003c E361     		str	r3, [r4, #28]
+  21:Drivers/BSP/bsp_adc.c **** 	HAL_DMA_Init(&DmaHandle);
+  73              		.loc 1 21 0
+  74 003e 2046     		mov	r0, r4
+  75 0040 FFF7FEFF 		bl	HAL_DMA_Init
+  76              	.LVL0:
+  22:Drivers/BSP/bsp_adc.c **** 	__HAL_LINKDMA(&hadc1, DMA_Handle, DmaHandle);
+  77              		.loc 1 22 0
+  78 0044 094B     		ldr	r3, .L3+12
+  79 0046 1C62     		str	r4, [r3, #32]
+  80 0048 6362     		str	r3, [r4, #36]
+  23:Drivers/BSP/bsp_adc.c **** 
+  24:Drivers/BSP/bsp_adc.c **** 	HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 1, 0);
+  81              		.loc 1 24 0
+  82 004a 2A46     		mov	r2, r5
+  83 004c 0121     		movs	r1, #1
+  84 004e 0B20     		movs	r0, #11
+  85 0050 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  86              	.LVL1:
+  25:Drivers/BSP/bsp_adc.c **** 	HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  87              		.loc 1 25 0
+  88 0054 0B20     		movs	r0, #11
+  89 0056 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+  90              	.LVL2:
+ARM GAS  /tmp/cc2f8ckD.s 			page 3
+
+
+  26:Drivers/BSP/bsp_adc.c **** }
+  91              		.loc 1 26 0
+  92 005a 03B0     		add	sp, sp, #12
+  93              	.LCFI2:
+  94              		.cfi_def_cfa_offset 12
+  95              		@ sp needed
+  96 005c 30BD     		pop	{r4, r5, pc}
+  97              	.L4:
+  98 005e 00BF     		.align	2
+  99              	.L3:
+ 100 0060 00100240 		.word	1073876992
+ 101 0064 00000000 		.word	.LANCHOR0
+ 102 0068 08000240 		.word	1073872904
+ 103 006c 00000000 		.word	hadc1
+ 104              		.cfi_endproc
+ 105              	.LFE66:
+ 107              		.section	.text.ADC_Init,"ax",%progbits
+ 108              		.align	1
+ 109              		.global	ADC_Init
+ 110              		.syntax unified
+ 111              		.thumb
+ 112              		.thumb_func
+ 113              		.fpu softvfp
+ 115              	ADC_Init:
+ 116              	.LFB67:
+  27:Drivers/BSP/bsp_adc.c **** 
+  28:Drivers/BSP/bsp_adc.c **** void ADC_Init(void)
+  29:Drivers/BSP/bsp_adc.c **** {
+ 117              		.loc 1 29 0
+ 118              		.cfi_startproc
+ 119              		@ args = 0, pretend = 0, frame = 64
+ 120              		@ frame_needed = 0, uses_anonymous_args = 0
+ 121 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 122              	.LCFI3:
+ 123              		.cfi_def_cfa_offset 28
+ 124              		.cfi_offset 4, -28
+ 125              		.cfi_offset 5, -24
+ 126              		.cfi_offset 6, -20
+ 127              		.cfi_offset 7, -16
+ 128              		.cfi_offset 8, -12
+ 129              		.cfi_offset 9, -8
+ 130              		.cfi_offset 14, -4
+ 131 0004 91B0     		sub	sp, sp, #68
+ 132              	.LCFI4:
+ 133              		.cfi_def_cfa_offset 96
+  30:Drivers/BSP/bsp_adc.c **** 	RCC_PeriphCLKInitTypeDef PeriphClkInit;
+  31:Drivers/BSP/bsp_adc.c **** 	ADC_ChannelConfTypeDef   sConfig;
+  32:Drivers/BSP/bsp_adc.c **** 	ADC_InjectionConfTypeDef sConfigInjected;
+  33:Drivers/BSP/bsp_adc.c **** 
+  34:Drivers/BSP/bsp_adc.c **** #if !defined (USE_INJECTED_GROUP_SMAPLE_BEMF)
+  35:Drivers/BSP/bsp_adc.c **** 	ADC_InitDMA();
+ 134              		.loc 1 35 0
+ 135 0006 FFF7FEFF 		bl	ADC_InitDMA
+ 136              	.LVL3:
+  36:Drivers/BSP/bsp_adc.c **** #endif
+  37:Drivers/BSP/bsp_adc.c **** 
+  38:Drivers/BSP/bsp_adc.c **** 	PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+ARM GAS  /tmp/cc2f8ckD.s 			page 4
+
+
+ 137              		.loc 1 38 0
+ 138 000a 4FF00208 		mov	r8, #2
+ 139 000e CDF83080 		str	r8, [sp, #48]
+  39:Drivers/BSP/bsp_adc.c **** 	PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV4;
+ 140              		.loc 1 39 0
+ 141 0012 4FF48043 		mov	r3, #16384
+ 142 0016 0E93     		str	r3, [sp, #56]
+  40:Drivers/BSP/bsp_adc.c **** 	HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit);
+ 143              		.loc 1 40 0
+ 144 0018 0CA8     		add	r0, sp, #48
+ 145 001a FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 146              	.LVL4:
+ 147              	.LBB3:
+  41:Drivers/BSP/bsp_adc.c **** 
+  42:Drivers/BSP/bsp_adc.c **** 	ADCx_CLK_Enable();
+ 148              		.loc 1 42 0
+ 149 001e 3C4B     		ldr	r3, .L7
+ 150 0020 9A69     		ldr	r2, [r3, #24]
+ 151 0022 42F40072 		orr	r2, r2, #512
+ 152 0026 9A61     		str	r2, [r3, #24]
+ 153 0028 9B69     		ldr	r3, [r3, #24]
+ 154 002a 03F40073 		and	r3, r3, #512
+ 155 002e 0093     		str	r3, [sp]
+ 156 0030 009B     		ldr	r3, [sp]
+ 157              	.LBE3:
+  43:Drivers/BSP/bsp_adc.c **** 
+  44:Drivers/BSP/bsp_adc.c **** #if defined (USE_INJECTED_GROUP_SMAPLE_BEMF)
+  45:Drivers/BSP/bsp_adc.c **** 	hadc1.Instance = ADCx;
+  46:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  47:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.ScanConvMode = ENABLE;
+  48:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.ContinuousConvMode = DISABLE;
+  49:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.NbrOfConversion = ADC_FAST_CHANNEL_NUM;
+  50:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.DiscontinuousConvMode = DISABLE;
+  51:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.NbrOfDiscConversion = 1;
+  52:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIGCONV_T3_TRGO;
+  53:Drivers/BSP/bsp_adc.c **** 	HAL_ADC_Init(&hadc1);
+  54:Drivers/BSP/bsp_adc.c **** 
+  55:Drivers/BSP/bsp_adc.c **** 	ADC1->CR2 |= ADC_CR2_JEXTTRIG;							
+  56:Drivers/BSP/bsp_adc.c **** 
+  57:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedOffset = 0;
+  58:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedNbrOfConversion = ADC_FAST_CHANNEL_NUM;
+  59:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedDiscontinuousConvMode = DISABLE;
+  60:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.AutoInjectedConv = DISABLE;
+  61:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.ExternalTrigInjecConv = ADC_EXTERNALTRIGINJECCONV_T4_TRGO;
+  62:Drivers/BSP/bsp_adc.c **** 	
+  63:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedChannel = ADC_BEMF_A_CH;
+  64:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedRank = ADC_INJECTED_RANK_1;
+  65:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedSamplingTime = ADC_SAMPLE_TIME;
+  66:Drivers/BSP/bsp_adc.c **** 	HAL_ADCEx_InjectedConfigChannel(&hadc1, &sConfigInjected);
+  67:Drivers/BSP/bsp_adc.c **** 
+  68:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedChannel = ADC_BEMF_B_CH;
+  69:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedRank = ADC_INJECTED_RANK_2;
+  70:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedSamplingTime = ADC_SAMPLE_TIME;
+  71:Drivers/BSP/bsp_adc.c **** 	HAL_ADCEx_InjectedConfigChannel(&hadc1, &sConfigInjected);
+  72:Drivers/BSP/bsp_adc.c **** 
+  73:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedChannel = ADC_BEMF_C_CH;
+  74:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedRank = ADC_INJECTED_RANK_3;
+ARM GAS  /tmp/cc2f8ckD.s 			page 5
+
+
+  75:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedSamplingTime = ADC_SAMPLE_TIME;
+  76:Drivers/BSP/bsp_adc.c **** 	HAL_ADCEx_InjectedConfigChannel(&hadc1, &sConfigInjected);
+  77:Drivers/BSP/bsp_adc.c **** 
+  78:Drivers/BSP/bsp_adc.c **** 	HAL_NVIC_SetPriority(ADC1_IRQn, 1, 0);
+  79:Drivers/BSP/bsp_adc.c **** 	HAL_NVIC_EnableIRQ(ADC1_IRQn);
+  80:Drivers/BSP/bsp_adc.c **** #else
+  81:Drivers/BSP/bsp_adc.c **** 	hadc1.Instance = ADCx;
+ 158              		.loc 1 81 0
+ 159 0032 384C     		ldr	r4, .L7+4
+ 160 0034 384D     		ldr	r5, .L7+8
+ 161 0036 2560     		str	r5, [r4]
+  82:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+ 162              		.loc 1 82 0
+ 163 0038 0026     		movs	r6, #0
+ 164 003a 6660     		str	r6, [r4, #4]
+  83:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.ScanConvMode = ENABLE;
+ 165              		.loc 1 83 0
+ 166 003c 0127     		movs	r7, #1
+ 167 003e A760     		str	r7, [r4, #8]
+  84:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.ContinuousConvMode = DISABLE;
+ 168              		.loc 1 84 0
+ 169 0040 E660     		str	r6, [r4, #12]
+  85:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.NbrOfConversion = ADC_FAST_CHANNEL_NUM;
+ 170              		.loc 1 85 0
+ 171 0042 4FF00309 		mov	r9, #3
+ 172 0046 C4F81090 		str	r9, [r4, #16]
+  86:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.DiscontinuousConvMode = DISABLE;
+ 173              		.loc 1 86 0
+ 174 004a 6661     		str	r6, [r4, #20]
+  87:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.NbrOfDiscConversion = 1;
+ 175              		.loc 1 87 0
+ 176 004c A761     		str	r7, [r4, #24]
+  88:Drivers/BSP/bsp_adc.c **** 	hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIGCONV_T3_TRGO;
+ 177              		.loc 1 88 0
+ 178 004e 4FF40023 		mov	r3, #524288
+ 179 0052 E361     		str	r3, [r4, #28]
+  89:Drivers/BSP/bsp_adc.c **** 	HAL_ADC_Init(&hadc1);
+ 180              		.loc 1 89 0
+ 181 0054 2046     		mov	r0, r4
+ 182 0056 FFF7FEFF 		bl	HAL_ADC_Init
+ 183              	.LVL5:
+  90:Drivers/BSP/bsp_adc.c **** 
+  91:Drivers/BSP/bsp_adc.c **** 	ADC1->CR2 |= ADC_CR2_EXTTRIG;							
+ 184              		.loc 1 91 0
+ 185 005a AB68     		ldr	r3, [r5, #8]
+ 186 005c 43F48013 		orr	r3, r3, #1048576
+ 187 0060 AB60     		str	r3, [r5, #8]
+  92:Drivers/BSP/bsp_adc.c **** 
+  93:Drivers/BSP/bsp_adc.c **** 	sConfig.Channel = ADC_BEMF_A_CH;
+ 188              		.loc 1 93 0
+ 189 0062 0723     		movs	r3, #7
+ 190 0064 0993     		str	r3, [sp, #36]
+  94:Drivers/BSP/bsp_adc.c **** 	sConfig.SamplingTime = ADC_SAMPLE_TIME;
+ 191              		.loc 1 94 0
+ 192 0066 0B96     		str	r6, [sp, #44]
+  95:Drivers/BSP/bsp_adc.c **** 	sConfig.Rank = ADC_REGULAR_RANK_1;
+ 193              		.loc 1 95 0
+ARM GAS  /tmp/cc2f8ckD.s 			page 6
+
+
+ 194 0068 0A97     		str	r7, [sp, #40]
+  96:Drivers/BSP/bsp_adc.c **** 	HAL_ADC_ConfigChannel(&hadc1, &sConfig);
+ 195              		.loc 1 96 0
+ 196 006a 09A9     		add	r1, sp, #36
+ 197 006c 2046     		mov	r0, r4
+ 198 006e FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 199              	.LVL6:
+  97:Drivers/BSP/bsp_adc.c **** 
+  98:Drivers/BSP/bsp_adc.c **** 	sConfig.Channel = ADC_BEMF_B_CH;
+ 200              		.loc 1 98 0
+ 201 0072 0623     		movs	r3, #6
+ 202 0074 0993     		str	r3, [sp, #36]
+  99:Drivers/BSP/bsp_adc.c **** 	sConfig.SamplingTime = ADC_SAMPLE_TIME;
+ 203              		.loc 1 99 0
+ 204 0076 0B96     		str	r6, [sp, #44]
+ 100:Drivers/BSP/bsp_adc.c **** 	sConfig.Rank = ADC_REGULAR_RANK_2;
+ 205              		.loc 1 100 0
+ 206 0078 CDF82880 		str	r8, [sp, #40]
+ 101:Drivers/BSP/bsp_adc.c **** 	HAL_ADC_ConfigChannel(&hadc1, &sConfig);
+ 207              		.loc 1 101 0
+ 208 007c 09A9     		add	r1, sp, #36
+ 209 007e 2046     		mov	r0, r4
+ 210 0080 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 211              	.LVL7:
+ 102:Drivers/BSP/bsp_adc.c **** 
+ 103:Drivers/BSP/bsp_adc.c **** 	sConfig.Channel = ADC_BEMF_C_CH;
+ 212              		.loc 1 103 0
+ 213 0084 0523     		movs	r3, #5
+ 214 0086 0993     		str	r3, [sp, #36]
+ 104:Drivers/BSP/bsp_adc.c **** 	sConfig.SamplingTime = ADC_SAMPLE_TIME;
+ 215              		.loc 1 104 0
+ 216 0088 0B96     		str	r6, [sp, #44]
+ 105:Drivers/BSP/bsp_adc.c **** 	sConfig.Rank = ADC_REGULAR_RANK_3;
+ 217              		.loc 1 105 0
+ 218 008a CDF82890 		str	r9, [sp, #40]
+ 106:Drivers/BSP/bsp_adc.c **** 	HAL_ADC_ConfigChannel(&hadc1, &sConfig);
+ 219              		.loc 1 106 0
+ 220 008e 09A9     		add	r1, sp, #36
+ 221 0090 2046     		mov	r0, r4
+ 222 0092 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 223              	.LVL8:
+ 107:Drivers/BSP/bsp_adc.c **** 
+ 108:Drivers/BSP/bsp_adc.c **** 	DMA1_Channel1->CPAR = (uint32_t)&ADC1->DR;
+ 224              		.loc 1 108 0
+ 225 0096 214B     		ldr	r3, .L7+12
+ 226 0098 214A     		ldr	r2, .L7+16
+ 227 009a 9A60     		str	r2, [r3, #8]
+ 109:Drivers/BSP/bsp_adc.c **** 	DMA1_Channel1->CMAR = (uint32_t)&Bldc.AdcBuffer;
+ 228              		.loc 1 109 0
+ 229 009c 214A     		ldr	r2, .L7+20
+ 230 009e DA60     		str	r2, [r3, #12]
+ 110:Drivers/BSP/bsp_adc.c **** 	/* DMA data length */
+ 111:Drivers/BSP/bsp_adc.c **** 	DMA1_Channel1->CNDTR = ADC_FAST_CHANNEL_NUM;
+ 231              		.loc 1 111 0
+ 232 00a0 C3F80490 		str	r9, [r3, #4]
+ 112:Drivers/BSP/bsp_adc.c **** 
+ 113:Drivers/BSP/bsp_adc.c **** 	/* DMA Enable */
+ARM GAS  /tmp/cc2f8ckD.s 			page 7
+
+
+ 114:Drivers/BSP/bsp_adc.c **** 	DMA1_Channel1->CCR |= DMA_CCR_EN;
+ 233              		.loc 1 114 0
+ 234 00a4 1A68     		ldr	r2, [r3]
+ 235 00a6 3A43     		orrs	r2, r2, r7
+ 236 00a8 1A60     		str	r2, [r3]
+ 115:Drivers/BSP/bsp_adc.c **** 
+ 116:Drivers/BSP/bsp_adc.c **** 	ADC1->CR2 |= ADC_CR2_DMA;
+ 237              		.loc 1 116 0
+ 238 00aa AB68     		ldr	r3, [r5, #8]
+ 239 00ac 43F48073 		orr	r3, r3, #256
+ 240 00b0 AB60     		str	r3, [r5, #8]
+ 117:Drivers/BSP/bsp_adc.c **** 
+ 118:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedOffset = 0;
+ 241              		.loc 1 118 0
+ 242 00b2 0496     		str	r6, [sp, #16]
+ 119:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedNbrOfConversion = 1;
+ 243              		.loc 1 119 0
+ 244 00b4 0597     		str	r7, [sp, #20]
+ 120:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedDiscontinuousConvMode = DISABLE;
+ 245              		.loc 1 120 0
+ 246 00b6 0696     		str	r6, [sp, #24]
+ 121:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.AutoInjectedConv = DISABLE;
+ 247              		.loc 1 121 0
+ 248 00b8 0796     		str	r6, [sp, #28]
+ 122:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.ExternalTrigInjecConv = ADC_INJECTED_SOFTWARE_START;
+ 249              		.loc 1 122 0
+ 250 00ba 4FF4E043 		mov	r3, #28672
+ 251 00be 0893     		str	r3, [sp, #32]
+ 123:Drivers/BSP/bsp_adc.c **** 
+ 124:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedChannel = ADC_SPEED_CH;
+ 252              		.loc 1 124 0
+ 253 00c0 0923     		movs	r3, #9
+ 254 00c2 0193     		str	r3, [sp, #4]
+ 125:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedRank = ADC_INJECTED_RANK_1;
+ 255              		.loc 1 125 0
+ 256 00c4 0297     		str	r7, [sp, #8]
+ 126:Drivers/BSP/bsp_adc.c **** 	sConfigInjected.InjectedSamplingTime = ADC_SAMPLETIME_13CYCLES_5;
+ 257              		.loc 1 126 0
+ 258 00c6 CDF80C80 		str	r8, [sp, #12]
+ 127:Drivers/BSP/bsp_adc.c **** 	HAL_ADCEx_InjectedConfigChannel(&hadc1, &sConfigInjected);
+ 259              		.loc 1 127 0
+ 260 00ca 01A9     		add	r1, sp, #4
+ 261 00cc 2046     		mov	r0, r4
+ 262 00ce FFF7FEFF 		bl	HAL_ADCEx_InjectedConfigChannel
+ 263              	.LVL9:
+ 128:Drivers/BSP/bsp_adc.c **** 
+ 129:Drivers/BSP/bsp_adc.c **** 	HAL_NVIC_SetPriority(ADC1_IRQn, 1, 0);
+ 264              		.loc 1 129 0
+ 265 00d2 3246     		mov	r2, r6
+ 266 00d4 3946     		mov	r1, r7
+ 267 00d6 1220     		movs	r0, #18
+ 268 00d8 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 269              	.LVL10:
+ 130:Drivers/BSP/bsp_adc.c **** 	HAL_NVIC_EnableIRQ(ADC1_IRQn);
+ 270              		.loc 1 130 0
+ 271 00dc 1220     		movs	r0, #18
+ 272 00de FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ARM GAS  /tmp/cc2f8ckD.s 			page 8
+
+
+ 273              	.LVL11:
+ 131:Drivers/BSP/bsp_adc.c **** 
+ 132:Drivers/BSP/bsp_adc.c **** 	ADC1->CR2 |= ADC_CR2_JEXTTRIG;							
+ 274              		.loc 1 132 0
+ 275 00e2 AB68     		ldr	r3, [r5, #8]
+ 276 00e4 43F40043 		orr	r3, r3, #32768
+ 277 00e8 AB60     		str	r3, [r5, #8]
+ 133:Drivers/BSP/bsp_adc.c **** 	ADC1->CR1 |= ADC_CR1_JEOSIE;
+ 278              		.loc 1 133 0
+ 279 00ea 6B68     		ldr	r3, [r5, #4]
+ 280 00ec 43F08003 		orr	r3, r3, #128
+ 281 00f0 6B60     		str	r3, [r5, #4]
+ 134:Drivers/BSP/bsp_adc.c **** 	ADC1->CR2 |= ADC_CR2_JSWSTART;
+ 282              		.loc 1 134 0
+ 283 00f2 AB68     		ldr	r3, [r5, #8]
+ 284 00f4 43F40013 		orr	r3, r3, #2097152
+ 285 00f8 AB60     		str	r3, [r5, #8]
+ 135:Drivers/BSP/bsp_adc.c **** #endif
+ 136:Drivers/BSP/bsp_adc.c **** 	
+ 137:Drivers/BSP/bsp_adc.c **** 	HAL_ADCEx_Calibration_Start(&hadc1);
+ 286              		.loc 1 137 0
+ 287 00fa 2046     		mov	r0, r4
+ 288 00fc FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 289              	.LVL12:
+ 138:Drivers/BSP/bsp_adc.c **** 
+ 139:Drivers/BSP/bsp_adc.c **** #if defined (USE_INJECTED_GROUP_SMAPLE_BEMF)
+ 140:Drivers/BSP/bsp_adc.c **** 	ADC1->CR1 |= ADC_CR1_JEOSIE;
+ 141:Drivers/BSP/bsp_adc.c **** 	ADC1->CR2 |= ADC_CR2_JSWSTART;
+ 142:Drivers/BSP/bsp_adc.c **** #else
+ 143:Drivers/BSP/bsp_adc.c **** 	ADC1->CR2 |= ADC_CR2_SWSTART;
+ 290              		.loc 1 143 0
+ 291 0100 AB68     		ldr	r3, [r5, #8]
+ 292 0102 43F48003 		orr	r3, r3, #4194304
+ 293 0106 AB60     		str	r3, [r5, #8]
+ 144:Drivers/BSP/bsp_adc.c **** #endif
+ 145:Drivers/BSP/bsp_adc.c **** }
+ 294              		.loc 1 145 0
+ 295 0108 11B0     		add	sp, sp, #68
+ 296              	.LCFI5:
+ 297              		.cfi_def_cfa_offset 28
+ 298              		@ sp needed
+ 299 010a BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 300              	.L8:
+ 301 010e 00BF     		.align	2
+ 302              	.L7:
+ 303 0110 00100240 		.word	1073876992
+ 304 0114 00000000 		.word	hadc1
+ 305 0118 00240140 		.word	1073816576
+ 306 011c 08000240 		.word	1073872904
+ 307 0120 4C240140 		.word	1073816652
+ 308 0124 0A000000 		.word	Bldc+10
+ 309              		.cfi_endproc
+ 310              	.LFE67:
+ 312              		.comm	hadc1,48,4
+ 313              		.section	.bss.DmaHandle.8227,"aw",%nobits
+ 314              		.align	2
+ 315              		.set	.LANCHOR0,. + 0
+ARM GAS  /tmp/cc2f8ckD.s 			page 9
+
+
+ 318              	DmaHandle.8227:
+ 319 0000 00000000 		.space	56
+ 319      00000000 
+ 319      00000000 
+ 319      00000000 
+ 319      00000000 
+ 320              		.text
+ 321              	.Letext0:
+ 322              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 323              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 324              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+ 325              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+ 326              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
+ 327              		.file 7 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f1xx.h"
+ 328              		.file 8 "/usr/arm-none-eabi/include/sys/lock.h"
+ 329              		.file 9 "/usr/arm-none-eabi/include/sys/_types.h"
+ 330              		.file 10 "/usr/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h"
+ 331              		.file 11 "/usr/arm-none-eabi/include/sys/reent.h"
+ 332              		.file 12 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 333              		.file 13 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
+ 334              		.file 14 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 335              		.file 15 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
+ 336              		.file 16 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h"
+ 337              		.file 17 "BLDC/bldc.h"
+ 338              		.file 18 "Drivers/STM32Cube_FW_F1_V1.4.0/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  /tmp/cc2f8ckD.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 bsp_adc.c
+     /tmp/cc2f8ckD.s:16     .text.ADC_InitDMA:0000000000000000 $t
+     /tmp/cc2f8ckD.s:22     .text.ADC_InitDMA:0000000000000000 ADC_InitDMA
+     /tmp/cc2f8ckD.s:100    .text.ADC_InitDMA:0000000000000060 $d
+                            *COM*:0000000000000030 hadc1
+     /tmp/cc2f8ckD.s:108    .text.ADC_Init:0000000000000000 $t
+     /tmp/cc2f8ckD.s:115    .text.ADC_Init:0000000000000000 ADC_Init
+     /tmp/cc2f8ckD.s:303    .text.ADC_Init:0000000000000110 $d
+     /tmp/cc2f8ckD.s:314    .bss.DmaHandle.8227:0000000000000000 $d
+     /tmp/cc2f8ckD.s:318    .bss.DmaHandle.8227:0000000000000000 DmaHandle.8227
+
+UNDEFINED SYMBOLS
+HAL_DMA_Init
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+HAL_RCCEx_PeriphCLKConfig
+HAL_ADC_Init
+HAL_ADC_ConfigChannel
+HAL_ADCEx_InjectedConfigChannel
+HAL_ADCEx_Calibration_Start
+Bldc

@@ -1,0 +1,234 @@
+ARM GAS  /tmp/cck7d8Dk.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"comm.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.BLDC_CommPWM,"ax",%progbits
+  16              		.align	1
+  17              		.global	BLDC_CommPWM
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	BLDC_CommPWM:
+  24              	.LFB66:
+  25              		.file 1 "BLDC/comm.c"
+   1:BLDC/comm.c   **** #include "comm.h"
+   2:BLDC/comm.c   **** #include "bldc.h"
+   3:BLDC/comm.c   **** 
+   4:BLDC/comm.c   **** #ifndef USE_SYNC_DRIVER
+   5:BLDC/comm.c   **** /* 非同步整流 */
+   6:BLDC/comm.c   **** const uint16_t PwmCommTable[6] =
+   7:BLDC/comm.c   **** {
+   8:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC1E | TIM_CCER_CC2NE), // AB
+   9:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC1E | TIM_CCER_CC3NE), // AC
+  10:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC2E | TIM_CCER_CC3NE),	// BC
+  11:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC2E | TIM_CCER_CC1NE),	// BA
+  12:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC3E | TIM_CCER_CC1NE),	// CA
+  13:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC3E | TIM_CCER_CC2NE)	// CB
+  14:BLDC/comm.c   **** };
+  15:BLDC/comm.c   **** #else
+  16:BLDC/comm.c   **** /* 同步整流 */
+  17:BLDC/comm.c   **** const uint16_t PwmCommTable[6] = {
+  18:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC1E | TIM_CCER_CC1NE | TIM_CCER_CC2NE), // AB
+  19:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC1E | TIM_CCER_CC1NE | TIM_CCER_CC3NE), // AC
+  20:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC2E | TIM_CCER_CC2NE | TIM_CCER_CC3NE), // BC
+  21:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC2E | TIM_CCER_CC2NE | TIM_CCER_CC1NE), // BA
+  22:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC3E | TIM_CCER_CC3NE | TIM_CCER_CC1NE), // CA
+  23:BLDC/comm.c   **** 	(uint16_t)(TIM_CCER_CC3E | TIM_CCER_CC3NE | TIM_CCER_CC2NE)	 // CB
+  24:BLDC/comm.c   **** };
+  25:BLDC/comm.c   **** #endif
+  26:BLDC/comm.c   **** 
+  27:BLDC/comm.c   **** void BLDC_CommPWM(uint8_t phase)
+  28:BLDC/comm.c   **** {
+  26              		.loc 1 28 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+ARM GAS  /tmp/cck7d8Dk.s 			page 2
+
+
+  31              	.LVL0:
+  29:BLDC/comm.c   **** 	PWM_TIM->CNT = 0;
+  32              		.loc 1 29 0
+  33 0000 044A     		ldr	r2, .L2
+  34 0002 0023     		movs	r3, #0
+  35 0004 5362     		str	r3, [r2, #36]
+  30:BLDC/comm.c   **** 	PWM_TIM->CCER = PwmCommTable[phase] | TIM_CCER_CC4E;
+  36              		.loc 1 30 0
+  37 0006 044B     		ldr	r3, .L2+4
+  38 0008 33F81030 		ldrh	r3, [r3, r0, lsl #1]
+  39 000c 43F48053 		orr	r3, r3, #4096
+  40 0010 1362     		str	r3, [r2, #32]
+  31:BLDC/comm.c   **** }
+  41              		.loc 1 31 0
+  42 0012 7047     		bx	lr
+  43              	.L3:
+  44              		.align	2
+  45              	.L2:
+  46 0014 002C0140 		.word	1073818624
+  47 0018 00000000 		.word	.LANCHOR0
+  48              		.cfi_endproc
+  49              	.LFE66:
+  51              		.section	.text.BLDC_StartAutoComm,"ax",%progbits
+  52              		.align	1
+  53              		.global	BLDC_StartAutoComm
+  54              		.syntax unified
+  55              		.thumb
+  56              		.thumb_func
+  57              		.fpu softvfp
+  59              	BLDC_StartAutoComm:
+  60              	.LFB67:
+  32:BLDC/comm.c   **** 
+  33:BLDC/comm.c   **** void BLDC_StartAutoComm(void)
+  34:BLDC/comm.c   **** {
+  61              		.loc 1 34 0
+  62              		.cfi_startproc
+  63              		@ args = 0, pretend = 0, frame = 0
+  64              		@ frame_needed = 0, uses_anonymous_args = 0
+  65              		@ link register save eliminated.
+  35:BLDC/comm.c   **** 	COMM_TIM->CNT = 0;
+  66              		.loc 1 35 0
+  67 0000 4FF08043 		mov	r3, #1073741824
+  68 0004 0022     		movs	r2, #0
+  69 0006 5A62     		str	r2, [r3, #36]
+  36:BLDC/comm.c   **** 	COMM_TIM->CR1 |= TIM_CR1_CEN;			// 计数器使能
+  70              		.loc 1 36 0
+  71 0008 1A68     		ldr	r2, [r3]
+  72 000a 42F00102 		orr	r2, r2, #1
+  73 000e 1A60     		str	r2, [r3]
+  37:BLDC/comm.c   **** 	COMM_TIM->DIER |= TIM_DIER_UIE;
+  74              		.loc 1 37 0
+  75 0010 DA68     		ldr	r2, [r3, #12]
+  76 0012 42F00102 		orr	r2, r2, #1
+  77 0016 DA60     		str	r2, [r3, #12]
+  38:BLDC/comm.c   **** }
+  78              		.loc 1 38 0
+  79 0018 7047     		bx	lr
+ARM GAS  /tmp/cck7d8Dk.s 			page 3
+
+
+  80              		.cfi_endproc
+  81              	.LFE67:
+  83              		.section	.text.BLDC_StopAutoComm,"ax",%progbits
+  84              		.align	1
+  85              		.global	BLDC_StopAutoComm
+  86              		.syntax unified
+  87              		.thumb
+  88              		.thumb_func
+  89              		.fpu softvfp
+  91              	BLDC_StopAutoComm:
+  92              	.LFB68:
+  39:BLDC/comm.c   **** 
+  40:BLDC/comm.c   **** void BLDC_StopAutoComm(void)
+  41:BLDC/comm.c   **** {
+  93              		.loc 1 41 0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 0
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97              		@ link register save eliminated.
+  42:BLDC/comm.c   **** 	COMM_TIM->SR &= ~TIM_FLAG_UPDATE;
+  98              		.loc 1 42 0
+  99 0000 4FF08043 		mov	r3, #1073741824
+ 100 0004 1A69     		ldr	r2, [r3, #16]
+ 101 0006 22F00102 		bic	r2, r2, #1
+ 102 000a 1A61     		str	r2, [r3, #16]
+  43:BLDC/comm.c   **** 	COMM_TIM->CR1 &= ~TIM_CR1_CEN;			// 计数器停止
+ 103              		.loc 1 43 0
+ 104 000c 1A68     		ldr	r2, [r3]
+ 105 000e 22F00102 		bic	r2, r2, #1
+ 106 0012 1A60     		str	r2, [r3]
+  44:BLDC/comm.c   **** 	COMM_TIM->DIER &= ~TIM_DIER_UIE;
+ 107              		.loc 1 44 0
+ 108 0014 DA68     		ldr	r2, [r3, #12]
+ 109 0016 22F00102 		bic	r2, r2, #1
+ 110 001a DA60     		str	r2, [r3, #12]
+  45:BLDC/comm.c   **** }
+ 111              		.loc 1 45 0
+ 112 001c 7047     		bx	lr
+ 113              		.cfi_endproc
+ 114              	.LFE68:
+ 116              		.section	.text.BLDC_UpdateCommPeriod,"ax",%progbits
+ 117              		.align	1
+ 118              		.global	BLDC_UpdateCommPeriod
+ 119              		.syntax unified
+ 120              		.thumb
+ 121              		.thumb_func
+ 122              		.fpu softvfp
+ 124              	BLDC_UpdateCommPeriod:
+ 125              	.LFB69:
+  46:BLDC/comm.c   **** 
+  47:BLDC/comm.c   **** void BLDC_UpdateCommPeriod(uint16_t period)
+  48:BLDC/comm.c   **** {
+ 126              		.loc 1 48 0
+ 127              		.cfi_startproc
+ 128              		@ args = 0, pretend = 0, frame = 0
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130              		@ link register save eliminated.
+ARM GAS  /tmp/cck7d8Dk.s 			page 4
+
+
+ 131              	.LVL1:
+  49:BLDC/comm.c   **** 	COMM_TIM->ARR = period;
+ 132              		.loc 1 49 0
+ 133 0000 4FF08043 		mov	r3, #1073741824
+ 134 0004 D862     		str	r0, [r3, #44]
+  50:BLDC/comm.c   **** }
+ 135              		.loc 1 50 0
+ 136 0006 7047     		bx	lr
+ 137              		.cfi_endproc
+ 138              	.LFE69:
+ 140              		.global	PwmCommTable
+ 141              		.section	.rodata.PwmCommTable,"a",%progbits
+ 142              		.align	2
+ 143              		.set	.LANCHOR0,. + 0
+ 146              	PwmCommTable:
+ 147 0000 4500     		.short	69
+ 148 0002 0504     		.short	1029
+ 149 0004 5004     		.short	1104
+ 150 0006 5400     		.short	84
+ 151 0008 0405     		.short	1284
+ 152 000a 4005     		.short	1344
+ 153              		.text
+ 154              	.Letext0:
+ 155              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 156              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 157              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+ 158              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+ 159              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
+ 160              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
+ 161              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
+ 162              		.file 9 "/usr/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h"
+ 163              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
+ 164              		.file 11 "BLDC/bldc.h"
+ARM GAS  /tmp/cck7d8Dk.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 comm.c
+     /tmp/cck7d8Dk.s:16     .text.BLDC_CommPWM:0000000000000000 $t
+     /tmp/cck7d8Dk.s:23     .text.BLDC_CommPWM:0000000000000000 BLDC_CommPWM
+     /tmp/cck7d8Dk.s:46     .text.BLDC_CommPWM:0000000000000014 $d
+     /tmp/cck7d8Dk.s:52     .text.BLDC_StartAutoComm:0000000000000000 $t
+     /tmp/cck7d8Dk.s:59     .text.BLDC_StartAutoComm:0000000000000000 BLDC_StartAutoComm
+     /tmp/cck7d8Dk.s:84     .text.BLDC_StopAutoComm:0000000000000000 $t
+     /tmp/cck7d8Dk.s:91     .text.BLDC_StopAutoComm:0000000000000000 BLDC_StopAutoComm
+     /tmp/cck7d8Dk.s:117    .text.BLDC_UpdateCommPeriod:0000000000000000 $t
+     /tmp/cck7d8Dk.s:124    .text.BLDC_UpdateCommPeriod:0000000000000000 BLDC_UpdateCommPeriod
+     /tmp/cck7d8Dk.s:146    .rodata.PwmCommTable:0000000000000000 PwmCommTable
+     /tmp/cck7d8Dk.s:142    .rodata.PwmCommTable:0000000000000000 $d
+
+NO UNDEFINED SYMBOLS

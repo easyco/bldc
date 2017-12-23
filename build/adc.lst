@@ -1,0 +1,145 @@
+ARM GAS  /tmp/ccy5wM1L.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"adc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.BLDC_StopAdc,"ax",%progbits
+  16              		.align	1
+  17              		.global	BLDC_StopAdc
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	BLDC_StopAdc:
+  24              	.LFB66:
+  25              		.file 1 "BLDC/adc.c"
+   1:BLDC/adc.c    **** #include "adc.h"
+   2:BLDC/adc.c    **** #include "bsp_tim.h"
+   3:BLDC/adc.c    **** 
+   4:BLDC/adc.c    **** void BLDC_StopAdc(void)
+   5:BLDC/adc.c    **** {
+  26              		.loc 1 5 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+   6:BLDC/adc.c    **** #if defined (USE_INJECTED_GROUP_SMAPLE_BEMF)
+   7:BLDC/adc.c    **** 	ADC_TRIG_TIM->CR1 &= ~TIM_CR1_CEN;
+   8:BLDC/adc.c    **** 	ADC1->CR1 &= ~ADC_CR1_JEOSIE;
+   9:BLDC/adc.c    **** #else
+  10:BLDC/adc.c    **** 	ADC_TRIG_TIM->CR1 &= ~TIM_CR1_CEN;
+  31              		.loc 1 10 0
+  32 0000 084A     		ldr	r2, .L2
+  33 0002 1368     		ldr	r3, [r2]
+  34 0004 23F00103 		bic	r3, r3, #1
+  35 0008 1360     		str	r3, [r2]
+  11:BLDC/adc.c    **** 	DMA1->IFCR |= DMA_FLAG_TC1;
+  36              		.loc 1 11 0
+  37 000a 02F5FE32 		add	r2, r2, #130048
+  38 000e 5368     		ldr	r3, [r2, #4]
+  39 0010 43F00203 		orr	r3, r3, #2
+  40 0014 5360     		str	r3, [r2, #4]
+  12:BLDC/adc.c    **** 	DMA1_Channel1->CCR &= ~DMA_CCR_TCIE;
+  41              		.loc 1 12 0
+  42 0016 0832     		adds	r2, r2, #8
+  43 0018 1368     		ldr	r3, [r2]
+  44 001a 23F00203 		bic	r3, r3, #2
+  45 001e 1360     		str	r3, [r2]
+  13:BLDC/adc.c    **** #endif
+ARM GAS  /tmp/ccy5wM1L.s 			page 2
+
+
+  14:BLDC/adc.c    **** }
+  46              		.loc 1 14 0
+  47 0020 7047     		bx	lr
+  48              	.L3:
+  49 0022 00BF     		.align	2
+  50              	.L2:
+  51 0024 00040040 		.word	1073742848
+  52              		.cfi_endproc
+  53              	.LFE66:
+  55              		.section	.text.BLDC_StartAdc,"ax",%progbits
+  56              		.align	1
+  57              		.global	BLDC_StartAdc
+  58              		.syntax unified
+  59              		.thumb
+  60              		.thumb_func
+  61              		.fpu softvfp
+  63              	BLDC_StartAdc:
+  64              	.LFB67:
+  15:BLDC/adc.c    **** 
+  16:BLDC/adc.c    **** void BLDC_StartAdc(void)
+  17:BLDC/adc.c    **** {
+  65              		.loc 1 17 0
+  66              		.cfi_startproc
+  67              		@ args = 0, pretend = 0, frame = 0
+  68              		@ frame_needed = 0, uses_anonymous_args = 0
+  69              		@ link register save eliminated.
+  18:BLDC/adc.c    **** #if defined (USE_INJECTED_GROUP_SMAPLE_BEMF)
+  19:BLDC/adc.c    **** 	ADC_TRIG_TIM->CR1 |= TIM_CR1_CEN;
+  20:BLDC/adc.c    **** 	ADC1->CR1 |= ADC_CR1_JEOSIE;
+  21:BLDC/adc.c    **** 	ADC1->CR2 |= ADC_CR2_JSWSTART;
+  22:BLDC/adc.c    **** #else
+  23:BLDC/adc.c    **** 	ADC_TRIG_TIM->CR1 |= TIM_CR1_CEN;
+  70              		.loc 1 23 0
+  71 0000 064A     		ldr	r2, .L5
+  72 0002 1368     		ldr	r3, [r2]
+  73 0004 43F00103 		orr	r3, r3, #1
+  74 0008 1360     		str	r3, [r2]
+  24:BLDC/adc.c    **** 	DMA_EnableTCIE();
+  75              		.loc 1 24 0
+  76 000a 02F5FE32 		add	r2, r2, #130048
+  77 000e 0832     		adds	r2, r2, #8
+  78 0010 1368     		ldr	r3, [r2]
+  79 0012 43F00203 		orr	r3, r3, #2
+  80 0016 1360     		str	r3, [r2]
+  25:BLDC/adc.c    **** #endif
+  26:BLDC/adc.c    **** }
+  81              		.loc 1 26 0
+  82 0018 7047     		bx	lr
+  83              	.L6:
+  84 001a 00BF     		.align	2
+  85              	.L5:
+  86 001c 00040040 		.word	1073742848
+  87              		.cfi_endproc
+  88              	.LFE67:
+  90              		.text
+  91              	.Letext0:
+  92              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ARM GAS  /tmp/ccy5wM1L.s 			page 3
+
+
+  93              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+  94              		.file 4 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Include/core_cm3.h"
+  95              		.file 5 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/system_stm32f1xx.h"
+  96              		.file 6 "Drivers/STM32Cube_FW_F1_V1.4.0/CMSIS/Device/STM32F1xx/Include/stm32f103xb.h"
+  97              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
+  98              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
+  99              		.file 9 "/usr/lib/gcc/arm-none-eabi/7.2.1/include/stddef.h"
+ 100              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
+ 101              		.file 11 "BLDC/bldc.h"
+ARM GAS  /tmp/ccy5wM1L.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 adc.c
+     /tmp/ccy5wM1L.s:16     .text.BLDC_StopAdc:0000000000000000 $t
+     /tmp/ccy5wM1L.s:23     .text.BLDC_StopAdc:0000000000000000 BLDC_StopAdc
+     /tmp/ccy5wM1L.s:51     .text.BLDC_StopAdc:0000000000000024 $d
+     /tmp/ccy5wM1L.s:56     .text.BLDC_StartAdc:0000000000000000 $t
+     /tmp/ccy5wM1L.s:63     .text.BLDC_StartAdc:0000000000000000 BLDC_StartAdc
+     /tmp/ccy5wM1L.s:86     .text.BLDC_StartAdc:000000000000001c $d
+
+NO UNDEFINED SYMBOLS
